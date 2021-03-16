@@ -1,0 +1,354 @@
+# SCRUBBING 'N SCORING {#scrubscore}
+
+ [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
+
+The focus of this chapter is the process of starting with raw data and preparing it for multivariate analysis.   To that end, we will address the conceptual considerations and practical steps in "scrubbing and scoring." 
+
+A twist in this lesson is that we are asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of *open science*, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to take the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU). The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.
+
+## Navigating this Lesson
+
+<!-- TODO: Update how long it will take. -->
+There is about # hours and ## minutes of lecture.  If you work through the materials with me it would be good to add another ## hours.
+
+### Learning Objectives
+
+Learning objectives from this lecture include the following:
+
+* Recognize the key components of data loss mechanisms (MCAR, MAR, MNAR), including how to diagnose MCAR.
+* Interpret missingness figures produced by packages such as *mice* and *Amelia*.
+* Articulate a workflow for scrubbing and scoring data.
+* Use critical data manipulation functions from *dplyr* including *filter()*, *select()*, and *mutate()*.
+* Interpret code related to missingness (i.e., "is.na", "!is.na") and the pipe (%>%)
+
+
+### Planning for Practice
+
+<!-- TODO: Specify set of items to score for homework. -->
+
+Using Parent's [-@parent_handling_2013] AIA approach to managing missing data, "scrub and score" a raw dataset. Options of graded complexity could incude:
+
+* Repeating the steps in the chapter; differences will be in the number of people who have completed the survey since the chapter was written.
+* Use the dataset that is the source of the chapter, but score a DIFFERENT SET OF ITEMS -- MUST SPECIFY.
+* Begin with raw data to which you have access. 
+
+### Readings & Resources
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+* Parent, M. C. (2013). Handling item-level missing data: Simpler is just as good. The Counseling Psychologist, 41(4), 568–600. https://doi.org/10.1177/0011000012445176
+
+* Kline, R. B. (2015). Data preparation and psychometrics review. In Principles and Practice of Structural Equation Modeling, Fourth Edition. Guilford Publications. http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4000663
+
+* Grolemund, G., & Wickham, H. (n.d.). 5 Data transformation | R for Data Science. Retrieved March 12, 2020, from https://r4ds.had.co.nz/
+
+* Grolemund, G., & Wickham, H. (n.d.). 3 Data visualisation | R for Data Science. Retrieved March 12, 2020, from https://r4ds.had.co.nz/
+
+
+### Packages
+
+If hashtags are removed, the script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+<!-- TODO: Build out this section. -->
+```{r initial packages}
+#will install the package if not already installed
+if(!require(qualtRics)){install.packages("qualtRics")}
+if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(psych)){install.packages("psych")}
+```
+
+
+## Workflow for Scrubbing and Scoring
+
+The following is a proposed workflow for preparing data for analysis. 
+
+<!-- TODO: Figure out how to link this as a document that opens in a separate window For a separate document [See screenshot](images/OnewayWrkFlw.png) -->
+
+![An image of a workflow for scrubbing and scoring data.](images/scubbinscorin_wrkflow.jpg) 
+Here is a narration of the figure:
+
+1. The workflow begins by importing data into R. Most lessons in this series involve simulated data that are created directly in R. Alternatively, data could be:
+   * imported "intRavenously" through programs such as Qualtrics,
+   * exported from programs such as Qualtrics to another program (e.g., .xlxs, .csv)
+   * imported in other forms (e.g., .csv,.sps, .sav).
+2. Scrubbing data by 
+   * variable naming,
+   * specifying variable characteristics such as factoring,
+   * ensuring that included particpiants consented to participation, 
+   * determining and executing the inclusion and exclusion criteria.
+3. Conduct preliminary data diagnostics such as
+   * outlier anlaysis
+   * assessing for univariate and multivariate analysis
+   * making transformations and/or corrections
+4. Managing missingness by one of two routes
+   * Available information analysis [@parent_handling_2013] at either the item-level or scale level.  The result is a single set of data for analysis.  If missingness remains, options include pairwise deletion, listwise deletion, or specifying FIML (when available0).  Another option is to use multiple imputation.
+   * Multiple imputation at either scale level or item-level
+
+## Research Vignette
+
+To provide first-hand experience as both the respondent and analyst for the same set of data, you were asked to complete a survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU).  If you haven't yet completed it, please consider doing so, now.
+
+The survey is administered in Qualtrics. In the chapter I teach two ways to import Qualtrics data into R. We will then use the data to work through the steps identified in the workflow.
+
+First, though, let's take a more conceptual look at issues regarding missing data.  We'll come back to details of the survey as we work with it.
+
+## On Missing Data
+
+On the topic of missing data, we follow the traditions in most textbooks.  We start by considering *data loss mechanisms* and options for *managing missingness.*
+
+Although the workflow I recommend is fairly straightforward, the topic is not.  Quantitative psychologist have produced volumes of research that supports and refutes all of these issues in detail.  An in-deth review of this is found in Enders' [@enders_applied_2010] text.
+
+## Data Loss Mechanisms
+
+We generally classify missingess in data in three different ways [@kline_principles_2016; @parent_handling_2013]:
+
+**Missing completely at random (MCAR)** is the ideal case (and often unrealistic in actual data).  For variable *Y* this mean that
+
+* Missingness is due to a factor(s) completely unrelated to the missing data.  Stated another way: 
+  * Missing observations differ from the observed scores only by chance; that is, whether scores on Y are missing or not missing is unrelated to *Y* itself
+* The presence versus absence of data on *Y* is unrelated to all other variables in the dataset.  That is, the nonmissing data are just a random sample of scores that the researcher would have analyzed had the data been complete.  We might think of it as *haphazard* missing.
+  * A respondent is interrupted, looks up, looks down, and skips an item.
+  * A computer glitch causes spotty missingness -- unrelated to any particular variable.
+  
+MCAR is the ideal state because results from it should not be biased as a function of the missingness.
+
+**Missing at random (MAR)** missing data arise from a process that is both measured and predictable in a particular sample. *Admittedly the use of "random" in this term is odd, because, by definition, the missingness is not random.*
+
+Restated:
+
+1. Missingness on Y is unrelated to Y itself, but
+2. missingness is on Y is correlated with other variables in the data set.
+
+Example: Men are less likely to respond to questions about mental health than women, but among men, the probability of responding is unrelated to their true mental health status.
+
+Kline [-@kline_principles_2016] indicated that information loss due to MAR is potentially recoverable through imputation where missing scores are replaced by predicted scores.  The predicted scores are generated from other variables in the data set that predict missingness on Y.  If the strength of that prediction is reasonably strong, then results on Y after imputation may be relatively unbiased.  In this sense, the MAR pattern is described as *ignorable* with regard to potential bias. Two types of variables can be used to predict the missing data 
+
+1.  variables that are in the prediction equation, and 
+2. *auxiliary* variables (i.e., variables in the dataset that are not in the prediction equation).
+
+Parent [-@parent_handling_2013] noted that multiple imputation and expectation maximization have frequently been used to manage missingness in MAR circumstances.
+
+**Missing not at random (MNAR)** is when the presence versus absence of scores on *Y* depend on *Y* itself.  This is *non-ignorable*.
+
+For example, if a patient drops out of a medical RCT because there are unpleasant side effects from the treatment, this discomfort is not measured, but the data is missing due to a process that is unknown in a particular data set.  Results based on *complete cases only* can be severely biased when the data loss pattern is MNAR.  That is, a treatment may look more beneficial than it really is if data from patients who were unable to tolerate the treatment are lost.
+
+Parent [-@parent_handling_2013] described MNAR a little differently -- but emphasized that the systematic missingness would be related to a variable outside the datset. Parent provided the example of items written in a manner that may be inappropriate for some participants (e.g., asking women about a relationship with their boyfriend/husband, when the woman might be in same gender relationship).  If there were not demographic items that could identify the bias, this would be MNAR.  Parent strongly advises researchers to carefully proofread and pilot surveys to avoid MNAR circumstances.
+
+Kline [-@kline_principles_2016] noted that the choice of the method to deal with the incomplete records can make a difference in the results, and should be made carefully.
+
+## Diagnosing Missing Data Mechanisms
+
+The bad news is that we never really know (with certainty) the type of missing data mechanism in our data. The following tools can help understand the mechanisms that contribute to missingness.
+
+* Missing data analyses often includes correlations that could predict missingness.
+* Little and Rubin [-@little_statistical_2002] proposed a multivariate statistical test of the MCAR assumption that simultaneously compares complete versus incomplete cases on *Y* across all other variables.  If this comparison is significant, then the MCAR hypothesis is rejected. 
+  * To restate: we want a non-significant result; and we use the sometimes-backwards-sounding NHST (null hypothesis significance testing) language, "MCAR cannot be rejected."
+* MCAR can also be examined through a series of *t* tests of the cases that have missing scores on Y with cases that have complete records on other variables. Unfortunately, sample sizes contribute to problems with interpretation.  With low samples, they are underpowered; in large samples they can flag trivial differences.
+
+If MCAR is rejected, we are never sure whether the data loss mechanism is MAR or MNAR. There is no magical statistical "fix."  Kline [-@kline_principles_2016] wrote, "About the best that can be done is to understand the nature of the underlying data loss pattern and accordingly modify your interpretation of the results" (p. 85).
+
+## Available Information Analysis
+
+Parent [-@parent_handling_2013] has created a set of recommendations that help us create a streamlined workflow for managing missing data.  Parent concluded that in datasets with (a) low levels of missingness, (b) a reasonable sample size, and (c)adequate internal reliability of measures, that *available information anlaysis* (AIA), mean substitution, and multiple imputation had similar results.  
+
+Further, in simulation studies where there was (a) low sample size (*n* = 50), (b) weak associations among items, and (c) a small number of missing items, AIA was equivalent to multiple imputation.  Even in cases where the data conditions were the "best" (i.e., *N* = 200, moderate correlations, at least 10 items), even 10% missingness (overall) did not produce notable difference among the methods.  That is, means, standard errors, and alphas were similar across the methods (AIA, mean substitution, multiple imputation).
+
+AIA is an older method of handling missing data that, as it's name suggests, uses the *available data* for analysis and excludes missing data points only for analyses in which the missing data point would be directly involved.  This means
+
+* In the case of research that uses multiple item scales, and analysis takes place at the scale level
+  - AIA is used to generate **mean** scores for the scale using the available data without substituting or imputing values;
+  - This method generally produces a fairly complete set of scale-level data where 
+     * pairwise deletion (the whole row/case/person is skipped) can be used for many analyses that do not permit missing data:  correlations, t-tests, ANOVA 
+     * FIML can be specified in path analysis (if scale scores are missing) and CFA/SEM (where item-level data is required), and
+     * some statistics, such as principal components analysis (an item-level analysis) permit missing data, 
+  - Of course, the researcher could still impute data, but why...
+  
+Parent's[-@parent_handling_2013] recommendations: 
+
+* Scale scores should be first calculated as a *mean* (average) not a sum. Why?
+   - Calculating a "sum" from available data will result in automatically lower scores in cases where there is missingness.
+   - If a sum is required (i.e., because you want to interpret some clinical level of something), calculate the mean first, do the analyse, then transform the results back into the whole-scale equivalent (multiply the mean by the number of items) for any interpretation (or do some math around the sum-level interpretation so that you can interpret a mean).
+   - For R script, do not write the script ([item1 + item2 + item3]/3) because this will return an empty entry for participants missing data (same problem as if you were to use sum).  There are several functions for properly computing a mean; I will demo the *mean_n()* function from *sjstats* package because it allows us to simultaneously specify the tolerance level (next item).
+* Determine your *tolerance* for missingness (20% seems to be common, although you could also look for guidance in the test manual/article). Then
+  - Run a "percent missingness" check on the level of analysis (i.e., total score, scale, or subscale) you are using. If you are using a total scale score, then check to see what percent is missing across all the items in the whole scale.  In contrast, if you are looking at subscales, run the percent missing at that level.
+  - Parent [-@parent_handling_2013] advised that the tolerance levels should be made mindfully.  A four-item scale with one item missing, won't meet the 80% threshold, so it may make sense to set a 75% threshold for this scale.
+* "Clearly and concisely detail the level of missingness" in papers [@parent_handling_2013, p. 595].  This includes
+  - tolerance level for missing data by scale or subscale (e.g., 80% or 75%)
+  - the number of missing values out of all data points on that scale for all participants and the maximum by participant (e.g., "For Scale X, a total of # missing data points out of ### were observed with no participant missing more than a single point.")
+  - verify a manual inspection of missing data for obvious patterns (e.g., abnormally high missing rates for only one or two items).  This can be accomplished by requesting frequency output for the items and checking the nonmissing data points for each scale, ensuring there are no abnormal spikes in missingness (looking for MNAR).
+* Curiously, Parent [-@parent_handling_2013] does not recommend that we run all the diagnostic tests. However, because recent reviewers have required them of me, I will demonstrate a series of them, including MCAR.
+* Reducing missingness starts at the survey design -- make sure that all people can answer all items (i.e,. relationship-related items may contain heterosexist assumptions...which would result in an MNAR circumstance)
+
+Very practically speaking, Parent's [-@parent_handling_2013] recommendations follow us through the entire data analysis process.  
+
+* We will use a tolerance of 20%.
+  - We will create 2 variables (n_miss and prop_miss) for each of the scales, these will be used two ways.
+  - In combination, we will delete individuals who have 100% missing data on these 3 scores (this was an individual decision for this particular dataset; it could be different depending on your analytic approach)
+  - We will calculate scale scores only on those with 80% of data present.
+* After calculating the scale scores, we will return to analyzing the missingness, looking at the whole dataset.
+
+
+## Working the Problem
+
+## intRavenous Qualtrics
+
+I will demonstrate using a Qualtrics account at my institution, Seattle Pacific University. The only surveys in this account are for the *Recentering Psych Stats* chapters and lessons. All surveys are designed to not capture personally identifying information.
+
+Access credentials for the institutional account, individual user's account, and survey are essential for getting the survey items and/or results to export into R. The Qualtrics website provides a tutorial for [generating an API token](https://www.qualtrics.com/support/integrations/api-integration/overview/#GeneratingAnAPIToken).     
+
+We need two pieces of information:  the **root_url** and an **API token**.  
+
+* Log into your respective qualtrics.com account.
+* Select Account Settings
+* Choose "Qualtrics IDs" from the user name dropdown
+
+We need the  **root_url**.  This is the first part of the web address for the Qualtrics account.  For our institution it is: spupsych.az1.qualtrics.com 
+
+The API token is in the box labeled, "API." If it is empty, select, "Generate Token." If you do not have this option, locate the *brand administrator* for your Qualtrics account. They will need to set up your account so that you have API privileges.
+
+*BE CAREFUL WITH THE API TOKEN*  This is the key to your Qualtrics accounts.  If you leave it in an .rmd file that you forward to someone else, this key and the base URL gives access to every survey in your account. If you share it, you could be releasing survey data to others that would violate confidentiality promises in an IRB application.
+
+If you mistakenly give out your API token you can generate a new one within your Qualtrics account and re-protect all its contents.
+
+You do need to change the API key/token if you want to download data from a different Qualtrics account.  If your list of surveys generates the wrong set of surveys, restart R, make sure you have the correct API token and try again.
+
+```{r API token}
+#only have to run this ONCE to draw from the same Qualtrics account...but will need to get different token if you are changing between accounts 
+library(qualtRics)
+#qualtrics_api_credentials(api_key = "mUgPMySYkiWpMFkwHale1QE5HNmh5LRUaA8d9PDg",
+              #base_url = "spupsych.az1.qualtrics.com", overwrite = TRUE, install = TRUE)
+
+```
+
+*all_surveys()* generates a dataframe containing information about all the surveys stored on your Qualtrics account.
+
+```{r Show all surveys,  eval=FALSE}
+surveys <- all_surveys() 
+#View this as an object (found in the right: Environment).  
+#Get survey id # for the next command
+#If this is showing you the WRONG list of surveys, you are pulling from the wrong Qualtrics account (i.e., maybe this one instead of your own). Go back and change your API token (it saves your old one). Changing the API likely requires a restart of R.
+surveys
+```
+
+To retrieve the survey, use the *fetch_survey()* function.  
+
+*
+
+```{r fetch pr, eval=FALSE}
+#obtained with the survey ID #
+#"surveyID" should be the ID from above
+#"verbose" prints messages to the R console
+#"label", when TRUE, imports data as text responses; if FALSE prints the data as numerical responses
+#"convert", when TRUE, attempts to convert certain question types to teh "proper" data type in R; because I don't like guessing, I want to set up my own factors.
+#"force_request", when TRUE, always downloads the survey from the API instead of from a temporary director (i.e., it always goes to the primary source)
+
+QTRX_df <- fetch_survey(surveyID = "SV_b2cClqAlLGQ6nLU",useLocalTime = TRUE,
+                         verbose = TRUE, label=FALSE, convert=FALSE, force_request = TRUE)
+```
+
+
+There is a command to get the survey items; it's not that useful.
+```{r get survey questions}
+QTRX_items <- survey_questions("SV_bxE7jISZ2LCYm3j")
+```
+
+*It is possible (and helpful, even) to import Qualtrics data that has been downloaded from Qualtrics as a .csv.  I demo this in the Bonus Reel.*
+
+It can be helpful to save outfiles of progress as we go along.  Here I save this raw file.
+```{r write outfile of Qualtrics download, eval=FALSE}
+write.table(QTRX_df, file="QTRX_df.csv", sep=",", col.names=TRUE, row.names=FALSE)
+```
+
+
+
+## APA Style Results
+
+All that's left to do is *write it up*! 
+
+
+## Practice Problems
+
+Below are three problems with graded levels of complexity.  Worked examples, following the first two suggestions will be provided in an Appendix.
+
+* Repeating the steps in the chapter; differences will be in the number of people who have completed the survey since the chapter was written.
+* Use the dataset that is the source of the chapter, but score a DIFFERENT SET OF ITEMS -- MUST SPECIFY.
+* Begin with raw data to which you have access. 
+
+### Problem #1:  Conduct a one-way ANOVA with *moreTalk* dependent variable.
+
+In their study, Tran and Lee [-@tran_you_2014] included an outcome variable where participants rated how much longer they would continue the interaction with their partner compared to their interactions in general. The scale ranged from -2 (*much less than average*) through 0 (*average*) to 2 (*much more than average*).
+
+Code for simulated data with *moreTalk* as the dependent variable is below.  Using the lecture and workflow (chart) as a guide, please work through all the steps listed in the proposed assignment/grading rubric.
+
+
+|Assignment Component                    | Points Possible   | Points Earned|
+|:-------------------------------------- |:----------------: |:------------:|
+|1. Simulate (or import) and format data |      5            |_____  |           
+|2. Evaluate statistical assumptions     |      5            |_____  |
+|3. Conduct omnibus ANOVA (w effect size)|      5           | _____  |  
+|4. Conduct one set of follow-up tests; narrate your choice| 5 |_____  |               
+|5. Describe approach for managing Type I error |    5        |_____  |   
+|6. APA style results with table(s) and figure  |    5        |_____  |       
+|7. Explanation to grader                 |      5        |_____  |
+|**Totals**                               |      35       |_____  |             
+
+
+
+
+
+
+### Problem #2:  Play around with this simulation.
+
+Copy the script for the simulation and then change (at least) one thing in the simulation to see how it impacts the results.  
+
+* If one-way ANOVA is new to you, perhaps you just change the number in "set.seed(2021)" from 2021 to something else. Your results should parallel those obtained in the lecture, making it easier for you to check your work as you go.
+* If you are interested in power, change the sample size to something larger or smaller.
+* If you are interested in variability (i.e., the homogeneity of variance assumption), perhaps you change the standard deviations in a way that violates the assumption.
+
+Using the lecture and workflow (chart) as a guide, please work through all the steps listed in the proposed assignment/grading rubric.
+
+|Assignment Component                    | Points Possible   | Points Earned|
+|:-------------------------------------- |:----------------: |:------------:|
+|1. Simulate (or import) and format data |      5            |_____  |           
+|2. Evaluate statistical assumptions     |      5            |_____  |
+|3. Conduct omnibus ANOVA (w effect size)|      5           | _____  |  
+|4. Conduct one set of follow-up tests; narrate your choice| 5 |_____  |               
+|5. Describe approach for managing Type I error|    5        |_____  |   
+|6. APA style results with table(s) and figure|    5        |_____  |       
+|7. Explanation to grader                 |      5        |_____  |
+|**Totals**                               |      35       |_____  |          
+
+
+### Problem #3:  Try something entirely new.
+
+Either (a) find an article from which you can simulate data or (b) create a research vignette of your own.  Specify group *n*,  means, and standard deviations.  Simulate the data with these.  Be thinking about "what it takes" in terms of sample size, mean differences, and variability to get a statistically significant omnibus.  
+
+Using the lecture and workflow (chart) as a guide, please work through all the steps listed in the proposed assignment/grading rubric.
+
+|Assignment Component                    | Points Possible   | Points Earned|
+|:-------------------------------------- |:----------------: |:------------:|
+|1. Narrate the research vignette, describing the IV and DV | 5 |_____  |
+|2. Simulate (or import) and format data               |      5            |_____  |           
+|3. Evaluate statistical assumptions     |      5            |_____  |
+|4. Conduct omnibus ANOVA (w effect size) |      5           | _____  |  
+|5. Conduct one set of follow-up tests; narrate your choice| 5 |_____  |               
+|6. Describe approach for managing Type I error |    5        |_____  |   
+|7. APA style results with table(s) and figure  |    5        |_____  |       
+|8 Explanation to grader                 |      5        |_____  |
+|**Totals**                               |      35       |_____  |          
+
+
+
+## Bonus Reel: 
+
+![Image of a filmstrip signifying that the what follows is considered to be supplemental](images/film-strip-1.jpg){#id .class width=620 height=211} 
+
+**Coming soon!**
+
+
+
+
+```{r sessionInfo}
+sessionInfo()
+```
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>DRAFT: ReCentering Psych Stats: Multivariate Modeling</title>
+  <meta name="description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
+  
+  <meta name="twitter:description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
+  
+
+<meta name="author" content="Lynette H Bikos, PhD, ABPP" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="ReCintro.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5488840-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>ReCentering Psych Stats: Multivariate Modeling</strong><br>by Lynette H Bikos, PhD, ABPP</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#copyright-with-open-access"><i class="fa fa-check"></i>Copyright with Open Access</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="ReCintro.html"><a href="ReCintro.html"><i class="fa fa-check"></i><b>1</b> INTRODUCTION</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="ReCintro.html"><a href="ReCintro.html#what-to-expect-in-each-chapter"><i class="fa fa-check"></i><b>1.1</b> What to expect in each chapter</a></li>
+<li class="chapter" data-level="1.2" data-path="ReCintro.html"><a href="ReCintro.html#if-you-are-new-to-r"><i class="fa fa-check"></i><b>1.2</b> If You are New to R</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="ReCintro.html"><a href="ReCintro.html#r-hygiene"><i class="fa fa-check"></i><b>1.2.1</b> R Hygiene</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="ReCintro.html"><a href="ReCintro.html#maximizing-learning-by-accessing-all-the-resources"><i class="fa fa-check"></i><b>1.3</b> Maximizing Learning by Accessing all the Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+#<li><a href="https:link" target="_blank">Open access book-in-progress</br>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
+  <li><a href="https://bookdown.org" target="_blank">Built with Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DRAFT: ReCentering Psych Stats: Multivariate Modeling</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">DRAFT: ReCentering Psych Stats: Multivariate Modeling</h1>
+<p class="author"><em>Lynette H Bikos, PhD, ABPP</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p><strong>If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 15 Mar 2021</strong></p>
+<p>To <em>center</em> a variable in regression means to set its value at zero and interpret all other values in relation to this reference point. Regarding race and gender, researchers often center male and White at zero. Further, it is typical that research vignettes in statistics textbooks are similarly seated in a White, Western (frequently U.S.), heteronormative, framework. The purpose of this project is to create a set of open educational resources (OER) appropriate for doctoral and post-doctoral training that contribute to justice, equity, diversity, inclusion (JEDI), and social responsivity.</p>
+<p>Statistics training in doctoral programs are frequently taught with fee-for-use programs (e.g., SPSS/AMOS, SAS, MPlus) that may not be readily available to the post-doctoral professional. In recent years, there has been an increase and improvement in R packages (e.g., <em>psych</em>, <em>lavaan</em>) used for in analyses common to psychological research. Correspondingly, many graduate programs are transitioning to statistics training in R (free and open source). This is a challenge for post-doctoral psychologists who were trained with other software. This OER will offer statistics training with R and be, freely available on open science platforms under a Creative Commons Attribution - Non Commercial - Share Alike license [CC BY-NC-SA 4.0].</p>
+<p>Training models for doctoral programs in HSP are commonly scholar-practitioner, scientist-practitioner, or clinical-scientist. An emerging model, the <em>scientist-practitioner-advocacy</em> training model incorporates social justice advocacy so that graduates are equipped to recognize and address the sociocultural context of oppression and unjust distribution of resources and opportunities <span class="citation">(<a href="ReCintro.html#ref-mallinckrodt_scientist-practitioner-advocate_2014" role="doc-biblioref">Mallinckrodt et al., 2014</a>)</span>. In statistics textbooks, the use of research vignettes engages the learner around a tangible scenario for identifying independent variables, dependent variables, covariates, and potential mechanisms of change. Many students recall examples in Field’s <span class="citation">(<a href="ReCintro.html#ref-field_discovering_2012" role="doc-biblioref">2012</a>)</span> popular statistics text: Viagra to teach one-way ANOVA, beer goggles for two-way ANOVA, and bushtucker for repeated measures. What if the research vignettes were investigations around JEDI/social responsivity and highlighted the scholarship of individuals whose identities are often marginalized?</p>
+<p>In this OER, research vignettes will be from recently published articles where: (a) the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations), (b) the research has a JEDI/social responsivity focus, (b) the lesson’s statistic is used in the article, and (c) the data is shared publicly or there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s).</p>
+<div class="figure">
+<img src="ReCenter_bookcover.jpg" alt="" />
+<p class="caption">An image of the book cover. It includes four quadrants of non-normal distributions representing gender, race/ethnicty, sustainability/global concerns, and journal articles</p>
+</div>
+<div id="copyright-with-open-access" class="section level2 unnumbered">
+<h2>Copyright with Open Access</h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></p>
+<p>This book is published under a a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. This means that this book can be reused, remixed, retained, revised and redistributed (including commercially) as long as appropriate credit is given to the authors. If you remix, or modify the original version of this open textbook, you must redistribute all versions of this open textbook under the same license - CC BY-SA.</p>
+<p>Our GitHub open-source repository contains all of the text and source code for the book, including data and images.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="ReCintro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ontheline/otl-bookdown/blob/master/index.Rmd",
+"text": null
+},
+"download": ["ReC_MultivariateModeling.pdf"],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>
