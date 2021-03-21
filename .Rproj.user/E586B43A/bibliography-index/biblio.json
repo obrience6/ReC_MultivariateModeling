@@ -72,6 +72,29 @@
             "volume": "41"
         },
         {
+            "ISBN": "978-1-60623-639-0",
+            "abstract": "Walking readers step by step through complex concepts, this book translates missing data techniques into something that applied researchers and graduate students can understand and utilize in their own research. Enders explains the rationale and procedural details for maximum likelihood estimation, Bayesian estimation, multiple imputation, and models for handling missing not at random (MNAR) data. Easy-to-follow examples and small simulated data sets illustrate the techniques and clarify the underlying principles. The companion website (www.appliedmissingdata.com) includes data files and syntax for the examples in the book as well as up-to-date information on software. The book is accessible to substantive researchers while providing a level of detail that will satisfy quantitative specialists. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "author": [
+                {
+                    "family": "Enders",
+                    "given": "Craig K."
+                }
+            ],
+            "id": "enders_applied_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "keyword": "Methodology, applied researchers, Bayesian estimation, graduate students, Graduate Students, Mathematical Modeling, Maximum Likelihood, maximum likelihood estimation, missing data techniques, missing not at random data, models, multiple imputation, Statistical Data, Statistical Probability",
+            "publisher": "Guilford Press",
+            "publisher-place": "New York, NY",
+            "title": "Applied missing data analysis",
+            "type": "book"
+        },
+        {
             "DOI": "10.1177/0011000006286347",
             "ISSN": "0011-0000, 1552-3861",
             "URL": "http://journals.sagepub.com/doi/10.1177/0011000006286347",
@@ -225,6 +248,44 @@
             "title-short": "The epistemology of mathematical and statistical modeling",
             "type": "article-journal",
             "volume": "65"
+        },
+        {
+            "ISBN": "978-1-118-62586-6",
+            "URL": "http://site.ebrary.com/id/10921256",
+            "abstract": "6.2. Likelihood-based Inference with Incomplete Data., Includes bibliographical references (pages 349-364) and indexes.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        2,
+                        24
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Little",
+                    "given": "Roderick J. A."
+                },
+                {
+                    "family": "Rubin",
+                    "given": "Donald B."
+                }
+            ],
+            "edition": "Second edition.",
+            "id": "little_statistical_2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "keyword": "Mathematical statistics; Missing observations (Statistics)",
+            "publisher": "Wiley",
+            "publisher-place": "Hoboken",
+            "title": "Statistical analysis with missing data",
+            "type": "book"
         },
         {
             "DOI": "10.1177/1094428112470848",
@@ -681,6 +742,35 @@
             "volume": "93"
         },
         {
+            "abstract": "(from the chapter) Imagine that you are conducting a large online quantitative survey of countertransference management strategies used by therapists in training. In addition to the quantitative measures included in the survey, you decide to add a single open-ended question asking participants to describe components of their unique clinical experiences that were not captured by the measures in the survey (e.g., \"How do specific client characteristics or presenting issues relate to your unresolved issues?\"). The written responses obtained from your 300 participants contain three or four sentences each and are relatively straightforward and easy to understand. Constructing core ideas as you would for a traditional consensual qualitative research (CQR) analysis seems excessive because the comments are already succinct and there is no context to consider. A briefer alternative to CQR that would produce domains and categories consensually derived from the data would be useful, but you are unsure of how to structure the coding teams, code the data, report the results, or discuss the qualitative findings within the context of the overall study. Fortunately, consensual qualitative research—modified (CQR-M) allows you to do just this task. This chapter provides a brief definition and background of CQR-M followed by a rationale for using CQR-M. We then provide a step-by-step guide to conducting CQR-M analyses. We begin with design considerations, including determining the purpose of the qualitative data and the issue of sample size. Next are steps for data collection, followed by steps for recruiting and training judges. We then describe the procedures for analyzing brief qualitative data, including development of domains and categories, and the consensual coding process. Finally, we provide some guidance for writing up CQR-M results and discussion sections.",
+            "author": [
+                {
+                    "family": "Spangler",
+                    "given": "Patricia"
+                },
+                {
+                    "family": "Liu",
+                    "given": "Jingqing"
+                },
+                {
+                    "family": "Hill",
+                    "given": "Clara"
+                }
+            ],
+            "id": "spangler_consensual_2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        1
+                    ]
+                ]
+            },
+            "page": "269-283",
+            "title": "Consensual Qualitative Research for Simple Qualitative Data An Introduction to CQR-M",
+            "type": "chapter"
+        },
+        {
             "URL": "https://docs.google.com/document/d/1_vNjPCI7H52T8tav1reYgWx6puMT03JZVY1wvEPHrWU/edit?usp=embed_facebook",
             "abstract": "Effect Size, Confidence Intervals, and Power Analyses Collaborative Guide Note: This Guide is currently under revamp. We are sorry if the content looks a bit disorganized. We aim to complete this revamp at the end of August 2020. Please definitely feel free to comment and make suggestions if you...",
             "accessed": {
@@ -697,6 +787,54 @@
             "note": "Library Catalog: docs.google.com",
             "title": "Effect size, confidence intervals, and power analyses collaborative guide",
             "type": ""
+        },
+        {
+            "DOI": "10.1111/spc3.12512",
+            "ISSN": "1751-9004",
+            "abstract": "Growing research supports the link between individual expressions of hope and psychological well‐being. In this paper, we draw on psychological theories of hope, racial and ethnic studies, and the literature on radical healing to propose a framework of radical hope. Although the proposed multidimensional framework integrates cultural practices of People of Color in the United States, it is flexible enough to be adapted to other contexts. The paper begins by providing a brief review of the literature that conceptualizes the concept of hope in the field of psychology as a prelude to comparing the concept to the interdisciplinary notion of radical hope. Based on this body of work, we then introduce a culturally relevant psychological framework of radical hope, which includes the components of collective memory as well as faith and agency. Both components require an orientation to one of four directions including individual orientation, collective orientation, past orientation, and future orientation. The framework also consists of pathways individuals can follow to experience radical hope including (a) understanding the history of oppression along with the actions of resistance taken to transform these conditions, (b) embracing ancestral pride, (c) envisioning equitable possibilities, and (d) creating meaning and purpose in life by adopting an orientation to social justice. We conclude with a proposed research agenda for radical hope. (PsycInfo Database Record (c) 2020 APA, all rights reserved)",
+            "author": [
+                {
+                    "family": "Mosley",
+                    "given": "Della V."
+                },
+                {
+                    "family": "Neville",
+                    "given": "Helen A."
+                },
+                {
+                    "family": "Chavez‐Dueñas",
+                    "given": "Nayeli Y."
+                },
+                {
+                    "family": "Adames",
+                    "given": "Hector Y."
+                },
+                {
+                    "family": "Lewis",
+                    "given": "Jioni A."
+                },
+                {
+                    "family": "French",
+                    "given": "Bryana H."
+                }
+            ],
+            "container-title": "Social and Personality Psychology Compass",
+            "id": "mosley_radical_2020",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        1
+                    ]
+                ]
+            },
+            "keyword": "psychological well-being, Well Being, Faith, faith, Race and Ethnic Discrimination, Minority Groups, race, meaning, Social Justice, oppression, agency, ancestral pride, collective memory, Collective Memory, collective orientation, cultural relevance, Future, future orientation, History, hope, Hope, individual orientation, Individualism, Oppression, past orientation, people of color, Pride, Psychological Theories, purpose, Racial and Ethnic Relations, radical hope, Radical Movements, resistance",
+            "note": "Publisher: Wiley-Blackwell Publishing Ltd.",
+            "title": "Radical hope in revolting times: Proposing a culturally relevant psychological framework",
+            "title-short": "Radical hope in revolting times",
+            "type": "article-journal",
+            "volume": "14"
         },
         {
             "ISBN": "978-1-4338-3233-8",
@@ -3831,6 +3969,43 @@
             "type": "chapter"
         },
         {
+            "DOI": "10.1177/0011000020959007",
+            "ISSN": "0011-0000, 1552-3861",
+            "URL": "http://journals.sagepub.com/doi/10.1177/0011000020959007",
+            "abstract": "In this 2020 SCP Presidential Address amidst the COVID-19 pandemic and global uprisings against anti-Black racism, Anneliese Singh reflects on the potentialities of liberation for all counseling psychologists in every setting in which they labor. In doing so, she invites the embodiment and practices of liberation as a key value of counseling psychology.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        12,
+                        18
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Singh",
+                    "given": "Anneliese"
+                }
+            ],
+            "container-title": "The Counseling Psychologist",
+            "id": "singh_building_2020",
+            "issue": "8",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        11
+                    ]
+                ]
+            },
+            "page": "1109-1130",
+            "title": "Building a Counseling Psychology of Liberation: The Path Behind Us, Under Us, and Before Us",
+            "title-short": "Building a Counseling Psychology of Liberation",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
             "ISBN": "978-0-8058-3718-6",
             "abstract": "Includes bibliographical references and indexes.",
             "author": [
@@ -4042,6 +4217,596 @@
             "id": "noauthor_how_nodate",
             "title": "How can I do post-hoc pairwise comparisons in R?  R FAQ",
             "type": ""
+        },
+        {
+            "URL": "http://www.personality-project.org/revelle/syllabi/454/rosseel_sem_longitudinal.pdf",
+            "author": [
+                {
+                    "family": "Rosseel",
+                    "given": "Yves"
+                }
+            ],
+            "genre": "Workshop",
+            "id": "rosseel_longitudinal_2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher-place": "Bertinoro, Italy",
+            "title": "Longitudinal Structural Equation Modeling",
+            "type": ""
+        },
+        {
+            "DOI": "10.1080/00918369.2019.1591788",
+            "ISSN": "0091-8369",
+            "PMID": "30919736",
+            "URL": "https://doi.org/10.1080/00918369.2019.1591788",
+            "abstract": "This article reports the development and psychometric properties of scores on a new scale designed to assess views of the university/college campus climate concerning LGBTQ students and issues: Perceptions of the LGBTQ College Campus Climate Scale. This 6-item scale includes two subscales: College Response to LGBTQ Students and LGBTQ Stigma. We provide evidence for structural validity (via exploratory and confirmatory factor analyses) and reliability for scores on this new measure. Supporting construct validity, Perceptions of the LGBTQ College Campus Climate full scale and subscales were each positively correlated with experiences of LGBTQ victimization on campus, anxiety, and depression and negatively correlated with satisfaction with college and intention to persist in college. Relationships with mental health and academic outcomes held true, even after controlling for LGBTQ victimization experiences, providing support for incremental validity. Implications for future research and practice are discussed.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        2,
+                        6
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Szymanski",
+                    "given": "Dawn M."
+                },
+                {
+                    "family": "Bissonette",
+                    "given": "Danielle"
+                }
+            ],
+            "container-title": "Journal of Homosexuality",
+            "id": "szymanski_perceptions_2020",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        8
+                    ]
+                ]
+            },
+            "keyword": "discrimination, scale development, campus climate, LGBTQ, cissexism, heterosexism",
+            "note": "Publisher: Routledge _eprint: https://doi.org/10.1080/00918369.2019.1591788",
+            "page": "1412-1428",
+            "title": "Perceptions of the LGBTQ College Campus Climate Scale: Development and Psychometric Evaluation",
+            "title-short": "Perceptions of the LGBTQ College Campus Climate Scale",
+            "type": "article-journal",
+            "volume": "67"
+        },
+        {
+            "DOI": "10.1007/s11065-016-9319-z",
+            "ISSN": "1573-6660",
+            "URL": "https://doi.org/10.1007/s11065-016-9319-z",
+            "abstract": "Meta-analysis is widely accepted as the preferred method to synthesize research findings in various disciplines. This paper provides an introduction to when and how to conduct a meta-analysis. Several practical questions, such as advantages of meta-analysis over conventional narrative review and the number of studies required for a meta-analysis, are addressed. Common meta-analytic models are then introduced. An artificial dataset is used to illustrate how a meta-analysis is conducted in several software packages. The paper concludes with some common pitfalls of meta-analysis and their solutions. The primary goal of this paper is to provide a summary background to readers who would like to conduct their first meta-analytic study.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Cheung",
+                    "given": "Mike W.-L."
+                },
+                {
+                    "family": "Vijayakumar",
+                    "given": "Ranjith"
+                }
+            ],
+            "container-title": "Neuropsychology Review",
+            "id": "cheung_guide_2016",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        6
+                    ]
+                ]
+            },
+            "page": "121-128",
+            "title": "A Guide to Conducting a Meta-Analysis",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "DOI": "10.1001/jamasurg.2019.4523",
+            "ISSN": "2168-6254",
+            "URL": "https://doi.org/10.1001/jamasurg.2019.4523",
+            "abstract": "Meta-analysis is a systematic approach of synthesizing, combining, and analyzing data from multiple studies (randomized clinical trials or observational studies) into a single effect estimate to answer a research question. Meta-analysis is especially useful if there is debate around the research question in the literature published to date or the individual published studies are underpowered. Vital to a high-quality meta-analysis is a comprehensive literature search, prespecified hypothesis and aims, reporting of study quality, consideration of heterogeneity and examination of bias. In the hierarchy of evidence, meta-analysis appears above observational studies and randomized clinical trials because it rigorously collates evidence across a larger body of literature; however, meta-analysis is largely dependent on the quality of the primary data.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        1
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Arya",
+                    "given": "Shipra"
+                },
+                {
+                    "family": "Schwartz",
+                    "given": "Todd A."
+                },
+                {
+                    "family": "Ghaferi",
+                    "given": "Amir A."
+                }
+            ],
+            "container-title": "JAMA Surgery",
+            "id": "arya_practical_2020",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        5
+                    ]
+                ]
+            },
+            "page": "430-431",
+            "title": "Practical Guide to Meta-analysis",
+            "type": "article-journal",
+            "volume": "155"
+        },
+        {
+            "DOI": "10.1037/dhe0000147",
+            "ISSN": "1938-8926",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2019-59378-001&site=ehost-live",
+            "abstract": "This qualitative study examines how Black undergraduate students attending a predominately White institution (PWI) assess and interpret their university’s diversity and inclusion initiatives given their everyday experiences with campus-based racism. Using critical race theory (CRT) this article illuminates how Black students at a PWI interpret their university’s implementation of diversity and inclusion initiatives. The article illustrates how the students interpreted the rationale behind the university’s implementation of the diversity and inclusion initiatives, questioned who benefits from the implementation of the initiatives, and called attention to how the ineffectiveness of the PWIs initiatives impacted their sense of belonging. By employing the concept of interest-convergence as an analytical tool, this article used the students’ narratives to illustrate what happens when initiatives aimed at promoting a more equitable and inclusive campus racial climate converge with the interests of an institution that centers Whiteness. The findings from this study illustrate the ways in which White supremacy undergirds the university’s implementation of its diversity and inclusion initiatives and the reality it creates for Black students. (PsycINFO Database Record (c) 2019 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        7
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Lewis",
+                    "given": "Kaleea R."
+                },
+                {
+                    "family": "Shah",
+                    "given": "Payal P."
+                }
+            ],
+            "container-title": "Journal of Diversity in Higher Education",
+            "id": "lewis_black_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        10
+                    ]
+                ]
+            },
+            "keyword": "Test Construction, Diversity, College Students, Students, Racial and Ethnic Differences, Blacks, race, Racial and Ethnic Attitudes, racism, Racism, Educational Measurement, Black college students, diversity and inclusion, Narratives",
+            "note": "Publisher: Educational Publishing Foundation",
+            "title": "Black students’ narratives of diversity and inclusion initiatives and the campus racial climate: An interest-convergence analysis",
+            "title-short": "Black students’ narratives of diversity and inclusion initiatives and the campus racial climate",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.2307/2673270",
+            "ISSN": "00380407",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=eue&AN=507591795&site=ehost-live",
+            "abstract": "A study was conducted to examine the extent to which Latino students’ background characteristics and college experiences in the first and second years assist in their sense of belonging in the third year of college. Results indicate that discussions about courses with fellow students outside class and membership in religious and social-community organizations are strongly associated with students’ sense of belonging. First-year experiences have positive effects on Latino students, whereas perceptions of a hostile racial climate have a direct negative impact on students’ sense of belonging in the third year.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        16
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hurtado",
+                    "given": "Sylvia"
+                },
+                {
+                    "family": "Carter",
+                    "given": "Deborah Faye"
+                }
+            ],
+            "container-title": "Sociology of Education",
+            "id": "hurtado_effects_1997",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997,
+                        10
+                    ]
+                ]
+            },
+            "keyword": "Psychology, College students, Psychological adaptation, Associations, institutions, etc., College environment, College student adjustment, Education of Hispanic Americans, Hispanic American college students, Hispanic American students, Minority students, Universities & colleges",
+            "page": "324-345",
+            "title": "Effects of college transition and perceptions of the campus racial climate on Latino college students’ sense of belonging",
+            "type": "article-journal",
+            "volume": "70"
+        },
+        {
+            "DOI": "10.2307/2579670",
+            "ISSN": "0037-7732",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=1991-21226-001&site=ehost-live",
+            "abstract": "Argues that group members’ perceptions of cohesion are important for the behavior of the individual as well as the group as a whole. The author proposes that individuals’ perceptions of their own cohesion to a group include a sense of belonging and feelings of morale. This conceptualization and the adequacy of a newly developed Perceived Cohesion Scale were tested in 2 random samples: 102 students at a small college noted for its strong ’school spirit’ and 110 residents of a mid-sized city. Confirmatory factor analyses indicated a 2-factor model, with a high degree of invariance across the samples and with the 2 dimensions correlated over .90 in both. However, as anticipated, perceived cohesion was significantly higher in the college than the city sample. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        16
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Bollen",
+                    "given": "Kenneth A."
+                },
+                {
+                    "family": "Hoyle",
+                    "given": "Rick H."
+                }
+            ],
+            "container-title": "Social Forces",
+            "id": "bollen_perceived_1990",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990,
+                        12
+                    ]
+                ]
+            },
+            "keyword": "Perception, Group Dynamics, college students & city residents, Group Cohesion, individual group behavior, perceived cohesion",
+            "note": "Publisher: University of North Carolina Press",
+            "page": "479-504",
+            "title": "Perceived cohesion: A conceptual and empirical examination",
+            "title-short": "Perceived cohesion",
+            "type": "article-journal",
+            "volume": "69"
+        },
+        {
+            "DOI": "10.1108/S1479-364420160000019004",
+            "ISBN": "978-1-78635-710-6 978-1-78635-709-0",
+            "URL": "https://doi.org/10.1108/S1479-364420160000019004",
+            "abstract": "Over the past several decades, scholars and universities have made efforts to increase the retention of students in higher education, but graduation rates remain low. Whereas two-thirds of high school graduates attend college, fewer than half graduate. The likelihood of graduation decreases even more for Black, Latino, American Indian, and low-income students, who have a 12–15% lower chance of earning their degree. The importance of psychosocial adjustment to student persistence has received relatively less attention than academic and social integration. Racial/ethnic minority students face unique challenges to psychosocial adjustment in college, including prejudice and discrimination, unwelcoming campus environments, underrepresentation, and a lack of culturally appropriate counseling resources. The current chapter will discuss the impact of these challenges on the persistence, academic success, and health of racial/ethnic minority students, and strategies that universities can employ to create inclusive policies, resources and campus environments that empower students of color and maximize their success.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        18
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Iacovino",
+                    "given": "Juliette M."
+                },
+                {
+                    "family": "James",
+                    "given": "Sherman A."
+                }
+            ],
+            "collection-title": "Diversity in Higher Education",
+            "container-title": "The Crisis of Race in Higher Education: A Day of Discovery and Dialogue",
+            "id": "iacovino_retaining_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        1
+                    ]
+                ]
+            },
+            "page": "61-84",
+            "publisher": "Emerald Group Publishing Limited",
+            "title": "Retaining Students of Color in Higher Education: Expanding Our Focus to Psychosocial Adjustment and Mental Health",
+            "title-short": "Retaining Students of Color in Higher Education",
+            "type": "chapter",
+            "volume": "19"
+        },
+        {
+            "DOI": "10.1353/rhe.2006.0070",
+            "ISSN": "0162-5748",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2006-23268-004&site=ehost-live",
+            "abstract": "The 2005 ASHE Presidential Address focuses on the practical, theoretical, and empirical rationale for making diversity central to the institutional mission. Institutional efforts to prepare students for a diverse democracy is a transformational strategy for nurturing the development of the next generation of change agents who will work to close existing socioeconomic gaps. Higher education scholarship can be useful in shaping the agenda for change, and more attention can be devoted to positioning the research focused on inequality to identify areas of change. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        18
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hurtado",
+                    "given": "Sylvia"
+                }
+            ],
+            "container-title": "Review of Higher Education: Journal of the Association for the Study of Higher Education",
+            "id": "hurtado_linking_2007",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "keyword": "Educational Objectives, Higher Education, Affirmative Action, diversity, higher education, change agenda, civic missions, educational institutions, scholarship, socioeconomic gaps, transformational strategy",
+            "note": "Publisher: Johns Hopkins University Press",
+            "page": "185-196",
+            "title": "Linking Diversity with the Educational and Civic Missions of Higher Education",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.1037/cou0000430",
+            "ISSN": "0022-0167",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2020-20397-001&site=ehost-live",
+            "abstract": "The negative impacts of racism, including experiences of racial trauma, are well documented (e.g., Bryant-Davis & Ocampo, 2006; Carter, 2007). Because of the deleterious effects of racial trauma on Black people, interventions that facilitate the resistance and prevention of anti-Black racism are needed. Critical consciousness is one such intervention, as it is often seen as a prerequisite of resistance and liberation (Prilleltensky, 2003, 2008). To understand how individuals advance from being aware of anti-Black racism to engaging in actions to prevent and resist racial trauma, nonconfidential interviews with 12 Black Lives Matter activists were conducted. Using constructivist grounded theory (Charmaz, 2014) under critical-ideological and Black feminist-womanist lenses, a model of Critical Consciousness of Anti-Black Racism (CCABR) was co-constructed. The 3 processes involved in developing CCABR include: witnessing anti-Black racism, processing anti-Black racism, and acting critically against anti-Black racism. This model, including each of the categories and subcategories, are detailed herein and supported with quotations. The findings and discussion provide context-rich and practical approaches to help Black people, and counseling psychologists who serve them, prevent and resist racial trauma. (PsycInfo Database Record (c) 2021 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Mosley",
+                    "given": "Della V."
+                },
+                {
+                    "family": "Hargons",
+                    "given": "Candice N."
+                },
+                {
+                    "family": "Meiller",
+                    "given": "Carolyn"
+                },
+                {
+                    "family": "Angyal",
+                    "given": "Blanka"
+                },
+                {
+                    "family": "Wheeler",
+                    "given": "Paris"
+                },
+                {
+                    "family": "Davis",
+                    "given": "Candice"
+                },
+                {
+                    "family": "Stevens-Watkins",
+                    "given": "Danelle"
+                }
+            ],
+            "container-title": "Journal of Counseling Psychology",
+            "id": "mosley_critical_2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        1
+                    ]
+                ]
+            },
+            "keyword": "activism, Activism, anti-Black racism, Black Lives Matter, Blacks, critical consciousness, Critical Thinking, Discrimination, Feminism, Intervention, Prevention, Racial and Ethnic Groups, racial trauma, Racism, Test Construction, Trauma",
+            "note": "Publisher: American Psychological Association",
+            "page": "1-16",
+            "title": "Critical consciousness of anti-Black racism: A practical model to prevent and resist racial trauma",
+            "title-short": "Critical consciousness of anti-Black racism",
+            "type": "article-journal",
+            "volume": "68"
+        },
+        {
+            "URL": "https://christianscholars.com/guest-post-anti-asian-racism-during-the-pandemic-how-faculty-on-christian-campuses-can-support-asian-and-asian-american-students/",
+            "abstract": "During the pandemic, my wife and I often take extended walks around our neighborhood. During one particular walk, we waved to a man and his daughter (must have been around...",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kim",
+                    "given": "Paul Y."
+                }
+            ],
+            "container-title": "Christian Scholar’s Review",
+            "id": "kim_guest_2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        3
+                    ]
+                ]
+            },
+            "title": "Guest Post: Anti-Asian Racism during the Pandemic: How Faculty on Christian Campuses Can Support Asian and Asian American Students",
+            "title-short": "Guest Post",
+            "type": ""
+        },
+        {
+            "URL": "https://stopaapihate.org/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "id": "noauthor_stop_nodate",
+            "title": "STOP AAPI HATE",
+            "type": ""
+        },
+        {
+            "URL": "https://www.seattletimes.com/opinion/yes-asians-and-asian-americans-experience-racism/",
+            "abstract": "Maybe, at a deeper level, we tend to dismiss the impact of racism directed at Asians and Asian Americans, or when we learn of it, we are at a loss for how to adequately respond.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kim",
+                    "given": "Paul"
+                }
+            ],
+            "container-title": "The Seattle Times",
+            "id": "kim_yes_2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        3
+                    ]
+                ]
+            },
+            "note": "Section: Opinion",
+            "title": "Yes, Asians and Asian Americans experience racism",
+            "type": ""
+        },
+        {
+            "DOI": "10.1037/lat0000179",
+            "ISSN": "2578-8086",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2020-69785-001&site=ehost-live",
+            "abstract": "The psychological literature on AfroLatinidad is sparse. The absence of Blackness in Latinx Psychology is due in part to Mestizaje Racial Ideologies (MRIs), or the belief that all people of Latinx descent are racially mixed and therefore skin-color and phenotypical differences do not matter. This colonial and anti-Blackness ideology has been so deeply rooted in the Latinx ethos that its implications and manifestations are seldomly interrogated. In turn, we default to a praxis that often studies, describes, and conceptualizes Latinidad through racially homogenous and color-blind paradigms. Put succinctly, we produce and reproduce scientific knowledge that fails to capture the unique racialized experiences of Black Latinxs. To this end, the goal of this paper is to provide action guidelines that will help acknowledge and integrate Blackness into the field of Latinx Psychology and disrupt the pervasive raceless narrative of MRIs. To achieve this goal, a brief history of Blackness and anti-Blackness in Latin America are outlined, followed by a discussion on the invisibility of Blackness in Latinx Psychology. Drawing on theory of intersectionality, the Centering Racial and Ethnic Identity for Latinxs (C-REIL) framework, which underscores the role of race, ethnicity, racism and ethnocentrism in the study of Latinxs, is introduced as a prelude to five guidelines that include: (a) anchoring AfroLatinidad in historical knowledge, (b) dismantling anti-Blackness, (c) acknowledging and including the role of Blackness in Latinx Psychology research and practice, (d) valuing Blackness as a political stance, and (e) practicing Latinx Psychology without the White gaze. (PsycInfo Database Record (c) 2021 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Adames",
+                    "given": "Hector Y."
+                },
+                {
+                    "family": "Chavez-Dueñas",
+                    "given": "Nayeli Y."
+                },
+                {
+                    "family": "Jernigan",
+                    "given": "Maryam M."
+                }
+            ],
+            "collection-title": "AfroLatinidad: Theory, Research, and Practice",
+            "container-title": "Journal of Latinx Psychology",
+            "id": "adames_fallacy_2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        2
+                    ]
+                ]
+            },
+            "keyword": "AfroLatinxs, Blackness, Blacks, Centering, colorism, Cross Cultural Psychology, Ethnic Identity, Latinos/Latinas, mestizaje, Racial and Ethnic Differences, racism, Racism, Skin (Anatomy), Stereotyped Attitudes",
+            "note": "Publisher: Educational Publishing Foundation",
+            "page": "26-44",
+            "title": "The fallacy of a raceless Latinidad: Action guidelines for centering Blackness in Latinx psychology",
+            "title-short": "The fallacy of a raceless Latinidad",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "DOI": "10.1177/0022022119835979",
+            "ISSN": "0022-0221, 1552-5422",
+            "URL": "http://journals.sagepub.com/doi/10.1177/0022022119835979",
+            "abstract": "Evaluating sociocultural factors that may influence acculturation strategies rather than assuming homogeneity among different Latinx ethnic groups is important. A latent profile analysis with covariates was used to identify acculturation profiles in a sample of first-generation Central Florida Puerto Ricans (N = 381) along bidimensional behavioral, values, and ethnic identity indicators. We examined whether three contextual covariates including (a) perceived ethnicracial discrimination, (b) percentage of White Americans, and (c) percentage of Puerto Ricans residing in each participants’ zip code could help derive latent profile membership. Participants were categorized into three profiles. The first profile exhibited the highest levels of White American ethnic identity and high levels of Puerto Rican and White American cultural behaviors. The second profile described individuals with the lowest adherence to White American behaviors and ethnic identity. It also exhibited high attachment to Puerto Rican cultural values. The third profile exhibited high levels of Puerto Rican and White American cultural values and moderate levels of White American cultural behaviors and ethnic identity. An examination of covariates revealed that only perceived ethnic-racial discrimination had an influence on profile identification and membership, with likelihood of belonging to Profile 2 decreasing, and likelihood of belonging to Profile 1 increasing as perceived ethnic-racial discrimination increased. Perceived ethnicracial discrimination did not influence the likelihood of Profile 3 membership. Results highlight the importance of contextualizing acculturation.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Capielo Rosario",
+                    "given": "Cristalis"
+                },
+                {
+                    "family": "Adames",
+                    "given": "Hector Y."
+                },
+                {
+                    "family": "Chavez-Dueñas",
+                    "given": "Nayeli Y."
+                },
+                {
+                    "family": "Renteria",
+                    "given": "Roberto"
+                }
+            ],
+            "container-title": "Journal of Cross-Cultural Psychology",
+            "id": "capielo_rosario_acculturation_2019",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        5
+                    ]
+                ]
+            },
+            "page": "556-576",
+            "title": "Acculturation Profiles of Central Florida Puerto Ricans: Examining the Influence of Skin Color, Perceived Ethnic-Racial Discrimination, and Neighborhood Ethnic-Racial Composition",
+            "title-short": "Acculturation Profiles of Central Florida Puerto Ricans",
+            "type": "article-journal",
+            "volume": "50"
         }
     ],
     "project_biblios": [

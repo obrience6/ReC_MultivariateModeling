@@ -1,45 +1,0 @@
-"0","#obtained with the survey ID #"
-"0","#""surveyID"" should be the ID from above"
-"0","#""verbose"" prints messages to the R console"
-"0","#""label"", when TRUE, imports data as text responses; if FALSE prints the data as numerical responses"
-"0","#""convert"", when TRUE, attempts to convert certain question types to teh ""proper"" data type in R; because I don't like guessing, I want to set up my own factors."
-"0","#""force_request"", when TRUE, always downloads the survey from the API instead of from a temporary director (i.e., it always goes to the primary source)"
-"0",""
-"0","QTRX_df <- fetch_survey(surveyID = ""SV_b2cClqAlLGQ6nLU"",useLocalTime = TRUE,"
-"0","                         verbose = TRUE, label=FALSE, convert=FALSE, force_request = TRUE)"
-"1","  |                                                                            "
-"1","  |                                                                      |   0%"
-"1","  |                                                                            "
-"1","  |======================================================================| 100%"
-"1","
-"
-"2","Duplicated column names deduplicated: 'Q26_1' => 'Q26_1_1' [117], 'Q26_2' => 'Q26_2_1' [118], 'Q26_3' => 'Q26_3_1' [119]"
-"2","
-[36m--[39m [1m[1mColumn specification[1m[22m [36m--------------------------------------------------------[39m
-cols(
-  .default = col_double(),
-  StartDate = [34mcol_datetime(format = """")[39m,
-  EndDate = [34mcol_datetime(format = """")[39m,
-  RecordedDate = [34mcol_datetime(format = """")[39m,
-  ResponseId = [31mcol_character()[39m,
-  DistributionChannel = [31mcol_character()[39m,
-  UserLanguage = [31mcol_character()[39m,
-  Q26_5 = [33mcol_logical()[39m,
-  Q26_4 = [33mcol_logical()[39m,
-  Q26_6 = [33mcol_logical()[39m,
-  `4_Q33` = [33mcol_logical()[39m,
-  `4_Q35` = [33mcol_logical()[39m,
-  `4_Q49` = [33mcol_logical()[39m,
-  `4_Q38` = [33mcol_logical()[39m,
-  `4_Q37` = [33mcol_logical()[39m,
-  `5_Q33` = [33mcol_logical()[39m,
-  `5_Q35` = [33mcol_logical()[39m,
-  `5_Q49` = [33mcol_logical()[39m,
-  `5_Q38` = [33mcol_logical()[39m,
-  `5_Q37` = [33mcol_logical()[39m,
-  `6_Q33` = [33mcol_logical()[39m
-  # ... with 24 more columns
-)
-[36mi[39m Use [38;5;235m[48;5;253m[38;5;235m[48;5;253m`spec()`[48;5;253m[38;5;235m[49m[39m for the full column specifications.
-
-"

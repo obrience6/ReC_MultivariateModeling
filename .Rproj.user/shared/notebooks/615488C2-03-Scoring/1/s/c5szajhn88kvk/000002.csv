@@ -1,0 +1,18 @@
+"0","#install.packages(""formattable"")"
+"0","library(formattable)"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"0","CellsMiss <- percent(mean(is.na(scrub_df)))#what proportion of cells missing across entire dataset"
+"0","CaseComplete <- percent(mean(complete.cases(scrub_df)))#what proportion of cases (rows) are complete (nonmissing)"
+"0","CellsMiss"
+"1","[1]"
+"1"," 4.22%"
+"1","
+"
+"0","CaseComplete"
+"1","[1]"
+"1"," 82.14%"
+"1","
+"

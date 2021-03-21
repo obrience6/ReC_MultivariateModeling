@@ -1,0 +1,1 @@
+"0","write.table(scrub_df, file=""BlStItmsScrs210320.csv"", sep="","", col.names=TRUE, row.names=FALSE)"

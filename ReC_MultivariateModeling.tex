@@ -43,6 +43,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -102,7 +142,7 @@
 \chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
 
-\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 15 Mar 2021}
+\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 21 Mar 2021}
 
 To \emph{center} a variable in regression means to set its value at zero and interpret all other values in relation to this reference point. Regarding race and gender, researchers often center male and White at zero. Further, it is typical that research vignettes in statistics textbooks are similarly seated in a White, Western (frequently U.S.), heteronormative, framework. The purpose of this project is to create a set of open educational resources (OER) appropriate for doctoral and post-doctoral training that contribute to justice, equity, diversity, inclusion (JEDI), and social responsivity.
 
@@ -114,7 +154,7 @@ In this OER, research vignettes will be from recently published articles where: 
 
 \begin{figure}
 \centering
-\includegraphics{ReCenter_bookcover.jpg}
+\includegraphics{images/ReCenter_bookcover.jpg}
 \caption{An image of the book cover. It includes four quadrants of non-normal distributions representing gender, race/ethnicty, sustainability/global concerns, and journal articles}
 \end{figure}
 
@@ -187,6 +227,1822 @@ In this section I will talk about the options for using and learning the materia
 \item
   Making use of the practice problems.
 \end{enumerate}
+
+\hypertarget{scrub}{%
+\chapter{SCRUBBING}\label{scrub}}
+
+{[}Screencasted Lecture Link{]}
+
+The focus of this chapter is the process of starting with raw data and preparing it for multivariate analysis. To that end, we will address the conceptual considerations and practical steps in ``scrubbing and scoring.''
+
+A twist in this lesson is that we are asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of \emph{open science}, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to complete the survey titled, \href{https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU}{Rate-a-Recent-Course: A ReCentering Psych Stats Exercise}. The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB\# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.
+
+\hypertarget{navigating-this-lesson}{%
+\section{Navigating this Lesson}\label{navigating-this-lesson}}
+
+There is about \# hours and \#\# minutes of lecture. If you work through the materials with me it would be good to add another \#\# hours.
+
+\hypertarget{learning-objectives}{%
+\subsection{Learning Objectives}\label{learning-objectives}}
+
+Learning objectives from this lecture include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Import data from Qualtrics into R.
+\item
+  Begin the scrubbing process by applying exclusion and inclusion criteria.
+\item
+  Rename variables.
+\item
+  Create a smaller dataframe with variables appropriate for testing a specific statistical model.
+\item
+  Use critical data manipulation functions from the \emph{tidyverse} (and \emph{dplyr}) in particular such as \emph{filter()}, \emph{select()}, and \emph{mutate()} to prepare variables.
+\item
+  Articulate the initial steps in a workflow for scrubbing and scoring data.
+\end{itemize}
+
+\hypertarget{planning-for-practice}{%
+\subsection{Planning for Practice}\label{planning-for-practice}}
+
+The suggestions for practice will start with this chapter and continue in the next two chapters (Scoring, Data dx). Using Parent's \citeyearpar{parent_handling_2013} AIA approach to managing missing data, you will scrub-and-score a raw dataset. Options of graded complexity could incude:
+
+\begin{itemize}
+\tightlist
+\item
+  Repeating the steps in the chapter with the additional data (it is quite likely that more will have completed the survey)
+\item
+  Use the dataset that is the source of the chapter, but select a different set of variables for a model you woud like to test.
+\item
+  Begin with raw data to which you have access.
+\end{itemize}
+
+\hypertarget{readings-resources}{%
+\subsection{Readings \& Resources}\label{readings-resources}}
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+\begin{itemize}
+\item
+  Parent, M. C. (2013). Handling item-level missing data: Simpler is just as good. The Counseling Psychologist, 41(4), 568--600. \url{https://doi.org/10.1177/0011000012445176}
+\item
+  Kline, R. B. (2015). Data preparation and psychometrics review. In Principles and Practice of Structural Equation Modeling, Fourth Edition. Guilford Publications. \url{http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4000663}
+\item
+  Grolemund, G., \& Wickham, H. (n.d.). 5 Data transformation \textbar{} R for Data Science. Retrieved March 12, 2020, from \url{https://r4ds.had.co.nz/}
+\end{itemize}
+
+\hypertarget{packages}{%
+\subsection{Packages}\label{packages}}
+
+The script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#will install the package if not already installed}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(qualtRics))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"qualtRics"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(tidyverse))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(psych))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"psych"}\NormalTok{)\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{workflow-for-scrubbing-and-scoring}{%
+\section{Workflow for Scrubbing and Scoring}\label{workflow-for-scrubbing-and-scoring}}
+
+The following is a proposed workflow for preparing data for analysis.
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch02/scrubscore_wrkflow.jpg}
+\caption{An image of a workflow for scrubbing and scoring data.}
+\end{figure}
+
+Here is a narration of the figure:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The workflow begins by importing data into R. Most lessons in this series involve simulated data that are created directly in R. Alternatively, data could be:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    imported ``intRavenously'' through programs such as Qualtrics,
+  \item
+    exported from programs such as Qualtrics to another program (e.g., .xlxs, .csv)
+  \item
+    imported in other forms (e.g., .csv,.sps, .sav).
+  \end{itemize}
+\item
+  Scrubbing data by
+
+  \begin{itemize}
+  \tightlist
+  \item
+    variable naming,
+  \item
+    specifying variable characteristics such as factoring,
+  \item
+    ensuring that included particpiants consented to participation,
+  \item
+    determining and executing the inclusion and exclusion criteria.
+  \end{itemize}
+\item
+  Conduct preliminary data diagnostics such as
+
+  \begin{itemize}
+  \tightlist
+  \item
+    outlier anlaysis
+  \item
+    assessing for univariate and multivariate analysis
+  \item
+    making transformations and/or corrections
+  \end{itemize}
+\item
+  Managing missingness by one of two routes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Available information analysis \citep{parent_handling_2013} at either the item-level or scale level. The result is a single set of data for analysis. If missingness remains, options include pairwise deletion, listwise deletion, or specifying FIML (when available). Another option is to use multiple imputation.
+  \item
+    Multiple imputation at either scale level or item-level
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{research-vignette}{%
+\section{Research Vignette}\label{research-vignette}}
+
+To provide first-hand experience as both the respondent and analyst for the same set of data, you were asked to complete a survey titled, \href{https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU}{Rate-a-Recent-Course: A ReCentering Psych Stats Exercise}. If you haven't yet completed it, please consider doing so, now. In order to reduce the potential threats to validity by providing background information about the survey, I will wait to describe it until later in the chapter.
+
+The survey is administered in Qualtrics. In the chapter I teach two ways to import Qualtrics data into R. We will then use the data to work through the steps identified in the workflow.
+
+\hypertarget{working-the-problem}{%
+\section{Working the Problem}\label{working-the-problem}}
+
+\hypertarget{intravenous-qualtrics}{%
+\subsection{intRavenous Qualtrics}\label{intravenous-qualtrics}}
+
+I will demonstrate using a Qualtrics account at my institution, Seattle Pacific University. The only surveys in this account are for the \emph{Recentering Psych Stats} chapters and lessons. All surveys are designed to not capture personally identifying information.
+
+Access credentials for the institutional account, individual user's account, and survey are essential for getting the survey items and/or results to export into R. The Qualtrics website provides a tutorial for \href{https://www.qualtrics.com/support/integrations/api-integration/overview/\#GeneratingAnAPIToken}{generating an API token}.
+
+We need two pieces of information: the \textbf{root\_url} and an \textbf{API token}.
+
+\begin{itemize}
+\tightlist
+\item
+  Log into your respective qualtrics.com account.
+\item
+  Select Account Settings
+\item
+  Choose ``Qualtrics IDs'' from the user name dropdown
+\end{itemize}
+
+We need the \textbf{root\_url}. This is the first part of the web address for the Qualtrics account. For our institution it is: spupsych.az1.qualtrics.com
+
+The API token is in the box labeled, ``API.'' If it is empty, select, ``Generate Token.'' If you do not have this option, locate the \emph{brand administrator} for your Qualtrics account. They will need to set up your account so that you have API privileges.
+
+\emph{BE CAREFUL WITH THE API TOKEN} This is the key to your Qualtrics accounts. If you leave it in an .rmd file that you forward to someone else, this key and the base URL gives access to every survey in your account. If you share it, you could be releasing survey data to others that would violate confidentiality promises in an IRB application.
+
+If you mistakenly give out your API token you can generate a new one within your Qualtrics account and re-protect all its contents.
+
+You do need to change the API key/token if you want to download data from a different Qualtrics account. If your list of surveys generates the wrong set of surveys, restart R, make sure you have the correct API token and try again.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#only have to run this ONCE to draw from the same Qualtrics account...but will need to get different token if you are changing between accounts }
+\FunctionTok{library}\NormalTok{(qualtRics)}
+\CommentTok{\#qualtrics\_api\_credentials(api\_key = "mUgPMySYkiWpMFkwHale1QE5HNmh5LRUaA8d9PDg",}
+              \CommentTok{\#base\_url = "spupsych.az1.qualtrics.com", overwrite = TRUE, install = TRUE)}
+\end{Highlighting}
+\end{Shaded}
+
+\emph{all\_surveys()} generates a dataframe containing information about all the surveys stored on your Qualtrics account.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{surveys }\OtherTok{\textless{}{-}} \FunctionTok{all\_surveys}\NormalTok{() }
+\CommentTok{\#View this as an object (found in the right: Environment).  }
+\CommentTok{\#Get survey id \# for the next command}
+\CommentTok{\#If this is showing you the WRONG list of surveys, you are pulling from the wrong Qualtrics account (i.e., maybe this one instead of your own). Go back and change your API token (it saves your old one). Changing the API likely requires a restart of R.}
+\NormalTok{surveys}
+\end{Highlighting}
+\end{Shaded}
+
+To retrieve the survey, use the \emph{fetch\_survey()} function.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#obtained with the survey ID \#}
+\CommentTok{\#"surveyID" should be the ID from above}
+\CommentTok{\#"verbose" prints messages to the R console}
+\CommentTok{\#"label", when TRUE, imports data as text responses; if FALSE prints the data as numerical responses}
+\CommentTok{\#"convert", when TRUE, attempts to convert certain question types to teh "proper" data type in R; because I don\textquotesingle{}t like guessing, I want to set up my own factors.}
+\CommentTok{\#"force\_request", when TRUE, always downloads the survey from the API instead of from a temporary director (i.e., it always goes to the primary source)}
+\CommentTok{\# "import\_id", when TRUE includes the unique Qualtrics{-}assigned ID; since I have provided labels, I want false}
+\FunctionTok{library}\NormalTok{(qualtRics)}
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}} \FunctionTok{fetch\_survey}\NormalTok{(}\AttributeTok{surveyID =} \StringTok{"SV\_b2cClqAlLGQ6nLU"}\NormalTok{,}\AttributeTok{useLocalTime =} \ConstantTok{TRUE}\NormalTok{,}
+                         \AttributeTok{verbose =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{label=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{convert=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{force\_request =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{import\_id =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## -- Column specification --------------------------------------------------------
+## cols(
+##   .default = col_double(),
+##   StartDate = col_datetime(format = ""),
+##   EndDate = col_datetime(format = ""),
+##   RecordedDate = col_datetime(format = ""),
+##   ResponseId = col_character(),
+##   DistributionChannel = col_character(),
+##   UserLanguage = col_character(),
+##   Virtual_2 = col_logical(),
+##   Virtual_6 = col_logical(),
+##   `5_iPronouns` = col_logical(),
+##   `5_iGenderConf` = col_logical(),
+##   `5_iRace` = col_logical(),
+##   `5_iUS` = col_logical(),
+##   `5_iDis` = col_logical(),
+##   `6_iPronouns` = col_logical(),
+##   `6_iGenderConf` = col_logical(),
+##   `6_iRace` = col_logical(),
+##   `6_iUS` = col_logical(),
+##   `6_iDis` = col_logical(),
+##   `7_iPronouns` = col_logical(),
+##   `7_iGenderConf` = col_logical()
+##   # ... with 18 more columns
+## )
+## i Use `spec()` for the full column specifications.
+\end{verbatim}
+
+\emph{It is possible (and helpful, even) to import Qualtrics data that has been downloaded from Qualtrics as a .csv. I demo this in the Bonus Reel.}
+
+\hypertarget{about-the-rate-a-recent-course-survey}{%
+\subsection{\texorpdfstring{About the \emph{Rate-a-Recent-Course} Survey}{About the Rate-a-Recent-Course Survey}}\label{about-the-rate-a-recent-course-survey}}
+
+As a teaching activity for the ReCentering Psych Stats OER, the topic of the survey was selected to be consistent with the overall theme of OER. Specifically, the purpose of this study is to understand the campus climate for students whose identities make them vulnerable to bias and discrimination. These include students who are Black, non-Black students of color, LGBTQ+ students, international students, and students with disabilities.
+
+Although the dataset should provide the opportunity to test a number of statistical models, one working hypothesis that framed the study is that the there will be a greater sense of belonging and less bias and discrimination when there is similar representation (of identities that are often marginalized) in the instructional faculty and student body. Termed, ``structural diversity'' \citep{lewis_black_2019} this is likely an oversimplification. In fact, an increase in diverse representation without attention to interacting factors can increase hostility on campus \citep{hurtado_linking_2007}. Thus, we included the task of rating of a single course relates to the larger campus along the dimensions of belonging and bias/discrimination. For example, if a single class has higher ratings on issues of inclusivity, diversity, and respect, we would expect that sentiment to be echoed in the broader institution.
+
+Our design has notable limitations You will likely notice that we ask about demographic characteristics of the instructional staff and classmates in the course rated, but we do not ask about the demographic characteristics of the respondent. In making this decision, we likely lose important information; Iacovino and James \citeyearpar{iacovino_retaining_2016} have noted that White students perceive campus more favorably than Black student counterparts. We made this decision to protect the identity of the respondent. As you will see when we download the data, if a faculty member asked an entire class to take the survey, the datestamp and a handful of demographic identifiers could very likely identify a student. In certain circumstances, this might be risky in that private information (i.e., gender nonconformity, disclosure of a disability) or course evaluation data could be related back to the student.
+
+Further, the items that ask respondents to \emph{guess} the identities of the instructional staff and classmates are limited, and contrary to best practices in survey construction that recommend providing the option of a ``write-in'' a response. After consulting with a diverse group of stakeholders and subject matter experts (and revising the response options numerous times) I have attempted to center anti-Black racism in the U.S. \citep{mosley_critical_2021, mosley_radical_2020, singh_building_2020}. In fact, the display logic does not present the race items when the course is offered outside the U.S. There are only five options for race: \emph{biracial/multiracial}, \emph{Black}, \emph{non-Black person(s) of color}, \emph{White}, and \emph{I did not notice} (intended to capture a color-blind response). One unintended negative consequence of this design is that the response options could contribute to \emph{colorism} \citep{adames_fallacy_2021, capielo_rosario_acculturation_2019}. Another possibility is that the limited options may erase, or make invisible, other identities. At the time that I am writing the first draft of this chapter, the murder of six Asian American women in Atlanta has just occurred and anti-Asian racism has increased nearly 2000\% in the past year \citep{kim_guest_2021, kim_yes_2021, noauthor_stop_nodate}. While this survey is intended to assess campus climate as a function of race, it unfortunately does not distinguish between many identities that experience marginalization.
+
+In parallel, the items asking respondents to identity characteristics of the instructional staff along dimensions of gender, international status, and disability are ``large buckets'' and do not include ``write-in'' options. Similarly, there was no intent to cause harm by erasing or making invisible individuals whose identities are better defined by different descriptors. Further, no write-in items were allowed. This was also intentional to prevent potential harm caused by people who could leave inappropriate or harmful comments.
+
+\hypertarget{the-codebook}{%
+\subsection{The Codebook}\label{the-codebook}}
+
+In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the \emph{Recentering Psych Stats: Psychometric} OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the \href{./Bikos_ReCenteringPsychStats_ReCupload.pdf}{IRB application} and \href{https://osf.io/z84kh/}{pre-registration} can be helpful in the scrubbing and scoring process.
+
+Let's look ``live'' at the survey. In Qualtrics it is possible to \emph{print} a PDF that looks very similar to its presentation when someone is taking it. You can access that static version \href{./Rate_a_CoursePDF.pdf}{here}.
+
+We can export a \href{./Rate-a-Course_Codebook.pdf}{codebook}, that is, a Word (or PDF) version of the survey with all the coding. In Qualtrics the protocol is: Survey/Tools/ImportExport/Export Survey to Word. Then select all the options you want (especially ``Show Coded Values''). A tutorial provided by Qualtrics can be found \href{https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/import-and-export-surveys/}{here}. This same process can be used to print the PDF example I used above.
+
+It is almost impossible to give this lecture without some reference to Qualtrics and the features used in Qualtrics. An import of raw data from Qualtrics into R can be nightmare in that the Qualtrics-assigned variable names are numbers (e.g., QID1, QID2) -- but often out of order because the number is assigned when the question is first created. If the survey is reordered, the numbers get out of sequence.
+
+Similarly, values for Likert-type scales can also get out of order if the scale anchors are revised (which is common to do).
+
+I recommend providing custom variable names and recode values directly in Qualtrics before exporting them into R. A Qualtrics tutorial for this is provided \href{https://www.qualtrics.com/support/survey-platform/survey-module/question-options/recode-values/}{here}. In general, consider these qualities when creating variable names:
+
+\begin{itemize}
+\tightlist
+\item
+  Brevity: historically, SPSS variable names could be a maximum of 8 characters.
+\item
+  Intuitive: although variables can be renamed in R (e.g., for use in charts and tables), it is helpful when the name imported from Qualtrics provides some indication of what the variable is.
+\item
+  Systematic: start items in a scale with the same stem, followed by the item number -- ITEM1, ITEM2, ITEM3.
+\end{itemize}
+
+The Rate-a-Recent-Course survey was written using some special features in Qualtrics. These include
+
+\begin{itemize}
+\tightlist
+\item
+  Display logic
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Items that are U.S.-centric are only shown if the respondent is taking a course from an institution in the U.S. is a student in the U.S.
+  \end{itemize}
+\item
+  Loop and merge
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Because course may have multiple instructional staff, the information asking about demographic characteristics of the instructors is repeated according to the number input by the respondent
+  \end{itemize}
+\item
+  Random presentation of the 30 items asking about campus climate for the five groups of students
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Although this might increase the cognitive load of the survey, this helps ``spread out'' missingness for respondents who might tire of the survey and stop early
+  \end{itemize}
+\item
+  Rank ordering of the institutional level (department, school/faculty, campus/university) to which the respondent feels most connected
+\end{itemize}
+
+Looking at the QTRX\_df, \emph{StartDate} thru \emph{UserLanguage} are metadata created by Qualtrics. The remaining variables and associated value labels are in the \href{./Rate-a-Course_Codebook.pdf}{codebook}.
+
+\hypertarget{scrubbing}{%
+\section{Scrubbing}\label{scrubbing}}
+
+With a look at our survey, codebook, and imported data, we now get to the business of scRubbing (deleting those who did not give consent, deleting previews, etc.). This level of ``scrubbing'' precedes the more formal detection of outliers.
+
+\hypertarget{tools-for-data-transcodmation}{%
+\subsection{Tools for Data Transcodmation}\label{tools-for-data-transcodmation}}
+
+The next stages will provide some experience transforming data with \textbf{dplyr} from the \textbf{tidyverse}.
+
+The \textbf{tidyverse} is a system of packages (i.e,. when you download the tidyverse, you download all its packages/members) for data manipulation, exploration and visualization. The packages in the tidyverse share a common design philosophy. These were mostly developed by Hadley Wickham, but more recently, more designers are contributing to them. Tidyverse packages are intended to make statisticians and data scientists more productive by guiding them through workflows that facilitate communication and result in reproducible work products. Fundamentally, the tidyverse is about the connections between the tools that make the workflow possible. Critical packages in the tidyverse include:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{dplyr}: data manipulation: mutate, select, filter, summarize, arrange
+\item
+  \textbf{ggplot2}: extravagant graphing
+\item
+  \textbf{tibble}: a \emph{tibble} is a dataframe that provides the user with more (and less) control over the data.
+\item
+  \textbf{readr}: gives access to ``rectangular data'' like .csv and tables
+\item
+  \textbf{tidyr}: tidy data is where each variable is a column, each observation is a row, each value is a cell (duh). \textbf{tidyr}'s contributions are gather(wide to long) and spread(long to wide) as well as separate, extract, unite.
+\item
+  \textbf{purrr}: facilitates working with functions and vectors. For example, if you write a function, using purrr may help you replace loops with code that is more efficient and intuitive.
+\end{itemize}
+
+The tidyverse is ever-evolving -- so check frequently for updates and troubleshooting.
+
+A handy cheatsheet for data transformation is found \href{https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf}{here}.
+
+\hypertarget{inclusion-and-exclusion-criteria}{%
+\subsection{Inclusion and Exclusion Criteria}\label{inclusion-and-exclusion-criteria}}
+
+For me, the first pass at scrubbing is to eliminate the obvious. In our case this is includes \emph{previews} and respondents who did not consent to continue. Previews are the researcher-initiated responses usually designed to proofread or troubleshoot survey problems. There could be other first-pass-deletions, such as selecting response between certain dates.
+
+I think these first-pass deletions, especially the ones around consent, are important to do as soon as possible. Otherwise, we might delete some of the variables (e.g., timestamps, consent documentation, preview status) and neglect to delete these cases later in the process.
+
+We are here in the workflow:
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch02/wrkflow_prelim.jpg}
+\caption{An image of a workflow for scrubbing and scoring data.}
+\end{figure}
+
+We can either update the existing df (by using the same object), or creating a new df from the old. Either works. In my early years, I tended to create lots of new objects. As I have gained confidence in myself and in R, I'm inclined to update the existing df. Why? Because unless you write the object as an outfile (using the same name for the object as for the filename -- which I do not recommend), the object used in R does not change the source of the dat. Therefore, it is easy to correct early code and it keeps the global environment less cluttered.
+
+In this particular survey, the majority of respondents will take the survey because they clicked an \emph{anonymous} link provided by Qualtrics. Another Qualtrics distribution method is e-mail. At the time of this writing, we have not recruited by e-mail, but it is is possible we could do so in the future. What we should not include, though, are \emph{previews}. These are the times when the researcher is self-piloting the survey to look for errors and to troubleshoot.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# the filter command is used when we are making inclusion/exclusion decisions about rows}
+\CommentTok{\# != means do not include cases with "preview"}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.3     v purrr   0.3.4
+## v tibble  3.0.4     v dplyr   1.0.2
+## v tidyr   1.1.2     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.0
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{ (QTRX\_df, DistributionChannel }\SpecialCharTok{!=} \StringTok{"preview"}\NormalTok{)}
+
+\CommentTok{\#FYI, another way that doesn\textquotesingle{}t use tidyverse, but gets the same result}
+\CommentTok{\#QTRX\_df \textless{}{-} QTRX\_df[!QTRX\_df$DistributionChannel == "preview",]}
+\end{Highlighting}
+\end{Shaded}
+
+APA Style, and in particular the Journal Article Reporting Standards (JARS) for quantitative research specify that we should report the frequency or percentages of missing data. We would start our counting \emph{after} eliminating the previews.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# I created an object that lists how many rows/cases remain.}
+\CommentTok{\# I used inline text below to update the text with the new number}
+\NormalTok{attempts }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(QTRX\_df)}
+\NormalTok{attempts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 29
+\end{verbatim}
+
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 29 individuals opened the survey link.
+
+Next let's filter in only those who consented to take the survey. Because Qualtrics discontinued the survey for everyone who did not consent, we do not have to worry that their data is unintentionally included, but it can be useful to mention the number of non-consenters in the summary of missing data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# == are used }
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}}\NormalTok{(}\FunctionTok{filter}\NormalTok{ (QTRX\_df, Consent }\SpecialCharTok{==} \DecValTok{1}\NormalTok{))}
+\NormalTok{consented\_attempts }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(QTRX\_df)}
+\NormalTok{consented\_attempts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 29
+\end{verbatim}
+
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 29 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items.
+
+In this particular study, the categories used to collect race were U.S.-centric. Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}}\NormalTok{(}\FunctionTok{filter}\NormalTok{ (QTRX\_df, USinst }\SpecialCharTok{==} \DecValTok{0}\NormalTok{))}
+\NormalTok{US\_inclusion }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(QTRX\_df)}
+\NormalTok{US\_inclusion}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 29
+\end{verbatim}
+
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 29 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.
+
+\hypertarget{renaming-variables}{%
+\subsection{Renaming Variables}\label{renaming-variables}}
+
+Even though we renamed the variables in Qualtrics, the loop-and-merge variables were auto-renamed such that they each started with a number. I cannot see how to rename these from inside Qualtrics. A potential problem is that, in R, when variable names start with numbers, they need to be surrounded with single quotation marks. I find it easier to rename them now. I used ``i'' to start the variable name to represent ``instructor.''
+
+The form of the \emph{rename()} function is this:
+df\_named \textless- rename(df\_raw, NewName1 = OldName1)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}} \FunctionTok{rename}\NormalTok{(QTRX\_df, }\AttributeTok{iRace1 =} \StringTok{\textquotesingle{}1\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace2 =} \StringTok{\textquotesingle{}2\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace3 =} \StringTok{\textquotesingle{}3\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace4 =} \StringTok{\textquotesingle{}4\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace5 =} \StringTok{\textquotesingle{}5\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace6 =} \StringTok{\textquotesingle{}6\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace7 =} \StringTok{\textquotesingle{}7\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace8 =} \StringTok{\textquotesingle{}8\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace9 =} \StringTok{\textquotesingle{}9\_iRace\textquotesingle{}}\NormalTok{, }\AttributeTok{iRace10 =} \StringTok{\textquotesingle{}10\_iRace\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Also in Qualtrics, it was not possible to rename the variable (formatted with sliders) that asked respondents to estimate the proportion of classmates in each race-based category. Using the codebook, we can do this now. I will use ``cm'' to precede each variable name to represent ``classmates.''
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}} \FunctionTok{rename}\NormalTok{(QTRX\_df, }\AttributeTok{cmBiMulti =}\NormalTok{ Race\_10, }\AttributeTok{cmBlack =}\NormalTok{ Race\_1, }\AttributeTok{cmNBPoC =}\NormalTok{ Race\_7, }\AttributeTok{cmWhite =}\NormalTok{ Race\_8, }\AttributeTok{cmUnsure =}\NormalTok{ Race\_2)}
+\end{Highlighting}
+\end{Shaded}
+
+Let's also create an ID variable (different from the lengthy Qualtrics-issued ID) and then move it to the front of the distribution.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#library(dplyr)}
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}}\NormalTok{ QTRX\_df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{mutate}\NormalTok{(}\AttributeTok{ID =} \FunctionTok{row\_number}\NormalTok{())}
+
+\CommentTok{\#moving the ID number to the first column; requires }
+\NormalTok{QTRX\_df }\OtherTok{\textless{}{-}}\NormalTok{ QTRX\_df}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{select}\NormalTok{(ID, }\FunctionTok{everything}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{downsizing-the-dataframe}{%
+\subsection{Downsizing the Dataframe}\label{downsizing-the-dataframe}}
+
+Although researchers may differ in their approach, my tendency is to downsize the df to the variables I will be using in my study. These could include variables in the model, demographic variables, and potentially auxillary variables (i.e,. variables not in the model, but that might be used in the case of multiple imputation).
+
+This particular survey did not collect demographic information, so that will not be used. The model that I will demonstrate in this research vignette examines the the respondent's perceived campus climate for students who are Black, predicted by the the respondent's own campus belonging, and also the \emph{structural diversity} \citep{lewis_black_2019} proportions of Black students in the classroom and BIPOC (Black, Indigenous, and people of color) instructional staff.
+
+\emph{I would like to assess the model by having the instructional staff variable to be the \%Black instructional staff. At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.}
+
+The \emph{select()} function can let us list the variables we want to retain.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#You can use the ":" to include all variables from the first to last variable in any sequence; I could have written this more efficiently.  I just like to "see" my scales and clusters of variables.}
+
+\NormalTok{Model\_df }\OtherTok{\textless{}{-}}\NormalTok{(}\FunctionTok{select}\NormalTok{ (QTRX\_df, ID, iRace1, iRace2, iRace3, iRace4, iRace5, iRace6, iRace7, iRace8, iRace9, iRace10, cmBiMulti, cmBlack, cmNBPoC, cmWhite, cmUnsure, Belong\_1}\SpecialCharTok{:}\NormalTok{Belong\_3, Blst\_1}\SpecialCharTok{:}\NormalTok{Blst\_6))}
+\end{Highlighting}
+\end{Shaded}
+
+It can be helpful to save outfiles of progress as we go along. Here I save this raw file.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.table}\NormalTok{(Model\_df, }\AttributeTok{file=}\StringTok{"BlackStntsModel210318.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{","}\NormalTok{, }\AttributeTok{col.names=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{row.names=}\ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{steps-toward-the-apa-style-write-up}{%
+\section{Steps Toward the APA Style Write-up}\label{steps-toward-the-apa-style-write-up}}
+
+\hypertarget{methodprocedure}{%
+\subsection{Method/Procedure}\label{methodprocedure}}
+
+Data screening suggested that 29 individuals opened the survey link. Of those, 29 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.
+
+\hypertarget{practice-problems}{%
+\section{Practice Problems}\label{practice-problems}}
+
+Starting with this chapter, the practice problems for this and the next two chapters (i.e., Scoring, Data dx) are connected. Whatever practice option(s) you choose, please (a) use raw data that (b) has some data missing. This second criteria will be important in the subsequent chapters.
+
+The three problems below are listed in the order of graded complexity. If you are just getting started, you may wish to start with the first problem. If you are more confident, choose the second or third option.
+
+\hypertarget{problem-1-rework-the-chapter-problem}{%
+\subsection{Problem \#1: Rework the Chapter Problem}\label{problem-1-rework-the-chapter-problem}}
+
+Because the \emph{Rate-a-Recent-Course} survey remains open, it is quite likely that there will be more participants who have taken the survey since this chapter was last updated. If not -- please encourage a peer to take it. Even one additional response will change the results. This practice problem encourages you to rework the chapter, as written, with the updated data from the survey.
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+Assignment Component & Points Possible & Points Earned \\
+\midrule
+\endhead
+1. Import the data from Qualtrics & 5 & \_\_\_\_\_ \\
+2. Exclude all previews & 5 & \_\_\_\_\_ \\
+3. Include only those who consented & 5 & \_\_\_\_\_ \\
+4. Exclude those whose institutions are outside the U.S. & 5 & \_\_\_\_\_ \\
+5. Rename variables & 5 & \_\_\_\_\_ \\
+6. Downsize the dataframe to the variables of interest & 5 & \_\_\_\_\_ \\
+7. Write up of preliminary results & 5 & \_\_\_\_\_ \\
+8. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 40 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables}{%
+\subsection{\texorpdfstring{Problem \#2: Use the \emph{Rate-a-Recent-Course} Survey, Choosing Different Variables}{Problem \#2: Use the Rate-a-Recent-Course Survey, Choosing Different Variables}}\label{problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables}}
+
+Before starting this option, choose a minimum of three variables from the \emph{Rate-a-Recent-Course} survey to include in a simple statistical model. Work through the chapter making decisions that are consistent with the research model you have proposed. There will likely be differences at several points in the process. For example, you may wish to include (not exclude) data where the rated-course was offered by an institution outside the U.S. Different decisions may involve an internet search for the R script you will need as you decide on inclusion and exclusion criteria.
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+Assignment Component & Points Possible & Points Earned \\
+\midrule
+\endhead
+1. Import the data from Qualtrics & 5 & \_\_\_\_\_ \\
+2. Exclude all previews & 5 & \_\_\_\_\_ \\
+3. Include only those who consented & 5 & \_\_\_\_\_ \\
+4. Other exclusionary/inclusionary criteria? & 5 & \_\_\_\_\_ \\
+5. Rename variables & 5 & \_\_\_\_\_ \\
+6. Downsize the dataframe to the variables of interest & 5 & \_\_\_\_\_ \\
+7. Write up of preliminary results & 5 & \_\_\_\_\_ \\
+8. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 40 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-3-other-data}{%
+\subsection{Problem \#3: Other data}\label{problem-3-other-data}}
+
+Using raw data for which you have access, use the chapter as a rough guide. Your data will likely have unique characteristics that may involved searching for solutions beyond this chapter/OER.
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+Assignment Component & Points Possible & Points Earned \\
+\midrule
+\endhead
+1. Import the data & 5 & \_\_\_\_\_ \\
+2. Include only those who consented & 5 & \_\_\_\_\_ \\
+3. Apply other exclusionary/inclusionary critera & 5 & \_\_\_\_\_ \\
+4. Addressing unique concerns & 5 & \_\_\_\_\_ \\
+5. Rename variables & 5 & \_\_\_\_\_ \\
+6. Downsize the dataframe to the variables of interest & 5 & \_\_\_\_\_ \\
+7. Write up of preliminary results & 5 & \_\_\_\_\_ \\
+8. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 40 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{bonus-track}{%
+\section{Bonus Track:}\label{bonus-track}}
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=6.45833in,height=2.19792in]{images/film-strip-1.jpg}
+\caption{Image of a filmstrip}\label{id}
+}
+\end{figure}
+
+\hypertarget{importing-data-from-an-exported-qualtrics-.csv-file}{%
+\subsection{Importing data from an exported Qualtrics .csv file}\label{importing-data-from-an-exported-qualtrics-.csv-file}}
+
+The lecture focused on the ``intRavenous'' import. It is is also possible to download the Qualtrics data in a variety of formats (e.g., CSV, Excel, SPSS). Since I got started using files with the CSV extension (think ``Excel'' lite), that is my preference.
+
+In Qualtrics, these are the steps to download the data: Projects/YOURsurvey/Data \& Analysis/Export \& Import/Export data/CSV/Use numeric values
+
+I think that it is critical that to save this file in the same folder as the .rmd file that you will use with the data.
+
+R is sensitive to characters used filenames As downloaded, my Qualtrics .csv file had a long name with spaces and symbols that are not allowed. Therore, I gave it a simple, sensible, filename, ``ReC\_Download210319.csv''. An idiosyncracy of mine is to datestamp filenames. I use two-digit representations of the year, month, and date so that if the letters preceding the date are the same, the files would alphabetize automatically.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(qualtRics)}
+\NormalTok{QTRX\_csv }\OtherTok{\textless{}{-}} \FunctionTok{read\_survey}\NormalTok{(}\StringTok{"ReC\_Download210319.csv"}\NormalTok{, }\AttributeTok{strip\_html =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{import\_id =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{time\_zone=}\ConstantTok{NULL}\NormalTok{, }\AttributeTok{legacy =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## -- Column specification --------------------------------------------------------
+## cols(
+##   .default = col_double(),
+##   StartDate = col_datetime(format = ""),
+##   EndDate = col_datetime(format = ""),
+##   RecordedDate = col_datetime(format = ""),
+##   ResponseId = col_character(),
+##   DistributionChannel = col_character(),
+##   UserLanguage = col_character(),
+##   Virtual = col_number(),
+##   `5_iPronouns` = col_logical(),
+##   `5_iGenderConf` = col_logical(),
+##   `5_iRace` = col_logical(),
+##   `5_iUS` = col_logical(),
+##   `5_iDis` = col_logical(),
+##   `6_iPronouns` = col_logical(),
+##   `6_iGenderConf` = col_logical(),
+##   `6_iRace` = col_logical(),
+##   `6_iUS` = col_logical(),
+##   `6_iDis` = col_logical(),
+##   `7_iPronouns` = col_logical(),
+##   `7_iGenderConf` = col_logical(),
+##   `7_iRace` = col_logical()
+##   # ... with 17 more columns
+## )
+## i Use `spec()` for the full column specifications.
+\end{verbatim}
+
+Although minor tweaking may be required, the same script above should be applicable to this version of the data.
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.0.4 (2021-02-15)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18362)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] forcats_0.5.0   stringr_1.4.0   dplyr_1.0.2     purrr_0.3.4    
+##  [5] readr_1.4.0     tidyr_1.1.2     tibble_3.0.4    ggplot2_3.3.3  
+##  [9] tidyverse_1.3.0 qualtRics_3.1.4
+## 
+## loaded via a namespace (and not attached):
+##  [1] tidyselect_1.1.0  sjlabelled_1.1.7  xfun_0.19         haven_2.3.1      
+##  [5] colorspace_2.0-0  vctrs_0.3.6       generics_0.1.0    htmltools_0.5.0  
+##  [9] yaml_2.2.1        rlang_0.4.9       pillar_1.4.7      glue_1.4.2       
+## [13] withr_2.3.0       DBI_1.1.0         dbplyr_2.0.0      modelr_0.1.8     
+## [17] readxl_1.3.1      lifecycle_0.2.0   munsell_0.5.0     gtable_0.3.0     
+## [21] cellranger_1.1.0  rvest_0.3.6       evaluate_0.14     knitr_1.30       
+## [25] curl_4.3          fansi_0.4.1       broom_0.7.3       Rcpp_1.0.5       
+## [29] backports_1.2.0   scales_1.1.1      jsonlite_1.7.2    fs_1.5.0         
+## [33] hms_0.5.3         digest_0.6.27     stringi_1.5.3     insight_0.11.1   
+## [37] bookdown_0.21     grid_4.0.4        cli_2.2.0         tools_4.0.4      
+## [41] magrittr_2.0.1    crayon_1.3.4      pkgconfig_2.0.3   ellipsis_0.3.1   
+## [45] xml2_1.3.2        reprex_0.3.0      lubridate_1.7.9.2 assertthat_0.2.1 
+## [49] rmarkdown_2.6     httr_1.4.2        rstudioapi_0.13   R6_2.5.0         
+## [53] compiler_4.0.4
+\end{verbatim}
+
+\hypertarget{score}{%
+\chapter{SCORING}\label{score}}
+
+{[}Screencasted Lecture Link{]}
+
+The focus of this chapter is to continue the process of scrubbing-and-scoring. We continue with the raw data we downloaded and prepared in teh prior chapter. In this chapter we analyze and manage missingness, score scales/subscales, and represent our work with an APA-style write-up. To that end, we will address the conceptual considerations and practical steps in this process.
+
+\hypertarget{navigating-this-lesson-1}{%
+\section{Navigating this Lesson}\label{navigating-this-lesson-1}}
+
+There is about \# hours and \#\# minutes of lecture. If you work through the materials with me it would be good to add another \#\# hours.
+
+\hypertarget{learning-objectives-1}{%
+\subsection{Learning Objectives}\label{learning-objectives-1}}
+
+Learning objectives from this lecture include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Recognize the key components of data loss mechanisms (MCAR, MAR, MNAR), including how to diagnose MCAR.
+\item
+  Interpret missingness figures produced by packages such as \emph{mice} and \emph{Amelia}.
+\item
+  Articulate a workflow for scrubbing and scoring data.
+\item
+  Use critical data manipulation functions from \emph{dplyr} including \emph{filter()}, \emph{select()}, and \emph{mutate()} to prepare variables.
+\item
+  Interpret code related to missingness (i.e., ``is.na'', ``!is.na'') and the pipe (\%\textgreater\%)
+\end{itemize}
+
+\hypertarget{planning-for-practice-1}{%
+\subsection{Planning for Practice}\label{planning-for-practice-1}}
+
+Using Parent's \citeyearpar{parent_handling_2013} AIA approach to managing missing data, ``scrub and score'' a raw dataset. Options of graded complexity could incude:
+
+\begin{itemize}
+\tightlist
+\item
+  Repeating the steps in the chapter; differences will be in the number of people who have completed the survey since the chapter was written.
+\item
+  Use the dataset that is the source of the chapter, but score a DIFFERENT SET OF ITEMS -- MUST SPECIFY.
+\item
+  Begin with raw data to which you have access.
+\end{itemize}
+
+\hypertarget{readings-resources-1}{%
+\subsection{Readings \& Resources}\label{readings-resources-1}}
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+\begin{itemize}
+\item
+  Parent, M. C. (2013). Handling item-level missing data: Simpler is just as good. The Counseling Psychologist, 41(4), 568--600. \url{https://doi.org/10.1177/0011000012445176}
+\item
+  Kline, R. B. (2015). Data preparation and psychometrics review. In Principles and Practice of Structural Equation Modeling, Fourth Edition. Guilford Publications. \url{http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4000663}
+\item
+  Grolemund, G., \& Wickham, H. (n.d.). 5 Data transformation \textbar{} R for Data Science. Retrieved March 12, 2020, from \url{https://r4ds.had.co.nz/}
+\item
+  Grolemund, G., \& Wickham, H. (n.d.). 3 Data visualization \textbar{} R for Data Science. Retrieved March 12, 2020, from \url{https://r4ds.had.co.nz/}
+\end{itemize}
+
+\hypertarget{packages-1}{%
+\subsection{Packages}\label{packages-1}}
+
+The script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(tidyverse))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(psych))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"psych"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(formattable))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"formattable"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(mice))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"mice"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(sjstats))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"sjstats"}\NormalTok{)\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{workflow-for-scrubbing-and-scoring-1}{%
+\section{Workflow for Scrubbing and Scoring}\label{workflow-for-scrubbing-and-scoring-1}}
+
+The following is a proposed workflow for preparing data for analysis.
+
+The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters. At this stage we are at preliminary data diagnosis.
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch02/wrkflow_prelimDx.jpg}
+\caption{An image of our stage in the workflow for scrubbing and scoring data.}
+\end{figure}
+
+\hypertarget{research-vignette-1}{%
+\section{Research Vignette}\label{research-vignette-1}}
+
+The research vignette comes from the survey titled, \href{https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU}{Rate-a-Recent-Course: A ReCentering Psych Stats Exercise} and is explained in the prior chapter. In the prior chapter we conducted super-preliminary scrubbing of variables that will allow us to examine the the respondent's perceived campus climate for students who are Black, predicted by the the respondent's own campus belonging, and also the \emph{structural diversity} proportions of Black students in the classroom and the BIPOC instructional staff. At present, I see this as a parallel mediation. That is, the perceived campus climate for Black students will be predicted by the respondent's sense of belonging, through the proportion of Black classmates and BIPOC (Black, Indigenous, and people of color)instructional staff.
+
+\emph{I would like to assess the model by having the instructional staff variable to be the \%Black instructional staff. At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.}
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch03/BlStuMod.jpg}
+\caption{An image of the statistical model for which we are preparing data.}
+\end{figure}
+
+First, though, let's take a more conceptual look at issues regarding missing data. We'll come back to details of the survey as we work with it.
+
+\hypertarget{on-missing-data}{%
+\section{On Missing Data}\label{on-missing-data}}
+
+On the topic of missing data, we follow the traditions in most textbooks. We start by considering \emph{data loss mechanisms} and options for \emph{managing missingness.}
+
+Although the workflow I recommend is fairly straightforward, the topic is not. Quantitative psychologist have produced volumes of research that supports and refutes all of these issues in detail. An in-deth review of this is found in Enders' \citep{enders_applied_2010} text.
+
+\hypertarget{data-loss-mechanisms}{%
+\subsection{Data Loss Mechanisms}\label{data-loss-mechanisms}}
+
+We generally classify missingess in data in three different ways \citep{kline_principles_2016, parent_handling_2013}:
+
+\textbf{Missing completely at random (MCAR)} is the ideal case (and often unrealistic in actual data). For variable \emph{Y} this mean that
+
+\begin{itemize}
+\tightlist
+\item
+  Missingness is due to a factor(s) completely unrelated to the missing data. Stated another way:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Missing observations differ from the observed scores only by chance; that is, whether scores on Y are missing or not missing is unrelated to \emph{Y} itself
+  \end{itemize}
+\item
+  The presence versus absence of data on \emph{Y} is unrelated to all other variables in the dataset. That is, the nonmissing data are just a random sample of scores that the researcher would have analyzed had the data been complete. We might think of it as \emph{haphazard} missing.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A respondent is interrupted, looks up, looks down, and skips an item.
+  \item
+    A computer glitch causes spotty missingness -- unrelated to any particular variable.
+  \end{itemize}
+\end{itemize}
+
+MCAR is the ideal state because results from it should not be biased as a function of the missingness.
+
+\textbf{Missing at random (MAR)} missing data arise from a process that is both measured and predictable in a particular sample. \emph{Admittedly the use of ``random'' in this term is odd, because, by definition, the missingness is not random.}
+
+Restated:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Missingness on Y is unrelated to Y itself, but
+\item
+  Missingness is on Y is correlated with other variables in the data set.
+\end{enumerate}
+
+Example: Men are less likely to respond to questions about mental health than women, but among men, the probability of responding is unrelated to their true mental health status.
+
+Kline \citeyearpar{kline_principles_2016} indicated that information loss due to MAR is potentially recoverable through imputation where missing scores are replaced by predicted scores. The predicted scores are generated from other variables in the data set that predict missingness on Y. If the strength of that prediction is reasonably strong, then results on Y after imputation may be relatively unbiased. In this sense, the MAR pattern is described as \emph{ignorable} with regard to potential bias. Two types of variables can be used to predict the missing data
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  variables that are in the prediction equation, and
+\item
+  \emph{auxiliary} variables (i.e., variables in the dataset that are not in the prediction equation).
+\end{enumerate}
+
+Parent \citeyearpar{parent_handling_2013} noted that multiple imputation and expectation maximization have frequently been used to manage missingness in MAR circumstances.
+
+\textbf{Missing not at random (MNAR)} is when the presence versus absence of scores on \emph{Y} depend on \emph{Y} itself. This is \emph{non-ignorable}.
+
+For example, if a patient drops out of a medical RCT because there are unpleasant side effects from the treatment, this discomfort is not measured, but the data is missing due to a process that is unknown in a particular data set. Results based on \emph{complete cases only} can be severely biased when the data loss pattern is MNAR. That is, a treatment may look more beneficial than it really is if data from patients who were unable to tolerate the treatment are lost.
+
+Parent \citeyearpar{parent_handling_2013} described MNAR a little differently -- but emphasized that the systematic missingness would be related to a variable outside the datset. Parent provided the example of items written in a manner that may be inappropriate for some participants (e.g., asking women about a relationship with their boyfriend/husband, when the woman might be in same gender relationship). If there were not demographic items that could identify the bias, this would be MNAR. Parent strongly advises researchers to carefully proofread and pilot surveys to avoid MNAR circumstances.
+
+Kline \citeyearpar{kline_principles_2016} noted that the choice of the method to deal with the incomplete records can make a difference in the results, and should be made carefully.
+
+\hypertarget{diagnosing-missing-data-mechanisms}{%
+\subsection{Diagnosing Missing Data Mechanisms}\label{diagnosing-missing-data-mechanisms}}
+
+The bad news is that we never really know (with certainty) the type of missing data mechanism in our data. The following tools can help understand the mechanisms that contribute to missingness.
+
+\begin{itemize}
+\tightlist
+\item
+  Missing data analyses often includes correlations that could predict missingness.
+\item
+  Little and Rubin \citep{little_statistical_2002} proposed a multivariate statistical test of the MCAR assumption that simultaneously compares complete versus incomplete cases on \emph{Y} across all other variables. If this comparison is significant, then the MCAR hypothesis is rejected.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To restate: we want a non-significant result; and we use the sometimes-backwards-sounding NHST (null hypothesis significance testing) language, ``MCAR cannot be rejected.''
+  \end{itemize}
+\item
+  MCAR can also be examined through a series of \emph{t} tests of the cases that have missing scores on Y with cases that have complete records on other variables. Unfortunately, sample sizes contribute to problems with interpretation. With low samples, they are underpowered; in large samples they can flag trivial differences.
+\end{itemize}
+
+If MCAR is rejected, we are never sure whether the data loss mechanism is MAR or MNAR. There is no magical statistical ``fix.'' Kline \citeyearpar{kline_principles_2016} wrote, ``About the best that can be done is to understand the nature of the underlying data loss pattern and accordingly modify your interpretation of the results'' (p.~85).
+
+\hypertarget{available-information-analysis}{%
+\subsection{Available Information Analysis}\label{available-information-analysis}}
+
+Parent \citeyearpar{parent_handling_2013} has created a set of recommendations that help us create a streamlined workflow for managing missing data. Parent concluded that in datasets with (a) low levels of missingness, (b) a reasonable sample size, and (c) adequate internal reliability of measures, that \emph{available information anlaysis} (AIA), mean substitution, and multiple imputation had similar results.
+
+Further, in simulation studies where there was (a) low sample size (\emph{n} = 50), (b) weak associations among items, and (c) a small number of missing items, AIA was equivalent to multiple imputation. Even in cases where the data conditions were the ``best'' (i.e., \emph{N} = 200, moderate correlations, at least 10 items), even 10\% missingness (overall) did not produce notable difference among the methods. That is, means, standard errors, and alphas were similar across the methods (AIA, mean substitution, multiple imputation).
+
+AIA is an older method of handling missing data that, as its name suggests, uses the \emph{available data} for analysis and excludes missing data points only for analyses in which the missing data point would be directly involved. This means
+
+\begin{itemize}
+\tightlist
+\item
+  In the case of research that uses multiple item scales, and analysis takes place at the scale level
+
+  \begin{itemize}
+  \tightlist
+  \item
+    AIA is used to generate \textbf{mean} scores for the scale using the available data without substituting or imputing values;
+  \item
+    This method generally produces a fairly complete set of scale-level data where
+
+    \begin{itemize}
+    \tightlist
+    \item
+      pairwise deletion (the whole row/case/person is skipped) can be used for many analyses that do not permit missing data: correlations, t-tests, ANOVA
+    \item
+      FIML can be specified in path analysis (if scale scores are missing) and CFA/SEM (where item-level data is required), and
+    \item
+      some statistics, such as principal components analysis (an item-level analysis) permit missing data,
+    \end{itemize}
+  \item
+    Of course, the researcher could still impute data, but why\ldots{}
+  \end{itemize}
+\end{itemize}
+
+Parent's\citeyearpar{parent_handling_2013} recommendations:
+
+\begin{itemize}
+\tightlist
+\item
+  Scale scores should be first calculated as a \emph{mean} (average) not a sum. Why?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Calculating a ``sum'' from available data will result in automatically lower scores in cases where there is missingness.
+  \item
+    If a sum is required (i.e., because you want to interpret some clinical level of something), calculate the mean first, do the analyse, then transform the results back into the whole-scale equivalent (multiply the mean by the number of items) for any interpretation (or do some math around the sum-level interpretation so that you can interpret a mean).
+  \item
+    For R script, do not write the script ({[}item1 + item2 + item3{]}/3) because this will return an empty entry for participants missing data (same problem as if you were to use sum). There are several functions for properly computing a mean; I will demo the \emph{mean\_n()} function from \emph{sjstats} package because it allows us to simultaneously specify the tolerance level (next item).
+  \end{itemize}
+\item
+  Determine your \emph{tolerance} for missingness (20\% seems to be common, although you could also look for guidance in the test manual/article). Then
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Run a ``percent missingness'' check on the level of analysis (i.e., total score, scale, or subscale) you are using. If you are using a total scale score, then check to see what percent is missing across all the items in the whole scale. In contrast, if you are looking at subscales, run the percent missing at that level.
+  \item
+    Parent \citeyearpar{parent_handling_2013} advised that the tolerance levels should be made mindfully. A four-item scale with one item missing, won't meet the 80\% threshold, so it may make sense to set a 75\% threshold for this scale.
+  \end{itemize}
+\item
+  ``Clearly and concisely detail the level of missingness'' in papers \citep[p.~595]{parent_handling_2013}. This includes
+
+  \begin{itemize}
+  \tightlist
+  \item
+    tolerance level for missing data by scale or subscale (e.g., 80\% or 75\%)
+  \item
+    the number of missing values out of all data points on that scale for all participants and the maximum by participant (e.g., ``For Scale X, a total of \# missing data points out of \#\#\# were observed with no participant missing more than a single point.'')
+  \item
+    verify a manual inspection of missing data for obvious patterns (e.g., abnormally high missing rates for only one or two items). This can be accomplished by requesting frequency output for the items and checking the nonmissing data points for each scale, ensuring there are no abnormal spikes in missingness (looking for MNAR).
+  \end{itemize}
+\item
+  Curiously, Parent \citeyearpar{parent_handling_2013} does not recommend that we run all the diagnostic tests. However, because recent reviewers have required them of me, I will demonstrate a series of them, including MCAR.
+\item
+  Reducing missingness starts at the survey design -- make sure that all people can answer all items (i.e,. relationship-related items may contain heterosexist assumptions\ldots which would result in an MNAR circumstance)
+\end{itemize}
+
+Very practically speaking, Parent's \citeyearpar{parent_handling_2013} recommendations follow us through the entire data analysis process.
+
+\begin{itemize}
+\tightlist
+\item
+  We will use a tolerance of 20\%.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We will create 2 variables (n\_miss and prop\_miss) for each of the scales, these will be used two ways.
+  \item
+    In combination, we will delete individuals who have 100\% missing data on these 3 scores (this was an individual decision for this particular dataset; it could be different depending on your analytic approach)
+  \item
+    We will calculate scale scores only on those with 80\% of data present.
+  \end{itemize}
+\item
+  After calculating the scale scores, we will return to analyzing the missingness, looking at the whole dataset.
+\end{itemize}
+
+\hypertarget{working-the-problem-1}{%
+\section{Working the Problem}\label{working-the-problem-1}}
+
+In the prior chapter we imported the data from Qualtrics and applied the broadest levels of inclusion (e.g., the course rated was offered from an institution in the U.S., the respondent consented to participation) and exclusion (e.g., the survey was not a preview). We then downsized the survey to include the variables we will use in our statistical model. We then saved the data in a .csv file.
+
+Presuming that you are working along with me in an .rmd file, if you have placed that file in the same folder as this .rmd file, the following code should read the data into your environment.
+
+I use \emph{different} names for the object/df in my R environment than I use for the filename that holds the data on my computer. Why? I don't want to accidentally overwrite this precious ``source'' of data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{ (}\StringTok{"BlackStntsModel210318.csv"}\NormalTok{, }\AttributeTok{head =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{sep =} \StringTok{","}\NormalTok{)}
+\FunctionTok{str}\NormalTok{(scrub\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    29 obs. of  25 variables:
+##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ iRace1   : int  3 3 3 3 1 3 3 3 1 0 ...
+##  $ iRace2   : int  1 NA 1 1 NA NA 3 NA NA 0 ...
+##  $ iRace3   : int  3 NA NA 3 NA NA NA NA NA 3 ...
+##  $ iRace4   : int  NA NA NA NA NA NA NA NA NA 3 ...
+##  $ iRace5   : logi  NA NA NA NA NA NA ...
+##  $ iRace6   : logi  NA NA NA NA NA NA ...
+##  $ iRace7   : logi  NA NA NA NA NA NA ...
+##  $ iRace8   : logi  NA NA NA NA NA NA ...
+##  $ iRace9   : logi  NA NA NA NA NA NA ...
+##  $ iRace10  : logi  NA NA NA NA NA NA ...
+##  $ cmBiMulti: int  0 0 0 2 5 15 0 0 0 7 ...
+##  $ cmBlack  : int  0 5 10 6 5 20 0 0 0 4 ...
+##  $ cmNBPoC  : int  39 10 30 19 10 30 40 5 30 13 ...
+##  $ cmWhite  : int  61 85 60 73 80 35 60 90 70 73 ...
+##  $ cmUnsure : int  0 0 0 0 0 0 0 5 0 3 ...
+##  $ Belong_1 : int  6 4 NA 5 4 5 6 7 6 3 ...
+##  $ Belong_2 : int  6 4 3 3 4 6 6 7 6 3 ...
+##  $ Belong_3 : int  7 6 NA 2 4 5 5 7 6 3 ...
+##  $ Blst_1   : int  5 6 NA 2 6 5 5 5 5 3 ...
+##  $ Blst_2   : int  3 6 5 2 1 1 4 4 3 5 ...
+##  $ Blst_3   : int  5 2 2 2 1 1 4 3 1 2 ...
+##  $ Blst_4   : int  2 2 2 2 1 2 4 3 2 3 ...
+##  $ Blst_5   : int  2 4 NA 2 1 1 4 4 1 3 ...
+##  $ Blst_6   : int  2 1 2 2 1 2 4 3 2 3 ...
+\end{verbatim}
+
+Let's think about how the variables in our model should be measured:
+
+\begin{itemize}
+\tightlist
+\item
+  DV: Campus Climate for Black Students (as perceived by the respondent)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    mean score of the 6 items on that scale (higher scores indicate a climate characterized by hostility, nonresponsiveness, and stigma)
+  \item
+    1 item needs to be reverse-coded
+  \item
+    this scale was adapted from the LGBT Campus Climate Scale \citep{szymanski_perceptions_2020}
+  \end{itemize}
+\item
+  IV: Belonging
+
+  \begin{itemize}
+  \tightlist
+  \item
+    mean score for the 3 items on that scale (higher scores indicate a greater sense of belonging)
+  \item
+    this scale is taken from the Sense of Belonging subscale from the Perceived Cohesion Scale \citep{bollen_perceived_1990}
+  \end{itemize}
+\item
+  Proportion of classmates who are Black
+
+  \begin{itemize}
+  \tightlist
+  \item
+    a single item
+  \end{itemize}
+\item
+  Proportion of instructional staff who are BIPOC
+
+  \begin{itemize}
+  \tightlist
+  \item
+    must be calculated from each of the single items for each instructor
+  \end{itemize}
+\end{itemize}
+
+Our next step is to conduct a preliminary missing data analysis at the item level, across the dataset we are using. The Campus Climate and Belonging scales are traditional in the sense that they have items that we sum. The variable representing proportion of classmates who are Black is a single item. The variable representing the proportion of instructional staff who are BIPOC must be calculated in a manner that takes into consideration the there may be multiple instructors. The survey allowed a respondent to name up to 10 instructors.
+
+Looking at the structure of our data, the iRace(1 thru 10) variables are in ``int'' or integer format. This means that they are represented as whole numbers. We need them to be represented as factors. R handles factors represented as words well. Therefore, let's use our codebook to reformat this variable, first from integer to factor and second represented with words instead of numbers.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace1\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace1\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace2\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace2\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace3\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace3\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace4\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace4\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace5\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace5\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace6\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace6\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace7\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace7\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace8\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace8\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace9\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace9\textquotesingle{}}\NormalTok{])}
+\NormalTok{scrub\_df[,}\StringTok{\textquotesingle{}iRace10\textquotesingle{}}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(scrub\_df[,}\StringTok{\textquotesingle{}iRace10\textquotesingle{}}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+Let's check the structure to see if they are factors.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(scrub\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    29 obs. of  25 variables:
+##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ iRace1   : Factor w/ 4 levels "0","1","2","3": 4 4 4 4 2 4 4 4 2 1 ...
+##  $ iRace2   : Factor w/ 3 levels "0","1","3": 2 NA 2 2 NA NA 3 NA NA 1 ...
+##  $ iRace3   : Factor w/ 2 levels "1","3": 2 NA NA 2 NA NA NA NA NA 2 ...
+##  $ iRace4   : Factor w/ 2 levels "2","3": NA NA NA NA NA NA NA NA NA 2 ...
+##  $ iRace5   : Factor w/ 0 levels: NA NA NA NA NA NA NA NA NA NA ...
+##  $ iRace6   : Factor w/ 0 levels: NA NA NA NA NA NA NA NA NA NA ...
+##  $ iRace7   : Factor w/ 0 levels: NA NA NA NA NA NA NA NA NA NA ...
+##  $ iRace8   : Factor w/ 0 levels: NA NA NA NA NA NA NA NA NA NA ...
+##  $ iRace9   : Factor w/ 0 levels: NA NA NA NA NA NA NA NA NA NA ...
+##  $ iRace10  : Factor w/ 0 levels: NA NA NA NA NA NA NA NA NA NA ...
+##  $ cmBiMulti: int  0 0 0 2 5 15 0 0 0 7 ...
+##  $ cmBlack  : int  0 5 10 6 5 20 0 0 0 4 ...
+##  $ cmNBPoC  : int  39 10 30 19 10 30 40 5 30 13 ...
+##  $ cmWhite  : int  61 85 60 73 80 35 60 90 70 73 ...
+##  $ cmUnsure : int  0 0 0 0 0 0 0 5 0 3 ...
+##  $ Belong_1 : int  6 4 NA 5 4 5 6 7 6 3 ...
+##  $ Belong_2 : int  6 4 3 3 4 6 6 7 6 3 ...
+##  $ Belong_3 : int  7 6 NA 2 4 5 5 7 6 3 ...
+##  $ Blst_1   : int  5 6 NA 2 6 5 5 5 5 3 ...
+##  $ Blst_2   : int  3 6 5 2 1 1 4 4 3 5 ...
+##  $ Blst_3   : int  5 2 2 2 1 1 4 3 1 2 ...
+##  $ Blst_4   : int  2 2 2 2 1 2 4 3 2 3 ...
+##  $ Blst_5   : int  2 4 NA 2 1 1 4 4 1 3 ...
+##  $ Blst_6   : int  2 1 2 2 1 2 4 3 2 3 ...
+\end{verbatim}
+
+They are now factors. Let's recode their representation as integers into representation as labels. We could totally recode each into itself, but I want to visually inspect to make sure it recodes correctly. Earlier I used ``i'' to indicate ``instructor''; I will simply changet that to ``t'' (teacher).
+
+The mutate code below is from dplyr -- a member of the tidyverse family. The use of the pipe (\%\textgreater\%) allows us to string together a number of commands into a single operation. I'm sure there are ways to do this with concatonated lists, but with copy and paste this was simple enough.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace1 =} \FunctionTok{recode}\NormalTok{(iRace1, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace2 =} \FunctionTok{recode}\NormalTok{(iRace2, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace3 =} \FunctionTok{recode}\NormalTok{(iRace3, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace4 =} \FunctionTok{recode}\NormalTok{(iRace4, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace5 =} \FunctionTok{recode}\NormalTok{(iRace5, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace6 =} \FunctionTok{recode}\NormalTok{(iRace6, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace7 =} \FunctionTok{recode}\NormalTok{(iRace7, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace8 =} \FunctionTok{recode}\NormalTok{(iRace8, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace9 =} \FunctionTok{recode}\NormalTok{(iRace9, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{tRace10 =} \FunctionTok{recode}\NormalTok{(iRace10, }\StringTok{"0"} \OtherTok{=} \StringTok{"Black"}\NormalTok{, }\StringTok{"1"} \OtherTok{=} \StringTok{"nBpoc"}\NormalTok{, }\StringTok{"2"} \OtherTok{=} \StringTok{"BiMulti"}\NormalTok{, }\StringTok{"3"} \OtherTok{=} \StringTok{"White"}\NormalTok{, }\StringTok{"4"} \OtherTok{=} \StringTok{"NotNotice"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Calculating the proportion of the not-White instructional staff could likely be accomplished a number of ways. My searching for solutions resulted in this. Hopefully it's a fair balance between intuitive and elegant coding. First, I created code that
+
+\begin{itemize}
+\tightlist
+\item
+  created a new variable (count.BIPOC) by
+\item
+  summing across the tRace1 through tRace10 variables,
+\item
+  assigning a count of ``1'',
+\item
+  each time the factor value was Black, nBpoc, or BiMulti
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{count.BIPOC }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(scrub\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"tRace1"}\NormalTok{, }\StringTok{"tRace2"}\NormalTok{, }\StringTok{"tRace3"}\NormalTok{, }\StringTok{"tRace4"}\NormalTok{, }\StringTok{"tRace5"}\NormalTok{, }\StringTok{"tRace6"}\NormalTok{, }\StringTok{"tRace7"}\NormalTok{, }\StringTok{"tRace8"}\NormalTok{, }\StringTok{"tRace9"}\NormalTok{, }\StringTok{"tRace10"}\NormalTok{)], }\DecValTok{1}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{sum}\NormalTok{(x }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"Black"}\NormalTok{, }\StringTok{"nBpoc"}\NormalTok{, }\StringTok{"BiMulti"}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+
+Next, I created a variable that counted the number of non-missing values across the tRace1 through tRace10 variables.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{count.nMiss }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(scrub\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"tRace1"}\NormalTok{, }\StringTok{"tRace2"}\NormalTok{, }\StringTok{"tRace3"}\NormalTok{, }\StringTok{"tRace4"}\NormalTok{, }\StringTok{"tRace5"}\NormalTok{, }\StringTok{"tRace6"}\NormalTok{, }\StringTok{"tRace7"}\NormalTok{, }\StringTok{"tRace8"}\NormalTok{, }\StringTok{"tRace9"}\NormalTok{, }\StringTok{"tRace10"}\NormalTok{)], }\DecValTok{1}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{sum}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(x)))}
+\end{Highlighting}
+\end{Shaded}
+
+Now to calculate the proportion of BIPOC instructional faculty for each case.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{iBIPOC\_pr }\OtherTok{=}\NormalTok{ scrub\_df}\SpecialCharTok{$}\NormalTok{count.BIPOC}\SpecialCharTok{/}\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{count.nMiss}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{missing-data-analysis-whole-df-and-item-level}{%
+\subsection{Missing Data Analysis: Whole df and Item level}\label{missing-data-analysis-whole-df-and-item-level}}
+
+In understanding missingness across the dataset, I think it is important to analyze and manage it, iteratively. We will start with a view of the whole df-level missingness. Subsequently, and consistent with the available information analysis {[}AIA; \citet{parent_handling_2013}{]} approach, we will score the scales and then look again at missingness, using the new information to update our decisions about how to manage it.
+
+Because we just created a host of new variables in creating the \emph{prop\_BIPOC} variable, let's downsize the df so that the calculations are sensible.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}}\NormalTok{(}\FunctionTok{select}\NormalTok{ (scrub\_df, ID, iBIPOC\_pr, cmBlack, Belong\_1}\SpecialCharTok{:}\NormalTok{Belong\_3, Blst\_1}\SpecialCharTok{:}\NormalTok{Blst\_6))}
+\end{Highlighting}
+\end{Shaded}
+
+With a couple of calculations, we create a proportion of item-level missingness.
+
+In this chunk I first calculate the number of missing (nmiss)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Calculating number and proportion of item{-}level missingness}
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{nmiss }\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(iBIPOC\_pr}\SpecialCharTok{:}\NormalTok{Blst\_6) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\#the colon allows us to include all variables between the two listed (the variables need to be in order)}
+\NormalTok{    is.na }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{    rowSums}
+
+\NormalTok{scrub\_df}\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{prop\_miss =}\NormalTok{ (nmiss}\SpecialCharTok{/}\DecValTok{11}\NormalTok{)}\SpecialCharTok{*}\DecValTok{100}\NormalTok{) }\CommentTok{\#11 is the number of variables included in calculating the proportion}
+\end{Highlighting}
+\end{Shaded}
+
+We can grab the descriptives for the \emph{prop\_miss} variable to begin to understand our data. I will create an object from it so I can use it with inline
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CaseMiss}\OtherTok{\textless{}{-}}\NormalTok{psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(scrub\_df}\SpecialCharTok{$}\NormalTok{prop\_miss)}
+\NormalTok{CaseMiss}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
+## X1    1 29 4.39 10.48      0    2.18   0   0 36.36 36.36 2.27     3.78 1.95
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0 to 36.3636364.
+
+At the time that I am lecturing this, the the amount of missing is not so aggregious that I want to eliminate any cases. That is, I'm willing to wait until after I score the items to make further decisions, then.
+
+Because (a) I want to teach it and (b) it is quite likely that we will receive responses with high levels of missingness, I will write code to eliminate cases with \(\geq\) 90\%.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{(scrub\_df, prop\_miss }\SpecialCharTok{\textless{}=} \DecValTok{90}\NormalTok{)  }\CommentTok{\#update df to have only those with at least 90\% of complete data}
+\end{Highlighting}
+\end{Shaded}
+
+To analyze missingness at this level, we need a df that has only the variables of interest. That is, variables like \emph{ID} and the \emph{prop\_miss} and \emph{nmiss} variables we created will interfere with an accurate assessment of missingness. I will update our df to eliminate these.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{ (}\SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(ID, nmiss, prop\_miss))}\CommentTok{\#further update to exclude the n\_miss and prop\_miss variables}
+\end{Highlighting}
+\end{Shaded}
+
+Missing data analysis commonly looks at proportions by:
+
+\begin{itemize}
+\tightlist
+\item
+  the entire df
+\item
+  rows/cases/people
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("formattable")}
+\FunctionTok{library}\NormalTok{(formattable)}
+\NormalTok{CellsMiss }\OtherTok{\textless{}{-}} \FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(scrub\_df)))}\CommentTok{\#what proportion of cells missing across entire dataset}
+\NormalTok{CaseComplete }\OtherTok{\textless{}{-}} \FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{complete.cases}\NormalTok{(scrub\_df)))}\CommentTok{\#what proportion of cases (rows) are complete (nonmissing)}
+\NormalTok{CellsMiss}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.39%
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CaseComplete}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 79.31%
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0 to 36.3636364. Across the dataset, 4.39\% of cells had missing data and 79.31\% of cases had nonmissing data.
+
+\hypertarget{analyzing-missing-data-patterns}{%
+\subsection{Analyzing Missing Data Patterns}\label{analyzing-missing-data-patterns}}
+
+One approach to analyzing missing data is to assess patterns of missingness. LECTURE? SOMEWHERE?
+
+Several R packages are popularly used for conducting such analyse. In the \emph{mice} package, \emph{md.pattern()} function provides a matrix with the number of columns + 1, in which each row corresponds to a missing data pattern (1 = observed, 0 = missing).
+
+Rows and columns are sorted in increasing amounts of missing information.
+
+The last column and row contain row and column counts, respectively.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Using the package: mice}
+\FunctionTok{library}\NormalTok{(mice)}
+
+\NormalTok{mice\_out }\OtherTok{\textless{}{-}} \FunctionTok{md.pattern}\NormalTok{(scrub\_df, }\AttributeTok{plot =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{rotate.names =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{mice\_out}
+\FunctionTok{write.csv}\NormalTok{ (mice\_out, }\AttributeTok{file=}\StringTok{"mice\_out.csv"}\NormalTok{) }\CommentTok{\#optional to write it to a .csv file}
+\end{Highlighting}
+\end{Shaded}
+
+The table lets you look at each missing pattern and see which variable(s) is/are missing. The output is in the form of a table that indicates the frequency of each pattern of missingness. Because I haven't (yet) figured out how to pipe objects from this table into the chapter, this text may dier from the patterns in the current data frame.
+
+Each row in the table represents a different pattern of missingness. At the time of writing, there are 5 patterns of missing data. The patterns are listed in descending order of the least amount of missingness. The most common pattern (23 cases, top row) is one with no missing data. One cases (is missing three cells -- three of the items assessing the campus climate for Black students, and so forth.
+
+In general, the data patterns represented a haphazard patterns of responding \citep{enders_applied_2010}.
+
+\hypertarget{missing-mechanisms}{%
+\subsection{Missing Mechanisms}\label{missing-mechanisms}}
+
+Remember Little's MCAR test. Recently it has a history of appearing, working with glitches, disappearing, and so forth. At the present time I cannot find a package that is working well. When I do, I will add this section.
+
+\hypertarget{scoring}{%
+\section{Scoring}\label{scoring}}
+
+So let's get to work to score up the measures for our analysis. Each step of this should involve careful cross-checking with the \href{./Rate-a-Course_Codebook.pdf}{codebook}.
+
+\hypertarget{reverse-scoring}{%
+\subsection{Reverse scoring}\label{reverse-scoring}}
+
+As we discovered previously, in the scale that assesses campus climate (higher scores reflect a more negative climate) one of our items (Blst\_1, ``My \emph{institution} provides a supportive environment for Black students.'') requires reverse-coding.
+
+To rescore:
+
+\begin{itemize}
+\tightlist
+\item
+  Create a \emph{new} variable (this is essential) that is designated as the reversed item. We might put a the letter ``r'' (for reverse scoring) at the beginning or end: rBlst\_1 or Blst\_1r. It does not matter; just be consistent.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We don't reverse score into the same variable because when you rerun the script, it just re-reverses the reversed score\ldots into infinity. It's very easy to lose your place.
+  \end{itemize}
+\item
+  The reversal is an \emph{equation} where you subtract the value in the item from the range/scaling + 1. For the our three items we subtract each item's value from 8.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scrub\_df}\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{rBlst\_1 =} \DecValTok{8} \SpecialCharTok{{-}}\NormalTok{ Blst\_1) }\CommentTok{\#if you had multiple items, you could add a pipe (\%\textgreater{}\%) at the end of the line and add more until the last one}
+\end{Highlighting}
+\end{Shaded}
+
+Per Parent \citeyearpar{parent_handling_2013} we will analyze missingness for each scale, separately.
+
+\begin{itemize}
+\tightlist
+\item
+  We will calculate scale scores on each scale separately when 80\% (roughly) of the data is present.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    this is somewhat arbitrary, on 4 item scales, I would choose 75\% (to allow one to be missing)
+  \item
+    on the 3 item scale, I will allow one item to be missing (65\%)
+  \end{itemize}
+\item
+  After calculating the scale scores, we will return to analyzing the missingness, looking at the whole df
+\end{itemize}
+
+The \emph{mean\_n()} function of \emph{sjstats} package has allows you to specify how many items (whole number) or what percentage of items should be present in order to get the mean. First, though, we should identify the variables (properly formatted, if rescoring was needed) that should be included in the calculation of each scale and subscale.
+
+In our case, the scale assessing belonging \citep{bollen_perceived_1990, hurtado_effects_1997} involves three items with no reversals. Our campus climate scale was adapted from Szymanski et al.'s LGBTQ College Campus Climate Scale \citep{szymanski_perceptions_2020}. While it has not been psychometrically evaluated for the purpose for which I am using it, I will follow the scoring structure in the journal article that introduces the measure. Specifically, the factor structure permits a total scale score and two subscales representing the college response and stigma.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(sjstats)}
+\CommentTok{\#Making the list of variables}
+\NormalTok{Belonging\_vars }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Belong\_1\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Belong\_2\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Belong\_3\textquotesingle{}}\NormalTok{)}
+\NormalTok{ResponseBL\_vars }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}rBlst\_1\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Blst\_4\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Blst\_6\textquotesingle{}}\NormalTok{)}
+\NormalTok{StigmaBL\_vars }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Blst\_2\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Blst\_3\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Blst\_5\textquotesingle{}}\NormalTok{)}
+\NormalTok{ClimateBL\_vars }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}rBlst\_1\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Blst\_4\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Blst\_6\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Blst\_2\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Blst\_3\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Blst\_5\textquotesingle{}}\NormalTok{ )}
+
+\CommentTok{\#Creating the new variables}
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{Belonging }\OtherTok{\textless{}{-}} \FunctionTok{mean\_n}\NormalTok{(scrub\_df[,Belonging\_vars], .}\DecValTok{65}\NormalTok{)}
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{ResponseBL }\OtherTok{\textless{}{-}} \FunctionTok{mean\_n}\NormalTok{(scrub\_df[,ResponseBL\_vars], .}\DecValTok{80}\NormalTok{)}
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{StigmaBL }\OtherTok{\textless{}{-}} \FunctionTok{mean\_n}\NormalTok{(scrub\_df[,StigmaBL\_vars], .}\DecValTok{80}\NormalTok{)}
+\NormalTok{scrub\_df}\SpecialCharTok{$}\NormalTok{ClimateBL }\OtherTok{\textless{}{-}} \FunctionTok{mean\_n}\NormalTok{(scrub\_df[,ClimateBL\_vars], .}\DecValTok{80}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Later it will be helpful to have a df with the item and scale-level variables. Let's save our \emph{scrub\_df} data for this and write it as an outfile.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.table}\NormalTok{(scrub\_df, }\AttributeTok{file=}\StringTok{"BlStItmsScrs210320.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{","}\NormalTok{, }\AttributeTok{col.names=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{row.names=}\ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{missing-analysis-scale-level}{%
+\section{Missing Analysis: Scale level}\label{missing-analysis-scale-level}}
+
+Let's return to analyzing the missingness, this time including the \emph{scale level} variables (without the individual items) that will be in our statistical model(s). First let's get the df down to the variables we want to retain:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scored }\OtherTok{\textless{}{-}}\NormalTok{(}\FunctionTok{select}\NormalTok{ (scrub\_df, iBIPOC\_pr, cmBlack, Belonging, ResponseBL, StigmaBL, ClimateBL))}
+\NormalTok{ScoredCaseMiss }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(scored) }\CommentTok{\#I produced this object for the sole purpose of feeding the number of cases into the inline text, below}
+\end{Highlighting}
+\end{Shaded}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29\ldots{}
+
+Before we start our formal analysis of missingness at the scale level, let's continue to scrub by eliminating cases that clearly won't remain. In the script below we create a variable that counts the number of missing variables and then creates a proportion by dividing it by the number of total variables.
+
+Using the \emph{describe()} function from the \emph{psych} package, we can investigate this variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Create a variable (n\_miss) that counts the number missing}
+\NormalTok{scored}\SpecialCharTok{$}\NormalTok{n\_miss }\OtherTok{\textless{}{-}}\NormalTok{ scored}\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{select}\NormalTok{(iBIPOC\_pr}\SpecialCharTok{:}\NormalTok{ClimateBL) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{is.na }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{rowSums}
+
+\CommentTok{\#Create a proportion missing by dividing n\_miss by the total number of variables (80)}
+\CommentTok{\#Pipe to sort in order of descending frequency to get a sense of the missingness}
+\NormalTok{scored}\OtherTok{\textless{}{-}}\NormalTok{ scored}\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{mutate}\NormalTok{(}\AttributeTok{prop\_miss =}\NormalTok{ (n\_miss}\SpecialCharTok{/}\DecValTok{6}\NormalTok{)}\SpecialCharTok{*}\DecValTok{100}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n\_miss))}
+
+\NormalTok{ScoredPrMiss }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(scored}\SpecialCharTok{$}\NormalTok{prop\_miss)}
+\NormalTok{ScoredPrMiss }\CommentTok{\#this object is displayed below and I use input from  it for the inline text used in the write{-}up}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
+## X1    1 29  4.6 10.82      0    2.67   0   0 33.33 33.33 1.97     2.29 2.01
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29 cases for which the scoring protocol was applied, missingness ranged from 0 to 33.3333333.
+
+We need to decide what is our retention threshhold. Twenty percent seems to be a general rule of thumb. Let's delete all cases with missingness at 20\% or greater.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scored }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{(scored, prop\_miss }\SpecialCharTok{\textless{}=} \DecValTok{20}\NormalTok{)  }\CommentTok{\#update df to have only those with at least 20\% of complete data (this is an arbitrary decision)}
+
+\NormalTok{scored }\OtherTok{\textless{}{-}}\NormalTok{(}\FunctionTok{select}\NormalTok{ (scored, iBIPOC\_pr}\SpecialCharTok{:}\NormalTok{ClimateBL)) }\CommentTok{\#the variable selection just lops off the proportion missing}
+
+\NormalTok{ScoredCasesIncluded }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(scored)}
+\NormalTok{ScoredCasesIncluded }\CommentTok{\#this object is displayed below and I use input from  it for the inline text used in the write{-}up}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 26
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29 cases for which the scoring protocol was applied, missingness ranged from zero to 33.3333333. After eliminating cases with greater than 20\% missing, the dataset analyzed included 26 cases.
+
+With a decision about the number of cases we are going to include, we can continue to analyze missingness.
+
+\hypertarget{revisiting-missing-analysis-at-the-scale-level}{%
+\section{Revisiting Missing Analysis at the Scale Level}\label{revisiting-missing-analysis-at-the-scale-level}}
+
+We work with a df that includes only the variables in our model. In our case this is easy. In other cases (i.e., maybe there is an ID number) it might be good to create a subset just for this analysis.
+
+Again, we look at missingness as the proportion of
+
+\begin{itemize}
+\tightlist
+\item
+  individual cells across the dataset, and
+\item
+  rows/cases with nonmissing data
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(formattable)}
+\NormalTok{PrScoredCellsMissing }\OtherTok{\textless{}{-}}\FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(scored))) }\CommentTok{\#percent missing across df}
+\NormalTok{PrScoredRowsMissing }\OtherTok{\textless{}{-}} \FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{complete.cases}\NormalTok{(scored))) }\CommentTok{\#percent of rows with nonmissing data}
+\NormalTok{PrScoredCellsMissing}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.28%
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{PrScoredRowsMissing}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 92.31%
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29 cases for which the scoring protocol was applied, missingness ranged from zero to 33.3333333. After eliminating cases with greater than 20\% missing, the dataset analyzed included 26 cases. In this dataset we had 1.28\% missing across the df; 92.31\% of the rows had nonmissing data.
+
+\emph{At this point in the write-up, if I knew I was going to use a consistent approach for managing data (e.g., listwise or pairwise deletion for ordinary least squares regression, FIML for SEM or CFA) I would mention it here.}
+
+Let's look again at missing patterns and mechanisms.
+
+\hypertarget{scale-level-patterns-of-missing-data}{%
+\subsection{Scale Level: Patterns of Missing Data}\label{scale-level-patterns-of-missing-data}}
+
+Returning to the \emph{mice} package, we can use the \emph{md.pattern()} function to examine a matrix with the number of columns + 1 in which each row corresponds to a missing data pattern (1 = observed, 0 = missing). The rows and columns are sorted in increasing amounts of missing information. The last column and row contain row and column counts, respectively.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Using the package: mice}
+\FunctionTok{library}\NormalTok{(mice)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'mice'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:stats':
+## 
+##     filter
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     cbind, rbind
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mice\_ScaleLvl }\OtherTok{\textless{}{-}} \FunctionTok{md.pattern}\NormalTok{(scored, }\AttributeTok{plot =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{rotate.names=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/scale level missingness w mice-1.pdf}
+
+At the scale-level, this is much easier to interpret. As I am lecturing the results today (the numbers will change) there are only two rows of data because there are only two patterns of missingness. The most common pattern is non-missing data (\emph{n} = 23). The second pattern occurs when two people have missing data on the \emph{iBIPOC\_pr} variable
+
+\hypertarget{is-it-mcar}{%
+\subsection{Is it MCAR?}\label{is-it-mcar}}
+
+As noted earlier, I cannot find an MCAR package. This is a placeholder for updating this portion of the lecture when one becomes readily available (and I learn about it)
+
+\hypertarget{r-eady-for-analysis}{%
+\subsection{R-eady for Analysis}\label{r-eady-for-analysis}}
+
+At this stage the data is ready for analysis. With the AIA approach \citep{parent_handling_2013} the following preliminary analyses would involve pairwise deletion (i.e., the row/case is dropped for that analysis, but included for all others):
+
+\begin{itemize}
+\tightlist
+\item
+  data diagnostics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    psychometric properties of scales, such as alpha coefficients
+  \item
+    assessing assumptions such as univariate and multivariate normality, outliers, etc.
+  \end{itemize}
+\item
+  preliminary analyses
+
+  \begin{itemize}
+  \tightlist
+  \item
+    descriptives (means/standard deviations, frequencies)
+  \item
+    correlation matrices
+  \end{itemize}
+\end{itemize}
+
+AIA can also be used with primary analyses. Examples of how to manage missingness include:
+
+\begin{itemize}
+\tightlist
+\item
+  ANOVA/regression models
+
+  \begin{itemize}
+  \tightlist
+  \item
+    if completed with ordinary least squares, pairwise deletion would be utilized
+  \end{itemize}
+\item
+  SEM/CFA models with observed, latent, or hybrid models
+
+  \begin{itemize}
+  \tightlist
+  \item
+    if FIML (we'll discuss later) is specified, all cases are used, even when there is missingness
+  \end{itemize}
+\item
+  EFA models
+
+  \begin{itemize}
+  \tightlist
+  \item
+    these can handle item-level missingness
+  \end{itemize}
+\item
+  Hierarchical linear modeling/multilevel modeling/mixed effects modeling
+
+  \begin{itemize}
+  \tightlist
+  \item
+    While all data needs to be present for a given cluster/wave, it is permissible to have varying numbers of clusters/waves per case
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{the-apa-style-write-up}{%
+\section{The APA Style Write-Up}\label{the-apa-style-write-up}}
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+All analyses were completed in R Studio (v. 1.4.1106) with R (v. 4.0.4).
+
+\textbf{Missing Data Analysis and Treatment of Missing Data}
+
+Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
+
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0 to 36.3636364. Across the dataset, 4.39\% of cells had missing data and 79.31\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with 4 items was scored if it at least three non-missig items; and the scale with six items was scored if it had at least five non-missing items. Across the 29 cases for which the scoring protocol was applied, missingness ranged from 0 to 33.3333333. After eliminating cases with greater than 20\% missing, the dataset analyzed included \texttt{ScoredCasesIncluded} cases. In this dataset 1.28\% was missing across the df; 92.31\% of the rows had nonmissing data.
+
+Given that our sample sizes were reasonable for the planned analyses and the degree of missingness was low, we specified a \ldots. (and here we would say how we analyzed the data: AIA/pairwise deletion, FIML, multiply imputed at the scale level\ldots stay tuned.)
+
+\hypertarget{practice-problems-1}{%
+\section{Practice Problems}\label{practice-problems-1}}
+
+The three problems described below are designed to be continuations from the previous chapter (Scrubbing).
+
+\hypertarget{problem-1-reworking-the-chapter-problem}{%
+\subsection{Problem \#1: Reworking the Chapter Problem}\label{problem-1-reworking-the-chapter-problem}}
+
+If you chose this option in the prior chapter, you imported the data from Qualtrics, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, and wrote up the preliminary results.
+
+Continue working with this data to:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Proper formatting of your the variable representing the proportion of BIPOC instructor & 5 & \_\_\_\_\_ \\
+2. Proper formatting of your the variable representing the & 5 & \_\_\_\_\_ \\
+3. Proper formatting of variables that will be used in the scales/subscales & 5 & \_\_\_\_\_ \\
+4. Evaluate and interpret item-level missingness & 5 & \_\_\_\_\_ \\
+5. Score any scales/subscales & 5 & \_\_\_\_\_ \\
+6. Evaluate and interpret scale-level missingness & 5 & \_\_\_\_\_ \\
+7. Represent your work in an APA-style write-up (added to the writeup in the previous chapter) & 5 & \_\_\_\_\_ \\
+8. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 40 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-1}{%
+\subsection{\texorpdfstring{Problem \#2: Use the \emph{Rate-a-Recent-Course} Survey, Choosing Different Variables}{Problem \#2: Use the Rate-a-Recent-Course Survey, Choosing Different Variables}}\label{problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-1}}
+
+If you chose this option in the prior chapter, you chose a minimum of three variables from the \emph{Rate-a-Recent-Course} survey to include in a simple statistical model. You imported the dat from Qualtrics, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest and wrote up the preliminary results.
+
+Continue working with this data to:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & Points Possible & Points Earned \\
+\midrule
+\endhead
+1. Proper formatting of your first variable & 5 & \_\_\_\_\_ \\
+2. Proper formatting of your second variable & 5 & \_\_\_\_\_ \\
+3. Proper formatting of your third variable & 5 & \_\_\_\_\_ \\
+4. Evaluate and interpret item-level missingness & 5 & \_\_\_\_\_ \\
+5. Score any scales/subscales & 5 & \_\_\_\_\_ \\
+6. Evaluate and interpret scale-level missingness & 5 & \_\_\_\_\_ \\
+7. Represent your work in an APA-style write-up (added to the writeup in the previous chapter) & 5 & \_\_\_\_\_ \\
+8. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 40 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-3-other-data-1}{%
+\subsection{Problem \#3: Other data}\label{problem-3-other-data-1}}
+
+If you chose this option in the prior chapter, you used raw data that was available to you. You imported it into R, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, and wrote up the preliminary results.
+
+Continue working with this data to:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & Points Possible & Points Earned \\
+\midrule
+\endhead
+1. Proper formatting of variables of interest (at least three) & 15 & \_\_\_\_\_ \\
+2. Evaluate and interpret item-level missingness & 5 & \_\_\_\_\_ \\
+3. Score any scales/subscales & 5 & \_\_\_\_\_ \\
+4. Evaluate and interpret scale-level missingness & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up (added to the writeup in the previous chapter) & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 40 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{bonus-reel}{%
+\section{Bonus Reel:}\label{bonus-reel}}
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=6.45833in,height=2.19792in]{images/film-strip-1.jpg}
+\caption{Image of a filmstrip signifying that the what follows is considered to be supplemental}\label{id}
+}
+\end{figure}
+
+\hypertarget{references-1}{%
+\section{References}\label{references-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.0.4 (2021-02-15)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18362)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] mice_3.13.0       sjstats_0.18.0    formattable_0.2.1 forcats_0.5.0    
+##  [5] stringr_1.4.0     dplyr_1.0.2       purrr_0.3.4       readr_1.4.0      
+##  [9] tidyr_1.1.2       tibble_3.0.4      ggplot2_3.3.3     tidyverse_1.3.0  
+## [13] qualtRics_3.1.4  
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-151      fs_1.5.0          lubridate_1.7.9.2 insight_0.11.1   
+##  [5] httr_1.4.2        tools_4.0.4       backports_1.2.0   R6_2.5.0         
+##  [9] sjlabelled_1.1.7  DBI_1.1.0         colorspace_2.0-0  withr_2.3.0      
+## [13] tidyselect_1.1.0  mnormt_2.0.2      emmeans_1.5.3     curl_4.3         
+## [17] compiler_4.0.4    performance_0.6.1 cli_2.2.0         rvest_0.3.6      
+## [21] xml2_1.3.2        sandwich_3.0-0    bookdown_0.21     bayestestR_0.8.0 
+## [25] scales_1.1.1      mvtnorm_1.1-1     psych_2.0.12      digest_0.6.27    
+## [29] minqa_1.2.4       rmarkdown_2.6     pkgconfig_2.0.3   htmltools_0.5.0  
+## [33] lme4_1.1-26       dbplyr_2.0.0      htmlwidgets_1.5.3 rlang_0.4.9      
+## [37] readxl_1.3.1      rstudioapi_0.13   generics_0.1.0    zoo_1.8-8        
+## [41] jsonlite_1.7.2    magrittr_2.0.1    parameters_0.10.1 Matrix_1.2-18    
+## [45] Rcpp_1.0.5        munsell_0.5.0     fansi_0.4.1       lifecycle_0.2.0  
+## [49] stringi_1.5.3     multcomp_1.4-15   yaml_2.2.1        MASS_7.3-53      
+## [53] grid_4.0.4        parallel_4.0.4    sjmisc_2.8.5      crayon_1.3.4     
+## [57] lattice_0.20-41   haven_2.3.1       splines_4.0.4     hms_0.5.3        
+## [61] tmvnsim_1.0-2     knitr_1.30        pillar_1.4.7      boot_1.3-25      
+## [65] estimability_1.3  effectsize_0.4.1  codetools_0.2-18  reprex_0.3.0     
+## [69] glue_1.4.2        evaluate_0.14     modelr_0.1.8      vctrs_0.3.6      
+## [73] nloptr_1.2.2.2    cellranger_1.1.0  gtable_0.3.0      assertthat_0.2.1 
+## [77] xfun_0.19         xtable_1.8-4      broom_0.7.3       coda_0.19-4      
+## [81] survival_3.2-7    statmod_1.4.35    TH.data_1.0-10    ellipsis_0.3.1
+\end{verbatim}
 
   \bibliography{STATSnMETH.bib}
 

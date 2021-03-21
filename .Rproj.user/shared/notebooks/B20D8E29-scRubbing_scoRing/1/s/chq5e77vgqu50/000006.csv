@@ -1,0 +1,33 @@
+"0","#obtained with the survey ID #"
+"0","#the Y1 pretest data was named ""Y1_PreCOMB"" in Qualtrics"
+"0","#I was getting a gnarly error: Error in parse_vector(x, col_factor(levels, ordered, include_na), na = na, : is.character(x) is not TRUE"
+"0","#I found an ropensci/qualtRics discussion and learned they'd fixed a bug; I updated/re-installed qualtRics and then it worked"
+"0",""
+"0","library(qualtRics)"
+"0","QTRX_df <- fetch_survey(surveyID = ""SV_bxE7jISZ2LCYm3j"",useLocalTime = TRUE,"
+"0","                         verbose = TRUE, label=FALSE, convert=FALSE, force_request = TRUE)"
+"1","  |                                                                                                                                                                "
+"1","  |                                                                                                                                                          |   0%"
+"1","  |                                                                                                                                                                "
+"1","  |==========================================================================================================================================================| 100%"
+"1","
+"
+"2","
+[36m--[39m [1m[1mColumn specification[1m[22m [36m--------------------------------------------------------------------------------------------------------------------------------------------[39m
+cols(
+  .default = col_double(),
+  StartDate = [34mcol_datetime(format = """")[39m,
+  EndDate = [34mcol_datetime(format = """")[39m,
+  IPAddress = [31mcol_character()[39m,
+  RecordedDate = [34mcol_datetime(format = """")[39m,
+  ResponseId = [31mcol_character()[39m,
+  RecipientLastName = [33mcol_logical()[39m,
+  RecipientFirstName = [33mcol_logical()[39m,
+  RecipientEmail = [33mcol_logical()[39m,
+  ExternalReference = [33mcol_logical()[39m,
+  DistributionChannel = [31mcol_character()[39m,
+  UserLanguage = [31mcol_character()[39m
+)
+[36mi[39m Use [38;5;235m[48;5;253m[38;5;235m[48;5;253m`spec()`[48;5;253m[38;5;235m[49m[39m for the full column specifications.
+
+"
