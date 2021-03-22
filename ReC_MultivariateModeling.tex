@@ -167,7 +167,7 @@ This book is published under a a Creative Commons Attribution-NonCommercial-Shar
 Our GitHub open-source repository contains all of the text and source code for the book, including data and images.
 
 \hypertarget{ReCintro}{%
-\chapter{INTRODUCTION}\label{ReCintro}}
+\chapter{Introduction}\label{ReCintro}}
 
 \hypertarget{what-to-expect-in-each-chapter}{%
 \section{What to expect in each chapter}\label{what-to-expect-in-each-chapter}}
@@ -228,8 +228,12 @@ In this section I will talk about the options for using and learning the materia
   Making use of the practice problems.
 \end{enumerate}
 
+\hypertarget{dataprep}{%
+\chapter*{DATA PREP}\label{dataprep}}
+\addcontentsline{toc}{chapter}{DATA PREP}
+
 \hypertarget{scrub}{%
-\chapter{SCRUBBING}\label{scrub}}
+\chapter{Scrubbing}\label{scrub}}
 
 {[}Screencasted Lecture Link{]}
 
@@ -497,7 +501,7 @@ In parallel, the items asking respondents to identity characteristics of the ins
 \hypertarget{the-codebook}{%
 \subsection{The Codebook}\label{the-codebook}}
 
-In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the \emph{Recentering Psych Stats: Psychometric} OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the \href{./Bikos_ReCenteringPsychStats_ReCupload.pdf}{IRB application} and \href{https://osf.io/z84kh/}{pre-registration} can be helpful in the scrubbing and scoring process.
+In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the \emph{Recentering Psych Stats: Psychometric} OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the \href{./Bikos_ReCenteringPsychStats_ReCupload.pdf}{IRB application} and \href{https://osf.io/a8e5u}{pre-registration} can be helpful in the scrubbing and scoring process.
 
 Let's look ``live'' at the survey. In Qualtrics it is possible to \emph{print} a PDF that looks very similar to its presentation when someone is taking it. You can access that static version \href{./Rate_a_CoursePDF.pdf}{here}.
 
@@ -941,7 +945,7 @@ Although minor tweaking may be required, the same script above should be applica
 \end{verbatim}
 
 \hypertarget{score}{%
-\chapter{SCORING}\label{score}}
+\chapter{Scoring}\label{score}}
 
 {[}Screencasted Lecture Link{]}
 
@@ -1026,7 +1030,7 @@ The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters
 
 \begin{figure}
 \centering
-\includegraphics{images/Ch02/wrkflow_prelimDx.jpg}
+\includegraphics{images/Ch02/wrkflow_prelim.jpg}
 \caption{An image of our stage in the workflow for scrubbing and scoring data.}
 \end{figure}
 
@@ -1448,6 +1452,12 @@ Now to calculate the proportion of BIPOC instructional faculty for each case.
 
 In understanding missingness across the dataset, I think it is important to analyze and manage it, iteratively. We will start with a view of the whole df-level missingness. Subsequently, and consistent with the available information analysis {[}AIA; \citet{parent_handling_2013}{]} approach, we will score the scales and then look again at missingness, using the new information to update our decisions about how to manage it.
 
+\begin{figure}
+\centering
+\includegraphics{images/Ch02/wrkflow_item_lvl.jpg}
+\caption{An image of our stage in the workflow for scrubbing and scoring data.}
+\end{figure}
+
 Because we just created a host of new variables in creating the \emph{prop\_BIPOC} variable, let's downsize the df so that the calculations are sensible.
 
 \begin{Shaded}
@@ -1660,7 +1670,15 @@ Later it will be helpful to have a df with the item and scale-level variables. L
 \hypertarget{missing-analysis-scale-level}{%
 \section{Missing Analysis: Scale level}\label{missing-analysis-scale-level}}
 
-Let's return to analyzing the missingness, this time including the \emph{scale level} variables (without the individual items) that will be in our statistical model(s). First let's get the df down to the variables we want to retain:
+Let's return to analyzing the missingness, this time including the \emph{scale level} variables (without the individual items) that will be in our statistical model(s).
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch02/wrkflow_scale_lvl.jpg}
+\caption{An image of our stage in the workflow for scrubbing and scoring data.}
+\end{figure}
+
+First let's get the df down to the variables we want to retain:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1814,6 +1832,12 @@ As noted earlier, I cannot find an MCAR package. This is a placeholder for updat
 \subsection{R-eady for Analysis}\label{r-eady-for-analysis}}
 
 At this stage the data is ready for analysis. With the AIA approach \citep{parent_handling_2013} the following preliminary analyses would involve pairwise deletion (i.e., the row/case is dropped for that analysis, but included for all others):
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch02/wrkflow_AIAready.jpg}
+\caption{An image of our stage in the workflow for scrubbing and scoring data.}
+\end{figure}
 
 \begin{itemize}
 \tightlist

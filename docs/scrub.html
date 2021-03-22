@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 SCRUBBING | DRAFT: ReCentering Psych Stats: Multivariate Modeling</title>
+  <title>Chapter 2 Scrubbing | DRAFT: ReCentering Psych Stats: Multivariate Modeling</title>
   <meta name="description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 SCRUBBING | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
+  <meta property="og:title" content="Chapter 2 Scrubbing | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 SCRUBBING | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
+  <meta name="twitter:title" content="Chapter 2 Scrubbing | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
   
   <meta name="twitter:description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ReCintro.html"/>
+<link rel="prev" href="dataprep.html"/>
 <link rel="next" href="score.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -50,16 +50,6 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-5488840-4', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 
 <style type="text/css">
@@ -147,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#copyright-with-open-access"><i class="fa fa-check"></i>Copyright with Open Access</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="ReCintro.html"><a href="ReCintro.html"><i class="fa fa-check"></i><b>1</b> INTRODUCTION</a>
+<li class="chapter" data-level="1" data-path="ReCintro.html"><a href="ReCintro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="ReCintro.html"><a href="ReCintro.html#what-to-expect-in-each-chapter"><i class="fa fa-check"></i><b>1.1</b> What to expect in each chapter</a></li>
 <li class="chapter" data-level="1.2" data-path="ReCintro.html"><a href="ReCintro.html#if-you-are-new-to-r"><i class="fa fa-check"></i><b>1.2</b> If You are New to R</a>
@@ -156,7 +146,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="ReCintro.html"><a href="ReCintro.html#maximizing-learning-by-accessing-all-the-resources"><i class="fa fa-check"></i><b>1.3</b> Maximizing Learning by Accessing all the Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="scrub.html"><a href="scrub.html"><i class="fa fa-check"></i><b>2</b> SCRUBBING</a>
+<li class="chapter" data-level="" data-path="dataprep.html"><a href="dataprep.html"><i class="fa fa-check"></i>DATA PREP</a></li>
+<li class="chapter" data-level="2" data-path="scrub.html"><a href="scrub.html"><i class="fa fa-check"></i><b>2</b> Scrubbing</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="scrub.html"><a href="scrub.html#navigating-this-lesson"><i class="fa fa-check"></i><b>2.1</b> Navigating this Lesson</a>
 <ul>
@@ -196,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="scrub.html"><a href="scrub.html#references"><i class="fa fa-check"></i><b>2.9</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="score.html"><a href="score.html"><i class="fa fa-check"></i><b>3</b> SCORING</a>
+<li class="chapter" data-level="3" data-path="score.html"><a href="score.html"><i class="fa fa-check"></i><b>3</b> Scoring</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="score.html"><a href="score.html#navigating-this-lesson-1"><i class="fa fa-check"></i><b>3.1</b> Navigating this Lesson</a>
 <ul>
@@ -264,7 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="scrub" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> SCRUBBING</h1>
+<h1><span class="header-section-number">Chapter 2</span> Scrubbing</h1>
 <p>[Screencasted Lecture Link] <!-- TODO: Add link to screencast. --></p>
 <p>The focus of this chapter is the process of starting with raw data and preparing it for multivariate analysis. To that end, we will address the conceptual considerations and practical steps in “scrubbing and scoring.”</p>
 <p>A twist in this lesson is that we are asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of <em>open science</em>, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to complete the survey titled, <a href="https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU">Rate-a-Recent-Course: A ReCentering Psych Stats Exercise</a>. The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.</p>
@@ -433,7 +424,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="the-codebook" class="section level3" number="2.4.3">
 <h3><span class="header-section-number">2.4.3</span> The Codebook</h3>
-<p>In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the <em>Recentering Psych Stats: Psychometric</em> OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the <a href="./Bikos_ReCenteringPsychStats_ReCupload.pdf">IRB application</a> and <a href="https://osf.io/z84kh/">pre-registration</a> can be helpful in the scrubbing and scoring process.</p>
+<p>In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the <em>Recentering Psych Stats: Psychometric</em> OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the <a href="./Bikos_ReCenteringPsychStats_ReCupload.pdf">IRB application</a> and <a href="https://osf.io/a8e5u">pre-registration</a> can be helpful in the scrubbing and scoring process.</p>
 <p>Let’s look “live” at the survey. In Qualtrics it is possible to <em>print</em> a PDF that looks very similar to its presentation when someone is taking it. You can access that static version <a href="./Rate_a_CoursePDF.pdf">here</a>.</p>
 <p>We can export a <a href="./Rate-a-Course_Codebook.pdf">codebook</a>, that is, a Word (or PDF) version of the survey with all the coding. In Qualtrics the protocol is: Survey/Tools/ImportExport/Export Survey to Word. Then select all the options you want (especially “Show Coded Values”). A tutorial provided by Qualtrics can be found <a href="https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/import-and-export-surveys/">here</a>. This same process can be used to print the PDF example I used above.</p>
 <p>It is almost impossible to give this lecture without some reference to Qualtrics and the features used in Qualtrics. An import of raw data from Qualtrics into R can be nightmare in that the Qualtrics-assigned variable names are numbers (e.g., QID1, QID2) – but often out of order because the number is assigned when the question is first created. If the survey is reordered, the numbers get out of sequence.</p>
@@ -840,7 +831,7 @@ df_named &lt;- rename(df_raw, NewName1 = OldName1)</p>
           </div>
         </div>
       </div>
-<a href="ReCintro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dataprep.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="score.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

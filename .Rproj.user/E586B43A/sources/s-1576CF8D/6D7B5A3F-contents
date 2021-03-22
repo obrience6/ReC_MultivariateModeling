@@ -595,7 +595,7 @@ https://github.com/brentthorne/posterdown/wiki
 #f2 is the effect size, Cohen used .02, .15, and .35 as small, medium, large
 #.95 as power is lots, .80 is moderate and will be a little more lenient in sample size
 library(WebPower)
-wp.regression(n = NULL, p1 = 2, f2 = 0.15, alpha = 0.05, power = 0.8)
+wp.regression(n = NULL, p1 = 3, f2 = 0.15, alpha = 0.05, power = 0.8)
 wp.regression(n = NULL, p1 = 2, f2 = 0.15, alpha = 0.05, power = 0.95)
 wp.regression(n = NULL, p1 = 2, f2 = 0.35, alpha = 0.05, power = 0.8)
 ```

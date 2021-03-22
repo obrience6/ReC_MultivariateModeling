@@ -3,7 +3,7 @@
     "path": "C:/Users/lhbikos/OneDrive - Seattle Pacific University/ReCenterPsychStats/ReC_MultivariateModeling/ReC_MultivariateModeling/02-Scrubbing.Rmd",
     "project_path": "02-Scrubbing.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1240493057",
     "contents": "",
     "dirty": false,
     "created": 1616110074369.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "419,20",
+        "cursorPosition": "12,174",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1616287562,
+    "lastKnownWriteTime": 1616367996,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1616287562147,
+    "last_content_update": 1616367996077,
     "read_only": false,
     "read_only_alternatives": []
 }

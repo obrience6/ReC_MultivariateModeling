@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | DRAFT: ReCentering Psych Stats: Multivariate Modeling</title>
+  <title>DATA PREP | DRAFT: ReCentering Psych Stats: Multivariate Modeling</title>
   <meta name="description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
+  <meta property="og:title" content="DATA PREP | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
+  <meta name="twitter:title" content="DATA PREP | DRAFT: ReCentering Psych Stats: Multivariate Modeling" />
   
   <meta name="twitter:description" content="This is an open-access, book-in-progress. My goal in offering it is to re-center the materials used in training statistics and research methods in graduate and post-graduate psychology programs." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="dataprep.html"/>
+<link rel="prev" href="ReCintro.html"/>
+<link rel="next" href="scrub.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -254,55 +254,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ReCintro" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<div id="what-to-expect-in-each-chapter" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> What to expect in each chapter</h2>
-<p>This textbook is intended as <em>applied,</em> in that a primary goal is to help the scientist-practitioner-advocate use the statistic in a research problem and <em>write it up</em> for a program evaluation, dissertation, or journal article. In support of that goal, I try to provide <em>just enough</em> conceptual information so that the researcher can select the appropriate statistic (i.e., distinguishing between when ANOVA is appropriate and when regression is appropriate) and assign variables to their proper role (e.g., covariate, moderator, mediator).</p>
-<p>This conceptual approach does include step-by-step <em>hand-calculations</em> (only we calculate them arithmetically in R) to provide a <em>visceral feeling</em> of what is happening within the statistical algorithm that may be invisible to the researcher. Additionally, the conceptual review includes a review of the assumptions about the characteristics of the data and research design that are required for the statistic. Statistics can be daunting, so I have worked hard to establish a <em>workflow</em> through each analysis. When possible, I include a flowchart that is referenced frequently in each chapter and assists the the researcher keep track of their place in the many steps and choices that accompany even the simplest of analyses.</p>
-<p>As with many statistics texts, each chapter includes a <em>research vignette.</em> Somewhat unique to this resource is that the vignettes are selected from recently published articles. Each vignette is chosen with the intent to meet as many of the following criteria as possible:</p>
-<ul>
-<li>the statistic that is the focus of the chapter was properly used in the article,</li>
-<li>the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations),</li>
-<li>the research has a justice, equity, inclusion, diversity, and social responsivity focus and will contribute positively to a social justice pedagogy, and</li>
-<li>the data is available in a repository or there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s).</li>
-</ul>
-<p>In each chapter we employ <em>R</em> packages that will efficiently calculate the statistic and the dashboard of metrics (e.g., effect sizes, confidence intervals) that are typically reported in psychological science.</p>
-</div>
-<div id="if-you-are-new-to-r" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> If You are New to R</h2>
-<!-- TODO: Build out this section. -->
-<p>In this section I will provide some orientation to using R in psychological research. I don’t intend this text to be “R from the ground up,” but I will provide enough guidance that the individual can start working the problems.</p>
-<p>I will also link to tutorials that help individuals get started in R.</p>
-<div id="r-hygiene" class="section level3" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> R Hygiene</h3>
-<!-- TODO: Build out this section. -->
-<p>Many problems in R can be resolved with good “R hygiene.” I will review those practices here. I will also review the conventions I will try to consistently use throughout the text.</p>
-<p>Everything in a folder</p>
-<p>Although it is often considered good R etiquette to load all packages at the beginning of the script, this is not my practice. Each chapter will include a script that lists all the packages used, but I will open each package as we use it. This will provide a greater sense of which packages are needed for what task.</p>
-</div>
-</div>
-<div id="maximizing-learning-by-accessing-all-the-resources" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Maximizing Learning by Accessing all the Resources</h2>
-<!-- TODO: Build out this section. -->
-<p>In this section I will talk about the options for using and learning the materials. Primarily these are:</p>
-<ol style="list-style-type: decimal">
-<li>Open a new document of R, copying the script over and running it in a fresh document.</li>
-<li>Forking the entire suite of materials from GitHub and working directly in the original R markdown documents with the option to annotate the material directly.</li>
-<li>Forking the materials to adopt and or adapt for teaching.</li>
-<li>Listening to the accompanying lectures (I sound best when the speed is 1.75). I intend to record the lectures in Panopto which provides some closed captioning options.</li>
-<li>Making use of the practice problems.</li>
-</ol>
-
-</div>
+<div id="dataprep" class="section level1 unnumbered">
+<h1>DATA PREP</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="dataprep.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ReCintro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="scrub.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -341,7 +302,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ontheline/otl-bookdown/blob/master/01-Introduction.Rmd",
+"link": "https://github.com/ontheline/otl-bookdown/blob/master/02-Scrubbing.Rmd",
 "text": null
 },
 "download": ["ReC_MultivariateModeling.pdf"],

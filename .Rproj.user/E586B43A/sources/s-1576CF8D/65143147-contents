@@ -3,7 +3,8 @@ output:
   word_document: default
   html_document: default
 ---
-# SCRUBBING {#scrub}
+# DATA PREP {-#dataprep}
+# Scrubbing {#scrub}
 
  [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
 
@@ -170,7 +171,7 @@ In parallel, the items asking respondents to identity characteristics of the ins
 
 
 ### The Codebook
-In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the *Recentering Psych Stats: Psychometric* OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the [IRB application](./Bikos_ReCenteringPsychStats_ReCupload.pdf) and [pre-registration](https://osf.io/z84kh/) can be helpful in the scrubbing and scoring process.
+In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the *Recentering Psych Stats: Psychometric* OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the [IRB application](./Bikos_ReCenteringPsychStats_ReCupload.pdf) and [pre-registration](https://osf.io/a8e5u) can be helpful in the scrubbing and scoring process.
 
 Let's look "live" at the survey. In Qualtrics it is possible to *print* a PDF that looks very similar to its presentation when someone is taking it. You can access that static version [here](./Rate_a_CoursePDF.pdf).
 

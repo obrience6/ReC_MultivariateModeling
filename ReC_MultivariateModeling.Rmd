@@ -20,7 +20,7 @@ output:
     dev: svglite
     css: css/style.css
     includes: 
-        in_header: [google-analytics-otl.html]
+        #in_header: [google-analytics-otl.html]
     toc_depth: 4
     split-by: section
     split_bib: true
@@ -79,7 +79,7 @@ Our GitHub open-source repository contains all of the text and source code for t
 
 <!--chapter:end:index.Rmd-->
 
-# INTRODUCTION {#ReCintro}
+# Introduction {#ReCintro}
 
 ## What to expect in each chapter
 
@@ -133,7 +133,8 @@ output:
   word_document: default
   html_document: default
 ---
-# SCRUBBING {#scrub}
+# DATA PREP {-#dataprep}
+# Scrubbing {#scrub}
 
  [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
 
@@ -300,7 +301,7 @@ In parallel, the items asking respondents to identity characteristics of the ins
 
 
 ### The Codebook
-In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the *Recentering Psych Stats: Psychometric* OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the [IRB application](./Bikos_ReCenteringPsychStats_ReCupload.pdf) and [pre-registration](https://osf.io/z84kh/) can be helpful in the scrubbing and scoring process.
+In order to scrub-and-score a survey, it is critical to know about its content, scoring directions for scales/subscales, and its design. A more complete description of the survey design elements is (or will be) available in the *Recentering Psych Stats: Psychometric* OER. The review in this chapter provides just-enough information to allow us to make decisions about which items to retain and how to score them. When they are well-written, information in the [IRB application](./Bikos_ReCenteringPsychStats_ReCupload.pdf) and [pre-registration](https://osf.io/a8e5u) can be helpful in the scrubbing and scoring process.
 
 Let's look "live" at the survey. In Qualtrics it is possible to *print* a PDF that looks very similar to its presentation when someone is taking it. You can access that static version [here](./Rate_a_CoursePDF.pdf).
 
@@ -554,7 +555,7 @@ sessionInfo()
 
 <!--chapter:end:02-Scrubbing.Rmd-->
 
-# SCORING {#score}
+# Scoring {#score}
 
  [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
 
@@ -620,7 +621,7 @@ The following is a proposed workflow for preparing data for analysis.
 
 The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters.  At this stage we are at preliminary data diagnosis.
 
-![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_prelimDx.jpg)
+![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_prelim.jpg)
 
 ## Research Vignette
 
@@ -822,6 +823,8 @@ scrub_df$iBIPOC_pr = scrub_df$count.BIPOC/scrub_df$count.nMiss
 
 In understanding missingness across the dataset, I think it is important to analyze and manage it, iteratively.  We will start with a view of the whole df-level missingness. Subsequently, and consistent with the available information analysis [AIA; @parent_handling_2013] approach, we will score the scales and then look again at missingness, using the new information to update our decisions about how to manage it.
 
+![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_item_lvl.jpg)
+
 Because we just created a host of new variables in creating the *prop_BIPOC* variable, let's downsize the df so that the calculations are sensible.
 
 ```{r}
@@ -968,7 +971,11 @@ write.table(scrub_df, file="BlStItmsScrs210320.csv", sep=",", col.names=TRUE, ro
 
 ## Missing Analysis:  Scale level 
 
-Let's return to analyzing the missingness, this time including the *scale level* variables (without the individual items) that will be in our statistical model(s). First let's get the df down to the variables we want to retain:
+Let's return to analyzing the missingness, this time including the *scale level* variables (without the individual items) that will be in our statistical model(s). 
+
+![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_scale_lvl.jpg)
+
+First let's get the df down to the variables we want to retain:
 
 ```{r Filtering in scored variables}
 scored <-(select (scrub_df, iBIPOC_pr, cmBlack, Belonging, ResponseBL, StigmaBL, ClimateBL))
@@ -1057,6 +1064,8 @@ As noted earlier, I cannot find an MCAR package.  This is a placeholder for upda
 ### R-eady for Analysis
 
 At this stage the data is ready for analysis. With the AIA approach [@parent_handling_2013] the following preliminary analyses would involve pairwise deletion (i.e., the row/case is dropped for that analysis, but included for all others):
+
+![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_AIAready.jpg)
 
 * data diagnostics
   +  psychometric properties of scales, such as alpha coefficients

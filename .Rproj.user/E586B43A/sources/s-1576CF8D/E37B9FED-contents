@@ -20,7 +20,7 @@ output:
     dev: svglite
     css: css/style.css
     includes: 
-        in_header: [google-analytics-otl.html]
+        #in_header: [google-analytics-otl.html]
     toc_depth: 4
     split-by: section
     split_bib: true
@@ -55,7 +55,7 @@ output:
     default
 ---
 
-# Preface {-}
+# PREFACE {-}
 
 **If you are viewing this document, you should know that this is a book-in-progress.  Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders.  The document was last updated on `r format (Sys.Date(), '%d %b %Y')`**
 

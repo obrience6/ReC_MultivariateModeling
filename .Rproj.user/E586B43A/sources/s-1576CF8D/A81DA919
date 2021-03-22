@@ -3,7 +3,7 @@
     "path": "C:/Users/lhbikos/OneDrive - Seattle Pacific University/ReCenterPsychStats/ReC_MultivariateModeling/ReC_MultivariateModeling/03-Scoring.Rmd",
     "project_path": "03-Scoring.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2811027542",
     "contents": "",
     "dirty": false,
     "created": 1616110068060.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "564,0",
-        "scrollLine": "543"
+        "cursorPosition": "0,9",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1616288247,
+    "lastKnownWriteTime": 1616367957,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1616288247929,
+    "last_content_update": 1616367957732,
     "read_only": false,
     "read_only_alternatives": []
 }

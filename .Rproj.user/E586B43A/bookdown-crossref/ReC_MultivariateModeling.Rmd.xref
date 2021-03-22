@@ -1,11 +1,12 @@
 h1:preface Preface
 h2:copyright-with-open-access Copyright with Open Access
-h1:ReCintro INTRODUCTION
+h1:ReCintro Introduction
 h2:what-to-expect-in-each-chapter What to expect in each chapter
 h2:if-you-are-new-to-r If You are New to R
 h3:r-hygiene R Hygiene
 h2:maximizing-learning-by-accessing-all-the-resources Maximizing Learning by Accessing all the Resources
-h1:scrub SCRUBBING
+h1:dataprep DATA PREP
+h1:scrub Scrubbing
 h2:navigating-this-lesson Navigating this Lesson
 h3:learning-objectives Learning Objectives
 h3:planning-for-practice Planning for Practice
@@ -31,7 +32,7 @@ h3:problem-3-other-data Problem #3: Other data
 h2:bonus-track Bonus Track:
 h3:importing-data-from-an-exported-qualtrics-.csv-file Importing data from an exported Qualtrics .csv file
 h2:references References
-h1:score SCORING
+h1:score Scoring
 h2:navigating-this-lesson-1 Navigating this Lesson
 h3:learning-objectives-1 Learning Objectives
 h3:planning-for-practice-1 Planning for Practice
