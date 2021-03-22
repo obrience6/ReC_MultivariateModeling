@@ -55,6 +55,10 @@ output:
     default
 ---
 
+# {-}
+
+![An image of the book cover. It includes four quadrants of non-normal distributions representing gender, race/ethnicty, sustainability/global concerns, and journal articles](images/ReCenter_bookcover.jpg) 
+
 # PREFACE {-}
 
 **If you are viewing this document, you should know that this is a book-in-progress.  Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders.  The document was last updated on `r format (Sys.Date(), '%d %b %Y')`**
@@ -67,7 +71,7 @@ Training models for doctoral programs in HSP are commonly scholar-practitioner, 
 
 In this OER, research vignettes will be from recently published articles where: (a) the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations), (b) the research has a JEDI/social responsivity focus, (b) the lesson’s statistic is used in the article, and (c) the data is shared publicly or there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s).  
 
-![An image of the book cover. It includes four quadrants of non-normal distributions representing gender, race/ethnicty, sustainability/global concerns, and journal articles ](images/ReCenter_bookcover.jpg) 
+
 
 ## Copyright with Open Access {-}
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>

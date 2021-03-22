@@ -133,9 +133,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>ReCentering Psych Stats: Multivariate Modeling</strong><br>by Lynette H Bikos, PhD, ABPP</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>PREFACE</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#copyright-with-open-access"><i class="fa fa-check"></i>Copyright with Open Access</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#copyright-with-open-access"><i class="fa fa-check"></i>Copyright with Open Access</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="ReCintro.html"><a href="ReCintro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
@@ -503,21 +504,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-2"><a href="scrub.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># I used inline text below to update the text with the new number</span></span>
 <span id="cb11-3"><a href="scrub.html#cb11-3" aria-hidden="true" tabindex="-1"></a>attempts <span class="ot">&lt;-</span> <span class="fu">nrow</span>(QTRX_df)</span>
 <span id="cb11-4"><a href="scrub.html#cb11-4" aria-hidden="true" tabindex="-1"></a>attempts</span></code></pre></div>
-<pre><code>## [1] 29</code></pre>
-<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 29 individuals opened the survey link.</p>
+<pre><code>## [1] 30</code></pre>
+<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 30 individuals opened the survey link.</p>
 <p>Next let’s filter in only those who consented to take the survey. Because Qualtrics discontinued the survey for everyone who did not consent, we do not have to worry that their data is unintentionally included, but it can be useful to mention the number of non-consenters in the summary of missing data.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="scrub.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># == are used </span></span>
 <span id="cb13-2"><a href="scrub.html#cb13-2" aria-hidden="true" tabindex="-1"></a>QTRX_df <span class="ot">&lt;-</span>(<span class="fu">filter</span> (QTRX_df, Consent <span class="sc">==</span> <span class="dv">1</span>))</span>
 <span id="cb13-3"><a href="scrub.html#cb13-3" aria-hidden="true" tabindex="-1"></a>consented_attempts <span class="ot">&lt;-</span> <span class="fu">nrow</span>(QTRX_df)</span>
 <span id="cb13-4"><a href="scrub.html#cb13-4" aria-hidden="true" tabindex="-1"></a>consented_attempts</span></code></pre></div>
 <pre><code>## [1] 29</code></pre>
-<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 29 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items.</p>
+<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 30 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items.</p>
 <p>In this particular study, the categories used to collect race were U.S.-centric. Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="scrub.html#cb15-1" aria-hidden="true" tabindex="-1"></a>QTRX_df <span class="ot">&lt;-</span>(<span class="fu">filter</span> (QTRX_df, USinst <span class="sc">==</span> <span class="dv">0</span>))</span>
 <span id="cb15-2"><a href="scrub.html#cb15-2" aria-hidden="true" tabindex="-1"></a>US_inclusion <span class="ot">&lt;-</span> <span class="fu">nrow</span>(QTRX_df)</span>
 <span id="cb15-3"><a href="scrub.html#cb15-3" aria-hidden="true" tabindex="-1"></a>US_inclusion</span></code></pre></div>
 <pre><code>## [1] 29</code></pre>
-<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 29 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.</p>
+<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 30 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.</p>
 </div>
 <div id="renaming-variables" class="section level3" number="2.5.3">
 <h3><span class="header-section-number">2.5.3</span> Renaming Variables</h3>
@@ -552,7 +553,7 @@ df_named &lt;- rename(df_raw, NewName1 = OldName1)</p>
 <h2><span class="header-section-number">2.6</span> Steps Toward the APA Style Write-up</h2>
 <div id="methodprocedure" class="section level3" number="2.6.1">
 <h3><span class="header-section-number">2.6.1</span> Method/Procedure</h3>
-<p>Data screening suggested that 29 individuals opened the survey link. Of those, 29 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.</p>
+<p>Data screening suggested that 30 individuals opened the survey link. Of those, 29 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.</p>
 </div>
 </div>
 <div id="practice-problems" class="section level2" number="2.7">
