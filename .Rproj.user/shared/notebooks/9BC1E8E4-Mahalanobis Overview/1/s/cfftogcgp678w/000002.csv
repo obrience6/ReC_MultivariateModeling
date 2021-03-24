@@ -1,0 +1,7 @@
+"0","#Calculate and store the Mahalnobis Distance in a new column"
+"0","DF$MD <- mahalanobis(DF,"
+"0","                     colMeans(DF),"
+"0","                     cov(DF)) %>% round(2)"
+"0",""
+"0","#Take a look at the top few rows"
+"0","head(DF)"

@@ -1,4 +1,4 @@
-h1:section 
+h1:book-cover BOOK COVER
 h1:preface PREFACE
 h2:copyright-with-open-access Copyright with Open Access
 h1:ReCintro Introduction
@@ -24,7 +24,7 @@ h3:tools-for-data-transcodmation Tools for Data Transcodmation
 h3:inclusion-and-exclusion-criteria Inclusion and Exclusion Criteria
 h3:renaming-variables Renaming Variables
 h3:downsizing-the-dataframe Downsizing the Dataframe
-h2:steps-toward-the-apa-style-write-up Steps Toward the APA Style Write-up
+h2:toward-the-apa-style-write-up Toward the APA Style Write-up
 h3:methodprocedure Method/Procedure
 h2:practice-problems Practice Problems
 h3:problem-1-rework-the-chapter-problem Problem #1: Rework the Chapter Problem
@@ -62,6 +62,27 @@ h2:practice-problems-1 Practice Problems
 h3:problem-1-reworking-the-chapter-problem Problem #1: Reworking the Chapter Problem
 h3:problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-1 Problem #2: Use the  Survey, Choosing Different Variables
 h3:problem-3-other-data-1 Problem #3: Other data
-h2:bonus-reel Bonus Reel:
 h2:references-1 References
+h1:DataDx Data Dx
+h2:navigating-this-lesson-2 Navigating this Lesson
+h3:learning-objectives-2 Learning Objectives
+h3:planning-for-practice-2 Planning for Practice
+h3:readings-resources-2 Readings & Resources
+h3:packages-2 Packages
+h2:workflow-for-scrubbing-and-scoring-2 Workflow for Scrubbing and Scoring
+h2:research-vignette-2 Research Vignette
+h2:internal-consistency-of-scalessubscales Internal Consistency of Scales/Subscales
+h2:distributional-characteristics-of-the-variables Distributional Characteristics of the Variables
+h3:evaluating-univariate-normality Evaluating Univariate Normality
+h3:pairs-panels Pairs Panels
+h2:evaluating-multivariate-normality Evaluating Multivariate Normality
+h2:a-few-words-on-transformations A Few Words on Transformations
+h2:the-apa-style-write-up-1 The APA Style Write-Up
+h3:data-diagnostics Data Diagnostics
+h2:a-quick-regression-of-our-research-vignette A Quick Regression of our Research Vignette
+h2:practice-problems-2 Practice Problems
+h3:problem-1-reworking-the-chapter-problem-1 Problem #1: Reworking the Chapter Problem
+h3:problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-2 Problem #2: Use the  Survey, Choosing Different Variables
+h3:problem-3-other-data-2 Problem #3: Other data
+h2:references-2 References
 

@@ -1,0 +1,6 @@
+"0",""
+"0","#Creates a new column identifying whether the Mahalanobis Distance is an outlier"
+"0","DF$MD_Outlier <- if_else(DF$MD > (median(DF$MD) + (3*sd(DF$MD))), TRUE, FALSE)"
+"0",""
+"0","#Take a look at the top few rows"
+"0","head(DF)"

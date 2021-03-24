@@ -138,13 +138,13 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{section}{%
-\chapter*{}\label{section}}
-\addcontentsline{toc}{chapter}{}
+\hypertarget{book-cover}{%
+\chapter*{BOOK COVER}\label{book-cover}}
+\addcontentsline{toc}{chapter}{BOOK COVER}
 
 \begin{figure}
 \centering
-\includegraphics{images/ReCenter_bookcover.jpg}
+\includegraphics{images/ReC_multivariate_bkcvr.png}
 \caption{An image of the book cover. It includes four quadrants of non-normal distributions representing gender, race/ethnicty, sustainability/global concerns, and journal articles}
 \end{figure}
 
@@ -152,7 +152,7 @@
 \chapter*{PREFACE}\label{preface}}
 \addcontentsline{toc}{chapter}{PREFACE}
 
-\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 22 Mar 2021}
+\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 23 Mar 2021}
 
 To \emph{center} a variable in regression means to set its value at zero and interpret all other values in relation to this reference point. Regarding race and gender, researchers often center male and White at zero. Further, it is typical that research vignettes in statistics textbooks are similarly seated in a White, Western (frequently U.S.), heteronormative, framework. The purpose of this project is to create a set of open educational resources (OER) appropriate for doctoral and post-doctoral training that contribute to justice, equity, diversity, inclusion (JEDI), and social responsivity.
 
@@ -274,14 +274,14 @@ Learning objectives from this lecture include the following:
 \hypertarget{planning-for-practice}{%
 \subsection{Planning for Practice}\label{planning-for-practice}}
 
-The suggestions for practice will start with this chapter and continue in the next two chapters (Scoring, Data dx). Using Parent's \citeyearpar{parent_handling_2013} AIA approach to managing missing data, you will scrub-and-score a raw dataset. Options of graded complexity could incude:
+The suggestions for practice will start with this chapter and continue in the next two chapters (Scoring, Data Dx). Using Parent's \citeyearpar{parent_handling_2013} AIA approach to managing missing data, you will scrub-and-score a raw dataset. Options of graded complexity could incude:
 
 \begin{itemize}
 \tightlist
 \item
-  Repeating the steps in the chapter with the additional data (it is quite likely that more will have completed the survey)
+  Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
 \item
-  Use the dataset that is the source of the chapter, but select a different set of variables for a model you woud like to test.
+  Use the dataset that is the source of the chapter, but score a different set of items that you choose.
 \item
   Begin with raw data to which you have access.
 \end{itemize}
@@ -457,36 +457,6 @@ To retrieve the survey, use the \emph{fetch\_survey()} function.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## 
-## -- Column specification --------------------------------------------------------
-## cols(
-##   .default = col_double(),
-##   StartDate = col_datetime(format = ""),
-##   EndDate = col_datetime(format = ""),
-##   RecordedDate = col_datetime(format = ""),
-##   ResponseId = col_character(),
-##   DistributionChannel = col_character(),
-##   UserLanguage = col_character(),
-##   Virtual_2 = col_logical(),
-##   Virtual_6 = col_logical(),
-##   `5_iPronouns` = col_logical(),
-##   `5_iGenderConf` = col_logical(),
-##   `5_iRace` = col_logical(),
-##   `5_iUS` = col_logical(),
-##   `5_iDis` = col_logical(),
-##   `6_iPronouns` = col_logical(),
-##   `6_iGenderConf` = col_logical(),
-##   `6_iRace` = col_logical(),
-##   `6_iUS` = col_logical(),
-##   `6_iDis` = col_logical(),
-##   `7_iPronouns` = col_logical(),
-##   `7_iGenderConf` = col_logical()
-##   # ... with 18 more columns
-## )
-## i Use `spec()` for the full column specifications.
-\end{verbatim}
-
 \emph{It is possible (and helpful, even) to import Qualtrics data that has been downloaded from Qualtrics as a .csv. I demo this in the Bonus Reel.}
 
 \hypertarget{about-the-rate-a-recent-course-survey}{%
@@ -617,28 +587,6 @@ In this particular survey, the majority of respondents will take the survey beca
 \CommentTok{\# the filter command is used when we are making inclusion/exclusion decisions about rows}
 \CommentTok{\# != means do not include cases with "preview"}
 \FunctionTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
-\end{verbatim}
-
-\begin{verbatim}
-## v ggplot2 3.3.3     v purrr   0.3.4
-## v tibble  3.0.4     v dplyr   1.0.2
-## v tidyr   1.1.2     v stringr 1.4.0
-## v readr   1.4.0     v forcats 0.5.0
-\end{verbatim}
-
-\begin{verbatim}
-## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{QTRX\_df }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{ (QTRX\_df, DistributionChannel }\SpecialCharTok{!=} \StringTok{"preview"}\NormalTok{)}
 
 \CommentTok{\#FYI, another way that doesn\textquotesingle{}t use tidyverse, but gets the same result}
@@ -658,10 +606,10 @@ APA Style, and in particular the Journal Article Reporting Standards (JARS) for 
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 30
+## [1] 31
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 30 individuals opened the survey link.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 31 individuals opened the survey link.
 
 Next let's filter in only those who consented to take the survey. Because Qualtrics discontinued the survey for everyone who did not consent, we do not have to worry that their data is unintentionally included, but it can be useful to mention the number of non-consenters in the summary of missing data.
 
@@ -675,10 +623,10 @@ Next let's filter in only those who consented to take the survey. Because Qualtr
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 29
+## [1] 30
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 30 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 31 individuals opened the survey link. Of those, 30, granted consent and proceeded into the survey items.
 
 In this particular study, the categories used to collect race were U.S.-centric. Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.
 
@@ -691,10 +639,10 @@ In this particular study, the categories used to collect race were U.S.-centric.
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 29
+## [1] 30
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 30 individuals opened the survey link. Of those, 29, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 31 individuals opened the survey link. Of those, 30, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 30 met this criteria.
 
 \hypertarget{renaming-variables}{%
 \subsection{Renaming Variables}\label{renaming-variables}}
@@ -758,18 +706,18 @@ It can be helpful to save outfiles of progress as we go along. Here I save this 
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{steps-toward-the-apa-style-write-up}{%
-\section{Steps Toward the APA Style Write-up}\label{steps-toward-the-apa-style-write-up}}
+\hypertarget{toward-the-apa-style-write-up}{%
+\section{Toward the APA Style Write-up}\label{toward-the-apa-style-write-up}}
 
 \hypertarget{methodprocedure}{%
 \subsection{Method/Procedure}\label{methodprocedure}}
 
-Data screening suggested that 30 individuals opened the survey link. Of those, 29 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 29 met this criteria.
+Data screening suggested that 31 individuals opened the survey link. Of those, 30 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 30 met this criteria.
 
 \hypertarget{practice-problems}{%
 \section{Practice Problems}\label{practice-problems}}
 
-Starting with this chapter, the practice problems for this and the next two chapters (i.e., Scoring, Data dx) are connected. Whatever practice option(s) you choose, please (a) use raw data that (b) has some data missing. This second criteria will be important in the subsequent chapters.
+Starting with this chapter, the practice problems for this and the next two chapters (i.e., Scoring, Data Dx) are connected. Whatever practice option(s) you choose, please (a) use raw data that (b) has some data missing. This second criteria will be important in the subsequent chapters.
 
 The three problems below are listed in the order of graded complexity. If you are just getting started, you may wish to start with the first problem. If you are more confident, choose the second or third option.
 
@@ -982,14 +930,14 @@ Learning objectives from this lecture include the following:
 \hypertarget{planning-for-practice-1}{%
 \subsection{Planning for Practice}\label{planning-for-practice-1}}
 
-Using Parent's \citeyearpar{parent_handling_2013} AIA approach to managing missing data, ``scrub and score'' a raw dataset. Options of graded complexity could incude:
+The sugestions for practice continue from the prior chapter. The assignment in the prior chapter involved downloading a dataset from Qualtrics and the ``scrubbing'' it on the basis of inclusion and exclusion criteria. Using that same data, the practice suggestions in this chapter will continue to use Parent's \citeyearpar{parent_handling_2013} AIA approach to managing missing data, to score the variables of interest. Options of graded complexity could incude:
 
 \begin{itemize}
 \tightlist
 \item
-  Repeating the steps in the chapter; differences will be in the number of people who have completed the survey since the chapter was written.
+  Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
 \item
-  Use the dataset that is the source of the chapter, but score a DIFFERENT SET OF ITEMS -- MUST SPECIFY.
+  Use the dataset that is the source of the chapter, but score a different set of items that you choose.
 \item
   Begin with raw data to which you have access.
 \end{itemize}
@@ -1047,7 +995,7 @@ The research vignette comes from the survey titled, \href{https://spupsych.az1.q
 
 \begin{figure}
 \centering
-\includegraphics{images/Ch03/BlStuMod.jpg}
+\includegraphics{images/Ch03/BlStuMed.jpg}
 \caption{An image of the statistical model for which we are preparing data.}
 \end{figure}
 
@@ -1058,7 +1006,7 @@ First, though, let's take a more conceptual look at issues regarding missing dat
 
 On the topic of missing data, we follow the traditions in most textbooks. We start by considering \emph{data loss mechanisms} and options for \emph{managing missingness.}
 
-Although the workflow I recommend is fairly straightforward, the topic is not. Quantitative psychologist have produced volumes of research that supports and refutes all of these issues in detail. An in-deth review of this is found in Enders' \citep{enders_applied_2010} text.
+Although the workflow I recommend is fairly straightforward, the topic is not. Quantitative psychologist have produced volumes of research that supports and refutes all of these issues in detail. An in-deth review of this is found in Enders' \citeyearpar{enders_applied_2010} text.
 
 \hypertarget{data-loss-mechanisms}{%
 \subsection{Data Loss Mechanisms}\label{data-loss-mechanisms}}
@@ -1137,7 +1085,7 @@ The bad news is that we never really know (with certainty) the type of missing d
 \item
   Missing data analyses often includes correlations that could predict missingness.
 \item
-  Little and Rubin \citep{little_statistical_2002} proposed a multivariate statistical test of the MCAR assumption that simultaneously compares complete versus incomplete cases on \emph{Y} across all other variables. If this comparison is significant, then the MCAR hypothesis is rejected.
+  Little and Rubin \citeyearpar{little_statistical_2002} proposed a multivariate statistical test of the MCAR assumption that simultaneously compares complete versus incomplete cases on \emph{Y} across all other variables. If this comparison is significant, then the MCAR hypothesis is rejected.
 
   \begin{itemize}
   \tightlist
@@ -1185,7 +1133,7 @@ AIA is an older method of handling missing data that, as its name suggests, uses
   \end{itemize}
 \end{itemize}
 
-Parent's\citeyearpar{parent_handling_2013} recommendations:
+Parent's \citeyearpar{parent_handling_2013} recommendations:
 
 \begin{itemize}
 \tightlist
@@ -1243,7 +1191,7 @@ Very practically speaking, Parent's \citeyearpar{parent_handling_2013} recommend
   \item
     In combination, we will delete individuals who have 100\% missing data on these 3 scores (this was an individual decision for this particular dataset; it could be different depending on your analytic approach)
   \item
-    We will calculate scale scores only on those with 80\% of data present.
+    We will calculate scale scores only on those with 80\% (roughly) of data present.
   \end{itemize}
 \item
   After calculating the scale scores, we will return to analyzing the missingness, looking at the whole dataset.
@@ -1266,7 +1214,7 @@ I use \emph{different} names for the object/df in my R environment than I use fo
 \end{Shaded}
 
 \begin{verbatim}
-## 'data.frame':    29 obs. of  25 variables:
+## 'data.frame':    30 obs. of  25 variables:
 ##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iRace1   : int  3 3 3 3 1 3 3 3 1 0 ...
 ##  $ iRace2   : int  1 NA 1 1 NA NA 3 NA NA 0 ...
@@ -1366,7 +1314,7 @@ Let's check the structure to see if they are factors.
 \end{Shaded}
 
 \begin{verbatim}
-## 'data.frame':    29 obs. of  25 variables:
+## 'data.frame':    30 obs. of  25 variables:
 ##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iRace1   : Factor w/ 4 levels "0","1","2","3": 4 4 4 4 2 4 4 4 2 1 ...
 ##  $ iRace2   : Factor w/ 3 levels "0","1","3": 2 NA 2 2 NA NA 3 NA NA 1 ...
@@ -1421,12 +1369,14 @@ Calculating the proportion of the not-White instructional staff could likely be 
 \tightlist
 \item
   created a new variable (count.BIPOC) by
-\item
-  summing across the tRace1 through tRace10 variables,
-\item
-  assigning a count of ``1'',
-\item
-  each time the factor value was Black, nBpoc, or BiMulti
+
+  \begin{itemize}
+  \tightlist
+  \item
+    summing across the tRace1 through tRace10 variables,
+  \item
+    assigning a count of ``1'' each time the factor value was Black, nBpoc, or BiMulti
+  \end{itemize}
 \end{itemize}
 
 \begin{Shaded}
@@ -1491,6 +1441,7 @@ We can grab the descriptives for the \emph{prop\_miss} variable to begin to unde
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(formattable)}
 \NormalTok{CaseMiss}\OtherTok{\textless{}{-}}\NormalTok{psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(scrub\_df}\SpecialCharTok{$}\NormalTok{prop\_miss)}
 \NormalTok{CaseMiss}
 \end{Highlighting}
@@ -1498,10 +1449,17 @@ We can grab the descriptives for the \emph{prop\_miss} variable to begin to unde
 
 \begin{verbatim}
 ##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 29 4.39 10.48      0    2.18   0   0 36.36 36.36 2.27     3.78 1.95
+## X1    1 30 4.24 10.33      0    1.14   0   0 36.36 36.36 2.33     4.08 1.89
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0 to 36.3636364.
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{missMin }\OtherTok{\textless{}{-}} \FunctionTok{digits}\NormalTok{(CaseMiss}\SpecialCharTok{$}\NormalTok{min, }\DecValTok{0}\NormalTok{)}
+\NormalTok{missMax }\OtherTok{\textless{}{-}} \FunctionTok{digits}\NormalTok{(CaseMiss}\SpecialCharTok{$}\NormalTok{max, }\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%.
 
 At the time that I am lecturing this, the the amount of missing is not so aggregious that I want to eliminate any cases. That is, I'm willing to wait until after I score the items to make further decisions, then.
 
@@ -1535,7 +1493,6 @@ Missing data analysis commonly looks at proportions by:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\#install.packages("formattable")}
-\FunctionTok{library}\NormalTok{(formattable)}
 \NormalTok{CellsMiss }\OtherTok{\textless{}{-}} \FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(scrub\_df)))}\CommentTok{\#what proportion of cells missing across entire dataset}
 \NormalTok{CaseComplete }\OtherTok{\textless{}{-}} \FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{complete.cases}\NormalTok{(scrub\_df)))}\CommentTok{\#what proportion of cases (rows) are complete (nonmissing)}
 \NormalTok{CellsMiss}
@@ -1543,7 +1500,7 @@ Missing data analysis commonly looks at proportions by:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 4.39%
+## [1] 4.24%
 \end{verbatim}
 
 \begin{Shaded}
@@ -1553,17 +1510,17 @@ Missing data analysis commonly looks at proportions by:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 79.31%
+## [1] 80.00%
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0 to 36.3636364. Across the dataset, 4.39\% of cells had missing data and 79.31\% of cases had nonmissing data.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 4.24\% of cells had missing data and 80.00\% of cases had nonmissing data.
 
 \hypertarget{analyzing-missing-data-patterns}{%
 \subsection{Analyzing Missing Data Patterns}\label{analyzing-missing-data-patterns}}
 
-One approach to analyzing missing data is to assess patterns of missingness. LECTURE? SOMEWHERE?
+One approach to analyzing missing data is to assess patterns of missingness.
 
-Several R packages are popularly used for conducting such analyse. In the \emph{mice} package, \emph{md.pattern()} function provides a matrix with the number of columns + 1, in which each row corresponds to a missing data pattern (1 = observed, 0 = missing).
+Several R packages are popularly used for conducting such analyses. In the \emph{mice} package, \emph{md.pattern()} function provides a matrix with the number of columns + 1, in which each row corresponds to a missing data pattern (1 = observed, 0 = missing).
 
 Rows and columns are sorted in increasing amounts of missing information.
 
@@ -1582,7 +1539,7 @@ The last column and row contain row and column counts, respectively.
 
 The table lets you look at each missing pattern and see which variable(s) is/are missing. The output is in the form of a table that indicates the frequency of each pattern of missingness. Because I haven't (yet) figured out how to pipe objects from this table into the chapter, this text may dier from the patterns in the current data frame.
 
-Each row in the table represents a different pattern of missingness. At the time of writing, there are 5 patterns of missing data. The patterns are listed in descending order of the least amount of missingness. The most common pattern (23 cases, top row) is one with no missing data. One cases (is missing three cells -- three of the items assessing the campus climate for Black students, and so forth.
+Each row in the table represents a different pattern of missingness. At the time of writing, there are \emph{6} patterns of missing data. The patterns are listed in descending order of the least amount of missingness. The most common pattern (\emph{23} cases, top row) is one with no missing data. One cases (is missing three cells -- three of the items assessing the campus climate for Black students, and so forth. \emph{These numbers are not piped and subject to change.}
 
 In general, the data patterns represented a haphazard patterns of responding \citep{enders_applied_2010}.
 
@@ -1663,7 +1620,19 @@ In our case, the scale assessing belonging \citep{bollen_perceived_1990, hurtado
 \end{Highlighting}
 \end{Shaded}
 
-Later it will be helpful to have a df with the item and scale-level variables. Let's save our \emph{scrub\_df} data for this and write it as an outfile.
+Later it will be helpful to have a df with the item and scale-level variables. It will also be helpful if there is an ID for each case.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{mutate}\NormalTok{(}\AttributeTok{ID =} \FunctionTok{row\_number}\NormalTok{())}
+
+\CommentTok{\#moving the ID number to the first column; requires }
+\NormalTok{scrub\_df }\OtherTok{\textless{}{-}}\NormalTok{ scrub\_df}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{select}\NormalTok{(ID, }\FunctionTok{everything}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+Let's save our \emph{scrub\_df} data for this and write it as an outfile.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1691,8 +1660,6 @@ First let's get the df down to the variables we want to retain:
 \end{Highlighting}
 \end{Shaded}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29\ldots{}
-
 Before we start our formal analysis of missingness at the scale level, let's continue to scrub by eliminating cases that clearly won't remain. In the script below we create a variable that counts the number of missing variables and then creates a proportion by dividing it by the number of total variables.
 
 Using the \emph{describe()} function from the \emph{psych} package, we can investigate this variable.
@@ -1712,16 +1679,38 @@ Using the \emph{describe()} function from the \emph{psych} package, we can inves
   \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n\_miss))}
 
 \NormalTok{ScoredPrMiss }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(scored}\SpecialCharTok{$}\NormalTok{prop\_miss)}
-\NormalTok{ScoredPrMiss }\CommentTok{\#this object is displayed below and I use input from  it for the inline text used in the write{-}up}
+\NormalTok{ScoredPrMiss}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 29  4.6 10.82      0    2.67   0   0 33.33 33.33 1.97     2.29 2.01
+## X1    1 30 4.44 10.66      0    1.39   0   0 33.33 33.33 2.03     2.53 1.95
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29 cases for which the scoring protocol was applied, missingness ranged from 0 to 33.3333333.
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ScrdMissMin }\OtherTok{\textless{}{-}} \FunctionTok{digits}\NormalTok{(ScoredPrMiss}\SpecialCharTok{$}\NormalTok{min, }\DecValTok{0}\NormalTok{)}\CommentTok{\#this object is displayed below and I use input from  it for the inline text used in the write{-}up}
+\NormalTok{ScrdMissMax }\OtherTok{\textless{}{-}} \FunctionTok{digits}\NormalTok{(ScoredPrMiss}\SpecialCharTok{$}\NormalTok{max, }\DecValTok{0}\NormalTok{)}
+\NormalTok{ScrdMissMin}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ScrdMissMax}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 33
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 30 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%.
 
 We need to decide what is our retention threshhold. Twenty percent seems to be a general rule of thumb. Let's delete all cases with missingness at 20\% or greater.
 
@@ -1737,10 +1726,10 @@ We need to decide what is our retention threshhold. Twenty percent seems to be a
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 26
+## [1] 27
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29 cases for which the scoring protocol was applied, missingness ranged from zero to 33.3333333. After eliminating cases with greater than 20\% missing, the dataset analyzed included 26 cases.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 30 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 27 cases.
 
 With a decision about the number of cases we are going to include, we can continue to analyze missingness.
 
@@ -1761,30 +1750,12 @@ Again, we look at missingness as the proportion of
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(formattable)}
 \NormalTok{PrScoredCellsMissing }\OtherTok{\textless{}{-}}\FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(scored))) }\CommentTok{\#percent missing across df}
 \NormalTok{PrScoredRowsMissing }\OtherTok{\textless{}{-}} \FunctionTok{percent}\NormalTok{(}\FunctionTok{mean}\NormalTok{(}\FunctionTok{complete.cases}\NormalTok{(scored))) }\CommentTok{\#percent of rows with nonmissing data}
-\NormalTok{PrScoredCellsMissing}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## [1] 1.28%
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{PrScoredRowsMissing}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 92.31%
-\end{verbatim}
-
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 29 cases for which the scoring protocol was applied, missingness ranged from zero to 33.3333333. After eliminating cases with greater than 20\% missing, the dataset analyzed included 26 cases. In this dataset we had 1.28\% missing across the df; 92.31\% of the rows had nonmissing data.
-
-\emph{At this point in the write-up, if I knew I was going to use a consistent approach for managing data (e.g., listwise or pairwise deletion for ordinary least squares regression, FIML for SEM or CFA) I would mention it here.}
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 30 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 27 cases. In this dataset we had 1.23\% missing across the df; 92.59\% of the rows had nonmissing data.
 
 Let's look again at missing patterns and mechanisms.
 
@@ -1797,35 +1768,13 @@ Returning to the \emph{mice} package, we can use the \emph{md.pattern()} functio
 \begin{Highlighting}[]
 \CommentTok{\#Using the package: mice}
 \FunctionTok{library}\NormalTok{(mice)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'mice'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:stats':
-## 
-##     filter
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:base':
-## 
-##     cbind, rbind
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{mice\_ScaleLvl }\OtherTok{\textless{}{-}} \FunctionTok{md.pattern}\NormalTok{(scored, }\AttributeTok{plot =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{rotate.names=}\ConstantTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \includegraphics{ReC_MultivariateModeling_files/figure-latex/scale level missingness w mice-1.pdf}
 
-At the scale-level, this is much easier to interpret. As I am lecturing the results today (the numbers will change) there are only two rows of data because there are only two patterns of missingness. The most common pattern is non-missing data (\emph{n} = 23). The second pattern occurs when two people have missing data on the \emph{iBIPOC\_pr} variable
+At the scale-level, this is much easier to interpret. As I am lecturing the results today (the numbers will change) there are \emph{4} rows of data because there are only \emph{4} patterns of missingness. The most common pattern is non-missing data (\emph{n} = 25).
 
 \hypertarget{is-it-mcar}{%
 \subsection{Is it MCAR?}\label{is-it-mcar}}
@@ -1917,9 +1866,9 @@ All analyses were completed in R Studio (v. 1.4.1106) with R (v. 4.0.4).
 
 Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
 
-Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0 to 36.3636364. Across the dataset, 4.39\% of cells had missing data and 79.31\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with 4 items was scored if it at least three non-missig items; and the scale with six items was scored if it had at least five non-missing items. Across the 29 cases for which the scoring protocol was applied, missingness ranged from 0 to 33.3333333. After eliminating cases with greater than 20\% missing, the dataset analyzed included \texttt{ScoredCasesIncluded} cases. In this dataset 1.28\% was missing across the df; 92.31\% of the rows had nonmissing data.
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 4.24\% of cells had missing data and 80.00\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
 
-Given that our sample sizes were reasonable for the planned analyses and the degree of missingness was low, we specified a \ldots. (and here we would say how we analyzed the data: AIA/pairwise deletion, FIML, multiply imputed at the scale level\ldots stay tuned.)
+Across the 30 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 27 cases. In this dataset we had 1.23\% missing across the df; 92.59\% of the rows had nonmissing data.
 
 \hypertarget{practice-problems-1}{%
 \section{Practice Problems}\label{practice-problems-1}}
@@ -2005,17 +1954,6 @@ Assignment Component & Points Possible & Points Earned \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{bonus-reel}{%
-\section{Bonus Reel:}\label{bonus-reel}}
-
-\begin{figure}
-\hypertarget{id}{%
-\centering
-\includegraphics[width=6.45833in,height=2.19792in]{images/film-strip-1.jpg}
-\caption{Image of a filmstrip signifying that the what follows is considered to be supplemental}\label{id}
-}
-\end{figure}
-
 \hypertarget{references-1}{%
 \section{References}\label{references-1}}
 
@@ -2056,6 +1994,916 @@ Assignment Component & Points Possible & Points Earned \\
 ## [17] compiler_4.0.4    performance_0.6.1 cli_2.2.0         rvest_0.3.6      
 ## [21] xml2_1.3.2        sandwich_3.0-0    bookdown_0.21     bayestestR_0.8.0 
 ## [25] scales_1.1.1      mvtnorm_1.1-1     psych_2.0.12      digest_0.6.27    
+## [29] minqa_1.2.4       rmarkdown_2.6     pkgconfig_2.0.3   htmltools_0.5.0  
+## [33] lme4_1.1-26       dbplyr_2.0.0      htmlwidgets_1.5.3 rlang_0.4.9      
+## [37] readxl_1.3.1      rstudioapi_0.13   generics_0.1.0    zoo_1.8-8        
+## [41] jsonlite_1.7.2    magrittr_2.0.1    parameters_0.10.1 Matrix_1.2-18    
+## [45] Rcpp_1.0.5        munsell_0.5.0     fansi_0.4.1       lifecycle_0.2.0  
+## [49] stringi_1.5.3     multcomp_1.4-15   yaml_2.2.1        MASS_7.3-53      
+## [53] grid_4.0.4        parallel_4.0.4    sjmisc_2.8.5      crayon_1.3.4     
+## [57] lattice_0.20-41   haven_2.3.1       splines_4.0.4     hms_0.5.3        
+## [61] tmvnsim_1.0-2     knitr_1.30        pillar_1.4.7      boot_1.3-25      
+## [65] estimability_1.3  effectsize_0.4.1  codetools_0.2-18  reprex_0.3.0     
+## [69] glue_1.4.2        evaluate_0.14     modelr_0.1.8      vctrs_0.3.6      
+## [73] nloptr_1.2.2.2    cellranger_1.1.0  gtable_0.3.0      assertthat_0.2.1 
+## [77] xfun_0.19         xtable_1.8-4      broom_0.7.3       coda_0.19-4      
+## [81] survival_3.2-7    statmod_1.4.35    TH.data_1.0-10    ellipsis_0.3.1
+\end{verbatim}
+
+\hypertarget{DataDx}{%
+\chapter{Data Dx}\label{DataDx}}
+
+{[}Screencasted Lecture Link{]}
+
+The focus of this chapter engage in \emph{data diagnostics}, that is, to evaluate the appropriateness of the data for the \emph{specific research model we are going to evaluate}. We are asking the question, ``Does the data have the appropriate characteristics for the analysis we want to perform?'' Some statistics are more robust than others to violations of the assumptions about the characteristics of the data. None-the-less, we must report these characteristics when we disseminate the results.
+
+\hypertarget{navigating-this-lesson-2}{%
+\section{Navigating this Lesson}\label{navigating-this-lesson-2}}
+
+There is about \# hours and \#\# minutes of lecture. If you work through the materials with me it would be good to add another \#\# hours.
+
+\hypertarget{learning-objectives-2}{%
+\subsection{Learning Objectives}\label{learning-objectives-2}}
+
+Learning objectives from this lecture include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Conduct and interpret critical data diagnostics, including
+
+  \begin{itemize}
+  \tightlist
+  \item
+    alpha coefficients
+  \item
+    skew
+  \item
+    kurtosis
+  \end{itemize}
+\item
+  Assess univariate and multivariate normality
+\item
+  Identify options for managing outliers and skewed data
+\item
+  Articulate a workflow for data prepartion, including scrubbing, scoring, and data diagnostics
+\end{itemize}
+
+\hypertarget{planning-for-practice-2}{%
+\subsection{Planning for Practice}\label{planning-for-practice-2}}
+
+The suggestions from practice are a continuation from the two prior chapters. If you have completed one or more of those assignments, you should have started with a raw dataset and then scrubbed and scored it. This chapter will involve running basic data diagnostics. Options of graded complexity could incude:
+
+\begin{itemize}
+\tightlist
+\item
+  Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
+\item
+  Use the dataset that is the source of the chapter, but score a different set of items that you choose.
+\item
+  Begin with raw data to which you have access.
+\end{itemize}
+
+\hypertarget{readings-resources-2}{%
+\subsection{Readings \& Resources}\label{readings-resources-2}}
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+\begin{itemize}
+\item
+  Parent, M. C. (2013). Handling item-level missing data: Simpler is just as good. The Counseling Psychologist, 41(4), 568--600. \url{https://doi.org/10.1177/0011000012445176}
+\item
+  Kline, R. B. (2015). Data preparation and psychometrics review. In Principles and Practice of Structural Equation Modeling, Fourth Edition. Guilford Publications. \url{http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4000663}
+\end{itemize}
+
+\hypertarget{packages-2}{%
+\subsection{Packages}\label{packages-2}}
+
+The script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(tidyverse))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(psych))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"psych"}\NormalTok{)\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{workflow-for-scrubbing-and-scoring-2}{%
+\section{Workflow for Scrubbing and Scoring}\label{workflow-for-scrubbing-and-scoring-2}}
+
+The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters. At this stage we have
+* imported our raw data from Qualtrics,
+* scrubbed the data by applying our inclusion and exclusion criteria, and
+* used Parent's available information approach {[}AIA; \citeyearpar{parent_handling_2013}{]} for determining the acceptable amount of missingness for each scale, and
+* prepared variables and scored them.
+
+We are now ready to engage in data diagnostics for the statistical model we will test.
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch04/wrkflow_dx.jpg}
+\caption{An image of our stage in the workflow for scrubbing and scoring data.}
+\end{figure}
+
+\hypertarget{research-vignette-2}{%
+\section{Research Vignette}\label{research-vignette-2}}
+
+The research vignette comes from the survey titled, \href{https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU}{Rate-a-Recent-Course: A ReCentering Psych Stats Exercise} and is explained in the \protect\hyperlink{scrub}{scrubbing chapter}. In the \protect\hyperlink{score}{scoring chapter} we prepared four variables for analysis. Details for these are in our \href{./Rate-a-Course_Codebook.pdf}{codebook}.
+
+Variable recap:
+
+\begin{itemize}
+\tightlist
+\item
+  Perceived Campus Climate for Black Students includes 6 items, one of which was reverse scored. This scale was adapted from Szymanski et al.'s \citeyearpar{szymanski_perceptions_2020} Campus Climate for LGBTQ students. It has not been evaluated for use with other groups. The Szymanski et al.~analysis suggested that it could be used as a total scale score, or divided into three items each that assess
+
+  \begin{itemize}
+  \tightlist
+  \item
+    College response to LGBTQ students (items 6, 4, 1)
+  \item
+    LGBTQ stigma (items 3, 2, 5)
+  \end{itemize}
+\item
+  Sense of Belonging includes 3 items. This is a subscale from Bollen and Hoyle's \citeyearpar{bollen_perceived_1990} Perceived Cohesion Scale. There are no items on this scale that require reversing.
+\item
+  Percent of Black classmates is a single item that asked respondents to estimate the proportion of students in various racial categories
+\item
+  Percent of BIPOC instructional staff, similarly, asked respondents to identify the racial category of each member of their instructional staff
+\end{itemize}
+
+As we noted in the \protect\hyperlink{scrub}{scrubbing chapter}, our design has notable limitations. Briefly, (a) owing to the open source aspect of the data we do not ask about the demographic characteristics of the respondent; (b) the items that ask respondents to \emph{guess} the identities of the instructional staff and to place them in broad categories, (c) we do not provide a ``write-in'' a response. We made these decisions after extensive conversation with stakeholders. The primary reason for these decisions was to prevent potential harm (a) to respondents who could be identified if/when the revealed private information in this open-source survey, and (b) trolls who would write inappropriate or harmful comments.
+
+As I think about ``how these variables go together'' (which is often where I start in planning a study), imagine a parallel mediation. That is the perception of campus climate for Black students would be predicted by the respondent's sense of belonging, mediated in separate paths through the proportion of classmates who are Black and the proportion of BIPOC instructional staff.
+
+\emph{I would like to assess the model by having the instructional staff variable to be the \%Black instructional staff. At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.}
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch03/BlStuMed.jpg}
+\caption{An image of the statistical model for which we are preparing data.}
+\end{figure}
+
+I will finish up this chapter by conducting a regression. Because parallel mediation can be complicated (I teach it in a later chapter), I will demonstrate use of our prepared variables with a simple multiple regression.
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch04/BlStuRegression.jpg}
+\caption{An image of the statistical model for which we are preparing data.}
+\end{figure}
+
+First, though, let's take a more conceptual look at issues regarding missing data. We'll come back to details of the survey as we work with it.
+
+\hypertarget{internal-consistency-of-scalessubscales}{%
+\section{Internal Consistency of Scales/Subscales}\label{internal-consistency-of-scalessubscales}}
+
+Alpha coefficients are \emph{reliability coefficients} that assess the \emph{internal consistency} of an instrument. It asks, ``For each person, are responses \emph{consistently} high, or medium, or low?'' To the degree that they are (meaning there are high inter-item correlations), the internal consistency coefficient will be high. We want values \textgreater.80. There are numerous problems with alpha coefficients. The biggest one is that they are influenced by sample size -- longer scales have higher alpha coefficients \citep{cortina_what_1993}. Fourteen seems to be a magic number where we begin to not trust the high alpha coefficient. I address this more thoroughly -- offering an alternative -- in psychometrics. While there is much criticism about the usefulness of the alpha coefficient \citep{sijtsma_use_2009}, researchers continue to use the alpha coefficient as an indicator of the internal consistency of scales that consist of multiple items and contain several variables.
+
+We need item level data to compute an alpha coefficient. The easiest way to get an alpha coefficient is to feed the \emph{alpha()} function (\emph{psych} package) a contatonated list of items (with any items already reverse-scored). There should be no extra items. In the \protect\hyperlink{score}{scoring chapter} we already reverse-coded the single item in the campus climate scale, so we are ready to calculate alphas.
+
+The df from which I am pulling data was created and written as an outfile in the \protect\hyperlink{score}{scoring chapter}. This particular df has item-level data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{item\_scores\_df }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{ (}\StringTok{"BlStItmsScrs210320.csv"}\NormalTok{, }\AttributeTok{head =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{sep =} \StringTok{","}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+From this, we create tiny dfs, one for each of the alpha coefficients we need to create. A priori, we are planning to use all six items of the campus climate scale. We'll go ahead and also calculate the subscales because (a) it's good practice and (b) if the alpha is low, a \emph{reason} might show up in one of the subscales.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(psych)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'psych'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:sjstats':
+## 
+##     phi
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:ggplot2':
+## 
+##     %+%, alpha
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(formattable)}
+\NormalTok{Bel\_alpha }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{alpha}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"Belong\_1"}\NormalTok{, }\StringTok{"Belong\_2"}\NormalTok{, }\StringTok{"Belong\_3"}\NormalTok{)])}
+\NormalTok{Bel\_alpha}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = item_scores_df[c("Belong_1", "Belong_2", "Belong_3")])
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
+##       0.95      0.95    0.94      0.87  19 0.017  4.3 1.5     0.87
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.92 0.95 0.98 
+## 
+##  Reliability if an item is dropped:
+##          raw_alpha std.alpha G6(smc) average_r  S/N alpha se var.r med.r
+## Belong_1      0.93      0.93    0.87      0.87 13.4    0.025    NA  0.87
+## Belong_2      0.89      0.89    0.80      0.80  8.1    0.040    NA  0.80
+## Belong_3      0.96      0.96    0.92      0.92 24.1    0.015    NA  0.92
+## 
+##  Item statistics 
+##           n raw.r std.r r.cor r.drop mean  sd
+## Belong_1 29  0.95  0.95  0.93   0.89  4.4 1.5
+## Belong_2 30  0.98  0.98  0.97   0.94  4.5 1.6
+## Belong_3 29  0.94  0.93  0.88   0.85  4.1 1.6
+## 
+## Non missing response frequency for each item
+##             1    2    3    4    5    6    7 miss
+## Belong_1 0.03 0.07 0.21 0.17 0.24 0.21 0.07 0.03
+## Belong_2 0.03 0.07 0.20 0.20 0.17 0.27 0.07 0.00
+## Belong_3 0.07 0.14 0.10 0.24 0.28 0.10 0.07 0.03
+\end{verbatim}
+
+CAPTURE FOR THE APA STYLE WRITE-UP(since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the belonging scale was 0.950.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CClim\_alpha }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{alpha}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"rBlst\_1"}\NormalTok{, }\StringTok{"Blst\_2"}\NormalTok{, }\StringTok{"Blst\_3"}\NormalTok{, }\StringTok{"Blst\_4"}\NormalTok{, }\StringTok{"Blst\_5"}\NormalTok{, }\StringTok{"Blst\_6"}\NormalTok{)])}
+\NormalTok{CClim\_alpha}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = item_scores_df[c("rBlst_1", "Blst_2", "Blst_3", 
+##     "Blst_4", "Blst_5", "Blst_6")])
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
+##       0.84      0.86    0.89       0.5 5.9 0.048  2.5 0.99     0.49
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.74 0.84 0.93 
+## 
+##  Reliability if an item is dropped:
+##         raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
+## rBlst_1      0.83      0.86    0.89      0.55 6.0    0.050 0.037  0.56
+## Blst_2       0.84      0.85    0.87      0.54 5.8    0.048 0.036  0.55
+## Blst_3       0.84      0.86    0.88      0.56 6.3    0.046 0.029  0.55
+## Blst_4       0.79      0.81    0.84      0.46 4.3    0.063 0.038  0.46
+## Blst_5       0.77      0.80    0.83      0.45 4.1    0.068 0.040  0.45
+## Blst_6       0.78      0.79    0.80      0.43 3.7    0.065 0.030  0.43
+## 
+##  Item statistics 
+##          n raw.r std.r r.cor r.drop mean  sd
+## rBlst_1 26  0.65  0.65  0.55   0.48  3.4 1.3
+## Blst_2  29  0.72  0.67  0.60   0.52  2.9 1.7
+## Blst_3  29  0.63  0.63  0.55   0.44  2.2 1.4
+## Blst_4  28  0.83  0.84  0.83   0.74  2.4 1.2
+## Blst_5  29  0.88  0.87  0.85   0.80  2.1 1.3
+## Blst_6  29  0.87  0.92  0.94   0.85  2.2 1.0
+## 
+## Non missing response frequency for each item
+##            1    2    3    4    5    6 miss
+## rBlst_1 0.04 0.23 0.27 0.31 0.08 0.08 0.13
+## Blst_2  0.31 0.17 0.14 0.14 0.21 0.03 0.03
+## Blst_3  0.38 0.34 0.07 0.14 0.03 0.03 0.03
+## Blst_4  0.21 0.39 0.21 0.11 0.07 0.00 0.07
+## Blst_5  0.45 0.24 0.10 0.17 0.03 0.00 0.03
+## Blst_6  0.28 0.41 0.17 0.14 0.00 0.00 0.03
+\end{verbatim}
+
+CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the campus climate scale was 0.836. Since this value is \(\geq\) .80, it is within the realm of acceptability. Let's go ahead, though, and look at its subscales.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Stigma\_alpha }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{alpha}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"Blst\_3"}\NormalTok{, }\StringTok{"Blst\_2"}\NormalTok{, }\StringTok{"Blst\_5"}\NormalTok{)])}
+\NormalTok{Stigma\_alpha}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = item_scores_df[c("Blst_3", "Blst_2", "Blst_5")])
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
+##        0.7      0.72    0.71      0.46 2.5 0.098  2.4 1.2     0.49
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.51 0.7 0.89 
+## 
+##  Reliability if an item is dropped:
+##        raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
+## Blst_3      0.79      0.81    0.68      0.68 4.3    0.071    NA  0.68
+## Blst_2      0.66      0.66    0.49      0.49 1.9    0.125    NA  0.49
+## Blst_5      0.33      0.33    0.20      0.20 0.5    0.241    NA  0.20
+## 
+##  Item statistics 
+##         n raw.r std.r r.cor r.drop mean  sd
+## Blst_3 29  0.69  0.71  0.48   0.35  2.2 1.4
+## Blst_2 29  0.82  0.78  0.68   0.50  2.9 1.7
+## Blst_5 29  0.91  0.91  0.87   0.77  2.1 1.3
+## 
+## Non missing response frequency for each item
+##           1    2    3    4    5    6 miss
+## Blst_3 0.38 0.34 0.07 0.14 0.03 0.03 0.03
+## Blst_2 0.31 0.17 0.14 0.14 0.21 0.03 0.03
+## Blst_5 0.45 0.24 0.10 0.17 0.03 0.00 0.03
+\end{verbatim}
+
+Cronbach's alpha for the campus climate stigma subscale was 0.701.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Resp\_alpha }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{alpha}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"rBlst\_1"}\NormalTok{, }\StringTok{"Blst\_4"}\NormalTok{, }\StringTok{"Blst\_6"}\NormalTok{)])}
+\NormalTok{Resp\_alpha}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Reliability analysis   
+## Call: psych::alpha(x = item_scores_df[c("rBlst_1", "Blst_4", "Blst_6")])
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean sd median_r
+##       0.84      0.85    0.82      0.65 5.5 0.055  2.6  1     0.57
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.73 0.84 0.94 
+## 
+##  Reliability if an item is dropped:
+##         raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
+## rBlst_1      0.90      0.91    0.83      0.83 9.8    0.034    NA  0.83
+## Blst_4       0.71      0.73    0.57      0.57 2.6    0.101    NA  0.57
+## Blst_6       0.70      0.70    0.54      0.54 2.4    0.109    NA  0.54
+## 
+##  Item statistics 
+##          n raw.r std.r r.cor r.drop mean  sd
+## rBlst_1 26  0.82  0.80  0.61   0.58  3.4 1.3
+## Blst_4  28  0.90  0.90  0.87   0.75  2.4 1.2
+## Blst_6  29  0.89  0.92  0.89   0.79  2.2 1.0
+## 
+## Non missing response frequency for each item
+##            1    2    3    4    5    6 miss
+## rBlst_1 0.04 0.23 0.27 0.31 0.08 0.08 0.13
+## Blst_4  0.21 0.39 0.21 0.11 0.07 0.00 0.07
+## Blst_6  0.28 0.41 0.17 0.14 0.00 0.00 0.03
+\end{verbatim}
+
+Cronbach's alpha for the campus climate responsiveness subscale was 0.835. Between the two subscales, it looks as if the responsivenes subscale is more internally consistent.
+
+\hypertarget{distributional-characteristics-of-the-variables}{%
+\section{Distributional Characteristics of the Variables}\label{distributional-characteristics-of-the-variables}}
+
+\hypertarget{evaluating-univariate-normality}{%
+\subsection{Evaluating Univariate Normality}\label{evaluating-univariate-normality}}
+
+Statistics like ANOVA and regression each have a set of assumptions about the distributional characteristics of the data. In most of the chapters in this OER we review those assumptions and how to evaluate them. Common across many statistics is the requirement of univariate and multivariate normality. Let's take a look at the variables we will use in our analysis and assess those.
+
+We can continue to work from the df we uploaded at the beginning of the chapter to do this work. Let's take a quick peek. This df has the item-level data (we used it for the alpha coefficients); the scale and subscale scores; and the two items that assess proportion of instructional staff that are BIPOC and proportion of classmates that are BIPOC.
+
+The \emph{str()} function let's us look at the variable format/measurement level of each variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(item\_scores\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    30 obs. of  17 variables:
+##  $ ID        : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ iBIPOC_pr : num  0.333 0 0.5 0.333 1 ...
+##  $ cmBlack   : int  0 5 10 6 5 20 0 0 0 4 ...
+##  $ Belong_1  : int  6 4 NA 5 4 5 6 7 6 3 ...
+##  $ Belong_2  : int  6 4 3 3 4 6 6 7 6 3 ...
+##  $ Belong_3  : int  7 6 NA 2 4 5 5 7 6 3 ...
+##  $ Blst_1    : int  5 6 NA 2 6 5 5 5 5 3 ...
+##  $ Blst_2    : int  3 6 5 2 1 1 4 4 3 5 ...
+##  $ Blst_3    : int  5 2 2 2 1 1 4 3 1 2 ...
+##  $ Blst_4    : int  2 2 2 2 1 2 4 3 2 3 ...
+##  $ Blst_5    : int  2 4 NA 2 1 1 4 4 1 3 ...
+##  $ Blst_6    : int  2 1 2 2 1 2 4 3 2 3 ...
+##  $ rBlst_1   : int  3 2 NA 6 2 3 3 3 3 5 ...
+##  $ Belonging : num  6.33 4.67 NA 3.33 4 5.33 5.67 7 6 3 ...
+##  $ ResponseBL: num  2.33 1.67 2 3.33 1.33 2.33 3.67 3 2.33 3.67 ...
+##  $ StigmaBL  : num  3.33 4 3.5 2 1 1 4 3.67 1.67 3.33 ...
+##  $ ClimateBL : num  2.83 2.83 NA 2.67 1.17 1.67 3.83 3.33 2 3.5 ...
+\end{verbatim}
+
+The difference between ``int'' (integer) and ``num'' (numerical) is that integers are limited to whole numbers. In the functions used in this chapter, both are acceptable formats for the variables.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# the script may look a little complicated; I could have simply written}
+\CommentTok{\# describe(item\_scores\_df) \#it would have given me descriptives for all the items in the df}
+\CommentTok{\# because I only wanted a few variables, I provided them in a concatenated: list [c("iBIPOC\_pr", "cmBlack", "Belonging", "ClimateBL")]}
+\CommentTok{\# I also added "psych::" in front of the command to make sure that R is using the describe function from the psych package}
+\CommentTok{\# I popped the output into an object; objects are not required, but can be helpful to write as outfiles, to pipe elements of inline text, and to use with packages like apaTables}
+\CommentTok{\# When we use an object, we need to write it below so the results will display}
+\NormalTok{descriptives }\OtherTok{\textless{}{-}}\NormalTok{ (psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"iBIPOC\_pr"}\NormalTok{, }\StringTok{"cmBlack"}\NormalTok{, }\StringTok{"Belonging"}\NormalTok{, }\StringTok{"ClimateBL"}\NormalTok{)]))}
+\NormalTok{descriptives}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           vars  n mean   sd median trimmed  mad min   max range  skew kurtosis
+## iBIPOC_pr    1 28 0.43 0.41   0.33    0.42 0.49   0  1.00  1.00  0.41    -1.47
+## cmBlack      2 30 7.07 7.82   5.00    5.88 7.41   0 25.00 25.00  1.08    -0.09
+## Belonging    3 29 4.35 1.51   4.33    4.40 1.97   1  7.00  6.00 -0.32    -0.76
+## ClimateBL    4 27 2.47 0.98   2.33    2.45 0.98   1  4.17  3.17  0.18    -1.15
+##             se
+## iBIPOC_pr 0.08
+## cmBlack   1.43
+## Belonging 0.28
+## ClimateBL 0.19
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{ (descriptives, }\AttributeTok{file=}\StringTok{"DataDx\_descripts.csv"}\NormalTok{) }\CommentTok{\#this can be useful if you wish to manually format the data for an APA style table}
+\end{Highlighting}
+\end{Shaded}
+
+To understand whether our data are normally distributed, we can look at skew and kurtosis. The skew and kurtosis indices in the psych package are reported as \emph{z} scores. Regarding skew, values \textgreater{} 3.0 are generally considered ``severely skewed.'' Regarding kurtosis, ``severely kurtotic'' is argued anywhere \textgreater{} 8 to 20 \citep{kline_principles_2016}. At the time I am writing this chapter, our skew and kurtosis values fall below the thresholds that Kline identified as concerning.
+
+We can also apply the Shapiro-Wilk test of normality to each of our variables. When the \(p\) value is \textless{} .05, the variable's distribution is deviates from a normal distribution to a degree that is statistically significant. Below, the plotting of the histogram with a normal curve superimposed shows how the distribution approximates one that is normal.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#The shapiro{-}test is in base R; it\textquotesingle{}s specification is simple:  shapiro.test(df$variable)}
+\CommentTok{\#I added the object (and had to list it below) so I can use the inline text function}
+\NormalTok{SWt\_i }\OtherTok{\textless{}{-}}\NormalTok{ (}\FunctionTok{shapiro.test}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{iBIPOC\_pr))}
+\NormalTok{SWt\_cm }\OtherTok{\textless{}{-}} \FunctionTok{shapiro.test}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{cmBlack)}
+\NormalTok{SWt\_Bel }\OtherTok{\textless{}{-}}\FunctionTok{shapiro.test}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{Belonging)}
+\NormalTok{SWt\_Cl }\OtherTok{\textless{}{-}}\FunctionTok{shapiro.test}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{ClimateBL)}
+\NormalTok{SWt\_i}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  item_scores_df$iBIPOC_pr
+## W = 0.81128, p-value = 0.0001699
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SWt\_cm}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  item_scores_df$cmBlack
+## W = 0.81548, p-value = 0.0001272
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SWt\_Bel}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  item_scores_df$Belonging
+## W = 0.97451, p-value = 0.6866
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SWt\_Cl}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  item_scores_df$ClimateBL
+## W = 0.95296, p-value = 0.2528
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP: Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.815, \(p\) = 0.0001) and the proportion of BIPOC instructional staff(\(W\) = 0.811, \(p\) = 0.0002) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.975, \(p\) = 0.6866) and the respondent's perception of campus climate for Black students (\(W\) = 0.953, \(p\) = 0.2528) did not differ differently from a normal distribution.
+
+\emph{Note. Owing to the open nature of the dataset, these values will change. While I have used inline text to update the values of the Shapiro Wilks' and associated significance test, the text narration is not automatically updated and may be inconsistent with the results.}
+
+What would we do in the case of a univariate outlier? I find Kline's \citeyearpar{kline_principles_2016} chapter on data preparation and management to be extremely useful. He provides ideas for more complex analysis of both univariate and multivariate normality and provides suggestions that range from recoding recoding an extreme value to the next most extreme that is within three standard deviations of the mean to more complicated transformations. First, though we need to further examine the relationships between variables. We do that, next.
+
+\hypertarget{pairs-panels}{%
+\subsection{Pairs Panels}\label{pairs-panels}}
+
+As we work our way from univariate to multivariate inspection of our data, let's take a look at the bivariate relations.
+
+The \emph{pairs.panels()} function from the \emph{psych} package is useful for showing the relationship between variables (probably no more than 10) in a model.
+
+\begin{itemize}
+\tightlist
+\item
+  The lower half is a scatterplot between the two variables with a regression line (red) and mean (dot).\\
+\item
+  The diagonal is a histogram of each variable.\\
+\item
+  The upper half of is the correlation coefficient between the two variables.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{psych}\SpecialCharTok{::}\FunctionTok{pairs.panels}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"iBIPOC\_pr"}\NormalTok{, }\StringTok{"cmBlack"}\NormalTok{, }\StringTok{"Belonging"}\NormalTok{, }\StringTok{"ClimateBL"}\NormalTok{)], }\AttributeTok{stars =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{lm =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/pairs panels-1.pdf}
+
+The histograms displayed in the diagonal graph for us what we learned from the Shapiro Wilk's test of normality. We can clearly see the non-normal distribution in the iBIPOC\_pr and cmBlack variables.
+
+\hypertarget{evaluating-multivariate-normality}{%
+\section{Evaluating Multivariate Normality}\label{evaluating-multivariate-normality}}
+
+\textbf{Multivariate outliers} have extreme scores on two or more variables, or a pattern of scores that is atypical. For example, a case may have scores between two and three standard deviations above the mean on all variables, even though no case would be extreme. A common method of multivariate outlier detection is the \textbf{Mahalanobis distance} (\(D_{M}^{2}\)). This indicates the distance in variance units between the profile of scores for that case and the vector of sample means, or \textbf{centroid}, correcting for intercorrelations.
+
+The \emph{outlier()} function from the \emph{psych} package tells us how far each datapoint is from the multivariate centroid of the data. That is, find the squared Mahalanobis distance for each data point and compare it to the expected values of \(\chi^2\). The \emph{outlier()} protocol also produces a Q-Q (quantile-quantile) plot with the \emph{n} most extreme data points labeled.
+
+The code below appends the Mahalanobis values to the dataframe. It is easy, then, to identify, sort, and examine the most extreme values (relative to the rest of the data in their case/row) to make decisions about their retention or adjustment.
+
+Numeric variables are required in the for the calculation of the Mahalanobis.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{item\_scores\_df}\SpecialCharTok{$}\NormalTok{Mahal }\OtherTok{\textless{}{-}}\NormalTok{ psych}\SpecialCharTok{::}\FunctionTok{outlier}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"iBIPOC\_pr"}\NormalTok{, }\StringTok{"cmBlack"}\NormalTok{, }\StringTok{"Belonging"}\NormalTok{, }\StringTok{"ClimateBL"}\NormalTok{)]) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/Detect multivariate outliers-1.pdf}
+
+Q-Q plots take your sample data, sort it in ascending order, and then plot them versus quantiles (the number varies; you can see it on the X axis) calculated from a theoretical distribution. The number of quantiles is selected to match the size of your sample data. While Normal Q-Q Plots are the ones most often used in practice due to so many statistical methods assuming normality, Q-Q Plots can actually be created for any distribution. To the degree that the plotted line stays on the straight line (representing the theoretical normal distribution), the data is multivariate normally distributed.
+
+It is possible, then to analyze the Mahalanobis distance values.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{Mahal)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    vars  n mean   sd median trimmed  mad  min  max range skew kurtosis   se
+## X1    1 30 3.72 2.07    3.6    3.62 2.21 0.26 8.74  8.48 0.39     -0.5 0.38
+\end{verbatim}
+
+Using this information we can determine cases that have a Mahalanobis distance values that exceeds three standard deviations around the mean. In fact, we can have these noted in a column in the dataframe.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\CommentTok{\#str(item\_scores\_df$Mahal)}
+\NormalTok{item\_scores\_df}\SpecialCharTok{$}\NormalTok{MOutlier }\OtherTok{\textless{}{-}} \FunctionTok{if\_else}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{Mahal }\SpecialCharTok{\textgreater{}}\NormalTok{ (}\FunctionTok{median}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{Mahal) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{3}\SpecialCharTok{*}\FunctionTok{sd}\NormalTok{(item\_scores\_df}\SpecialCharTok{$}\NormalTok{Mahal))), }\ConstantTok{TRUE}\NormalTok{, }\ConstantTok{FALSE}\NormalTok{)}
+
+\FunctionTok{library}\NormalTok{(dplyr)}
+\NormalTok{OutlierCount }\OtherTok{\textless{}{-}}\NormalTok{ item\_scores\_df}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(MOutlier)}
+\NormalTok{OutlierCount}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   MOutlier  n
+## 1    FALSE 30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NumOutliers }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(item\_scores\_df) }\SpecialCharTok{{-}}\NormalTok{ OutlierCount}
+\NormalTok{NumOutliers}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   MOutlier n
+## 1       30 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(item\_scores\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   ID iBIPOC_pr cmBlack Belong_1 Belong_2 Belong_3 Blst_1 Blst_2 Blst_3 Blst_4
+## 1  1 0.3333333       0        6        6        7      5      3      5      2
+## 2  2 0.0000000       5        4        4        6      6      6      2      2
+## 3  3 0.5000000      10       NA        3       NA     NA      5      2      2
+## 4  4 0.3333333       6        5        3        2      2      2      2      2
+## 5  5 1.0000000       5        4        4        4      6      1      1      1
+## 6  6 0.0000000      20        5        6        5      5      1      1      2
+##   Blst_5 Blst_6 rBlst_1 Belonging ResponseBL StigmaBL ClimateBL     Mahal
+## 1      2      2       3      6.33       2.33     3.33      2.83 2.5049365
+## 2      4      1       2      4.67       1.67     4.00      2.83 1.4546365
+## 3     NA      2      NA        NA       2.00     3.50        NA 0.2625032
+## 4      2      2       6      3.33       3.33     2.00      2.67 0.5537915
+## 5      1      1       2      4.00       1.33     1.00      1.17 4.1284502
+## 6      1      2       3      5.33       2.33     1.00      1.67 5.0665840
+##   MOutlier
+## 1    FALSE
+## 2    FALSE
+## 3    FALSE
+## 4    FALSE
+## 5    FALSE
+## 6    FALSE
+\end{verbatim}
+
+CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP: We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the \emph{outlier()} function in the \emph{psych} package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased. Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that 0 exceed three standard deviations beyond the median. \emph{Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis} AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.
+
+\hypertarget{a-few-words-on-transformations}{%
+\section{A Few Words on Transformations}\label{a-few-words-on-transformations}}
+
+To quote from Kline \citeyearpar{kline_principles_2016}, ``Before applying a normalizing transformation, you should think about the variables of interest and whether the expectation of normality is reasonable.'' (p.~77)
+
+At this point in history, the non-normal distribution of the proportions of classmates who are Black and instructional staff who are BIPOC are accurate representations in higher education. Kline \citeyearpar{kline_principles_2016} has noted that transforming an inherently non-normal variable to force a normal distribution may fundamentally alter it such that the variable of interest is not actually studied. Kline's chapter reviews some options for applying corrections to outliers. Additionally, the chapter describes a variety of normalizing transformations.
+
+On a personal note, while I will use stadardized scores (a linear transformation) if it improves interpretation and center variables around a meaningful intercept, I tend to resist the transformation of data without a really compelling reason. Why? It's complicated and can make interpretation difficult.
+
+\hypertarget{the-apa-style-write-up-1}{%
+\section{The APA Style Write-Up}\label{the-apa-style-write-up-1}}
+
+Since the focus of this chapter was on data diagnostics, the APA style writeup will focus on on this element of the Method section:
+
+\hypertarget{data-diagnostics}{%
+\subsection{Data Diagnostics}\label{data-diagnostics}}
+
+Data screening suggested that 31 individuals opened the survey link. Of those, 30 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 30 met this criteria.
+
+Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
+
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 4.24\% of cells had missing data and 80.00\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
+
+Across the 30 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 27 cases. In this dataset we had 1.23\% missing across the df; 92.59\% of the rows had nonmissing data.
+
+Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.815, \(p\) = 0.0001) and the proportion of BIPOC instructional staff(\(W\) = 0.811, \(p\) = 0.0002) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.975, \(p\) = 0.6866) and the respondent's perception of campus climate for Black students (\(W\) = 0.953, \(p\) = 0.2528) did not differ differently from a normal distribution.
+
+We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the \emph{outlier()} function in the \emph{psych} package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased. Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that 0 exceed three standard deviations beyond the median. \emph{Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis} AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.
+
+Given that our sample sizes were reasonable for the planned analyses and the degree of missingness was low, we used pairwise deletion in our multiple regression analysis.
+
+\hypertarget{a-quick-regression-of-our-research-vignette}{%
+\section{A Quick Regression of our Research Vignette}\label{a-quick-regression-of-our-research-vignette}}
+
+With some confidence that our scrubbed-and-scored variables are appropriate for analysis, let me conduct the super quick regression that is our research vignette.
+
+\begin{figure}
+\centering
+\includegraphics{images/Ch04/BlStuRegression.jpg}
+\caption{An image of the statistical model for which we are preparing data.}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Climate\_fit }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(ClimateBL }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Belonging }\SpecialCharTok{+}\NormalTok{ cmBlack }\SpecialCharTok{+}\NormalTok{ iBIPOC\_pr, }\AttributeTok{data =}\NormalTok{ item\_scores\_df)}
+\FunctionTok{summary}\NormalTok{(Climate\_fit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = ClimateBL ~ Belonging + cmBlack + iBIPOC_pr, data = item_scores_df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.81102 -0.50885  0.06717  0.52050  1.64431 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  3.08986    0.64324   4.804 9.54e-05 ***
+## Belonging   -0.02121    0.12995  -0.163   0.8719    
+## cmBlack     -0.04980    0.02258  -2.206   0.0387 *  
+## iBIPOC_pr   -0.57833    0.45679  -1.266   0.2193    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.8998 on 21 degrees of freedom
+##   (5 observations deleted due to missingness)
+## Multiple R-squared:  0.2259, Adjusted R-squared:  0.1153 
+## F-statistic: 2.043 on 3 and 21 DF,  p-value: 0.1386
+\end{verbatim}
+
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = -0.021, \(p\) = 0.872), the proportion of classmates who were Black (\(B\) = -0.050, \(p\) = 0.039), nor the proportion of BIPOC instructional staff (\(B\) = -0.578, \(p\) = 0.219) led to statistically significant changes in perceptions of campus climate for Black students. Results are presented in Table 2.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(apaTables)}
+\FunctionTok{apa.cor.table}\NormalTok{(item\_scores\_df[}\FunctionTok{c}\NormalTok{(}\StringTok{"iBIPOC\_pr"}\NormalTok{, }\StringTok{"cmBlack"}\NormalTok{, }\StringTok{"Belonging"}\NormalTok{, }\StringTok{"ClimateBL"}\NormalTok{)], }\AttributeTok{table.number =} \DecValTok{1}\NormalTok{, }\AttributeTok{show.sig.stars =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{filename =} \StringTok{"Table1\_M\_SDs\_r\_DataDx"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 
+## Table 1 
+## 
+## Means, standard deviations, and correlations with confidence intervals
+##  
+## 
+##   Variable     M    SD   1           2            3          
+##   1. iBIPOC_pr 0.43 0.41                                     
+##                                                              
+##   2. cmBlack   7.07 7.82 -.14                                
+##                          [-.49, .25]                         
+##                                                              
+##   3. Belonging 4.35 1.51 .24         -.23                    
+##                          [-.15, .57] [-.55, .15]             
+##                                                              
+##   4. ClimateBL 2.47 0.98 -.21        -.39*        -.10       
+##                          [-.56, .20] [-.67, -.01] [-.46, .29]
+##                                                              
+## 
+## Note. M and SD are used to represent mean and standard deviation, respectively.
+## Values in square brackets indicate the 95% confidence interval.
+## The confidence interval is a plausible range of population correlations 
+## that could have caused the sample correlation (Cumming, 2014).
+##  * indicates p < .05. ** indicates p < .01.
+## 
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(apaTables)}
+\NormalTok{apaTables}\SpecialCharTok{::}\FunctionTok{apa.reg.table}\NormalTok{(Climate\_fit, }\AttributeTok{table.number =} \DecValTok{2}\NormalTok{, }\AttributeTok{filename =} \StringTok{"Climate\_table.doc"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 
+## Table 2 
+## 
+## Regression results using ClimateBL as the criterion
+##  
+## 
+##    Predictor      b       b_95%_CI  beta    beta_95%_CI sr2  sr2_95%_CI     r
+##  (Intercept) 3.09**   [1.75, 4.43]                                           
+##    Belonging  -0.02  [-0.29, 0.25] -0.03  [-0.45, 0.38] .00 [-.02, .02]  -.00
+##      cmBlack -0.05* [-0.10, -0.00] -0.43 [-0.84, -0.02] .18 [-.09, .45] -.40*
+##    iBIPOC_pr  -0.58  [-1.53, 0.37] -0.25  [-0.66, 0.16] .06 [-.10, .22]  -.21
+##                                                                              
+##                                                                              
+##                                                                              
+##              Fit
+##                 
+##                 
+##                 
+##                 
+##        R2 = .226
+##  95% CI[.00,.42]
+##                 
+## 
+## Note. A significant b-weight indicates the beta-weight and semi-partial correlation are also significant.
+## b represents unstandardized regression weights. beta indicates the standardized regression weights. 
+## sr2 represents the semi-partial correlation squared. r represents the zero-order correlation.
+## Square brackets are used to enclose the lower and upper limits of a confidence interval.
+## * indicates p < .05. ** indicates p < .01.
+## 
+\end{verbatim}
+
+\hypertarget{practice-problems-2}{%
+\section{Practice Problems}\label{practice-problems-2}}
+
+The three problems described below are designed to be continuations from the previous chapter (Scrubbing).
+
+\hypertarget{problem-1-reworking-the-chapter-problem-1}{%
+\subsection{Problem \#1: Reworking the Chapter Problem}\label{problem-1-reworking-the-chapter-problem-1}}
+
+If you chose this option in the prior chapters, you imported the data from Qualtrics, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, properly formatted the variables, interpreted item-level missingness, scored the scales/subscales, interpreted scale-level missingness, and wrote up the results.
+
+If you continue with this option, please continue working with the data to:
+
+Continue working with this data to:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Calculate alpha coefficients for scales/subscales. & 5 & \_\_\_\_\_ \\
+2. Evaluate univariate normality (skew, kurtosis, Shapiro-Wilks). & 5 & \_\_\_\_\_ \\
+3. Evaluate multivarite normality (Mahalanobis test) & 5 & \_\_\_\_\_ \\
+4. Represent your work in an APA-style write-up (added to the writeup in the previous chapter) & 5 & \_\_\_\_\_ \\
+5. For fun, run a quick analysis (e.g., regression, ANOVA) including at least three variables & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 30 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-2}{%
+\subsection{\texorpdfstring{Problem \#2: Use the \emph{Rate-a-Recent-Course} Survey, Choosing Different Variables}{Problem \#2: Use the Rate-a-Recent-Course Survey, Choosing Different Variables}}\label{problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-2}}
+
+If you chose this option in the prior chapter, you chose a minimum of three variables from the \emph{Rate-a-Recent-Course} survey to include in a simple statistical model. You imported the data from Qualtrics, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, properly formatted the variables, interpreted item-level missingness, scored the scales/subscales, interpreted scale-level missingness, and wrote up the results.
+
+Continue working with this data to:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Calculate alpha coefficients for scales/subscales. & 5 & \_\_\_\_\_ \\
+2. Evaluate univariate normality (skew, kurtosis, Shapiro-Wilks). & 5 & \_\_\_\_\_ \\
+3. Evaluate multivarite normality (Mahalanobis test) & 5 & \_\_\_\_\_ \\
+4. Represent your work in an APA-style write-up (added to the writeup in the previous chapter) & 5 & \_\_\_\_\_ \\
+5. For fun, run a quick analysis (e.g., regression, ANOVA) including at least three variables & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 30 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-3-other-data-2}{%
+\subsection{Problem \#3: Other data}\label{problem-3-other-data-2}}
+
+If you chose this option in the prior chapter, you used raw data that was available to you. You imported it into R, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, properly formatted the variables, interpreted item-level missingness, scored the scales/subscales, interpreted scale-level missingness, and wrote up the results.
+
+Continue working with this data to:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Calculate alpha coefficients for scales/subscales. & 5 & \_\_\_\_\_ \\
+2. Evaluate univariate normality (skew, kurtosis, Shapiro-Wilks). & 5 & \_\_\_\_\_ \\
+3. Evaluate multivarite normality (Mahalanobis test) & 5 & \_\_\_\_\_ \\
+4. Represent your work in an APA-style write-up (added to the writeup in the previous chapter) & 5 & \_\_\_\_\_ \\
+5. For fun, run a quick analysis (e.g., regression, ANOVA) including at least three variables & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 30 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{references-2}{%
+\section{References}\label{references-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.0.4 (2021-02-15)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18362)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] apaTables_2.0.8   psych_2.0.12      mice_3.13.0       sjstats_0.18.0   
+##  [5] formattable_0.2.1 forcats_0.5.0     stringr_1.4.0     dplyr_1.0.2      
+##  [9] purrr_0.3.4       readr_1.4.0       tidyr_1.1.2       tibble_3.0.4     
+## [13] ggplot2_3.3.3     tidyverse_1.3.0   qualtRics_3.1.4  
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-151      fs_1.5.0          lubridate_1.7.9.2 MBESS_4.8.0      
+##  [5] insight_0.11.1    httr_1.4.2        tools_4.0.4       backports_1.2.0  
+##  [9] R6_2.5.0          sjlabelled_1.1.7  DBI_1.1.0         colorspace_2.0-0 
+## [13] withr_2.3.0       tidyselect_1.1.0  mnormt_2.0.2      emmeans_1.5.3    
+## [17] curl_4.3          compiler_4.0.4    performance_0.6.1 cli_2.2.0        
+## [21] rvest_0.3.6       xml2_1.3.2        sandwich_3.0-0    bookdown_0.21    
+## [25] bayestestR_0.8.0  scales_1.1.1      mvtnorm_1.1-1     digest_0.6.27    
 ## [29] minqa_1.2.4       rmarkdown_2.6     pkgconfig_2.0.3   htmltools_0.5.0  
 ## [33] lme4_1.1-26       dbplyr_2.0.0      htmlwidgets_1.5.3 rlang_0.4.9      
 ## [37] readxl_1.3.1      rstudioapi_0.13   generics_0.1.0    zoo_1.8-8        

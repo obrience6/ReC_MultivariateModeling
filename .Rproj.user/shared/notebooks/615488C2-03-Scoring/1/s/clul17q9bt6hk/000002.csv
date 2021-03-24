@@ -1,0 +1,4 @@
+"0","PrScoredCellsMissing <-percent(mean(is.na(scored))) #percent missing across df"
+"0","PrScoredRowsMissing <- percent(mean(complete.cases(scored))) #percent of rows with nonmissing data"
+"0","#PrScoredCellsMissing <- digits(PrScoredCellsMissing, 2)"
+"0","#PrScoredRowsMissing <- digits(PrScoredRowsMissing, 2)"

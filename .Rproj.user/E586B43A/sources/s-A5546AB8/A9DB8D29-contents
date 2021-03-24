@@ -1,0 +1,529 @@
+---
+title: "Data Dx"
+author: "Lynette H. Bikos, PhD, ABPP"
+date: "03/25/2020"
+output: word_document
+always_allow_html: yes
+csl: apa-single-spaced.csl
+bibliography: DataCleaning.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(comment = NA) #keeps out the hashtags in the knits
+```
+
+![Opening image](phd101305s.gif){#id .class width=1000 height=400px}
+
+**Screencast Playlist link:** https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=444dcbc1-1693-4513-8a88-ab8a000ccf01 
+
+
+## navigating this lectuRette
+
+About 1 hour.  Add another 1.5ish hours to work through and digest the materials.
+
+Prior to this lecture we "scrubbed and scored."
+
+The focus of this lecture is ...
+
+* Identifying three simplish analyses we want to do
+* Calculating alpha coefficients for the scales we are using (a psychometric evaluation)
+* Conducting data diagnostics on the dataset with these in mind
+  + outlier analysis
+  + assessing univariate and multivariate normality
+  + consider transformations to the data
+
+After this lecture we will engage in multiple imputation (MImp) at
+  + scale level
+  + item level
+* Running a exploratory and primary analyses comparing 
+  + MImp scale level,
+  + MImp item level, and 
+  + AIA approaches
+
+### quiz pRep
+
+* Know how to interpret critical "data diagnostics"
+  + alpha coefficients
+  + skew
+  + kurtosis
+  + univariate and multivariate normality
+* Have some ideas for how to manage outliers and skewed data
+
+
+### planning for youR homewoRk
+
+This is a continuation of a multi-week assignments where you will prepare a set of data such that it is ready for multivariate analysis.
+
+### Readings & ResouRces
+
+Kline Ch4, Data Preparation & Psychometrics Review (pp. 72/Outliers - 88/Modern Methods )
+
+https://www.r-bloggers.com/a-new-way-to-handle-multivariate-outliers/
+
+
+# Data Diagnostics
+
+## wheRe we've been
+
+In the prior lectures we described the types of missing data (MCAR, MAR, MNAR).  We worked through a process for using Parent's AIA to prepare data for analysis..
+
+We used the available information analysis [AIA; @parent_handling_2013] approach to analyze missingness, diagnose that it's reasonably MCAR, and score the scales so that it's ready for analysis.
+
+But our data diagnostics aren't quite over...
+
+*Full disclosure:  at this moment I am thinking, "Oh, this is gonna be gnaRly...do we really wanna go here?" But if we don't, ya'll will be asking me later..."*
+
+## wheRe we'Re going depends on what we want to do
+
+Let's use the AIA scored data to frame up some analyses.  In this df we have:
+
+* Scores (continuous, means) for each of the four Hogwarts houses
+  + we could use other variables to predict degree of similarity to that house
+* Singlar identification of the Hogwarts house the respondent to which the respondent believed they belonged (unordered factors)
+* Platform on which the student was trained (SPSS v R; dichotomous, unordered, factor)
+* Year admitted to program
+* Program (IO or CPY)
+* Comfort with (affinity for) technology (continuous, mean score)
+* Career aspirations toward leadership(continuous, mean score)
+* Tendencies to display leadership behaviors in grad school (continuous, mean score)
+* Advisor (unordered factor)
+* Rank of Faculty member (ordered factor, 3 levels)
+* Tenure of Faculty member (ordered factor, 2 levels)
+
+Three (just for very fun) questions:
+
+* Linear regression of career aspirations toward leadership (Career) from score on the Gryffindor scale (Gryffindor), leadership behaviors in grad school (Leader), and doctoral program (Program).  
+* Linear regression of comfort with technology (Tech) from Program (IO or CPY), Platform (SPSS or R), and amount of time to complete the survey (seconds)
+* And what we *really really really* want to know, a simple disaggregation of Hogwarts house scores by faculty member/RVT and program (we'll do one-way ANOVAs).
+
+# Alpha coefficients for our scales
+
+Several scales in our df require item-level alpha coefficients. In psychometrics, we'll learn that we should probably report *more than* alpha coefficients, but this will get us started in the good habits of assessing the psychometric properties of the scale for our particular sample and context.
+
+Alpha coefficients are *reliability coefficients* that assess the *internal consistency* of an instrument. It asks, "For each person, are responses *consistently* high, or medium, or low?"  To the degree that they are (meaning there are high inter-item correlatons), the internal consistency coefficient will be high.  We want values >.80.  There are numerous problems with alpha coefficients.  The biggest one is that they are influenced by sample size -- longer scales have higher alpha coefficients.  Fourteen seems to be a magic number where we begin to not trust the high alpha coefficient (more later, in psychometrics).
+
+We need item level data for these. We'll learn more complicated scoring protocols in psychometrics.  The easiest way to get an alpha coefficient is to feed the *alpha()* function (psych package) a df that contains only the variables (with any items already reverse-scored).  No extra items.
+
+```{r install packages}
+#will install the package if not already installed
+if(!require(psych)){install.packages("psych")}
+if(!require(dplyr)){install.packages("dplyr")}
+if(!require(mice)){install.packages("mice")}
+
+library(dplyr)
+library(mice)
+library(psych) 
+```
+
+
+```{r import scrubbed df}
+#The first of this 3-part lecture imports the latest data directly from Qualtrics. I only re-lecture this occasionally.  If you use the .csv files in this folder, you should get the same results as in the lecture.  But if you use the df you created in the first lecture, your results will be different.  Up to you which you do/try!
+
+#this df created in a prior lecture; contains item-level variables that have been scrubbed
+scrubbed <- read.csv ("scrubbed.csv", head = TRUE, sep = ",")
+
+```
+
+*Keep in mind that our Sorting Hat quiz is not an official one, we will interpret it "with reservations".*
+Gryffindor:  1, 3, 4, 14, 17
+Hufflepuff:  8, 9, 10, 11, 15, 16
+Ravenclaw:  5, 12, 13, 18, 20
+Slytherin: 2, 6, 7, 19
+
+Other scales:
+Technology:  1, 2, r3, r4
+Career:  1, r2, 3, 4
+Ldr: 1, 2, 3
+
+```{r reverse score items}
+#Yes, we did this in the scRubbing_scoRing lecture, but in a different df; important to have clearly labeled dfs
+#How do we know we didn't do it to this one -- WE ALWAYS CREATE NEW VARIABLES AND THIS DF DOESN'T HAVE SUCH VARIABLES
+scrubbed<- scrubbed %>%
+  mutate(rTech_3 = 8 - Tech_3.)%>%
+  mutate (rTech_4 = 8 - Tech_4.)%>%
+  mutate (rCareer_2 = 8 - Career_2.) 
+```
+
+
+```{r Alpha coefficient for Gryffindor}
+Gryff_df <- select(scrubbed, Hat1, Hat3,Hat4, Hat14, Hat17)
+psych::alpha(Gryff_df)
+```
+Gryff alpha = .66, below threshhold
+
+```{r Alpha coefficient for Hufflepuff}
+Huff_df <- select(scrubbed, Hat8, Hat9, Hat10, Hat11, Hat15, Hat16)
+psych::alpha(Huff_df)
+```
+Huff alpha = .64, below threshhold
+
+```{r Alpha coefficient for Ravenclaw}
+Rave_df <- select(scrubbed, Hat5, Hat12, Hat13, Hat18, Hat20)
+psych::alpha(Rave_df)
+```
+Rave alpha = .75, below threshhold
+
+```{r Alpha coefficient for Slytherin}
+Slyth_df <- select(scrubbed, Hat2, Hat6, Hat7, Hat19)
+psych::alpha(Slyth_df)
+```
+Slyth alpha = .45, oof
+
+
+```{r Alpha coefficent for technology comfort}
+Tech_df <- select(scrubbed, Tech_1, Tech_2, rTech_3, rTech_4)
+psych::alpha(Tech_df)
+```
+Tech alpha = .84, meets threshhold!
+
+```{r Alpha coefficient for career leadership}
+Car_df <- select(scrubbed, Career_1, rCareer_2, Career_3, Career_4)
+psych::alpha(Car_df)
+```
+Career alpha = .73, below threshhold (but not by much)
+
+
+```{r Alpha coefficient of Leader scake}
+Ldr_df <- select(scrubbed, Leader_1, Leader_2, Leader_3)
+psych::alpha(Ldr_df)
+```
+Leader alpha = .77, almost.
+
+
+# Outlier Analysis
+
+**START HERE** for a df with the scored variables
+```{r}
+#this df created in a prior lecture; it contains scale-level variables with missingness managed by AIA, ready for analysis
+scored <- read.csv ("scored.csv", head = TRUE, sep = ",")
+library(tidyverse)
+```
+
+Let's do the responsible thing and run some diagnostics to assess the univariate and multivariate normality of this data.
+
+Taking a peek at the structured data will us know the factor levels; lower levels are listed first.  "Didn't we just do this (in the last lecture)?", you ask?  Why yes, we did.  It's critical to doublecheck, triplecheck, check again.
+
+```{r struture of scored df, eval=FALSE}
+str(scored)
+```
+
+Seconds should be numeric.
+
+Year, in this really case is a number...but it means something different than time (and we're not going to use it in the proposed analyses) so for the moment, we'll ignore it.
+
+```{r reformat seconds as numeric}
+AIAscored <- scored %>%
+    mutate(seconds = as.numeric(seconds))
+```
+
+```{r structure of AIAscored df, eval=FALSE}
+str(AIAscored)
+```
+
+
+```{r Proportion of missingness of each variable for raw data}
+p_missing <- unlist(lapply(AIAscored, function(x) sum(is.na(x))))/nrow(AIAscored)
+sort(p_missing[p_missing > 0], decreasing = TRUE)
+```
+50% of the data is missing for US_School, 25% for Hogwarts2, 20% for Hogwarts1, 19% for Platorm...then no more than 6T for the remaining variables.
+
+Even though we will use (later) the entire df for multiple imputation, the *psych* package works a little easier if we just create a baby df with the model variables and get the descriptives on those.
+
+Given that the other variables (considered to be *auxiliary*) in the larger df will impact the imputed values, if this were your data, you might want to examine them as well.
+
+To understand whether our data are normally distributed, we can look at skew and kurtosis.  The skew and kurtosis indices in the psych package are reported as *z* scores.  Regarding skew, values > 3.0 are generally considered "severely skewed."  Regarding kurtosis, "severely kurtotic" is argued anywhere > 8 to 20 [@kline_principles_2016].
+
+Asking for descriptives gives us a sense about **univariate outliers**.  One guideline is that scores > +/- 3 SDs around the mean may be outliers.  Transforming variable to *z* scores and then looking for those > 3 is one method of detection. BUT THIS IS OVERLY SIMPLISTIC. Alternatively,  Kline [-@kline_principles_2016] offers a MAD, or **median absolute deviation** of all scores from the sample median.
+
+```{r Data exploration with a babyframe}
+library(psych)
+#creating a baby df so that getting the descriptives is easier
+babydf <- dplyr::select (AIAscored, Gryffindor, Hufflepuff, Ravenclaw, Slytherin, Career, Leader, Tech, Program, Platform, Rank, Advisor, seconds)
+describe (babydf)
+```
+
+Our babyframe includes factors/categorical variables where interpreting the descriptives is not helpful.  Looking at the continuous variables and ordered factors we seem to be within reasonably normal ranges. 
+
+The only crazy skew and kurtosis is for seconds.  
+
+OK, I'm having difficulty interpreting this as seconds (shortest is 77 seconds, but longest is like 24 hours), so let's make it minutes:
+
+```{r Seconds rescored as minutes}
+babydf <- babydf %>% 
+  mutate(minutes = seconds/60)
+```
+
+And then because I'm too tired to think about what those big values mean, I want to just look at hours (we will pick one of these for our subsequent analysis).
+
+```{r Minutes rescored as hours}
+babydf <- babydf %>% 
+  mutate(hours = minutes/60)
+```
+
+We see that big outlier is 26 hours. Then a couple at ~3 hours.  Then 4 at ~1 hour or more, then the rest 40 minutes or below.
+
+The visual.
+
+```{r Histogram of seconds}
+library(ggplot2)
+ggplot(babydf, aes(seconds)) + geom_histogram(binwidth = 600)
+#binwidth maps it in 10 minute intervals
+```
+
+Things I think about in transformations in general, and in this particular case.
+
+* What is recommended?
+  + it's an extreme outlier, Kline [-@kline_chapter_2016] recommends recoding it as the value of the next most extreme score that is within 3SDs of the mean; 
+  
+```{r Calculating SDs around mean}
+#mean + 3SDs
+1921.47 +  (10571.90*3)
+#in our case, dropping it to 11910 would be ok
+```
+  + in the case of an extreme positive skew (it cb considered that, as well), Kline offers several transformation (squaring the values, various logarithmic transformation) that begin by setting the lowest value to 1.0.
+  + interpretation is always critical...transformations make interpretation tough.
+  
+* What I'm thinking
+  + in this case, the value of time is a meaningful metric
+  + if we look at the data, several people "left their surveys open" for 1 hour or more and so there may be "something" to the behavior of this cluster of people
+  + so I will drop that high score back to the next highest value (11910)
+  + working with this data makes me realize that the incremental change measured in seconds will be so low that no matter what, there won't be a statistically significant change if we stay in the time metric of seconds, so I will also calculate minutes/hours...we'll probably use minutes.
+  
+x %>% 
+  mutate(A = if_else(A>500, 500,A))
+
+```{r Cap seconds to the outlier level}
+babydf <- babydf %>%
+  mutate(seconds = if_else(seconds>11910, 11910,seconds))
+```
+
+```{r Recalc time}
+
+babydf <- babydf %>% 
+  mutate(minutes = seconds/60)
+babydf <- babydf %>% 
+  mutate(hours = minutes/60)
+
+```
+  
+```{r Descriptives of babydf}
+describe(babydf)
+```
+
+```{r another histogram of seconds}
+library(ggplot2)
+ggplot(babydf, aes(seconds)) + geom_histogram(binwidth = 600)
+#binwidth maps it in 10 minute intervals
+```
+
+Ugh....those 3 case are still out there and really throwing off the skew and kurtosis.  Let's take the new mean and bring those three to 3SDs above the mean (although one, like Kline [-@kline_chapter_2016] could argue, median).
+
+```{r Cap at 3SDs around median}
+894 + (2138.02*3) #if mean
+294.50 + (2138.02*3) #if we do it around the median
+```
+
+Looking at these #s and the graph, the median probably makes more sense.
+
+```{r Recoding time around new median}
+babydf <- babydf %>%
+  mutate(seconds = if_else(seconds>6700, 6708,seconds))
+```
+
+```{r Another histogram of time}
+ggplot(babydf, aes(seconds)) + geom_histogram(binwidth = 600)
+#binwidth maps it in 10 minute intervals
+```
+
+```{r  More time calcs}
+babydf <- babydf %>% 
+  mutate(minutes = seconds/60)
+babydf <- babydf %>% 
+  mutate(hours = minutes/60)
+```
+
+```{r More babydf descriptives}
+describe(babydf)
+```
+
+Still skewed and kurtotic, but skew (3.48) is closer to 3 and kurtosis (11.95) is within the 8 to 20 range.  So, at this stage we will call it golden!
+
+```{r Counts of categorical vars}
+babydf %>%
+  count(Program)
+babydf %>%
+  count(Platform)
+babydf %>%
+  count(Rank)
+```
+
+
+**Multivariate outliers** have extreme scores on two or more variables, or a pattern of scores that is atypical.  For example, a case may have scores between two and three SDs above the mean on all variables, even though no case would be extreme.  A common method of multivariate outlier detection is the  **Mahalanobis distance** ($D_{M}^{2}$).  This indicates the  distance in variance units between the profile of scores for that case and the vector of sample means, or **centroid**, correcting for intercorrelations.
+
+The *outlier()* function tells us how far each datapoint is from the multivariate centroid of the data.  That is, find the squared Mahalanobis distance for each data point and compare it to the expected values of $\chi^2$.  This produces a Q-Q (quantile-quantile) plot with the *n* most extreme data points labeled.  The outlier values are in the vector, d2.
+
+Numeric variables are required in the superbabydf for the calculation of the Mahalanobis.
+
+```{r Superbabydf creation and outlier exploration, eval=FALSE}
+superbabydf <- dplyr::select(babydf, Gryffindor, Hufflepuff, Ravenclaw, Slytherin, Career, Leader, Tech, seconds)
+
+#plot gives us the Q-Q plot; bad = 5 prints the ID# (in this case it should be the row#) of the most outlandish 5 scores
+outlier(superbabydf, plot=TRUE, bad = 5)
+```
+
+
+
+Q-Q plots take your sample data, sort it in ascending order, and then plot them versus quantiles (the number varies; you can see it on the X axis) calculated from a theoretical distribution. The number of quantiles is selected to match the size of your sample data. While Normal Q-Q Plots are the ones most often used in practice due to so many statistical methods assuming normality, Q-Q Plots can actually be created for any distribution. To the degree that the plotted line stays on the straight line (representing the theoretical normal distribution), the data is multivariate normally distributed.
+
+The *pairs.panels()* function is useful for showing the relationship between variables (probably no more than 10) in a model.  The lower half is a scatterplot between the two variables with a regression line (red) and mean (dot).  The diagonal is a histogram of each variable.  The upper half of is the bivariate correlation between the two variables.
+
+See the top 5 scores on the plot (listed by their row #)?  If this were my data, I'd go take a look at those.
+
+```{r Pairspanels of babydf}
+pairs.panels(babydf, stars = TRUE, lm = TRUE)
+```
+
+These are tough to see, so it looking at them in their clusters can be helpful.  R is a little clunky, so making tiny dfs is required.
+
+```{r Pairs panels for regression 1}
+Reg1_df <- (select(babydf, Career, Gryffindor,Leader, Program))
+pairs.panels(Reg1_df, stars = TRUE, lm = TRUE)
+```
+
+
+```{r}
+Reg2_df <- (select(babydf, Tech, Program, Platform, seconds))
+pairs.panels(Reg2_df, stars = TRUE, lm = TRUE)
+```
+
+**We will need to update any other df we will be carrying forward in subsequent analyses**:  scrubbed, AIAscored
+
+### Transformations
+
+Directly from Kline [-@kline_principles_2016], "Before applying a normalizing transformation, you should think about the variables of interset and whether the expectation of normality is reasonable.  Some variables are expected to have non-normal distributions, such as reports of alcohol or drug use and certain personality characteristics (Bentler, 1987).  If so, then transforming an inherently non-normal variable to force a normal distribution may fundamentall alter it (the target variable isnot actually studied)" (p. 77)
+
+I am just generally disinclined to transform data without a really compelling reason and solution and here I see neither.
+
+In a *Bonus Reel* I work for you an example of multiple imputation from Katitas [-@katitas_getting_2019] where a logarithmic transformation is applied.
+
+Before closing out this lecture, let's make sure we save files with the transformed variable.
+
+```{r Saving files w transformed vars}
+scrubbed <-scrubbed %>%
+    mutate(seconds = as.numeric(seconds))
+scrubbed <-scrubbed %>%
+  mutate(seconds = if_else(seconds>6700, 6708,seconds))
+scrubbed <- scrubbed %>% 
+  mutate(minutes = seconds/60)
+scrubbed <- scrubbed %>% 
+  mutate(hours = minutes/60)
+  
+AIAscored <- AIAscored %>%
+  mutate(seconds = if_else(seconds>6700, 6708,seconds))
+AIAscored <- AIAscored %>% 
+  mutate(minutes = seconds/60)
+AIAscored <- AIAscored %>% 
+  mutate(hours = minutes/60)
+
+write.table(scrubbed, file="scrubbed_dx.csv", sep=",", col.names=TRUE, row.names=FALSE)
+write.table(AIAscored, file="AIAscored_dx.csv", sep=",", col.names=TRUE, row.names=FALSE)
+```
+
+# Analysis with the AIA prepared data
+
+**START HERE** to upload the df that has been scored and transformed after data dx.
+```{r Importing AIAscored_dx}
+AIAscored_dx <- read.csv ("AIAscored_dx.csv", head = TRUE, sep = ",")
+```
+
+
+## Predicting career aspirations for leadership
+
+```{r Predicting career aspirations for leadership}
+#fitm <- with(imp1, lm(y1 ~ y4 + x1)) #later for the MImp data
+AIA_ldr_fit <- lm(Career ~ Gryffindor + Leader + Program, data = AIAscored_dx)
+summary(AIA_ldr_fit)
+```
+
+We see that Leader and Program have a significant effect. Cool that the output indicates that it is IOP that contributes an additional .75 points to the overall leader score.
+
+We can play around with the regressions to see how they work (i.e., if I enter all 4 houses, significance drops; if I enter the polychotomous Hogwarts1, there is no sig and much more missingness) in terms of missing observations and significance.
+
+## Predicting comfort with technology
+
+```{r Predicting comfort with tech}
+#fitm <- with(imp1, lm(y1 ~ y4 + x1)) #model for later with MImp data
+#show difference if run with seconds, minutes, hours
+AIA_tech_fit <- lm(Tech ~ Program + Platform + seconds, data = AIAscored_dx)
+summary(AIA_tech_fit)
+
+```
+
+19 observations were deleted due to missingness (kind of a big deal).  Students using SPSS reported having greater affinity with technology.
+
+## Descriptives of Hogwarts scores by house
+
+A little one-way ANOVA ("Looks like regression!"  You say?  Yep, that, too.)
+
+```{r Gryff by program}
+GryffProg_fitAIA <- lm(Gryffindor ~ 1 + Program, data = AIAscored_dx)
+summary(GryffProg_fitAIA)
+```
+
+```{r Gryff by advisor}
+GryffAdv_fitAIA <- lm(Gryffindor ~ 1 + Advisor, data = AIAscored_dx)
+summary(GryffAdv_fitAIA)
+```
+
+```{r Huff by program}
+HuffProg_fitAIA <- lm(Hufflepuff ~ 1 + Program, data = AIAscored_dx)
+summary(HuffProg_fitAIA)
+```
+
+```{r Huff by advisor}
+HuffAdv_fitAIA <- lm(Gryffindor ~ 1 + Advisor, data = AIAscored_dx)
+summary(HuffAdv_fitAIA)
+```
+
+
+```{r Rave by program}
+RaveProg_fitAIA <- lm(Ravenclaw ~ 1 + Program, data = AIAscored_dx)
+summary(RaveProg_fitAIA)
+```
+
+
+```{r Rave by adisor}
+RaveAdv_fitAIA <- lm(Ravenclaw ~ 1 + Advisor, data = AIAscored_dx)
+summary(RaveAdv_fitAIA)
+```
+
+```{r Slyth by program}
+SlythProg_fitAIA <- lm(Slytherin ~ 1 + Program, data = AIAscored_dx)
+summary(SlythProg_fitAIA)
+```
+
+
+```{r Slyth by advisor}
+SlythAdv_fitAIA <- lm(Slytherin ~ 1 + Advisor, data = AIAscored_dx)
+summary(SlythAdv_fitAIA)
+```
+
+
+## Results
+
+All analyses were completed in R Studio (v. 1.2.5033) with R (v. 3.6.2). 
+
+**Missing Data Analysis and Treatment of Missing Data**
+
+Available item analysis (AIA; [@parent_handling_2013]) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent’s recommendations to guide our approach to managing missing data. Missing data analyses were conducted with the R packages mice (v. 3.7.0), Amelia (v. 1.7.6), and BaylorEdPsych (v. 0.5). We began by deleting cases where missingness was 50% or more. Of the 83 cases remaining, missing values represented 6% of the cases; 33% of the cases had non-missing data. For the 73% of the dataset with missing values, there were 35 patterns of missingness, with the most common (n = 26) being non-missing. Of cases with missing values, the number of items ranged between 1 and 11. Visual inspection of a missing value patterns chart suggested that the missing patterns resembled both monotonicity (e.g., once an individual skipped an item, they discontinued the survey) and haphazard responding. Two exceptions were the variables *US_School* and *Hogwarts2* (i.e., the U.S. parallel to the Hogwarts schools and the secondary Hogwarts house), where there were disproportionately high levels of missingness (attributed to respondent unfamiliarity with the concepts).  Scales, subscales, and parcels were calculated using Parent’s recommendation that some reasonable amount of missingness be allowed. Thus, for scales containing only three items, we allowed up to 33% missingness; for scales containing four items, we allowed up to 25% missingness; and for all others, we permitted up to 20% missingness. Applied at this measurement-model level of analysis, Little’s MCAR test, which diagnoses whether or not the missing observations are missing completely at random suggested that there was insufficient evidence to reject MCAR ($\chi ^{2}(302)=300.53, p < 0.513$). 
+
+Given that our sample sizes were reasonable for the planned analyses and the degree of missingness was low, we used the AIA approach to conduct the OLS regressions and ANOVAs.
+
+
+```{r}
+sessionInfo()
+```
+
+# References
+

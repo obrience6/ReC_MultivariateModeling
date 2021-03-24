@@ -1,0 +1,3 @@
+"0","library(formattable)"
+"0","CaseMiss<-psych::describe(scrub_df$prop_miss)"
+"0","CaseMiss"

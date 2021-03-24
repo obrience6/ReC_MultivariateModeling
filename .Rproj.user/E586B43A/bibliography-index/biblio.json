@@ -1,6 +1,81 @@
 {
     "sources": [
         {
+            "DOI": "10.1037/0021-9010.78.1.98",
+            "ISSN": "0021-9010",
+            "URL": "http://doi.apa.org/getdoi.cfm?doi=10.1037/0021-9010.78.1.98",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2019,
+                        9,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Cortina",
+                    "given": "Jose M."
+                }
+            ],
+            "container-title": "Journal of Applied Psychology",
+            "id": "cortina_what_1993",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "page": "98-104",
+            "title": "What is coefficient alpha? An examination of theory and applications.",
+            "title-short": "What is coefficient alpha?",
+            "type": "article-journal",
+            "volume": "78"
+        },
+        {
+            "abstract": "The psych package (Revelle, 2019a) was developed to perform most basic psychometric functions using R (R Core Team, 2019) A common problem is the need to take a set of items (e.g., a questionnaire) and score one or more scales on that questionnaire. Scores for subsequent analysis, reliabilities and intercorrelations are easily done using the scoreItems function.",
+            "author": [
+                {
+                    "family": "Revelle",
+                    "given": "William"
+                }
+            ],
+            "id": "revelle_using_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "14",
+            "title": "Using R to score personality scales",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Revelle",
+                    "given": "William"
+                }
+            ],
+            "id": "revelle_overview_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        1
+                    ]
+                ]
+            },
+            "page": "128",
+            "title": "An overview of the psych package",
+            "type": "article-journal"
+        },
+        {
             "ISBN": "978-1-4625-2336-8",
             "URL": "http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4000663",
             "abstract": "Emphasizing concepts and rationale over mathematical minutiae, this is the most widely used, complete, and accessible structural equation modeling (SEM) text. Continuing the tradition of using real data examples from a variety of disciplines, the significantly revised fourth edition incorporates recent developments such as Pearl’s graphing theory and the structural causal model (SCM), measurement invariance, and more. Readers gain a comprehensive understanding of all phases of SEM, from data collection and screening to the interpretation and reporting of the results. Learning is enhanced by exercises with answers, rules to remember, and topic boxes. The companion website supplies data, syntax, and output for the book’s examples–now including files for Amos, EQS, LISREL, Mplus, Stata, and R (lavaan). New to This Edition *Extensively revised to cover important new topics: Pearl’s graphing theory and the SCM, causal inference frameworks, conditional process modeling, path models for longitudinal data, item response theory, and more. *Chapters on best practices in all stages of SEM, measurement invariance in confirmatory factor analysis, and significance testing issues and bootstrapping. *Expanded coverage of psychometrics. *Additional computer tools: online files for all detailed examples, previously provided in EQS, LISREL, and Mplus, are now also given in Amos, Stata, and R (lavaan). *Reorganized to cover the specification, identification, and analysis of observed variable models separately from latent variable models. Pedagogical Features *Exercises with answers, plus end-of-chapter annotated lists of further reading. *Real examples of troublesome data, demonstrating how to handle typical problems in analyses. *Topic boxes on specialized issues, such as causes of nonpositive definite correlations. *Boxed rules to remember. *Website promoting a learn-by-doing approach, including syntax and data files for six widely used SEM computer tools.",
@@ -95,6 +170,50 @@
             "type": "book"
         },
         {
+            "DOI": "10.18637/jss.v056.i06",
+            "ISSN": "1548-7660",
+            "URL": "https://www.jstatsoft.org/index.php/jss/article/view/v056i06",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        1,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Jamshidian",
+                    "given": "Mortaza"
+                },
+                {
+                    "family": "Jalal",
+                    "given": "Siavash"
+                },
+                {
+                    "family": "Jansen",
+                    "given": "Camden"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "jamshidian_missmech_2014",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        1
+                    ]
+                ]
+            },
+            "page": "1-31",
+            "title": "MissMech: An R package for testing homoscedasticity, multivariate normality, and missing completely at random (MCAR)",
+            "title-short": "MissMech",
+            "type": "article-journal",
+            "volume": "56"
+        },
+        {
             "DOI": "10.1177/0011000006286347",
             "ISSN": "0011-0000, 1552-3861",
             "URL": "http://journals.sagepub.com/doi/10.1177/0011000006286347",
@@ -172,6 +291,32 @@
             "title-short": "Analysis of covariance",
             "type": "article-journal",
             "volume": "34"
+        },
+        {
+            "URL": "https://r4ds.had.co.nz/",
+            "abstract": "This book will teach you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        2,
+                        22
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "grolemund_3_nodate",
+            "title": "3 Data visualisation  R for Data Science",
+            "type": "book"
         },
         {
             "DOI": "10.1177/0956797613504966",
@@ -330,6 +475,128 @@
             "title": "Best-Practice Recommendations for Defining, Identifying, and Handling Outliers",
             "type": "article-journal",
             "volume": "16"
+        },
+        {
+            "URL": "https://r4ds.had.co.nz/",
+            "abstract": "This book will teach you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "grolemund_5_nodate",
+            "title": "5 Data transformation  R for Data Science",
+            "type": "book"
+        },
+        {
+            "URL": "https://uvastatlab.github.io/2019/05/01/getting-started-with-multiple-imputation-in-r/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        17
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Katitas",
+                    "given": "Aycan"
+                }
+            ],
+            "id": "katitas_getting_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "Library Catalog: uvastatlab.github.io",
+            "title": "Getting Started with Multiple Imputation in R - StatLab Articles",
+            "type": ""
+        },
+        {
+            "URL": "https://www.r-bloggers.com/a-new-way-to-handle-multivariate-outliers/",
+            "abstract": "Psychologists often have a standoffish attitude toward outliers. Developmental psychologists, in particular, seem uncomfortable with removing cases because of the challenges inherent in obtaining data in the first place. However, the process of identifying and (sometimes) removing outliers is not a witch hunt to cleanse datasets of “weird” cases; rather, dealing with outliers is an important step toward solid, reproducible science. As I’ll demonstrate in this simulated example, a few outliers can completely reverse the conclusions derived from statistical analyses. library(psych) library(tidyverse) library(simstudy) library(jtools) A Hypothetical Case I’ll pretend that I have data on participants’ self-reported affinity for aloneness (i.e., how much time they like being alone), time alone (i.e., number of hours typically spent alone per week), and loneliness. We might expect that people who spend more time alone feel more loneliness. However, if you’re the kind of person who enjoys being alone, maybe being by yourself isn’t so bad. In other words, I’m interested in the moderating effect of time alone on the association between affinity for aloneness and loneliness. Generating the Data I’ll simulate 600 cases using the simstudy package. Because I want the variables correlated, I’ll specify a correlation matrix that makes theoretical sense. c",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hipson",
+                    "given": "Will"
+                }
+            ],
+            "container-title": "R-bloggers",
+            "id": "hipson_new_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        1
+                    ]
+                ]
+            },
+            "note": "Library Catalog: www.r-bloggers.com",
+            "title": "A New Way to Handle Multivariate Outliers",
+            "type": ""
+        },
+        {
+            "URL": "https://stefvanbuuren.name/fimd/",
+            "abstract": "Flexible Imputation of Missing Data, Second Edition",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        21
+                    ]
+                ]
+            },
+            "id": "noauthor_httpsstefvanbuurennamefimd_nodate",
+            "title": "Https://stefvanbuuren.name/fimd/",
+            "title-short": "Https",
+            "type": "book"
+        },
+        {
+            "URL": "https://datascienceplus.com/handling-missing-data-with-mice-package-a-simple-approach/",
+            "abstract": "This is a quick, short and concise tutorial on how to impute missing data. Previously, we have published an extensive tutorial on imputing missing values with MICE package. The current tutorial aims to be simple and user-friendly for those who just starting using R. Preparing the dataset I have created a simulated dataset, which you […]",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        21
+                    ]
+                ]
+            },
+            "container-title": "DataScience+",
+            "id": "noauthor_handling_nodate",
+            "note": "Library Catalog: datascienceplus.com",
+            "title": "Handling missing data with MICE package; a simple approach",
+            "type": ""
         },
         {
             "DOI": "10.1016/S0022-2496(02)00028-7",
@@ -4624,7 +4891,7 @@
                     ]
                 ]
             },
-            "keyword": "activism, Activism, anti-Black racism, Black Lives Matter, Blacks, critical consciousness, Critical Thinking, Discrimination, Feminism, Intervention, Prevention, Racial and Ethnic Groups, racial trauma, Racism, Test Construction, Trauma",
+            "keyword": "Test Construction, Racial and Ethnic Groups, Intervention, Discrimination, Blacks, Trauma, Racism, activism, Activism, anti-Black racism, Black Lives Matter, critical consciousness, Critical Thinking, Feminism, Prevention, racial trauma",
             "note": "Publisher: American Psychological Association",
             "page": "1-16",
             "title": "Critical consciousness of anti-Black racism: A practical model to prevent and resist racial trauma",
@@ -4751,7 +5018,7 @@
                     ]
                 ]
             },
-            "keyword": "AfroLatinxs, Blackness, Blacks, Centering, colorism, Cross Cultural Psychology, Ethnic Identity, Latinos/Latinas, mestizaje, Racial and Ethnic Differences, racism, Racism, Skin (Anatomy), Stereotyped Attitudes",
+            "keyword": "Ethnic Identity, Cross Cultural Psychology, Latinos/Latinas, Racial and Ethnic Differences, Blacks, racism, Racism, Stereotyped Attitudes, Skin (Anatomy), AfroLatinxs, Blackness, Centering, colorism, mestizaje",
             "note": "Publisher: Educational Publishing Foundation",
             "page": "26-44",
             "title": "The fallacy of a raceless Latinidad: Action guidelines for centering Blackness in Latinx psychology",
@@ -4807,6 +5074,112 @@
             "title-short": "Acculturation Profiles of Central Florida Puerto Ricans",
             "type": "article-journal",
             "volume": "50"
+        },
+        {
+            "URL": "https://bookdown.org/mwheymans/bookmi/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        20
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Heymans",
+                    "given": "Martijn W."
+                },
+                {
+                    "family": "Eekhout",
+                    "given": "Iris"
+                }
+            ],
+            "id": "heymans_applied_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher-place": "Amsterdam",
+            "title": "Applied Missing Data Analysis with SPSS and (R) Studio",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-8039-4507-4",
+            "abstract": "What is the role of fit measures when respecifying a model? Should the means of the sampling distributions of a fit index be unrelated to the size of the sample? Is it better to estimate the statistical power of the chi-square test than to turn to fit indices? Exploring these and related questions, well-known scholars examine the methods of testing structural equation models (SEMS) with and without measurement error, as estimated by such programs as EQS, LISREL and CALIS.",
+            "author": [
+                {
+                    "family": "Joreskog",
+                    "given": "K. G."
+                }
+            ],
+            "container-title": "Testing Structural Equation Models",
+            "editor": [
+                {
+                    "family": "Bollen",
+                    "given": "Kenneth A."
+                },
+                {
+                    "family": "Long",
+                    "given": "J. Scott"
+                }
+            ],
+            "id": "bollen_testing_1993",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993,
+                        2
+                    ]
+                ]
+            },
+            "keyword": "Social Science / Research, Social Science / Methodology",
+            "note": "Google-Books-ID: FvIxxeYDLx4C",
+            "publisher": "SAGE",
+            "title": "Testing structural equation models",
+            "type": "chapter"
+        },
+        {
+            "DOI": "10.1007/s11336-008-9101-0",
+            "ISSN": "0033-3123",
+            "PMCID": "PMC2792363",
+            "PMID": "20037639",
+            "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2792363/",
+            "abstract": "This discussion paper argues that both the use of Cronbach’s alpha as a reliability estimate and as a measure of internal consistency suffer from major problems. First, alpha always has a value, which cannot be equal to the test score’s reliability given the interitem covariance matrix and the usual assumptions about measurement error. Second, in practice, alpha is used more often as a measure of the test’s internal consistency than as an estimate of reliability. However, it can be shown easily that alpha is unrelated to the internal structure of the test. It is further discussed that statistics based on a single test administration do not convey much information about the accuracy of individuals’ test performance. The paper ends with a list of conclusions about the usefulness of alpha.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        3,
+                        22
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Sijtsma",
+                    "given": "Klaas"
+                }
+            ],
+            "container-title": "Psychometrika",
+            "id": "sijtsma_use_2009",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        3
+                    ]
+                ]
+            },
+            "page": "107-120",
+            "title": "On the Use, the Misuse, and the Very Limited Usefulness of Cronbach’s Alpha",
+            "type": "article-journal",
+            "volume": "74"
         }
     ],
     "project_biblios": [

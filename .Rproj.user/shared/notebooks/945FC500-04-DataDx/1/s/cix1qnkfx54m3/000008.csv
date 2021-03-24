@@ -1,0 +1,14 @@
+"0","Stigma_alpha <- psych::alpha(item_scores_df[c(""Blst_3"", ""Blst_2"", ""Blst_5"")])"
+"0","Stigma_alpha"
+"1","
+Reliability analysis "
+"1"," "
+"1"," 
+"
+"1","Call: "
+"1","psych::alpha(x = item_scores_df[c(""Blst_3"", ""Blst_2"", 
+"
+"1","    ""Blst_5"")])
+"
+"1","
+ "

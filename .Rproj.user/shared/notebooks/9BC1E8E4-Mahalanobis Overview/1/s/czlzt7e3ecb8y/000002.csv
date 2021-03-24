@@ -1,0 +1,2 @@
+"0","#Descriptive statistics"
+"0","stat.desc(DF, norm = TRUE,basic = TRUE) %>% round(2)"

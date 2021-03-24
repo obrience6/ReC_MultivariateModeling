@@ -1,0 +1,8 @@
+"0","# the script may look a little complicated; I could have simply written"
+"0","# describe(item_scores_df) #it would have given me descriptives for all the items in the df"
+"0","# because I only wanted a few variables, I provided them in a concatenated: list [c(""iBIPOC_pr"", ""cmBlack"", ""Belonging"", ""ClimateBL"")]"
+"0","# I also added ""psych::"" in front of the command to make sure that R is using the describe function from the psych package"
+"0","# I popped the output into an object; objects are not required, but can be helpful to write as outfiles, to pipe elements of inline text, and to use with packages like apaTables"
+"0","# When we use an object, we need to write it below so the results will display"
+"0","descriptives <- (psych::describe(item_scores_df[c(""iBIPOC_pr"", ""cmBlack"", ""Belonging"", ""ClimateBL"")]))"
+"0","descriptives"

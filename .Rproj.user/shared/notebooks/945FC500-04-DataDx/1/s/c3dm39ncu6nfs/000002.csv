@@ -1,0 +1,13 @@
+"0","clSW <- digits(SWt_Cl$statistic, 3)
+clSWp <- digits(SWt_Cl$p.value, 4)
+clSW
+"
+"1","[1]"
+"1"," 0.954"
+"1","
+"
+"0","clSWp"
+"1","[1]"
+"1"," 0.2868"
+"1","
+"

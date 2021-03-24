@@ -1,0 +1,8 @@
+"0","library(dplyr)"
+"0","#str(item_scores_df$Mahal)"
+"0","item_scores_df$MOutlier <- if_else(item_scores_df$Mahal > (median(item_scores_df$Mahal) + (3*sd(item_scores_df$Mahal))), TRUE, FALSE)"
+"0",""
+"0","library(dplyr)"
+"0","OutlierCount <- item_scores_df%>%"
+"0","  count(MOutlier)"
+"0","OutlierCount"
