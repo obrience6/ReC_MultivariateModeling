@@ -3,7 +3,7 @@
     "path": "C:/Users/lhbikos/OneDrive - Seattle Pacific University/CPY 7033_Multivariate Modeling lectures/scRiptuRe200327.Rmd",
     "project_path": null,
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "927739016",
     "contents": "",
     "dirty": false,
     "created": 1616024718959.0,
@@ -12,16 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "732,21",
-        "scrollLine": "0",
+        "cursorPosition": "338,19",
+        "scrollLine": "314",
         "last_setup_crc32": ""
     },
     "folds": "",
-    "lastKnownWriteTime": 1616597430,
+    "lastKnownWriteTime": 1616784653,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1616597430440,
+    "last_content_update": 1616784697878,
     "read_only": false,
     "read_only_alternatives": []
 }

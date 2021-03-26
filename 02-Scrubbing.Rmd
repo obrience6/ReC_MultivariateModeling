@@ -109,6 +109,7 @@ We need two pieces of information:  the **root_url** and an **API token**.
 * Select Account Settings
 * Choose "Qualtrics IDs" from the user name dropdown
 
+
 We need the  **root_url**.  This is the first part of the web address for the Qualtrics account.  For our institution it is: spupsych.az1.qualtrics.com 
 
 The API token is in the box labeled, "API." If it is empty, select, "Generate Token." If you do not have this option, locate the *brand administrator* for your Qualtrics account. They will need to set up your account so that you have API privileges.

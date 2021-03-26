@@ -5,7 +5,7 @@ output:
 ---
 # Introduction {#ReCintro}
 
-[Screencasted Lecture Link]
+[Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=cc9b7c0d-e5c3-4e4e-a469-acf7013ee761)
 
 ## What to expect in each chapter
 

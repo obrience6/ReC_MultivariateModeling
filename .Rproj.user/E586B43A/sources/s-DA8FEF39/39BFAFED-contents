@@ -10,7 +10,7 @@ output:
 
 The focus of this chapter is the process of starting with raw data and preparing it for multivariate analysis.   To that end, we will address the conceptual considerations and practical steps in "scrubbing and scoring." 
 
-A twist in this lesson is that we are asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of *open science*, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to complete the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU). The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.
+A twist in this lesson is that I am asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of *open science*, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to complete the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU). The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.
 
 ## Navigating this Lesson
 
@@ -74,7 +74,7 @@ Here is a narration of the figure:
 
 1. The workflow begins by importing data into R. Most lessons in this series involve simulated data that are created directly in R. Alternatively, data could be:
    * imported "intRavenously" through programs such as Qualtrics,
-   * exported from programs such as Qualtrics to another program (e.g., .xlxs, .csv)
+   * exported from programs such as Qualtrics to another program (e.g., .xlxs, .csv),
    * imported in other forms (e.g., .csv,.sps, .sav).
 2. Scrubbing data by 
    * variable naming,
@@ -108,6 +108,7 @@ We need two pieces of information:  the **root_url** and an **API token**.
 * Log into your respective qualtrics.com account.
 * Select Account Settings
 * Choose "Qualtrics IDs" from the user name dropdown
+
 
 We need the  **root_url**.  This is the first part of the web address for the Qualtrics account.  For our institution it is: spupsych.az1.qualtrics.com 
 

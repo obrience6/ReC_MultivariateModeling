@@ -63,7 +63,7 @@ output:
 
 **If you are viewing this document, you should know that this is a book-in-progress.  Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders.  The document was last updated on `r format (Sys.Date(), '%d %b %Y')`**
 
-[Screencasted Lecture Link]
+[Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c932455e-ef06-444a-bdca-acf7012d759a)
 
 To *center* a variable in regression means to set its value at zero and interpret all other values in relation to this reference point. Regarding race and gender, researchers often center male and White at zero. Further, it is typical that research vignettes in statistics textbooks are similarly seated in a White, Western (frequently U.S.), heteronormative, framework. The purpose of this project is to create a set of open educational resources (OER) appropriate for doctoral and post-doctoral training that contribute to a socially responsive pedagogy -- that is, it contributes to justice, equity, diversity, and inclusion. 
 
@@ -73,12 +73,12 @@ Training models for doctoral programs in HSP are commonly scholar-practitioner, 
 
 In this OER, research vignettes will be from recently published articles where: 
 
-* the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations), 
-* the research has a JEDI/social responsivity focus, 
+* the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, LMIC[low-middle income countries]), 
+* the research is responsive to issues of justice, equity, inclusion, diversity, 
 * the lesson’s statistic is used in the article, and 
-* there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s); or it is publically available.  
+* there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s); or it is publicly available.  
 
-In training for multicultural competence, the saying, "A fish doesn't know that it's wet" is often used to convey the notion that we are often unaware of our own cultural characteristics. In recent months and years, there has been an increased awakening to the institutional and systemic racism that our sytems are perpetuating. Queuing from the water metaphor, I am hopeful that a text that is recentered in the ways I have described can contribute to *changing the water* in higher education and in the profession of psychology.
+In training for multicultural competence, the saying, "A fish doesn't know that it's wet" is often used to convey the notion that we are often unaware of our own cultural characteristics. In recent months and years, there has been an increased awakening to the institutional and systemic racism that our systems are perpetuating. Queuing from the water metaphor, I am hopeful that a text that is recentered in the ways I have described can contribute to *changing the water* in higher education and in the profession of psychology.
 
 ## Copyright with Open Access {-}
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
@@ -106,7 +106,7 @@ output:
 ---
 # Introduction {#ReCintro}
 
-[Screencasted Lecture Link]
+[Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=cc9b7c0d-e5c3-4e4e-a469-acf7013ee761)
 
 ## What to expect in each chapter
 
@@ -297,7 +297,7 @@ output:
 
 The focus of this chapter is the process of starting with raw data and preparing it for multivariate analysis.   To that end, we will address the conceptual considerations and practical steps in "scrubbing and scoring." 
 
-A twist in this lesson is that we are asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of *open science*, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to complete the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU). The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.
+A twist in this lesson is that I am asking you to contribute to the dataset that serves as the basis for the chapter and the practice problems. In the spirit of *open science*, this dataset is available to you and others for your own learning. Before continuing, please take 15-20 minutes to complete the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU). The study is approved by the Institutional Review Board at Seattle Pacific University (SPUIRB# 202102011, no expiration). Details about the study, including an informed consent, are included at the link.
 
 ## Navigating this Lesson
 
@@ -361,7 +361,7 @@ Here is a narration of the figure:
 
 1. The workflow begins by importing data into R. Most lessons in this series involve simulated data that are created directly in R. Alternatively, data could be:
    * imported "intRavenously" through programs such as Qualtrics,
-   * exported from programs such as Qualtrics to another program (e.g., .xlxs, .csv)
+   * exported from programs such as Qualtrics to another program (e.g., .xlxs, .csv),
    * imported in other forms (e.g., .csv,.sps, .sav).
 2. Scrubbing data by 
    * variable naming,
@@ -395,6 +395,7 @@ We need two pieces of information:  the **root_url** and an **API token**.
 * Log into your respective qualtrics.com account.
 * Select Account Settings
 * Choose "Qualtrics IDs" from the user name dropdown
+
 
 We need the  **root_url**.  This is the first part of the web address for the Qualtrics account.  For our institution it is: spupsych.az1.qualtrics.com 
 
