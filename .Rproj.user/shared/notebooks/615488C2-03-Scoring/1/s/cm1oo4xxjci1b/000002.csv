@@ -1,0 +1,5 @@
+"0","scrub_df$Belonging <- mean_n(scrub_df[,Belonging_vars], .65)
+"
+"2","Error in mean_n(scrub_df[, Belonging_vars], 0.65) : 
+  could not find function ""mean_n""
+"

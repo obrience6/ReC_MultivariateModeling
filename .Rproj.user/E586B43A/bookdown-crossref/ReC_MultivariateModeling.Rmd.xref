@@ -1,18 +1,29 @@
 h1:book-cover BOOK COVER
 h1:preface PREFACE
 h2:copyright-with-open-access Copyright with Open Access
+h1:acknowledgements ACKNOWLEDGEMENTS
 h1:ReCintro Introduction
 h2:what-to-expect-in-each-chapter What to expect in each chapter
+h2:strategies-for-accessing-and-using-this-oer Strategies for Accessing and Using this OER
 h2:if-you-are-new-to-r If You are New to R
+h3:base-r Base R
+h3:r-studio R Studio
 h3:r-hygiene R Hygiene
-h2:maximizing-learning-by-accessing-all-the-resources Maximizing Learning by Accessing all the Resources
+h4:everything-is-documented-in-the-.rmd-file Everything is documented in the .rmd file
+h4:file-organization File organization
+h4:chunks Chunks
+h4:packages Packages
+h4:knitting Knitting
+h3:troubleshooting-in-r-markdown tRoubleshooting in R maRkdown
+h3:strategies-for-success stRategies for success
+h3:resources-for-getting-started Resources for getting staRted
 h1:dataprep DATA PREP
 h1:scrub Scrubbing
 h2:navigating-this-lesson Navigating this Lesson
 h3:learning-objectives Learning Objectives
 h3:planning-for-practice Planning for Practice
 h3:readings-resources Readings & Resources
-h3:packages Packages
+h3:packages-1 Packages
 h2:workflow-for-scrubbing-and-scoring Workflow for Scrubbing and Scoring
 h2:research-vignette Research Vignette
 h2:working-the-problem Working the Problem
@@ -20,7 +31,7 @@ h3:intravenous-qualtrics intRavenous Qualtrics
 h3:about-the-rate-a-recent-course-survey About the  Survey
 h3:the-codebook The Codebook
 h2:scrubbing Scrubbing
-h3:tools-for-data-transcodmation Tools for Data Transcodmation
+h3:tools-for-data-manipulations Tools for Data Manipulations
 h3:inclusion-and-exclusion-criteria Inclusion and Exclusion Criteria
 h3:renaming-variables Renaming Variables
 h3:downsizing-the-dataframe Downsizing the Dataframe
@@ -32,19 +43,19 @@ h3:problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables Pr
 h3:problem-3-other-data Problem #3: Other data
 h2:bonus-track Bonus Track:
 h3:importing-data-from-an-exported-qualtrics-.csv-file Importing data from an exported Qualtrics .csv file
-h2:references References
 h1:score Scoring
 h2:navigating-this-lesson-1 Navigating this Lesson
 h3:learning-objectives-1 Learning Objectives
 h3:planning-for-practice-1 Planning for Practice
 h3:readings-resources-1 Readings & Resources
-h3:packages-1 Packages
+h3:packages-2 Packages
 h2:workflow-for-scrubbing-and-scoring-1 Workflow for Scrubbing and Scoring
 h2:research-vignette-1 Research Vignette
 h2:on-missing-data On Missing Data
 h3:data-loss-mechanisms Data Loss Mechanisms
 h3:diagnosing-missing-data-mechanisms Diagnosing Missing Data Mechanisms
-h3:available-information-analysis Available Information Analysis
+h3:managing-missing-data Managing Missing Data
+h3:available-information-analysis-aia Available Information Analysis (AIA)
 h2:working-the-problem-1 Working the Problem
 h3:missing-data-analysis-whole-df-and-item-level Missing Data Analysis: Whole df and Item level
 h3:analyzing-missing-data-patterns Analyzing Missing Data Patterns
@@ -62,13 +73,12 @@ h2:practice-problems-1 Practice Problems
 h3:problem-1-reworking-the-chapter-problem Problem #1: Reworking the Chapter Problem
 h3:problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-1 Problem #2: Use the  Survey, Choosing Different Variables
 h3:problem-3-other-data-1 Problem #3: Other data
-h2:references-1 References
 h1:DataDx Data Dx
 h2:navigating-this-lesson-2 Navigating this Lesson
 h3:learning-objectives-2 Learning Objectives
 h3:planning-for-practice-2 Planning for Practice
 h3:readings-resources-2 Readings & Resources
-h3:packages-2 Packages
+h3:packages-3 Packages
 h2:workflow-for-scrubbing-and-scoring-2 Workflow for Scrubbing and Scoring
 h2:research-vignette-2 Research Vignette
 h2:internal-consistency-of-scalessubscales Internal Consistency of Scales/Subscales
@@ -84,5 +94,29 @@ h2:practice-problems-2 Practice Problems
 h3:problem-1-reworking-the-chapter-problem-1 Problem #1: Reworking the Chapter Problem
 h3:problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-2 Problem #2: Use the  Survey, Choosing Different Variables
 h3:problem-3-other-data-2 Problem #3: Other data
-h2:references-2 References
+h1:multimp Multiple Imputation (A Brief Demo)
+h2:navigating-this-lesson-3 Navigating this Lesson
+h3:learning-objectives-3 Learning Objectives
+h3:planning-for-practice-3 Planning for Practice
+h3:readings-resources-3 Readings & Resources
+h3:packages-4 Packages
+h2:workflow-for-multiple-imputation Workflow for Multiple Imputation
+h2:research-vignette-3 Research Vignette
+h2:multiple-imputation-a-super-brief-review Multiple Imputation – a Super Brief Review
+h3:steps-in-multiple-imputation Steps in Multiple Imputation
+h3:statistical-approaches-to-multiple-imputation Statistical Approaches to Multiple Imputation
+h2:working-the-problem-2 Working the Problem
+h3:selecting-and-formatting-variables Selecting and Formatting Variables
+h3:the-multiple-imputation The Multiple Imputation
+h3:creating-scale-scores Creating Scale Scores
+h2:multiple-regression-with-multiply-imputed-data Multiple Regression with Multiply Imputed Data
+h2:toward-the-apa-style-write-up-1 Toward the APA Style Write-up
+h3:methoddata-diagnostics Method/Data Diagnostics
+h3:results-1 Results
+h2:multiple-imputation-considerations Multiple imputation considerations
+h2:practice-problems-3 Practice Problems
+h3:problem-1-reworking-the-chapter-problem-2 Problem #1: Reworking the Chapter Problem
+h3:problem-2-use-the-rate-a-recent-course-survey-choosing-different-variables-3 Problem #2: Use the  Survey, Choosing Different Variables
+h3:problem-3-other-data-3 Problem #3: Other data
+h1:refs References
 

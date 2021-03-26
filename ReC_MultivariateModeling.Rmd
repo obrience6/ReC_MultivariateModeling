@@ -1,6 +1,6 @@
 --- 
 lang: "en"
-title: "DRAFT: ReCentering Psych Stats:  Multivariate Modeling"
+title: "ReCentering Psych Stats:  Multivariate Modeling"
 author: "Lynette H Bikos, PhD, ABPP"
 knit: "bookdown::render_book"
 site:  bookdown::bookdown_site
@@ -63,15 +63,22 @@ output:
 
 **If you are viewing this document, you should know that this is a book-in-progress.  Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders.  The document was last updated on `r format (Sys.Date(), '%d %b %Y')`**
 
-To *center* a variable in regression means to set its value at zero and interpret all other values in relation to this reference point. Regarding race and gender, researchers often center male and White at zero. Further, it is typical that research vignettes in statistics textbooks are similarly seated in a White, Western (frequently U.S.), heteronormative, framework. The purpose of this project is to create a set of open educational resources (OER) appropriate for doctoral and post-doctoral training that contribute to justice, equity, diversity, inclusion (JEDI), and social responsivity. 
+[Screencasted Lecture Link]
 
-Statistics training in doctoral programs are frequently taught with fee-for-use programs (e.g., SPSS/AMOS, SAS, MPlus) that may not be readily available to the post-doctoral professional. In recent years, there has been an increase and improvement in R packages (e.g., *psych*, *lavaan*) used for in analyses common to psychological research. Correspondingly, many graduate programs are transitioning to statistics training in R (free and open source).  This is a challenge for post-doctoral psychologists who were trained with other software. This OER will offer statistics training with R and be, freely available on open science platforms under a Creative Commons Attribution - Non Commercial - Share Alike license [CC BY-NC-SA 4.0]. 
+To *center* a variable in regression means to set its value at zero and interpret all other values in relation to this reference point. Regarding race and gender, researchers often center male and White at zero. Further, it is typical that research vignettes in statistics textbooks are similarly seated in a White, Western (frequently U.S.), heteronormative, framework. The purpose of this project is to create a set of open educational resources (OER) appropriate for doctoral and post-doctoral training that contribute to a socially responsive pedagogy -- that is, it contributes to justice, equity, diversity, and inclusion. 
 
-Training models for doctoral programs in HSP are commonly scholar-practitioner, scientist-practitioner, or clinical-scientist.  An emerging model, the *scientist-practitioner-advocacy* training model incorporates social justice advocacy so that graduates are equipped to recognize and address the sociocultural context of oppression and unjust distribution of resources and opportunities [@mallinckrodt_scientist-practitioner-advocate_2014]. In statistics textbooks, the use of research vignettes engages the learner around a tangible scenario for identifying independent variables, dependent variables, covariates, and potential mechanisms of change. Many students recall examples in Field's  [-@field_discovering_2012] popular statistics text:  Viagra to teach one-way ANOVA, beer goggles for two-way ANOVA, and bushtucker for repeated measures.  What if the research vignettes were investigations around JEDI/social responsivity and highlighted the scholarship of individuals whose identities are often marginalized?
+Statistics training in doctoral programs are frequently taught with fee-for-use programs (e.g., SPSS/AMOS, SAS, MPlus) that may not be readily available to the post-doctoral professional. In recent years, there has been an increase and improvement in R packages (e.g., *psych*, *lavaan*) used for in analyses common to psychological research. Correspondingly, many graduate programs are transitioning to statistics training in R (free and open source).  This is a challenge for post-doctoral psychologists who were trained with other software. This OER will offer statistics training with R and be freely available (specifically in a GitHub respository and posted through GitHub Pages) under a Creative Commons Attribution - Non Commercial - Share Alike license [CC BY-NC-SA 4.0]. 
 
-In this OER, research vignettes will be from recently published articles where: (a) the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations), (b) the research has a JEDI/social responsivity focus, (b) the lesson’s statistic is used in the article, and (c) the data is shared publicly or there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s).  
+Training models for doctoral programs in HSP are commonly scholar-practitioner, scientist-practitioner, or clinical-scientist.  An emerging model, the *scientist-practitioner-advocacy* training model incorporates social justice advocacy so that graduates are equipped to recognize and address the sociocultural context of oppression and unjust distribution of resources and opportunities [@mallinckrodt_scientist-practitioner-advocate_2014]. In statistics textbooks, the use of research vignettes engages the learner around a tangible scenario for identifying independent variables, dependent variables, covariates, and potential mechanisms of change. Many students recall examples in Field's  [-@field_discovering_2012] popular statistics text:  Viagra to teach one-way ANOVA, beer goggles for two-way ANOVA, and bushtucker for repeated measures.  What if the research vignettes were more socially responsive? 
 
+In this OER, research vignettes will be from recently published articles where: 
 
+* the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations), 
+* the research has a JEDI/social responsivity focus, 
+* the lesson’s statistic is used in the article, and 
+* there is sufficient information in the article to simulate the data for the chapter example(s) and practice problem(s); or it is publically available.  
+
+In training for multicultural competence, the saying, "A fish doesn't know that it's wet" is often used to convey the notion that we are often unaware of our own cultural characteristics. In recent months and years, there has been an increased awakening to the institutional and systemic racism that our sytems are perpetuating. Queuing from the water metaphor, I am hopeful that a text that is recentered in the ways I have described can contribute to *changing the water* in higher education and in the profession of psychology.
 
 ## Copyright with Open Access {-}
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
@@ -79,17 +86,33 @@ In this OER, research vignettes will be from recently published articles where: 
 This book is published under a a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. This means that this book can be reused, remixed, retained, revised and redistributed (including commercially) as long as appropriate credit is given to the authors. If you remix, or modify the original version of this open textbook, you must redistribute all versions of this open textbook under the same license - CC BY-SA.
 
 
-Our GitHub open-source repository contains all of the text and source code for the book, including data and images. 
+A [GitHub open-source repository](https://github.com/lhbikos/ReC_MultivariateModeling) contains all of the text and source code for the book, including data and images. 
+
+# ACKNOWLEDGEMENTS {-}
+
+As a doctoral student at the University of Kansas (1992-2005), I learned that I "a foreign language" was required for graduation. *Please note that as one who studies the intersections of global, vocational, and sustainable psychology, I regret that I do not have language skills.* This could have been met with credit from high school -- but having grown up in rural, mid-Missouri -- my high school was exempt from this requiremnt. This requirement would have typically been met with a foreign language taken during an undergraduate program -- but my non-teaching degree at the University of Missouri's School of Education did not require one. The requirement could have also been met with a computer language (fortran, C++) -- I did not have any of those either. There was a tiny note on the degree plan that said that a 2-credit course, "SPSS for Windows" would also count.  Given that it was taught by my one of my favorite professors, I readily signed up. As it turns out, Samuel B. Green, PhD, was using the course to draft chapters in the textbook [@green_using_2014] that has been so helpful for so many. Unfortunately, Drs. Green (1947 - 2018) and Salkind (2947 - 2017) are no longer with us. I have worn out numerous versions of their text. Another favorite text of mine was Dr. Barbara Byrne's [-@byrne_structural_2016] text for learning SEM with AMOS. I had taken my tea-stained text with me to a workshop she taught at APA and was proud of the signature she added to it (a little catfur might have fallen out).  Dr. Byrne created SEM texts for a number of statistical programs (e.g., LISREL, EQS, MPlus). As I was learning R, I wrote Dr. Byrne and asked if she had one for SEM/CFA in R that I missed. She promptly wrote back, saying that she did not have the bandwidth to learn a new program.  We lost Dr. Byrne in December 2020. I am so grateful to these authors for their persistent, accessible, work. As my role models, I am aspiring to create something that is equally helpful. I am also grateful for the doctoral students who have taken my courses and are continuing to provide input for how to improve the materials.
+
+At very practical levels, I am indebted to SPU's Library, and more specifically, SPU's Education, Technology, and Media Department.  Assistant Dean for Instructional Design and Emerging Technologies, R. John Robertson, MSc, MCS, has offered unlimited consultation, support, and connection. Senior Instructional Designer in Graphics & Illustrations,Dominic Wilkinson, designed the logo and bookcover.  Psychology and Scholarly Communications Librarian, Kristin Hoffman, MLIS, has provided consultation on topics ranging from OERS to citations. I am alo indebted to Associate Vice President, Teaching and Learning at Kwantlen Polytechnic University, Rajiv Jhangiani, PhD. Dr. Jhangiani's text [-@jhangiani_research_2019] was the first OER I ever used and I was grateful for his encouraging conversation.
+
+Financial support for this text has been provided from the *Call to Action on Equity, Inclusion, Diversity, Justice, and Social Responsivity
+Request for Proposals* grant from the Association of Psychology Postdoctoral and Internship Centers (2021-2022). 
 
 <!--chapter:end:index.Rmd-->
 
+---
+output:
+  word_document: default
+  html_document: default
+---
 # Introduction {#ReCintro}
+
+[Screencasted Lecture Link]
 
 ## What to expect in each chapter
 
-This textbook is intended as *applied,* in that a primary goal is to help the scientist-practitioner-advocate use the statistic in a research problem and *write it up* for a program evaluation, dissertation, or journal article. In support of that goal, I try to provide *just enough* conceptual information so that the researcher can select the appropriate statistic (i.e., distinguishing between when ANOVA is appropriate and when regression is appropriate) and assign variables to their proper role (e.g., covariate, moderator, mediator).
+This textbook is intended as *applied,* in that a primary goal is to help the scientist-practitioner-advocate use a variety of statistics in research problems and *writing them up* for a program evaluation, dissertation, or journal article. In support of that goal, I try to provide just enough conceptual information so that the researcher can select the appropriate statistic (i.e., distinguishing between when ANOVA is appropriate and when regression is appropriate) and assign variables to their proper role (e.g., covariate, moderator, mediator).
 
-This conceptual approach does include step-by-step *hand-calculations* (only we calculate them arithmetically in R) to provide a *visceral feeling* of what is happening within the statistical algorithm that may be invisible to the researcher.  Additionally, the conceptual review includes a review of the assumptions about the characteristics of the data and research design that are required for the statistic. Statistics can be daunting, so I have worked hard to establish a *workflow* through each analysis. When possible, I include a flowchart that is referenced frequently in each chapter and assists the the researcher keep track of their place in the many steps and choices that accompany even the simplest of analyses.
+This conceptual approach does include occasional, step-by-step, *hand-calculations* (only we calculate them arithmetically in R) to provide a *visceral feeling* of what is happening within the statistical algorithm that may be invisible to the researcher.  Additionally, the conceptual review includes a review of the assumptions about the characteristics of the data and research design that are required for the statistic. Statistics can be daunting, so I have worked hard to establish a *workflow* through each analysis. When possible, I include a flowchart that is referenced frequently in each chapter and assists the the researcher keep track of their place in the many steps and choices that accompany even the simplest of analyses.
 
 As with many statistics texts, each chapter includes a *research vignette.* Somewhat unique to this resource is that the vignettes are selected from recently published articles. Each vignette is chosen with the intent to meet as many of the following criteria as possible:
 
@@ -100,35 +123,165 @@ As with many statistics texts, each chapter includes a *research vignette.* Some
 
 In each chapter we employ *R* packages that will efficiently calculate the statistic and the dashboard of metrics (e.g., effect sizes, confidence intervals) that are typically reported in psychological science.
 
+## Strategies for Accessing and Using this OER
+
+There are a number of ways you can access this resource. You may wish to try several strategies and then select which works best for you.  I demonstrate these in the screencast that accompanies this chapter.
+
+1. Simply follow along in the .html formatted document that is available on via GitHug Pages, and then
+   * open a fresh .rmd file of your own, copying (or retyping) the script  and running it 
+2. Locate the original documents at the [GitHub repository](https://github.com/lhbikos/ReC_MultivariateModeling) . You can
+   * open them to simply take note of the "behind the scenes" script
+   * copy/download individual documents that are of interest to you
+   * fork a copy of the entire project to your own GitHub site and further download it (in its entirety) to your personal workspace. The [GitHub Desktop app](https://desktop.github.com/) makes this easy!
+3. Listen to the accompanying lectures (I think sound best when the speed is 1.75). The lectures are being recorded in Panopto and should include the closed captioning.
+4. Provide feedback to me!  If you fork a copy to your own GitHub repository, you can 
+   * open up an editing tool and mark up the document with your edits,
+   * start a discussion by leaving comments/questions, and then
+   * sending them back to me by committing and saving.  I get an e-mail notiying me of this action.  I can then review (accepting or rejecting) them and, if a discussion is appropriate, reply back to you.
+
 ## If You are New to R
 
-<!-- TODO: Build out this section. -->
+R can be oveRwhelming. Jumping right into advanced statistics might not be the easiest way to start. However, in these chapters, I provide complete code for every step of the process, starting with uploading the data. To help explain what R script is doing, I sometimes write it in the chapter text; sometimes leave hastagged-comments in the chunks; and, particularly in the accompanying screencasted lectures, try to take time to narrate what the R script is doing.  
 
-In this section I will provide some orientation to using R in psychological research.  I don't intend this text to be "R from the ground up," but I will provide enough guidance that the individual can start working the problems.
+I've found that, somewhere on the internet, there's almost always a solution to what I'm trying to do. I am frequently stuck and stumped and have spent hours searching the internet for even the tiniest of things.  When you watch my videos, you may notice that in my R studio, there is a "scRiptuRe" file. I takes notes on the solutions and scripts here -- using keywords that are meaningful to me so that when I need to repeat the task, I can hopefully search my own prior solutions and find a fix or a hint.
 
-I will also link to tutorials that help individuals get started in R.
+### Base R
+
+The base program is free and is available here:  https://www.r-project.org/  
+
+Because R is already on my machine (and because the instructions are sufficient), I will not walk through the instllation, but I will point out a few things.
+
+* Follow the instructions for your operating system (Mac, Windows, Linux)
+* The "cran" (I think "cranium") is the *Comprehensive R Archive Network.*  In order for R to run on your computer, you have to choose a location.  Because proximity is somewhat related to processing speed, select one that is geographically "close to you." 
+* You will see the results of this download on your desktop (or elsewhere if you chose to not have it appear there) but you won't ever use R through this platform.
+
+### R Studio
+
+*R Studio* is the desktop application I work in R.  It's a separate download. Choose the free, desktop, option that is appropriate for your operating system:   https://www.rstudio.com/products/RStudio/
+
+* Upper right window:  Includes several tabs; we frequently monitor the
+  + Environment: it lists the *objects* that are available to you (e.g., dataframes)
+* Lower right window: has a number of helpful tabs.
+  + Files:  Displays the file structure in your computer's environment.  Make it a practice to (a) organize your work in small folders and (b) navigating to that small folder that is holding your project when you are working on it.
+  + Packages:  Lists the packages that have been installed.  If you navigate to it, you can see if it is "on."  You can also access information about the package (e.g., available functions, examples of script used with the package) in this menu.  This information opens in the Help window.
+  + Viewer and Plots are helpful, later, when we can simultaneously look at our output and still work on our script.
+* Primary window
+  + R Studio runs in the background(in the console).  Very occasionally, I can find useful troubleshooting information here.
+  + More commonly, I open my R Markdown document so that it takes the whole screen and I work directly, right here.
+* *R Markdown* is the way that many analysts write *script*, conduct analyses, and even write up results.  These are saved as .rmd files.
+  + In R Studio, open an R Markdown document through File/New File/R Markdown
+  + Specify the details of your document (title, author, desired ouput)
+  + In a separate step, SAVE this document (File/Save] into a NEW FILE FOLDER that will contain anything else you need for your project (e.g., the data).
+  + *Packages* are at the heart of working in R.  Installing and activating packages require writing script.
 
 ### R Hygiene
 
-<!-- TODO: Build out this section. -->
+Many initial problems in R can be solved with good R hygiene. Here are some suggestions for basic practices.  It can be tempting to "skip this."  However, in the first few weeks of class, these are the solutions I am presenting to my students.
 
-Many problems in R can be resolved with good "R hygiene." I will review those practices here. I will also review the conventions I will try to consistently use throughout the text.
+#### Everything is documented in the .rmd file
 
-Everything in a folder
+Although others do it differently, everything is in my .rmd file. That is, for uploading data and opening packages I write the code in my .rmd file.  Why?  Because when I read about what I did hours or years later, I have a permanent record of very critical things like (a) where my data is located, (b) what version I was using, and (c) what package was associated with the functions.
 
-Although it is often considered good R etiquette to load all packages at the beginning of the script, this is not my practice.  Each chapter will include a script that lists all the packages used, but I will open each package as we use it. This will provide a greater sense of which packages are needed for what task.
+#### File organization
 
-## Maximizing Learning by Accessing all the Resources
+File organization is a critical key to this:
 
-<!-- TODO: Build out this section. -->
+* Create a project file folder.
+* Put the data file in it.
+* Open an R Markdown file.
+* Save it in the same file folder.
+* When your data and .rmd files are in the same folder (not your desktop, but a shared folder), they can be connected.
 
-In this section I will talk about the options for using and learning the materials.  Primarily these are:
+#### Chunks
 
-1. Open a new document of R, copying the script over and running it in a fresh document.
-2. Forking the entire suite of materials from GitHub and working directly in the original R markdown documents with the option to annotate the material directly.
-3. Forking the materials to adopt and or adapt for teaching.
-3. Listening to the accompanying lectures (I sound best when the speed is 1.75). I intend to record the lectures in Panopto which provides some closed captioning options.
-4. Making use of the practice problems.
+The R Markdown document is an incredible tool for integrating text, tables, and analyses.  This entire OER is written in R Markdown.  A central feature of this is "chunks."
+
+The easiest way to insert a chunk is to use the INSERT/R command at the top of this editor box.  You can also insert a chunk with the keyboard shortcut:  CTRL/ALT/i
+
+"Chunks" start and end with with those three tic marks and will show up in a shaded box, like this:
+
+```{r title for the chunk contents}
+#hashtags let me write comments to remind myself what I did
+#here I am simply demonstrating arithmetic (but I would normally be running code)
+2021 - 1966
+```
+
+Each chunk must open and close.  If one or more of your tic marks get deleted, your chunk won't be read as such and your script will not run.  The only thing in the chunks should be script for running R; you can hashtag-out script so it won't run.
+
+Although unnecessary, you can add a brief title for the chunk in the opening row, after the "r."  These create something of a table of contents of all the chunks -- making it easier to find what you did.  You can access them in the "Chunks" tab at the bottom left of R Studio. If you wish to knit a document, you cannot have identical chunk titles.
+
+You can put almost anything you want in the space outside of tics.  Syntax for simple formatting in the text areas (e.g,. using italics, making headings, bold, etc.) is found here:  https://rmarkdown.rstudio.com/authoring_basics.html
+
+
+#### Packages
+
+As scientist-practitioners (and not coders), we will rely on *packages* to do our work for us. At first you may feel overwhelmed about the large number of packages that are available. Soon, though, you will become accustomed to the ones most applicable to our work (e.g., psych, tidyverse, lavaan, apaTables).
+
+Researchers treat packages differently. In these lectures, I list all the packages we will use in an opening chunk that asks R to check to see if the package is installed, and if not, installs it.  
+
+```{r checking for packages}
+if(!require(psych)){install.packages("psych")}
+```
+
+To make a package operable, you need to open it through the library.  This process must be repeated each time you restart R. I don't open the package (through the "library(package_name)") command until it is time to use it.  Especially for new users, I think it's important to connect the functions with the specific packages.
+
+```{r opening psych, package, message=FALSE, warning=FALSE}
+#install.packages ("psych")
+library (psych)
+```
+
+If you type in your own "install.packages" code, hashtag it out once it's been installed.  It is problematic to continue to re-run this code .
+
+#### Knitting
+
+An incredible feature of R Markdown is its capacity to *knit* to HTML, powerpoint, or word. If you access the .rmd files for this OER, you can use annotate or revise them to suit your purposes.  If you redistribute them, though, please honor the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License with a citation.
+
+### tRoubleshooting in R maRkdown
+
+Hiccups are normal.  Here are some ideas that I have found useful in getting unstuck.
+
+* In an R script, you must have everything in order -- Every. Single. Time. 
+  + All the packages have to be in your library and activated; if you restart R, you need to reload each package.
+  + If you open an .rmd file and want a boxplot, you cannot just scroll down to that script.  You need to run any *prerequisite* script (like loading the package, importing data, putting the data in the global environment, etc.)
+  + Do you feel lost?  clear your global environment (broom) and start at the top of the R script. Frequent, fresh starts are good.
+* Your .rmd file and your data need to be stored in the same file folder.  These should be separate for separate projects, no matter how small.
+* Type any warnings you get into a search engine.  Odds are, you'll get some decent hints in a manner of seconds.  Especially at first, these are common errors:
+  + The package isn't loaded (if you restarted R, you need to reload your packages)
+  + The .rmd file has been saved yet, or isn't saved in the same folder as the data
+  + Errors of punctuation or spelling
+* Restart R (it's quick -- not like restarting your computer)
+* If you receive an error indicating that a function isn't working or recognized, and you have loaded the package, type the name of the package in front of the function with two colons (e.g., psych::describe(df). If multiple packages are loaded with functions that have the same name, R can get confused.
+
+### stRategies for success
+
+* Engage with R, but don't let it overwhelm you.
+  + The *mechanical is also the conceptual*. Especially when it is *simpler*, do try to retype the script into your own .rmd file and run it. Track down the errors you are making and fix them.
+  + If this stresses you out, move to simply copying the code into the .rmd file and running it.  If you continue to have errors, you may have violated one of the best practices above (Is the package loaded? Are the data and .rmd files in the same place? Is all the prerequisite script run?).
+  + Still overwhelmed?  Keep moving forward by downloading a copy of the .rmd file that accompanies any given chapter and just "run it along" with the lecture. Spend your mental power trying to understand what each piece does. Then select a practice problem that is appropriate for your next level of growth. 
+* Copy script that works elsewhere and replace it with your datafile, variables, etc.  
+* The leaRning curve is steep, but not impossible.  Gladwell[-@gladwell_outliers_2008] reminds us that it takes about 10,000 hours to get GREAT at something (2,000 to get reasonably competent). Practice. Practice. Practice.
+* Updates to R, R Studio, and the packages are NECESSARY, but can also be problematic.  It could very well be that updates cause programs/script to fail (e.g., "X has been deprecated for version X.XX").  Moreover, this very well could have happened between my distribution of these resources and your attempt to use it.  My personal practice is to update R, R Studio, and the packages a week or two before each academic term.
+* Embrace your downward dog.  Also, walk away, then come back.
+  
+
+### Resources for getting staRted
+
+R for Data Science:  https://r4ds.had.co.nz/
+
+R Cookbook:  http://shop.oreilly.com/product/9780596809164.do
+
+R Markdown homepage with tutorials:  https://rmarkdown.rstudio.com/index.html
+
+R has cheatsheets for everything, here's one for R Markdown:  https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf 
+
+R Markdown Reference guide:  https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf
+
+Using R Markdown for writing reproducible scientific papers:  https://libscie.github.io/rmarkdown-workshop/handout.html 
+
+LaTeX equation editor:  https://www.codecogs.com/latex/eqneditor.php
+
+
+
 
 <!--chapter:end:01-Introduction.Rmd-->
 
@@ -140,7 +293,7 @@ output:
 # DATA PREP {-#dataprep}
 # Scrubbing {#scrub}
 
- [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
+[Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=7c87f991-276b-448f-aed9-acf6015b9638) 
 
 The focus of this chapter is the process of starting with raw data and preparing it for multivariate analysis.   To that end, we will address the conceptual considerations and practical steps in "scrubbing and scoring." 
 
@@ -148,8 +301,9 @@ A twist in this lesson is that we are asking you to contribute to the dataset th
 
 ## Navigating this Lesson
 
-<!-- TODO: Update how long it will take. -->
-There is about # hours and ## minutes of lecture.  If you work through the materials with me it would be good to add another ## hours.
+There is about 90 minutes of lecture.  If you work through the materials with me it would be good to add another hour.
+
+While the majority of R objects and data you will need are created within the R script that sources the chapter, there are a few that cannot be created from within the R framework. Additionally, sometimes links fail.  All original materials are provided at the [Github site](https://github.com/lhbikos/ReC_MultivariateModeling) that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's [introduction](#ReCintro)
 
 ### Learning Objectives
 
@@ -192,7 +346,6 @@ The script below will (a) check to see if the following packages are installed o
 #will install the package if not already installed
 if(!require(qualtRics)){install.packages("qualtRics")}
 if(!require(tidyverse)){install.packages("tidyverse")}
-if(!require(psych)){install.packages("psych")}
 ```
 
 
@@ -258,7 +411,6 @@ You do need to change the API key/token if you want to download data from a diff
 library(qualtRics)
 #qualtrics_api_credentials(api_key = "mUgPMySYkiWpMFkwHale1QE5HNmh5LRUaA8d9PDg",
               #base_url = "spupsych.az1.qualtrics.com", overwrite = TRUE, install = TRUE)
-
 ```
 
 *all_surveys()* generates a dataframe containing information about all the surveys stored on your Qualtrics account.
@@ -274,17 +426,18 @@ surveys
 To retrieve the survey, use the *fetch_survey()* function.  
 
 ```{r intRavenous Qualtrics,  message=FALSE, WARNING=FALSE}
-#obtained with the survey ID #
+#obtained with the survey ID 
 #"surveyID" should be the ID from above
 #"verbose" prints messages to the R console
 #"label", when TRUE, imports data as text responses; if FALSE prints the data as numerical responses
-#"convert", when TRUE, attempts to convert certain question types to teh "proper" data type in R; because I don't like guessing, I want to set up my own factors.
-#"force_request", when TRUE, always downloads the survey from the API instead of from a temporary director (i.e., it always goes to the primary source)
+#"convert", when TRUE, attempts to convert certain question types to the "proper" data type in R; because I don't like guessing, I want to set up my own factors.
+#"force_request", when TRUE, always downloads the survey from the API instead of from a temporary directory (i.e., it always goes to the primary source)
 # "import_id", when TRUE includes the unique Qualtrics-assigned ID; since I have provided labels, I want false
-library(qualtRics)
-QTRX_df <- fetch_survey(surveyID = "SV_b2cClqAlLGQ6nLU",useLocalTime = TRUE,
-                         verbose = FALSE, label=FALSE, convert=FALSE, force_request = TRUE, import_id = FALSE)
 
+#Out of the blue, I started getting an error, that R couldn't find function "fetch_survey."  After trying a million things, adding qualtRics:: to the front of it solved the problem
+QTRX_df <-qualtRics::fetch_survey(surveyID = "SV_b2cClqAlLGQ6nLU", time_zone = NULL, verbose = FALSE, label=FALSE, convert=FALSE, force_request = TRUE, import_id = FALSE)
+
+#useLocalTime = TRUE,
 ```
 <!-- TODO: Link to the Bonus Reel -->
 *It is possible (and helpful, even) to import Qualtrics data that has been downloaded from Qualtrics as a .csv.  I demo this in the Bonus Reel.*
@@ -299,7 +452,7 @@ Although the dataset should provide the opportunity to test a number of statisti
 
 Our design has notable limitations  You will likely notice that we ask about demographic characteristics of the instructional staff and classmates in the course rated, but we do not ask about the demographic characteristics of the respondent. In making this decision, we likely lose important information; Iacovino and James [-@iacovino_retaining_2016] have noted that White students perceive campus more favorably than Black student counterparts. We made this decision to protect the identity of the respondent. As you will see when we download the data, if a faculty member asked an entire class to take the survey, the datestamp and a handful of demographic identifiers could very likely identify a student. In certain circumstances, this might be risky in that private information (i.e., gender nonconformity, disclosure of a disability) or course evaluation data could be related back to the student.  
 
-Further, the items that ask respondents to *guess* the identities of the instructional staff and classmates are limited, and contrary to best practices in survey construction that recommend providing the option of a "write-in" a response.  After consulting with a diverse group of stakeholders and subject matter experts (and revising the response options numerous times) I have attempted to center anti-Black racism in the U.S. [@mosley_critical_2021; @mosley_radical_2020; @singh_building_2020].  In fact, the display logic does not present the race items when the course is offered outside the U.S. There are only five options for race: *biracial/multiracial*, *Black*, *non-Black person(s) of color*, *White*, and *I did not notice* (intended to capture a color-blind response). One unintended negative consequence of this design is that the response options could contribute to *colorism* [@adames_fallacy_2021; @capielo_rosario_acculturation_2019]. Another possibility is that the limited options may erase, or make invisible, other identities. At the time that I am writing the first draft of this chapter, the murder of six Asian American women in Atlanta has just occurred and anti-Asian racism has increased nearly 2000% in the past year [@kim_guest_2021; @kim_yes_2021; @noauthor_stop_nodate]. While this survey is intended to assess campus climate as a function of race, it unfortunately does not distinguish between many identities that experience marginalization. 
+Further, the items that ask respondents to *guess* the identities of the instructional staff and classmates are limited, and contrary to best practices in survey construction that recommend providing the option of a "write-in" a response.  After consulting with a diverse group of stakeholders and subject matter experts (and revising the response options numerous times) I have attempted to center anti-Black racism in the U.S. [@mosley_critical_2021; @mosley_radical_2020; @singh_building_2020].  In fact, the display logic does not present the race items when the course is offered outside the U.S. There are only five options for race: *biracial/multiracial*, *Black*, *non-Black person(s) of color*, *White*, and *I did not notice* (intended to capture a color-blind response). One unintended negative consequence of this design is that the response options could contribute to *colorism* [@adames_fallacy_2021; @capielo_rosario_acculturation_2019]. Another possibility is that the limited options may erase, or make invisible, other identities. At the time that I am writing the first draft of this chapter, the murder of six Asian American women in Atlanta has just occurred. The Center for the Study of Hate and Extremeism has documented that while overall hate drimes dropped by 7% in 2020, anti-Asian hate crimes reported to the police in America's largest cities increasedby 149% [@noauthor_fact_nodate]. These incidents have occurred not only in cities, but in our neighborhoods and on our campusus [@kim_guest_2021; @kim_yes_2021; @noauthor_stop_nodate]. While this survey is intended to assess campus climate as a function of race, it unfortunately does not distinguish between many identities that experience marginalization. 
 
 In parallel, the items asking respondents to identity characteristics of the instructional staff along dimensions of gender, international status, and disability are "large buckets" and do not include "write-in" options. Similarly, there was no intent to cause harm by erasing or making invisible individuals whose identities are better defined by different descriptors.  Further, no write-in items were allowed.  This was also intentional to prevent potential harm caused by people who could leave inappropriate or harmful comments. 
 
@@ -338,9 +491,9 @@ Looking at the QTRX_df, *StartDate* thru *UserLanguage* are metadata created by 
 
 With a look at our survey, codebook, and imported data, we now get to the business of scRubbing (deleting those who did not give consent, deleting previews, etc.). This level of "scrubbing" precedes the more formal detection of outliers.
 
-### Tools for Data Transcodmation
+### Tools for Data Manipulations
 
-The next stages will provide some experience transforming data with **dplyr** from  the **tidyverse**.
+The next stages will provide some experience manipulating data with **dplyr** from  the **tidyverse**.
 
 The **tidyverse** is a system of packages (i.e,. when you download the tidyverse, you download all its packages/members) for data manipulation, exploration and visualization.  The packages in the tidyverse share a common design philosophy. These were mostly developed by Hadley Wickham, but more recently, more designers are contributing to them. Tidyverse packages are intended to make statisticians and data scientists more productive by guiding them through workflows that facilitate communication and result in reproducible work products. Fundamentally, the tidyverse is about the connections between the tools that make the workflow possible. Critical packages in the tidyverse include:
 
@@ -401,7 +554,6 @@ consented_attempts
 ```
 CAPTURING RESULTS FOR WRITING IT UP:  Data screening suggested that `r attempts` individuals opened the survey link. Of those, `r consented_attempts`, granted consent and proceeded into the survey items.
 
-
 In this particular study, the categories used to collect race were U.S.-centric.  Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.
 ```{r include US institutions}
 QTRX_df <-(filter (QTRX_df, USinst == 0))
@@ -418,7 +570,7 @@ Even though we renamed the variables in Qualtrics, the loop-and-merge variables 
 The form of the *rename()* function is this:
 df_named <- rename(df_raw, NewName1 = OldName1)
 
-```{r rename variables that start with a number}
+```{r rename variables that start with numbers}
 library(tidyverse)
 QTRX_df <- rename(QTRX_df, iRace1 = '1_iRace', iRace2 = '2_iRace', iRace3 = '3_iRace', iRace4 = '4_iRace', iRace5 = '5_iRace', iRace6 = '6_iRace', iRace7 = '7_iRace', iRace8 = '8_iRace', iRace9 = '9_iRace', iRace10 = '10_iRace')
 ```
@@ -430,7 +582,6 @@ QTRX_df <- rename(QTRX_df, cmBiMulti = Race_10, cmBlack = Race_1, cmNBPoC = Race
 
 Let's also create an ID variable (different from the lengthy Qualtrics-issued ID) and then move it to the front of the distribution.
 ```{r create ID variable}
-#library(dplyr)
 QTRX_df <- QTRX_df %>% mutate(ID = row_number())
 
 #moving the ID number to the first column; requires 
@@ -439,7 +590,7 @@ QTRX_df <- QTRX_df%>%select(ID, everything())
 
 ### Downsizing the Dataframe
 
-Although researchers may differ in their approach, my tendency is to downsize the df to the variables I will be using in my study.  These could include variables in the model, demographic variables, and potentially auxillary variables (i.e,. variables not in the model, but that might be used in the case of multiple imputation).  
+Although researchers may differ in their approach, my tendency is to downsize the df to the variables I will be using in my study.  These could include variables in the model, demographic variables, and potentially auxiliary variables (i.e,. variables not in the model, but that might be used in the case of multiple imputation).  
 
 This particular survey did not collect demographic information, so that will not be used.  The model that I will demonstrate in this research vignette examines the the respondent's perceived campus climate for students who are Black, predicted by the the respondent's own campus belonging, and also the *structural diversity* [@lewis_black_2019] proportions of Black students in the classroom and BIPOC (Black, Indigenous, and people of color) instructional staff. 
 
@@ -454,7 +605,7 @@ Model_df <-(select (QTRX_df, ID, iRace1, iRace2, iRace3, iRace4, iRace5, iRace6,
 ```
 
 
-It can be helpful to save outfiles of progress as we go along.  Here I save this raw file.
+It can be helpful to save outfile of progress as we go along.  Here I save this raw file.
 ```{r write outfile}
 write.table(Model_df, file="BlackStntsModel210318.csv", sep=",", col.names=TRUE, row.names=FALSE)
 ```
@@ -471,7 +622,7 @@ Data screening suggested that `r attempts` individuals opened the survey link. O
 
 Starting with this chapter, the practice problems for this and the next two chapters (i.e., Scoring, Data Dx) are connected. Whatever practice option(s) you choose, please (a) use raw data that (b) has some data missing.  This second criteria will be important in the subsequent chapters.
 
-The three problems below are listed in the order of graded complexity. If you are just getting started, you may wish to start with the first problem. If you are more confident, choose the second or third option.
+The three problems below are listed in the order of graded complexity. If you are just getting started, you may wish to start with the first problem. If you are more confident, choose the second or third option. You will likely encounter challenges that were not covered in this chapter. Search for and try out solutions, knowing that there are multiple paths through the analysis.
 
 
 ### Problem #1: Rework the Chapter Problem
@@ -547,11 +698,6 @@ QTRX_csv <- read_survey("ReC_Download210319.csv", strip_html = TRUE, import_id =
 
 Although minor tweaking may be required, the same script above should be applicable to this version of the data.  
 
-## References
-
-
-
-
 ```{r sessionInfo 02}
 sessionInfo()
 ```
@@ -561,21 +707,22 @@ sessionInfo()
 
 # Scoring {#score}
 
- [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
+[Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=18a6be07-5bdc-404d-bc95-acf601830887)
 
-The focus of this chapter is to continue the process of scrubbing-and-scoring.  We continue with the raw data we downloaded and prepared in teh prior chapter. In this chapter we analyze and manage missingness, score scales/subscales, and represent our work with an APA-style write-up. To that end, we will address the conceptual considerations and practical steps in this process. 
+The focus of this chapter is to continue the process of scrubbing-and-scoring.  We continue with the raw data we downloaded and prepared in the prior chapter. In this chapter we analyze and manage missingness, score scales/subscales, and represent our work with an APA-style write-up. To that end, we will address the conceptual considerations and practical steps in this process. 
 
 ## Navigating this Lesson
 
-<!-- TODO: Update how long it will take. -->
-There is about # hours and ## minutes of lecture.  If you work through the materials with me it would be good to add another ## hours.
+There is about 1 hour and 20 minutes of lecture.  If you work through the materials with me it would be good to add another hour.
+
+While the majority of R objects and data you will need are created within the R script that sources the chapter, there are a few that cannot be created from within the R framework. Additionally, sometimes links fail.  All original materials are provided at the [Github site](https://github.com/lhbikos/ReC_MultivariateModeling) that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's [introduction](#ReCintro)
 
 ### Learning Objectives
 
 Learning objectives from this lecture include the following:
 
 * Recognize the key components of data loss mechanisms (MCAR, MAR, MNAR), including how to diagnose MCAR.
-* Interpret missingness figures produced by packages such as *mice* and *Amelia*.
+* Interpret missingness figures produced by packages such as *mice*.
 * Articulate a workflow for scrubbing and scoring data.
 * Use critical data manipulation functions from *dplyr* including *filter()*, *select()*, and *mutate()* to prepare variables.
 * Interpret code related to missingness (i.e., "is.na", "!is.na") and the pipe (%>%)
@@ -584,7 +731,7 @@ Learning objectives from this lecture include the following:
 
 <!-- TODO: Specify set of items to score for homework. -->
 
-The sugestions for practice continue from the prior chapter. The assignment in the prior chapter involved downloading a dataset from Qualtrics and the "scrubbing" it on the basis of inclusion and exclusion criteria. Using that same data, the practice suggestions in this chapter will continue to use Parent's [-@parent_handling_2013] AIA approach to managing missing data, to score the variables of interest. Options of graded complexity could incude:
+The suggestions for practice continue from the prior chapter. The assignment in the prior chapter involved downloading a dataset from Qualtrics and the "scrubbing" it on the basis of inclusion and exclusion criteria. Using that same data, the practice suggestions in this chapter will continue to use Parent's [-@parent_handling_2013] AIA approach to managing missing data, to score the variables of interest. Options of graded complexity could incude:
 
 * Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
 * Use the dataset that is the source of the chapter, but score a different set of items that you choose.
@@ -599,8 +746,6 @@ In preparing this chapter, I drew heavily from the following resource(s). Other 
 * Kline, R. B. (2015). Data preparation and psychometrics review. In Principles and Practice of Structural Equation Modeling, Fourth Edition. Guilford Publications. http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4000663
 
 * Grolemund, G., & Wickham, H. (n.d.). 5 Data transformation | R for Data Science. Retrieved March 12, 2020, from https://r4ds.had.co.nz/
-
-* Grolemund, G., & Wickham, H. (n.d.). 3 Data visualization | R for Data Science. Retrieved March 12, 2020, from https://r4ds.had.co.nz/
 
 
 ### Packages
@@ -623,13 +768,13 @@ The following is a proposed workflow for preparing data for analysis.
 
 <!-- TODO: When finalized, save as PDF so it can open in its own window) -->
 
-The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters.  At this stage we are at preliminary data diagnosis.
+The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters.  At this stage in the chapter we are still scrubbing as we work through the item-level and whole-level portions of the AIA (left side) of the chart.
 
 ![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_prelim.jpg)
 
 ## Research Vignette
 
-The research vignette comes from the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU) and is explained in the prior chapter. In the prior chapter we conducted super-preliminary scrubbing of variables that will allow us to examine the the respondent's perceived campus climate for students who are Black, predicted by the the respondent's own campus belonging, and also the *structural diversity* proportions of Black students in the classroom and the  BIPOC instructional staff. At present, I see this as a parallel mediation. That is, the perceived campus climate for Black students will be predicted by the respondent's sense of belonging, through the proportion of Black classmates and BIPOC (Black, Indigenous, and people of color)instructional staff.
+The research vignette comes from the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU) and is explained in the prior chapter. In the prior chapter we conducted super-preliminary scrubbing of variables that will allow us to examine the respondent's perceived campus climate for students who are Black, predicted by the the respondent's own campus belonging, and also the *structural diversity* proportions of Black students in the classroom and the  BIPOC instructional staff. At present, I see this as a parallel mediation. That is, the perceived campus climate for Black students will be predicted by the respondent's sense of belonging, through the proportion of Black classmates and BIPOC (Black, Indigenous, and people of color)instructional staff.
 
 *I would like to assess the model by having the instructional staff variable to be the %Black instructional staff.  At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.* 
 
@@ -693,9 +838,28 @@ The bad news is that we never really know (with certainty) the type of missing d
 
 If MCAR is rejected, we are never sure whether the data loss mechanism is MAR or MNAR. There is no magical statistical "fix."  Kline [-@kline_principles_2016] wrote, "About the best that can be done is to understand the nature of the underlying data loss pattern and accordingly modify your interpretation of the results" (p. 85).
 
-### Available Information Analysis
+### Managing Missing Data
 
-Parent [-@parent_handling_2013] has created a set of recommendations that help us create a streamlined workflow for managing missing data.  Parent concluded that in datasets with (a) low levels of missingness, (b) a reasonable sample size, and (c) adequate internal reliability of measures, that *available information anlaysis* (AIA), mean substitution, and multiple imputation had similar results.  
+There are a number of approaches to managing missing data.  Here is a summary of the ones most commonly used.
+
+* **Listwise deletion** (aka, Complete Case Analysis)  If there is a missing score on any variable, that case is excluded from **all**
+analyses.
+  
+* **Pairwise deletion** Cases are excluded only if they have missing data on variables involved in a particular analysis. AIA is a variant of pair-wise deletion, but it preserves as much data as possible with person-mean imputation at the scale level.
+
+* **Mean/median substitution** Mean/median substitution replaces missing values with the mean/median of that particular variable.  While this preserves the mean of the dataset, it can cause bias by decreasing variance.  For example, if you have a column that has substantial of missingness and you replace each value with the same, fixed, mean, the variability of that variable has just been reduced.  A variation on this is a **group-mean substitution** where the missing score in a particular group (e.g., women) is replaced by the group mean.
+
+*  **Full information maximum likelihood (FIML)**  A *model-based method* that takes the researcher's model as the starting point.  The procedure partitions the cases in a raw data file into subsets, each with the same pattern of missing observations, including none (complete cases).  Statistical information (e.g., means, variances) is extracted from each subset so all case are retained in the analysis.  Parameters for the researcher's model are estimated after combining all available information over the subsets of cases.
+
+* **Multiple imputation** A *data based method* that works with the whole raw data file (not just with the observed variables that comprise the researcher's model). Multiple imputation assumes that data are MAR (remember, MCAR is the more prestigious one).  This means that researchers assume that missing values can be replaced by predictions derived from the observable portion fo the dataset.
+
+  - Multiple datasets (often 5 to 20) are created where missing values are replaced via a randomized process (so the same missing value [item 4 for person A] will likely have different values for each dataset).
+  - The desired anlayis(es) is conducted simultaneously/separately for each of the imputed sets (so if you imputed 5 sets and wanted a linear regression, you get 5 linear regressions).
+  - A *pooled analysis* uses the point estimates and the standard errors to provide a single result that represents the analysis.
+
+### Available Information Analysis (AIA)
+
+Parent [-@parent_handling_2013] has created a set of recommendations that help us create a streamlined workflow for managing missing data.  After evaluating three approaches to managing missingness (AIA, mean substitution, and multiple imputation) Parent concluded that in datasets with (a) low levels of missingness, (b) a reasonable sample size, and (c) adequate internal reliability of measures, these approaches had similar results.  
 
 Further, in simulation studies where there was (a) low sample size (*n* = 50), (b) weak associations among items, and (c) a small number of missing items, AIA was equivalent to multiple imputation.  Even in cases where the data conditions were the "best" (i.e., *N* = 200, moderate correlations, at least 10 items), even 10% missingness (overall) did not produce notable difference among the methods.  That is, means, standard errors, and alphas were similar across the methods (AIA, mean substitution, multiple imputation).
 
@@ -704,16 +868,16 @@ AIA is an older method of handling missing data that, as its name suggests, uses
 * In the case of research that uses multiple item scales, and analysis takes place at the scale level
   - AIA is used to generate **mean** scores for the scale using the available data without substituting or imputing values;
   - This method generally produces a fairly complete set of scale-level data where 
-     * pairwise deletion (the whole row/case/person is skipped) can be used for many analyses that do not permit missing data:  correlations, t-tests, ANOVA 
-     * FIML can be specified in path analysis (if scale scores are missing) and CFA/SEM (where item-level data is required), and
-     * some statistics, such as principal components analysis (an item-level analysis) permit missing data, 
+     * pairwise deletion (the whole row/case/person is skipped) can be used where there will be multiple analyses using statistics (e.g., correlations, t-tests, ANOVA) were missingness is not permitted
+     * FIML can be specified in path analysisand CFA/SEM (where item-level data is required), and
+     * some statistics, such as principal components analysis and principal axis factoring (item-level analyses) permit missing data, 
   - Of course, the researcher could still impute data, but why...
   
 Parent's [-@parent_handling_2013] recommendations: 
 
 * Scale scores should be first calculated as a *mean* (average) not a sum. Why?
    - Calculating a "sum" from available data will result in automatically lower scores in cases where there is missingness.
-   - If a sum is required (i.e., because you want to interpret some clinical level of something), calculate the mean first, do the analyse, then transform the results back into the whole-scale equivalent (multiply the mean by the number of items) for any interpretation (or do some math around the sum-level interpretation so that you can interpret a mean).
+   - If a sum is required (i.e., because you want to interpret some clinical level of something), calculate the mean first, do the analyses, then transform the results back into the whole-scale equivalent (multiply the mean by the number of items) for any interpretation.
    - For R script, do not write the script ([item1 + item2 + item3]/3) because this will return an empty entry for participants missing data (same problem as if you were to use sum).  There are several functions for properly computing a mean; I will demo the *mean_n()* function from *sjstats* package because it allows us to simultaneously specify the tolerance level (next item).
 * Determine your *tolerance* for missingness (20% seems to be common, although you could also look for guidance in the test manual/article). Then
   - Run a "percent missingness" check on the level of analysis (i.e., total score, scale, or subscale) you are using. If you are using a total scale score, then check to see what percent is missing across all the items in the whole scale.  In contrast, if you are looking at subscales, run the percent missing at that level.
@@ -722,16 +886,10 @@ Parent's [-@parent_handling_2013] recommendations:
   - tolerance level for missing data by scale or subscale (e.g., 80% or 75%)
   - the number of missing values out of all data points on that scale for all participants and the maximum by participant (e.g., "For Scale X, a total of # missing data points out of ### were observed with no participant missing more than a single point.")
   - verify a manual inspection of missing data for obvious patterns (e.g., abnormally high missing rates for only one or two items).  This can be accomplished by requesting frequency output for the items and checking the nonmissing data points for each scale, ensuring there are no abnormal spikes in missingness (looking for MNAR).
-* Curiously, Parent [-@parent_handling_2013] does not recommend that we run all the diagnostic tests. However, because recent reviewers have required them of me, I will demonstrate a series of them, including MCAR.
+* Curiously, Parent [-@parent_handling_2013] does not recommend that we run all the diagnostic tests. However, because recent reviewers have required them of me, I will demonstrate a series of them.
 * Reducing missingness starts at the survey design -- make sure that all people can answer all items (i.e,. relationship-related items may contain heterosexist assumptions...which would result in an MNAR circumstance)
 
 Very practically speaking, Parent's [-@parent_handling_2013] recommendations follow us through the entire data analysis process.  
-
-* We will use a tolerance of 20%.
-  - We will create 2 variables (n_miss and prop_miss) for each of the scales, these will be used two ways.
-  - In combination, we will delete individuals who have 100% missing data on these 3 scores (this was an individual decision for this particular dataset; it could be different depending on your analytic approach)
-  - We will calculate scale scores only on those with 80% (roughly) of data present.
-* After calculating the scale scores, we will return to analyzing the missingness, looking at the whole dataset.
 
 ## Working the Problem
 
@@ -762,47 +920,58 @@ Let's think about how the variables in our model should be measured:
   
 Our next step is to conduct a preliminary missing data analysis at the item level, across the dataset we are using. The Campus Climate and Belonging scales are traditional in the sense that they have items that we sum. The variable representing proportion of classmates who are Black is a single item. The variable representing the proportion of instructional staff who are BIPOC must be calculated in a manner that takes into consideration the there may be multiple instructors. The survey allowed a respondent to name up to 10 instructors.
 
-Looking at the structure of our data, the iRace(1 thru 10) variables are in "int" or integer format.  This means that they are represented as whole numbers.  We need them to be represented as factors. R handles factors represented as words well.  Therefore, let's use our codebook to reformat this variable, first from integer to factor and second represented with words instead of numbers.
+```{r str of iRace1}
+str(scrub_df$iRace1)
+```
 
-```{r convert race to factor}
 
-scrub_df[,'iRace1'] <- as.factor(scrub_df[,'iRace1'])
-scrub_df[,'iRace2'] <- as.factor(scrub_df[,'iRace2'])
-scrub_df[,'iRace3'] <- as.factor(scrub_df[,'iRace3'])
-scrub_df[,'iRace4'] <- as.factor(scrub_df[,'iRace4'])
-scrub_df[,'iRace5'] <- as.factor(scrub_df[,'iRace5'])
-scrub_df[,'iRace6'] <- as.factor(scrub_df[,'iRace6'])
-scrub_df[,'iRace7'] <- as.factor(scrub_df[,'iRace7'])
-scrub_df[,'iRace8'] <- as.factor(scrub_df[,'iRace8'])
-scrub_df[,'iRace9'] <- as.factor(scrub_df[,'iRace9'])
-scrub_df[,'iRace10'] <- as.factor(scrub_df[,'iRace10'])
+Looking at the structure of our data, the iRace(1 thru 10) variables are in "int" or integer format.  This means that they are represented as whole numbers.  We need them to be represented as factors. R handles factors represented as words well.  Therefore, let's use our codebook to reformat this variable as a an ordered factor, with words instead of numbers.
+
+Qualtrics imports many of the categorical variables as numbers.  R often reads them numerically (integers or numbers). If they are directly converted to factors, R will sometimes collapse across missing numbers.  In this example, if there is a race that is not represented (e.g., 2 for BiMulti), when the numbers are changed to factors, R will assume they are ordered and there is a consecutive series of numbers (0,1,2,3,4).  If a number in the sequence is missing (0,1,3,4) and labels are applied, it will collapse across the numbers and the labels you think are attached to each number are not.  Therefore, it is ESSENTIAL to check (again and again ad nauseum) to ensure that your variables are recoding in a manner you understand.
+
+One way to avoid this is to use the code below to identify the levels and the labels.  When they are in order, they align and don't "skip" numbers. To quadruple check our work, we will recode into a new variable "tRace#" for "teacher" Race.
+
+```{r creating factors for the iRace variable}
+scrub_df$tRace1 = factor(scrub_df$iRace1,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace2 = factor(scrub_df$iRace2,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace3 = factor(scrub_df$iRace3,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace4 = factor(scrub_df$iRace4,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace5 = factor(scrub_df$iRace5,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace6 = factor(scrub_df$iRace6,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace7 = factor(scrub_df$iRace7,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace8 = factor(scrub_df$iRace8,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace9 = factor(scrub_df$iRace9,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+scrub_df$tRace10 = factor(scrub_df$iRace10,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
 ```
 
 Let's check the structure to see if they are factors.
 
-```{r}
-str(scrub_df)
+```{r glimps of the scrub_df}
+library(tidyverse)
+glimpse(scrub_df)
 ```
 
-They are now factors.  Let's recode their representation as integers into representation as labels.  We could totally recode each into itself, but I want to visually inspect to make sure it recodes correctly.  Earlier I used "i" to indicate "instructor"; I will simply changet that to "t" (teacher).
-
-The mutate code below is from dplyr -- a member of the tidyverse family.  The use of the pipe (%>%) allows us to string together a number of commands into a single operation. I'm sure there are ways to do this with concatonated lists, but with copy and paste this was simple enough.
-```{r recoding factor labels, warning=FALSE, message=FALSE}
-library(dplyr)
-scrub_df <- scrub_df %>%
-  mutate(tRace1 = recode(iRace1, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace2 = recode(iRace2, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace3 = recode(iRace3, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace4 = recode(iRace4, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace5 = recode(iRace5, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace6 = recode(iRace6, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace7 = recode(iRace7, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace8 = recode(iRace8, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace9 = recode(iRace9, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))%>%
-  mutate(tRace10 = recode(iRace10, "0" = "Black", "1" = "nBpoc", "2" = "BiMulti", "3" = "White", "4" = "NotNotice"))
-```
-
-Calculating the proportion of the not-White instructional staff could likely be accomplished a number of ways.  My searching for solutions resulted in this. Hopefully it's a fair balance between intuitive and elegant coding.  First, I created code that 
+Calculating the proportion of the BIPOC instructional staff could likely be accomplished a number of ways.  My searching for solutions resulted in this. Hopefully it's a fair balance between intuitive and elegant coding.  First, I created code that 
 
 * created a new variable (count.BIPOC) by
   * summing across the tRace1 through tRace10 variables,
@@ -860,7 +1029,7 @@ missMax <- digits(CaseMiss$max, 0)
 
 CUMULATIVE CAPTURE FOR WRITING IT UP:  Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from `r missMin`% to `r missMax`%.
 
-At the time that I am lecturing this, the the amount of missing is not so aggregious that I want to eliminate any cases. That is, I'm willing to wait until after I score the items to make further decisions, then. 
+At the time that I am lecturing this, the the amount of missing is not so egregious that I want to eliminate any cases. That is, I'm willing to wait until after I score the items to make further decisions, then. 
 
 Because (a) I want to teach it and (b) it is quite likely that we will receive responses with high levels of missingness, I will write code to eliminate cases with $\geq$ 90%.
 
@@ -970,7 +1139,7 @@ scrub_df$ClimateBL <- mean_n(scrub_df[,ClimateBL_vars], .80)
 Later it will be helpful to have a df with the item and scale-level variables.  It will also be helpful if there is an ID for each case.
 
 ```{r}
-library(dplyr)
+library(tidyverse)
 scrub_df <- scrub_df %>% mutate(ID = row_number())
 
 #moving the ID number to the first column; requires 
@@ -1003,13 +1172,14 @@ Before we start our formal analysis of missingness at the scale level, let's con
 Using the *describe()* function from the *psych* package, we can investigate this variable.
 
 ```{r row missingness for scoed variables}
+library(psych)
 #Create a variable (n_miss) that counts the number missing
 scored$n_miss <- scored%>%
 select(iBIPOC_pr:ClimateBL) %>% 
 is.na %>% 
 rowSums
 
-#Create a proportion missing by dividing n_miss by the total number of variables (80)
+#Create a proportion missing by dividing n_miss by the total number of variables (6)
 #Pipe to sort in order of descending frequency to get a sense of the missingness
 scored<- scored%>%
 mutate(prop_miss = (n_miss/6)*100)%>%
@@ -1051,6 +1221,8 @@ Again, we look at missingness as the proportion of
 ```{r Scale level missing data summaries}
 PrScoredCellsMissing <-percent(mean(is.na(scored))) #percent missing across df
 PrScoredRowsMissing <- percent(mean(complete.cases(scored))) #percent of rows with nonmissing data
+PrScoredCellsMissing
+PrScoredRowsMissing
 ```
 
 
@@ -1068,7 +1240,7 @@ library(mice)
 mice_ScaleLvl <- md.pattern(scored, plot = TRUE, rotate.names=TRUE)
 ```
 
-At the scale-level, this is much easier to interpret.  As I am lecturing the results today (the numbers will change) there are *4* rows of data because there are only *4* patterns of missingness. The most common pattern is non-missing data (*n* = 25). 
+At the scale-level, this is much easier to interpret.  As I am lecturing the results today (the numbers will change) there are *2* rows of data because there are only *2* patterns of missingness. The most common pattern is non-missing data (*n* = 26). 
 
 
 ### Is it MCAR?
@@ -1078,7 +1250,7 @@ As noted earlier, I cannot find an MCAR package.  This is a placeholder for upda
 
 ### R-eady for Analysis
 
-At this stage the data is ready for analysis. With the AIA approach [@parent_handling_2013] the following preliminary analyses would involve pairwise deletion (i.e., the row/case is dropped for that analysis, but included for all others):
+At this stage the data is ready for analysis (data diagnostics). With the AIA approach [@parent_handling_2013] the following preliminary analyses would involve pairwise deletion (i.e., the row/case is dropped for that analysis, but included for all others):
 
 ![An image of our stage in the workflow for scrubbing and scoring data.](images/Ch02/wrkflow_AIAready.jpg)
 
@@ -1116,7 +1288,7 @@ Across the `r ScoredCaseMiss` cases for which the scoring protocol was applied, 
 
 ## Practice Problems
 
-The three problems described below are designed to be continuations from the previous chapter (Scrubbing). 
+The three problems described below are designed to be continuations from the previous chapter (Scrubbing). You will likely encounter challenges that were not covered in this chapter. Search for and try out solutions, knowing that there are multiple paths through the analysis.
 
 ### Problem #1: Reworking the Chapter Problem
 
@@ -1126,8 +1298,8 @@ Continue working with this data to:
 
 |Assignment Component  
 |:---------------------------------------------------------------------------------------------|:-------------: |:------------:|
-|1. Proper formatting of your the variable representing the proportion of BIPOC instructor     |      5         |    _____     |           
-|2. Proper formatting of your the variable representing the                                    |      5         |    _____     |
+|1. Proper formatting of your the variable representing the proportion of BIPOC instructor     |      5         |    _____     |        
+|2. Proper formatting of your the variable representing the proportion of Black students in the classroom|      5         |    _____     |
 |3. Proper formatting of variables that will be used in the scales/subscales                   |      5         |    _____     |
 |4. Evaluate and interpret item-level missingness                                              |      5         |    _____     |  
 |5. Score any scales/subscales                                                                 |      5         |    _____     |               
@@ -1171,9 +1343,6 @@ Continue working with this data to:
 |6. Explanation to grader                                                                      |      5         |    _____     |
 |**Totals**                                                                                    |      40        |    _____     |                                                                          
 
-## References
-
-
 ```{r sessionInfo 03}
 sessionInfo()
 ```
@@ -1184,14 +1353,15 @@ sessionInfo()
 
 # Data Dx {#DataDx}
 
- [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
+ [Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=43dbe818-8186-498d-8e84-acf7000acb5b) 
 
 The focus of this chapter engage in *data diagnostics*, that is, to evaluate the appropriateness of the data for the *specific research model we are going to evaluate*. We are asking the question, "Does the data have the appropriate characteristics for the analysis we want to perform?" Some statistics are more robust than others to violations of the assumptions about the characteristics of the data. None-the-less, we must report these characteristics when we disseminate the results.
 
 ## Navigating this Lesson
 
-<!-- TODO: Update how long it will take. -->
-There is about # hours and ## minutes of lecture.  If you work through the materials with me it would be good to add another ## hours.
+There is about 45 minutes of lecture.  If you work through the materials with me it would be plan for an additional hour.
+
+While the majority of R objects and data you will need are created within the R script that sources the chapter, there are a few that cannot be created from within the R framework. Additionally, sometimes links fail.  All original materials are provided at the [Github site](https://github.com/lhbikos/ReC_MultivariateModeling) that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's [introduction](#ReCintro)
 
 ### Learning Objectives
 
@@ -1203,7 +1373,7 @@ Learning objectives from this lecture include the following:
   * kurtosis
 * Assess univariate and multivariate normality
 * Identify options for managing outliers and skewed data
-* Articulate a workflow for data prepartion, including scrubbing, scoring, and data diagnostics
+* Articulate a workflow for data preparation, including scrubbing, scoring, and data diagnostics
 
 
 ### Planning for Practice
@@ -1229,8 +1399,10 @@ The script below will (a) check to see if the following packages are installed o
 
 <!-- TODO: Build out this section. -->
 ```{r initial packages 04, eval=FALSE}
-if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(tidyverse)){install.packages("tidyverse")} #this includes dplyr
 if(!require(psych)){install.packages("psych")}
+if(!require(apaTables)){install.packages("apaTables")}
+if(!require(formattable)){install.packages("formattable")}
 ```
 
 
@@ -1238,7 +1410,8 @@ if(!require(psych)){install.packages("psych")}
 
 <!-- TODO: When finalized, save as PDF so it can open in its own window) -->
 
-The same workflow guides us through the Scrubbing, Scoring, and Data dx chapters.  At this stage we have 
+The same workflow guides us through the Scrubbing, Scoring, and Data Dx chapters.  At this stage we have 
+
 * imported our raw data from Qualtrics, 
 * scrubbed the data by applying our inclusion and exclusion criteria, and
 * used Parent's available information approach [AIA; -@parent_handling_2013] for determining the acceptable amount of missingness for each scale, and
@@ -1267,7 +1440,7 @@ As I think about "how these variables go together" (which is often where I start
 
 *I would like to assess the model by having the instructional staff variable to be the %Black instructional staff.  At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.* 
 
-![An image of the statistical model for which we are preparing data.](images/Ch03/BlStuMed.jpg)
+![An image of the statistical model for which we are preparing data.](images/Ch04/BlStuMed.jpg)
 
 I will finish up this chapter by conducting a regression. Because parallel mediation can be complicated (I teach it in a later chapter), I will demonstrate use of our prepared variables with a simple multiple regression.
 
@@ -1355,7 +1528,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ```{r Shapiro Wilk tests of univariate normality}
 #The shapiro-test is in base R; it's specification is simple:  shapiro.test(df$variable)
 #I added the object (and had to list it below) so I can use the inline text function
-SWt_i <- (shapiro.test(item_scores_df$iBIPOC_pr))
+SWt_i <- shapiro.test(item_scores_df$iBIPOC_pr)
 SWt_cm <- shapiro.test(item_scores_df$cmBlack)
 SWt_Bel <-shapiro.test(item_scores_df$Belonging)
 SWt_Cl <-shapiro.test(item_scores_df$ClimateBL)
@@ -1364,6 +1537,7 @@ SWt_cm
 SWt_Bel
 SWt_Cl
 ```
+
 ```{r extracting Shapiro Wilks objects, echo = FALSE, results='hide'}
 
 iSW <- digits(SWt_i$statistic, 3)
@@ -1391,7 +1565,7 @@ CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP:  Regarding the distributional cha
 
 *Note.  Owing to the open nature of the dataset, these values will change.  While I have used inline text to update the values of the Shapiro Wilks' and associated significance test, the text narration is not automatically updated and may be inconsistent with the results.*
 
-What would we do in the case of a univariate outlier? I find Kline's [-@kline_principles_2016] chapter on data preparation and management to be extremely useful. He provides ideas for more complex analysis of both univariate and multivariate normality and provides suggestions that range from recoding recoding an extreme value to the next most extreme that is within three standard deviations of the mean to more complicated transformations. First, though we need to further examine the relationships between variables.  We do that, next.
+What would we do in the case of a univariate outlier? I find Kline's [-@kline_principles_2016] chapter on data preparation and management to be extremely useful. He provides ideas for more complex analysis of both univariate and multivariate normality and provides suggestions that range from recoding an extreme value to the next most extreme that is within three standard deviations of the mean to more complicated transformations. First, though we need to further examine the relationships between variables.  We do that, next.
 
 ### Pairs Panels
 
@@ -1432,7 +1606,7 @@ It is possible, then to analyze the Mahalanobis distance values.
 psych::describe(item_scores_df$Mahal)
 ```
 
-Using this information we can determine cases that have a Mahalanobis distance values that exceeds three standard deviations around the mean.  In fact, we can have these noted in a column in the dataframe.
+Using this information we can determine cases that have a Mahalanobis distance values that exceeds three standard deviations around the median.  In fact, we can have these noted in a column in the dataframe.
 
 ```{r warning=FALSE }
 library(dplyr)
@@ -1444,10 +1618,11 @@ OutlierCount <- item_scores_df%>%
   count(MOutlier)
 OutlierCount
 
-NumOutliers <- nrow(item_scores_df) - OutlierCount
+NumOutliers <- nrow(item_scores_df) - OutlierCount #calculating how many outliers
+NumOutliers #this object is used for the inline text for the reesults
 NumOutliers
 
-head(item_scores_df)
+head(item_scores_df) #shows us the first 6 rows of the data so we can see the new variables (Mahal, MOutlier)
 
 ```
 
@@ -1495,29 +1670,40 @@ summary(Climate_fit)
 
 ```{r Coefficients and p values for inline text, echo = FALSE, results ='hide'}
 library(formattable)
-Bel_B <- digits(Climate_fit$coefficients[2],3)
-Bel_p <- digits(summary(Climate_fit)$coefficients[2,4],3)
-Bel_B
+#Here I am creating objects to feed into the inline text as I write up the results
+Bel_B <- digits(Climate_fit$coefficients[2],3) #this is the beta weight for Belonging
+Bel_p <- digits(summary(Climate_fit)$coefficients[2,4],3) #this is the p value for Belonging
+Bel_B #listing the object lets me check to see that I obtained the correct value
 Bel_p
 
-cm_B <- digits(Climate_fit$coefficients[3],3)
-cm_p <- digits(summary(Climate_fit)$coefficients[3,4],3)
+cm_B <- digits(Climate_fit$coefficients[3],3) #beta weight for proportion of classmates who are Black
+cm_p <- digits(summary(Climate_fit)$coefficients[3,4],3)#p value for proportion of classmates who are Black
 cm_B
 cm_p
 
-i_B <- digits(Climate_fit$coefficients[4],3)
-i_p <- digits(summary(Climate_fit)$coefficients[4,4],3)
+i_B <- digits(Climate_fit$coefficients[4],3) #beta weight for proportion of instructional staff who are Black
+i_p <- digits(summary(Climate_fit)$coefficients[4,4],3) #p value for for proportion of instructional staff who are Black
 i_B
 i_p
 
+modR2 <- percent(summary(Climate_fit)$r.squared)
+modR2
+
+#this section doesn't appear in the built/knitted products because I used "echo=False, results='hide'" in the chunk label
 ```
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging ($B$ = `r Bel_B`, $p$ = `r Bel_p`), the proportion of classmates who were Black ($B$ = `r cm_B`, $p$ = `r cm_p`), nor the proportion of BIPOC instructional staff ($B$ = `r i_B`, $p$ = `r i_p`) led to statistically significant changes in perceptions of campus climate for Black students. Results are presented in Table 2.
+```{r}
+names(Climate_fit)
+```
+
+
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging ($B$ = `r Bel_B`, $p$ = `r Bel_p`) nor the proportion of BIPOC instructional staff ($B$ = `r i_B`, $p$ = `r i_p`), nor the proportion of Black classmates ($B$ = `r cm_B`, $p$ = `r cm_p`) led to statistically significant changes in perceptions of campus climate for Black students.  Although it accounted for `r modR2` of the variance, the overall model was not statistically significant. Results are presented in Table 2.
 
 ```{r}
 library(apaTables)
-apa.cor.table(item_scores_df[c("iBIPOC_pr", "cmBlack", "Belonging", "ClimateBL")], table.number = 1, show.sig.stars = TRUE, filename = "Table1_M_SDs_r_DataDx")
+apa.cor.table(item_scores_df[c("iBIPOC_pr", "cmBlack", "Belonging", "ClimateBL")], table.number = 1, show.sig.stars = TRUE, filename = "Table1_M_SDs_r_DataDx.doc")
 ```
+
 ```{r}
 library(apaTables)
 apaTables::apa.reg.table(Climate_fit, table.number = 2, filename = "Climate_table.doc")
@@ -1525,7 +1711,7 @@ apaTables::apa.reg.table(Climate_fit, table.number = 2, filename = "Climate_tabl
 
 ## Practice Problems
 
-The three problems described below are designed to be continuations from the previous chapter (Scrubbing). 
+The three problems described below are designed to be continuations from the previous chapter (Scrubbing). You will likely encounter challenges that were not covered in this chapter. Search for and try out solutions, knowing that there are multiple paths through the analysis.
 
 ### Problem #1: Reworking the Chapter Problem
 
@@ -1537,7 +1723,7 @@ Continue working with this data to:
 
 |Assignment Component  
 |:---------------------------------------------------------------------------------------------|:-------------: |:------------:|
-|1. Calculate alpha coefficients for scales/subscales.                                         |      5         |    _____     |           
+|1. Calculate alpha coefficients for scales/subscales.                                         |      5         |    _____     |      
 |2. Evaluate univariate normality (skew, kurtosis, Shapiro-Wilks).                             |      5         |    _____     |
 |3. Evaluate multivarite normality (Mahalanobis test)                                          |      5         |    _____     |
 |4. Represent your work in an APA-style write-up (added to the writeup in the previous chapter)|      5         |    _____     |  
@@ -1571,7 +1757,7 @@ Continue working with this data to:
 
 |Assignment Component  
 |:---------------------------------------------------------------------------------------------|:-------------: |:------------:|
-|1. Calculate alpha coefficients for scales/subscales.                                         |      5         |    _____     |           
+|1. Calculate alpha coefficients for scales/subscales.                                         |      5         |    _____     |       
 |2. Evaluate univariate normality (skew, kurtosis, Shapiro-Wilks).                             |      5         |    _____     |
 |3. Evaluate multivarite normality (Mahalanobis test)                                          |      5         |    _____     |
 |4. Represent your work in an APA-style write-up (added to the writeup in the previous chapter)|      5         |    _____     |  
@@ -1580,13 +1766,633 @@ Continue working with this data to:
 |**Totals**                                                                                    |      30        |    _____     |               
                                                                                                                                          
 
-## References
-
-
 ```{r sessionInfo 04}
 sessionInfo()
 ```
 
 
 <!--chapter:end:04-DataDx.Rmd-->
+
+---
+output:
+  word_document: default
+  html_document: default
+---
+# Multiple Imputation (A Brief Demo) {#multimp}
+
+ [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
+
+Multiple imputation is a tool for managing missing data that works with the whole raw data file to impute values for missing data for *multiple sets* (e.g., 5-20) of the raw data. Those multiple sets are considered together in analyses (such as regression) and interpretation is made on the pooled results.  Much has been written about multiple imputation and, if used, should be done with many considerations.  This chapter is intended as a brief introduction.  In this chapter, I demonstrate the use of multiple imputation with the data from the [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU) that has served as the research vignette for the first few chapters of this OER.
+
+## Navigating this Lesson
+
+<!-- TODO: Update how long it will take. -->
+There is about # hours and ## minutes of lecture.  If you work through the materials with me it would be good to add another ## hours.
+
+While the majority of R objects and data you will need are created within the R script that sources the chapter, there are a few that cannot be created from within the R framework. Additionally, sometimes links fail.  All original materials are provided at the [Github site](https://github.com/lhbikos/ReC_MultivariateModeling) that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's [introduction](#ReCintro)
+
+### Learning Objectives
+
+Learning objectives from this lecture include the following:
+
+* Describe circumstances under which multiple imputation would be appropriate* 
+* List and define the stages in multiple imputation.
+* Apply multiple imputation to a dataset that has missingness
+* Interpret results from a simple regression that uses multiple imputation
+* Articulate how multiple imputation fits into the workflow for scrubbing and scoring data.
+* Write up the results of an the process of imputation from raw data through analyzing a simple regression (or similar) analysis.
+
+### Planning for Practice
+
+<!-- TODO: Specify set of items to score for homework. -->
+
+The suggestions from practice are a continuation from the three prior chapters. If you have completed one or more of those assignments, you should have worked through the steps in preparing a data set and evaluating its appropriateness for the planned, statistical, analysis. This chapter takes a deviation from the AIA [@parent_handling_2013] approach that was the focus of the first few chapters in that we used multiple imputation as the approach for managing missingness.  Options, of graded complexity, for practice include:
+
+* Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
+* Use the dataset that is the source of the chapter, but score a different set of items that you choose.
+* Begin with raw data to which you have access. 
+
+### Readings & Resources
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+Enders, C. K. (2017). Multiple imputation as a flexible tool for missing data handling in clinical research. *Behaviour Research and Therapy*, 98, 4–18.
+
+Katitas, A. (2019). Getting Started with Multiple Imputation in R. University of Virginia Library:  Research Data Services + Sciences. https://uvastatlab.github.io/2019/05/01/getting-started-with-multiple-imputation-in-r/
+
+Kline Ch4, Data Preparation & Psychometrics Review (pp. 72/Outliers - 88/Modern Methods)
+
+Little, T. D., Howard, W. J., McConnell, E. K., & Stump, K. N. (2008). Missing data in large data projects: Two methods of missing data imputation when working with large data projects. KUant Guides, 011.3, 10.
+
+### Packages
+
+The script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+<!-- TODO: Build out this section. -->
+```{r initial packages 05, eval=FALSE}
+#will install the package if not already installed
+if(!require(qualtRics)){install.packages("qualtRics")}
+if(!require(psych)){install.packages("psych")}
+if(!require(dplyr)){install.packages("dplyr")}
+if(!require(mice)){install.packages("mice")}
+#if(!require(foreign)){install.packages("foreign")}
+#if(!require(car)){install.packages("car")}
+```
+
+
+## Workflow for Multiple Imputation
+
+The following is a proposed workflow for preparing data for analysis. 
+
+<!-- TODO: When finalized, save as PDF so it can open in its own window) -->
+
+![An image of a workflow for scrubbing and scoring data.](images/Ch05/scrubscore_mimp_itemlvl.jpg) 
+
+In this lecture we are working on the right side of the flowchart in the multiple imputation (blue) section.  Within it, there are two options, each with a slightly different set of options.
+
+* imputing at the item level
+  * in this case, scales/subscales are scored after the item-level imputation
+* imputating at the scale level
+  * in this case, scales/subscales are scored prior to the imputation; likely using some of the same criteria as identified in the scoring chapter (i.e., scoring if 75-80% of data are non-missing). Multiple imputation, then, is used to estimate the remaining, missing values.
+ 
+Whichever approach is used, the imputed variables (multiple sets) are used in a *pooled analysis* and results are interpreted from that analysis.
+
+## Research Vignette
+
+The research vignette comes from the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU) and is explained in the [scrubbing chapter](#scrub). In the [scoring chapter](#score) we prepared four variables for analysis. In the [data diagnostics chapter](#DataDx) we assessed the quality of the variables and conducted the multiple regression described below. Details for these are in our [codebook](./Rate-a-Course_Codebook.pdf).
+
+Variable recap:
+
+* Perceived Campus Climate for Black Students includes 6 items, one of which was reverse scored. This scale was adapted from Szymanski et al.'s [-@szymanski_perceptions_2020] Campus Climate for LGBTQ students. It has not been evaluated for use with other groups.  The Szymanski et al. analysis suggested that it could be used as a total scale score, or divided into three items each that assess
+  * College response to LGBTQ students (items 6, 4, 1)
+  * LGBTQ stigma (items 3, 2, 5)
+* Sense of Belonging includes 3 items. This is a subscale from Bollen and Hoyle's [-@bollen_perceived_1990] Perceived Cohesion Scale. There are no items on this scale that require reversing.
+* Percent of Black classmates is a single item that asked respondents to estimate the proportion of students in various racial categories
+* Percent of BIPOC instructional staff, similarly, asked respondents to identify the racial category of each member of their instructional staff
+
+As we noted in the [scrubbing chapter](#scrub), our design has notable limitations. Briefly, (a) owing to the open source aspect of the data we do not ask about the demographic characteristics of the respondent; (b) the items that ask respondents to *guess* the identities of the instructional staff and to place them in broad categories, (c) we do not provide a "write-in" a response. We made these decisions after extensive conversation with stakeholders. The primary reason for these decisions was to prevent potential harm (a) to respondents who could be identified if/when the revealed private information in this open-source survey, and (b) trolls who would write inappropriate or harmful comments. 
+  
+As I think about "how these variables go together" (which is often where I start in planning a study), imagine a parallel mediation.  That is the perception of campus climate for Black students would be predicted by the respondent's sense of belonging, mediated in separate paths through the proportion of classmates who are Black and the proportion of BIPOC instructional staff.  
+
+*I would like to assess the model by having the instructional staff variable to be the %Black instructional staff.  At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.* 
+
+![An image of the statistical model for which we are preparing data.](images/Ch04/BlStuMed.jpg)
+
+As in the [data diagnostic chapter](#DataDx), I will conclude this chapter by conducting a statistical analysis with the multiply imputed data. Because parallel mediation can be complicated (I teach it in a later chapter), I will demonstrate use of our prepared variables with a simple multiple regression.
+
+![An image of the statistical model for which we are preparing data.](images/Ch04/BlStuRegression.jpg)
+
+## Multiple Imputation -- a Super Brief Review
+
+Multiple imputation is complex. Numerous quantitative psychologists had critiqued it and provided numerous cautions and guidelines for its use [@enders_applied_2010; @enders_multiple_2017; @little_missing_2008; @little_statistical_2002]. In brief, 
+
+### Steps in Multiple Imputation
+
+* Multiple imputation starts with a raw data file. 
+  * Multiple imputation assumes that data are MAR (remember, MCAR is the more prestigiouos one).  This means that researchers assume that missing values can be replaced by predictions derived from the observable portion of the dataset.  
+* Multiple datsets (often 5 to 20) are created where missing values are replaced via a randomized process (so the same missing value [item 4 for person A] will likely have different values for each dataset). 
+* The desired anlayis(es) is conducted simultaneously/separately for each of the imputed sets (so if you imputed 5 sets and wanted a linear regression, you get 5 linear regressions).  
+* A *pooled analysis* uses the point estimates and the standard errors to provide a single result that represents the analysis.
+
+In a web-hosted guide from the University of Virginia Library, Katitas [-@katitas_getting_2019] provided a user-friendly review and example of using tools in R in a multiple imputation. Katitas' figure is a useful conceptual tool in understanding how multiple imputation works. *This figure is my recreation of Katitas' original.*
+
+![An image adapted from the Katitas multiple imputation guide showing the four stages of multiple imputation.](images/Ch05/KatitasMimpFig.jpg)
+
+* the datframe with missing data is the single place we start
+* we intervene with a package like *mice()* to impute
+* multiple sets of data (filling in the missing variables with different values that are a product of their conditional distribution and an element of "random"); 
+  * "mids" ("multiply imputed dataset") is an object class where the completed datasets are stored.
+* the "with_mids" command allows OLS regression to be run, as many times as we have imputed datasets (in this figure, 3X).  It produces different regression coefficients for each datset
+* the "pool" command pools together the multiple coefficients taking into consideration the value of the coefficients,the standard errors, and the variance of the missing value parmeter across the samples.
+
+### Statistical Approaches to Multiple Imputation
+
+**Joint multivariate normal distribution multiple imputation** assumes that the observed data follow a multivariate normal distribution.  The algorithm used draws from this assumed distribution.  A drawback is that if the data do not follow a multivariate normal distribution, the imputed values are incorrect.  *Amelia* and *norm* packages use this approach.
+
+**Conditional multiple imputation** is an iterative procedure, modeling the conditional distribution of a certain variable given the other variables.  In this way the distribution is assumed for each variable, rather than or the entire dataset.  *mice* uses this approach.
+
+*mice*:  multivariate imputation by chained equations
+
+## Working the Problem
+
+Katitas [@katitas_getting_2019] claims that it is best to impute the data in its rawest form possible because any change would be taking it away from its original distribution.  There are debates about how many variables to include in an imputation.  Some authors would suggest that researchers include everything that was collected. Others (like me) will slim down the dataset to include (a) the variables included in the model, plus (b) auxilliary variables (i.e., variables not in the model, but that are sufficiently non-missing and will provide additional information to the data).
+
+In our case we will want:
+
+Item for the variables represented in our model
+
+* the item level responses to the scales/subscales
+  * respondents' sense of belonging to campus (3 items)
+  * respondents' rating of campus climate for Black students (6 items)
+* proportion of BIPOC instructional staff
+* proportion of classmates who are Black
+
+Auxilliary variables -- let's choose three.  I'm choosing items from the course evaluation that sample a traditional item, a item about inclusivity/diversity, and an item about the student's growth
+
+* format, whether the course was taught in-person, a blend, or virtual
+* cEval_1, "Course material was presented clearly"
+* cEval_13, "Where applicable, issues were considered from multiple perspectives"
+* cEval_19, "My understanding of the subject matter increased over the span of the course"
+
+
+### Selecting and Formatting Variables
+
+There are some guidelines for selecting and formatting variables for imputation.  
+
+* Variables should be in their "naturalist" state
+* Redundant or too highly correlated variables should not be included
+  * If you reverse coded a variable (we haven't yet), that's ok, but EXCLUDE the original variable
+  * Redundant variables (or multicollinear variables) may cause the multiple imputation process to cease
+  * Violation of this also provides clues for troubleshooting
+* Exclude variables with more than 25% missing
+
+To make this as realistic as possible. let's start with our very raw data.  The [Scrubbing chapter](#scrub) provides greater detail on importing data directly from Qualtrics.  Therefore, I will repeat our protocol that imports the data and then scrubs it for our purposes. As described in the prior chapter, I named variables in Qualtrics to facilitate a more intuitive use in R.
+
+```{r intRavenous qualtRics, warning=FALSE, message=FALSE}
+library(qualtRics)
+QTRX_df2 <- qualtRics::fetch_survey(surveyID = "SV_b2cClqAlLGQ6nLU",useLocalTime = TRUE,
+                         verbose = FALSE, label=FALSE, convert=FALSE, force_request = TRUE, import_id = FALSE)
+```
+
+Next, I apply inclusion/exclusion criteria.  As described in the [Scrubbing chapter](#scrub) this includes:
+
+* excluding all *previews*
+* including only those who consented
+* including only those whose rated course was offered by a U.S. institution
+
+```{r Apply inclusion and exclusion critera}
+library(tidyverse)
+QTRX_df2 <- filter (QTRX_df2, DistributionChannel != "preview")
+QTRX_df2 <-filter (QTRX_df2, Consent == 1)
+QTRX_df2 <-filter (QTRX_df2, USinst == 0)
+```
+
+Preparing the data also meant renaming some variables that started with numbers (a hassle in R). I also renamed variables on the Campus Climate scale so that we know to which subscale they belong.
+```{r rename variables that start with a number}
+library(tidyverse)
+#renaming variables that started with numbers
+QTRX_df2 <- rename(QTRX_df2, iRace1 = '1_iRace', iRace2 = '2_iRace', iRace3 = '3_iRace', iRace4 = '4_iRace', iRace5 = '5_iRace', iRace6 = '6_iRace', iRace7 = '7_iRace', iRace8 = '8_iRace', iRace9 = '9_iRace', iRace10 = '10_iRace')
+#renaming variables from the identification of classmates
+QTRX_df2 <- rename(QTRX_df2, cmBiMulti = Race_10, cmBlack = Race_1, cmNBPoC = Race_7, cmWhite = Race_8, cmUnsure = Race_2)
+```
+
+The Qualtrics download does not include an ID number.  Because new variables are always appended to the end of the df, we also include code to make this the first column. 
+```{r applying an ID number for each case}
+QTRX_df2 <- QTRX_df2 %>% mutate(ID = row_number())
+#moving the ID number to the first column; requires 
+QTRX_df2 <- QTRX_df2%>%select(ID, everything())
+```
+
+Because this huge df is cumbersome to work with, let's downsize it to be closer to the size we will work with in the imputation
+
+```{r downsizing the df}
+mimp_df <-  select (QTRX_df2, ID, iRace1, iRace2, iRace3, iRace4, iRace5, iRace6, iRace7, iRace8, iRace9, iRace10, cmBiMulti, cmBlack, cmNBPoC, cmWhite, cmUnsure, Belong_1:Belong_3, Blst_1:Blst_6, cEval_1, cEval_13, cEval_19, format)
+glimpse(mimp_df)
+```
+
+Qualtrics imports many of the categorical variables as numbers.  R often reads them numerically (integers or numbers). If they are directly converted to factors, R will sometimes collapse.  In this example, if there is a race that is not represented (e.g., 2 for BiMulti), when the numbers are changed to factors, R will assume it's ordered and will change up the numbers.  Therefore, it is ESSENTIAL to check (again and again ad nauseum) to ensure that your variables are recoding in a manner you understand.
+
+```{r creating an ordered factor}
+mimp_df$iRace1 = factor(mimp_df$iRace1,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace2 = factor(mimp_df$iRace2,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace3 = factor(mimp_df$iRace3,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace4 = factor(mimp_df$iRace4,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace5 = factor(mimp_df$iRace5,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace6 = factor(mimp_df$iRace6,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace7 = factor(mimp_df$iRace7,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace8 = factor(mimp_df$iRace8,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace9 = factor(mimp_df$iRace9,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+mimp_df$iRace10 = factor(mimp_df$iRace10,
+                        levels = c(0,1,2,3,4),
+                        labels = c("Black", "nBpoc", "BiMulti", "White", "NotNotice"))
+```
+
+```{r another peek, results='hide'}
+glimpse(mimp_df)
+```
+
+
+```{r calculating the proportion of BIPOC instructional staff}
+#creating a count of BIPOC faculty identified by each respondent
+mimp_df$count.BIPOC <- apply(mimp_df[c("iRace1", "iRace2", "iRace3", "iRace4", "iRace5", "iRace6", "iRace7", "iRace8", "iRace9", "iRace10")], 1, function(x) sum(x %in% c("Black", "nBpoc", "BiMulti")))
+
+#creating a count of all instructional  faculty identified by each respondent
+mimp_df$count.nMiss <- apply(mimp_df[c("iRace1", "iRace2", "iRace3", "iRace4", "iRace5", "iRace6", "iRace7", "iRace8", "iRace9", "iRace10")], 1, function(x) sum(!is.na(x)))
+
+#calculating the proportion of BIPOC faculty with the counts above
+mimp_df$iBIPOC_pr = mimp_df$count.BIPOC/mimp_df$count.nMiss
+```
+
+I have included another variable, *format* that we will use as auxiliary variable. As written, these are the following meanings:
+
+1. In-person (all persons are attending in person)
+2. In person (some students are attending remotely)
+3. Blended:  some sessions in person and some sessions online/virtual
+4. Online or virtual
+5. Other
+
+Let's recoded it to have three categories:
+
+0. 100% in-person (1)
+1. Some sort of blend/mix (2, 3)
+2. 100% online/virtual (4)
+NA. Other (5)
+
+```{r creating an ordered factor for course format}
+#we can assign more than one value to the same factor by repeating the label
+mimp_df$format = factor(mimp_df$format,
+                        levels = c(1,2,3,4,5),
+                        labels = c("InPerson", "Blend", "Blend", "Online", is.na(5)))
+```
+
+
+Let's trim the df again to just include the variables we need in the imputation.
+```{r trim the df to variables of interest}
+mimp_df <-  select (mimp_df, ID, iBIPOC_pr, cmBlack, Belong_1:Belong_3, Blst_1:Blst_6, cEval_1, cEval_13, cEval_19, format)
+```
+
+Recall one of the guidelines was to remove variables with more than 25% missing. This code calculates the proportion missing from our variables and places them in rank order.
+```{r Proportion of missingness of each variable for raw data}
+p_missing <- unlist(lapply(mimp_df, function(x) sum(is.na(x))))/nrow(mimp_df)
+sort(p_missing[p_missing > 0], decreasing = TRUE)
+```
+Luckily, none of our variables have more than 25% missing (*or at least they didn't when I wrote this; the open nature of the survey and how it sources this chapter could change this*). If we did have a variable with more than 25% missing, we would have to consider what to do about it.
+
+Later we learn that we should eliminate case with greater than 50% missingness.  Let's write code for that, now.
+
+```{r Remove cases with too much missingness}
+#Calculating number and proportion of item-level missingness
+mimp_df$nmiss <- mimp_df%>%
+    select(iBIPOC_pr:format) %>% #the colon allows us to include all variables between the two listed (the variables need to be in order)
+    is.na %>% 
+    rowSums
+
+mimp_df<- mimp_df%>%
+  mutate(prop_miss = (nmiss/15)*100) #11 is the number of variables included in calculating the proportion
+
+mimp_df <- filter(mimp_df, prop_miss <= 50)  #update df to have only those with at least 90% of complete data
+```
+
+Once again, trim the df to include on the data to be included in the imputation
+```{r another trimming of the df}
+mimp_df <-  select (mimp_df, ID, iBIPOC_pr, cmBlack, Belong_1:Belong_3, Blst_1:Blst_6, cEval_1, cEval_13, cEval_19, format)
+```
+
+### The Multiple Imputation
+
+Because multiple imputation is a *random* process, if we all want the same answers we need to set a *random seed.* 
+
+```{r Set random seed}
+set.seed(210324) #you can pick any number you want, today I'm using today's datestamp
+```
+
+The program we will use is *mice*. *mice* assumes that each variable has a distribution and it imputes missing variables according to that distribution.  
+This means we need to correctly specify each variable's format/role.  *mice* will automatically choose a distribution (think "format") for each variable; we can override this by changing the methods' characteristics.
+
+The following code sets up the structure for the imputation. I'm not an expert at this -- just following the Katitas example.
+
+```{r Setting up the structure for the imputation}
+library(mice)
+# runs the mice code with 0 iterations
+imp <- mice(mimp_df, maxit = 0)
+# Extract predictorMatrix and methods of imputation 
+predM = imp$predictorMatrix
+meth = imp$method
+```
+
+Here we code what format/role each variable should be.
+```{r Specifying variable role in imputation}
+#These variables are left in the dataset, but setting them = 0 means they are not used as predictors.  
+#We want our ID to be retained in the df.  There's nothing missing from it, and we don't want it used as a predictor, so it will just hang out.
+predM[, c("ID")]=0
+
+#If you like, view the first few rows of the predictor matrix
+#head(predM)
+
+#We don't have any ordered categorical variables, but if we did we would follow this format
+#poly <- c("Var1", "Var2")
+
+#We don't have any dichotomous variables, but if we did we would follow this format
+#log <- c("Var3", "Var4")
+
+#Uunordered categorical variables (nominal variables), but if we did we would follow this format
+poly2 <- c("format")
+
+#Turn their methods matrix into the specified imputation models
+#Remove the hashtag if you have any of these variables
+#meth[poly] = "polr" 
+#meth[log] = "logreg"
+meth[poly2] = "polyreg"
+
+meth
+```
+
+This list (meth) contains all our variables; "pmm" is the default and is the "predictive mean matching" process used. We see tht format (an unordered categorical variable) is noted as "polyreg."  If we had used other categorical variables (ordered/poly, dichotomous/log), we would have seen those designations, instead.  If there is "" underneath it means the data is complete.
+
+Our variables of interest are now configured to be imputed with the imputation method we specified.  Empty cells in the method matrix mean that those variables aren't going to be imputed.
+
+If a variable has no missing values, it is automatically set to be empty.  We can also manually set variables to not be imputed with the *meth[variable]=""* command.
+
+The code below begins the imputation process. We are asking for 5 datasets. If you have many cases and many variables, this can take awhile. How many imputations?  Recommendations have ranged as low as five to several hundred.
+
+
+```{r imputing five sets}
+# With this command, we tell mice to impute the anesimpor2 data, create 5vvdatasets, use predM as the predictor matrix and don't print the imputation process. 
+#If you would like to see the process (or if the process is failing to execute) set print as TRUE; seeing where the execution halts can point to problematic variables (more notes at end of lecture)
+
+imp2 <- mice(mimp_df, maxit = 5, 
+             predictorMatrix = predM, 
+             method = meth, print =  FALSE)
+```
+
+We need to create a "long file" that stacks all the imputed data.  Looking at the df in R Studio shows us that when imp = 0 (the pe-imputed data), there is still missingness.  As we scroll through the remaining imputations, there are no NA cells.
+
+```{r Restructuring df to long}
+# First, turn the datasets into long format
+# This procedure is, best I can tell, unique to mice and wouldn't work for repeated measures designs
+mimp_long <- mice::complete(imp2, action="long", include = TRUE)
+```
+
+If we look at it, we can see 6 sets of data.  Playing with it...
+
+* .imp = 0 is the unimputed set; there are still missing values
+* .imp = 1, 2, 3, or 5 has no missing values for the variables we included in the imputation
+
+Sort on the ID number to see how this works...6 sets of data.
+
+With this fully imputed file, let's recode the data as we had done for the OLS regression with the raw, unimputed, data.
+
+```{r Proportion of missingness for each imputed item, eval = FALSE}
+p_missing_mimp_long <- unlist(lapply(mimp_long, function(x) sum(is.na(x))))/nrow(mimp_long)
+sort(p_missing_mimp_long[p_missing_mimp_long > 0], decreasing = TRUE)#check to see if this works
+```
+
+### Creating Scale Scores
+
+Because our imputation was item-level, we need to score the variables with scales/subscales.  As demonstrated more completely in the [Scoring chapter](#score), this required reversing one item in the campus climate scale:
+
+```{r reverse scoring the Blst_1 item}
+mimp_long<- mimp_long %>%
+  mutate(rBlst_1 = 8 - Blst_1) #if you had multiple items, you could add a pipe (%>%) at the end of the line and add more until the last one
+```
+
+
+Below is the scoring protocol we used in the AIA protocol for scoring.  Although the protocol below functionally says, "Create a mean score if (65-80)% is non-missing, for the imputed version, it doesn't harm anything to leave this because there is no missing data.
+```{r Scoring scales and subscales}
+library(sjstats)
+#Making the list of variables
+Belonging_vars <- c('Belong_1','Belong_2','Belong_3')
+ResponseBL_vars <- c('rBlst_1', 'Blst_4','Blst_6')
+StigmaBL_vars <- c('Blst_2', 'Blst_3','Blst_5')
+ClimateBL_vars <- c('rBlst_1', 'Blst_4','Blst_6','Blst_2', 'Blst_3','Blst_5' )
+
+#Creating the new variables
+mimp_long$Belonging <- mean_n(mimp_long[,Belonging_vars], .65)
+mimp_long$ResponseBL <- mean_n(mimp_long[,ResponseBL_vars], .80)
+mimp_long$StigmaBL <- mean_n(mimp_long[,StigmaBL_vars], .80)
+mimp_long$ClimateBL <- mean_n(mimp_long[,ClimateBL_vars], .80)
+```
+
+
+## Multiple Regression with Multiply Imputed Data
+
+For a refresher, here was the script when we used the AIA approach for managing missingness:
+
+~~~
+Climate_fit <- lm(ClimateBL ~ Belonging + cmBlack + iBIPOC_pr, data = item_scores_df)
+summary(Climate_fit)
+~~~
+
+In order for the regression to use multiply imputed data, it must be a "mids" (multiply imputed data sets) type
+```{r Convertion to mids_A}
+# Convert to mids type - mice can work with this type
+mimp_mids<-as.mids(mimp_long)
+```
+
+Here's what we do with imputed data:
+
+```{r OLS regression w imputed data}
+fitimp <- with(mimp_mids,
+               lm(ClimateBL ~ Belonging + cmBlack + iBIPOC_pr))
+```
+
+In this process, 5 individual, OLS, regressions are being conducted and the results being pooled into this single set.
+
+```{r Summary of each OLS regression}
+# to get the 5, individual imputations
+summary(fitimp)
+```
+
+```{r The pooled result}
+# the pooled result
+pooledests <- pool(fitimp)
+pooledests
+#str(pooledests)
+```
+
+```{r Another view of the pooled result}
+sumpooled <- summary(pool(fitimp))
+sumpooled
+#str(sumpooled)
+```
+
+```{r creating the inline text objects, echo=FALSE, results='hide'}
+library(formattable)
+mimpBel_B <- digits(sumpooled$estimate[2],3)
+mimpBel_B
+mimpBel_p <- digits(sumpooled$p.value[2],3)
+mimpBel_p
+mimp_cmBl_B <- digits(sumpooled$estimate[3],3)
+mimp_cmBl_B
+mimp_cmBl_p <- digits(sumpooled$p.value[3],3)
+mimp_cmBl_p
+mimp_i_B <- digits(sumpooled$estimate[4],3)
+mimp_i_B
+mimp_i_p <- digits(sumpooled$p.value[4],3)
+mimp_i_p
+```
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging ($B$ = `r mimpBel_B`, $p$ = `r mimpBel_p`) nor the proportion of BIPOC instructional staff ($B$ = `r mimp_i_B`, $p$ = `r mimp_i_p`) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus ($B$ = `r mimp_cmBl_B`, $p$ = `r mimp_cmBl_p`). Results are presented in Table X.
+
+
+## Toward the APA Style Write-up
+
+### Method/Data Diagnostics
+
+Data screening suggested that `r attempts` individuals opend the survey link. Of those, `r consented_attempts` granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; `r US_inclusion` met this criteria.  Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from `r missMin`% to `r missMax`%.  Across the dataset, `r CellsMiss` of cells had missing data and `r CaseComplete` of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50% missing to be included the multiple imputation [@katitas_getting_2019].
+
+Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning [-@kline_principles_2016]. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black ($W$ = `r cmSW`, $p$ = `r cmSWp`) and the proportion of BIPOC instructional staff($W$ = `r iSW`, $p$ = `r iSWp`)  are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging ($W$ = `r belSW`, $p$ = `r belSWp`) and the respondent's perception of campus climate for Black students ($W$ = `r clSW`, $p$ = `r clSWp`) did not differ differently from a normal distribution.
+
+We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the *outlier()* function in the *psych* package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased.  Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that `r NumOutliers$n` exceed three standard deviations beyond the median. *Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis* AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.*
+
+We managed missing data with multiple imputation [@enders_multiple_2017; @katitas_getting_2019]. We imputed five sets of data with the R package, *mice* (v. 3.13) -- a program that utilizes conditional multiple imputation. The imputation included the item-level variables that comprised our scales, the variables that represented proportion of BIPOC instructional staff and proportion of Black classmates, as well as four auxiliary variables (three variables from the course evaluation and the format [in-person/blended/virtual] of the class).
+
+### Results
+
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging ($B$ = `r Bel_B`, $p$ = `r Bel_p`) nor the proportion of BIPOC instructional staff ($B$ = `r i_B`, $p$ = `r i_p`) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus ($B$ = `r cm_B`, $p$ = `r cm_p`). Although it accounted for `r modR2` of the variance, the overall model was not statistically significant. Results are presented in Table 2.
+
+**Some notes about this write-up**
+
+* I went ahead and used the data diagnostics that we did in the AIA method.  It feels to me like these should be calculated with the multiply imputed data (i.e., 5 sets, with pooled estimates and standard errors), but I do not see that modeled -- anywhere in R.
+* Note the similarities with the AIA write-up. 
+
+
+## Multiple imputation considerations
+
+1. Character vectors (i.e., values that are represented with words) can be problematic.  If they are causing trouble, consider
+   * recode into factors,
+   * keep it in the df, but exclude it from the imputation protocol,
+   * our "format" variable was an ordered factor (i.e., each term was associated with a value), so I think that helped us avoid problems
+   
+2. Variables with really high (like 50% or more) proportions of missingness should be excluded.
+
+3. Variables that are highly correlated or redundant (even if inverse) will halt the execution. If you set print=TRUE you will see where the algorithm is having difficulty because it will halt at that variable.
+
+4. Variables with non-missing values can be problematic.  If they are problematic, just exclude them from the process.
+
+5. Width (columns/variables) versus length (rows/cases).  You must have more columns/variables than rows/cases.  It is difficult to say how many.  If this is a problem:
+  * Consider scoring scales first with AIA, then impute with whole scales.
+  * Divide the df in halves or thirds, impute separately, then join with the ID numbers. 
+  * There should be auxiliary variables in each.
+
+6. Item-level imputation is its "whole big thing" with multiple, complex considerations.  There are tremendous resources
+  *  Enders [BLIMP](http://www.appliedmissingdata.com/multilevel-imputation.html) app is free and works with R
+  *  Little's [-@little_statistical_2002] article
+
+7. How many imputations? Controversial and has changed over the years. 
+  *  Practical concern: the more you request, the longer it will take in R, this demo was 5
+  *  For a number of years there was a push for 20, but I've also seen recommendations for 100s.
+  *  Check examples of imputed studies in your disciplinary specialty/journals.
+
+7. There are lots of discussions and debates about
+   * allowing for fractional/decimal responses (a 3.5 on 1 to 4 scaling; or a 0.75 on a dichotomous variable such as male/female)
+   * out-of-bounds estimates (what if you get a 7 on 1 to 4 scaling?)
+
+It can be helpful to save outfiles of progress as we go along.  Here I save this raw file.
+
+## Practice Problems
+
+The three problems described below are designed to be continuations from the previous chapters. You will likely encounter challenges that were not covered in this chapter. Search for and try out solutions, knowing that there are multiple paths through the analysis.
+
+### Problem #1: Reworking the Chapter Problem
+
+If you chose this option in the prior chapters, you imported the data from Qualtrics, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, properly formatted the variables, interpreted item-level missingness, scored the scales/subscales, interpreted scale-level missingness, and wrote up the results.
+
+Continue working with this data to:
+
+|Assignment Component                                                          | Points Possible| Points Earned|
+|:---------------------------------------------------------------------------- |:-------------: |:------------:|
+|1. Import the raw data from Qualtrics                                         |      5         |    _____     |           
+|2. Apply inclusionary/exclusionary criteria                                   |      5         |    _____     |
+|3. Format any variables that shouldn't be imputed in their raw form           |      5         |    _____     |  
+|4. Multiply impute a minimum of 5 sets of data                                |      5         |    _____     |               
+|5. Run a regression with at least three variables                             |      5         |    _____     |   
+|6. APA style write-up of the multiple imputation section of data diagnostics  |      5         |    _____     |       
+|7. APA style write-up regression results                                      |      5         |    _____     |
+|8. Explanation to grader                                                      |      5         |    _____     |
+|**Totals**                                                                    |      40        |    _____     |             
+
+
+### Problem #2:  Use the *Rate-a-Recent-Course* Survey, Choosing Different Variables
+
+If you chose this option in the prior chapter, you chose a minimum of three variables from the *Rate-a-Recent-Course* survey to include in a simple statistical model. You imported the data from Qualtrics, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, properly formatted the variables, interpreted item-level missingness, scored the scales/subscales, interpreted scale-level missingness, and wrote up the results.
+
+Continue working with this data to:
+
+|Assignment Component                                                          | Points Possible| Points Earned|
+|:---------------------------------------------------------------------------- |:-------------: |:------------:|
+|1. Import the raw data from Qualtrics                                         |      5         |    _____     |           
+|2. Apply inclusionary/exclusionary criteria                                   |      5         |    _____     |
+|3. Format any variables that shouldn't be imputed in their raw form           |      5         |    _____     |  
+|4. Multiply impute a minimum of 5 sets of data                                |      5         |    _____     |               
+|5. Run a regression with at least three variables                             |      5         |    _____     |   
+|6. APA style write-up of the multiple imputation section of data diagnostics  |      5         |    _____     |       
+|7. APA style write-up regression results                                      |      5         |    _____     |
+|8. Explanation to grader                                                      |      5         |    _____     |
+|**Totals**                                                                    |      40        |    _____     |   
+      
+
+### Problem #3:  Other data
+
+If you chose this option in the prior chapter, you used raw data that was available to you. You imported it into R, applied inclusion/exclusion criteria, renamed variables, downsized the df to the variables of interest, properly formatted the variables, interpreted item-level missingness, scored the scales/subscales, interpreted scale-level missingness, and wrote up the results.
+
+Continue working with this data to:
+
+|Assignment Component                                                          | Points Possible| Points Earned|
+|:---------------------------------------------------------------------------- |:-------------: |:------------:|
+|1. Import the raw data from Qualtrics (or elsewhere)                          |      5         |    _____     |           
+|2. Apply inclusionary/exclusionary criteria                                   |      5         |    _____     |
+|3. Format any variables that shouldn't be imputed in their raw form           |      5         |    _____     |  
+|4. Multiply impute a minimum of 5 sets of data                                |      5         |    _____     |               
+|5. Run a regression with at least three variables                             |      5         |    _____     |   
+|6. APA style write-up of the multiple imputation section of data diagnostics  |      5         |    _____     |       
+|7. APA style write-up regression results                                      |      5         |    _____     |
+|8. Explanation to grader                                                      |      5         |    _____     |
+|**Totals**                                                                    |      40        |    _____     |   
+                     
+
+```{r sessionInfo 05}
+sessionInfo()
+```
+
+# References {-#refs}
+
+<!--chapter:end:05-MultipleImputation.Rmd-->
 

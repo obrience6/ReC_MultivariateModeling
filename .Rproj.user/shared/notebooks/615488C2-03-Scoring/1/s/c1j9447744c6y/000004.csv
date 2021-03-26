@@ -1,0 +1,13 @@
+"0","ScrdMissMin <- digits(ScoredPrMiss$min, 0)#this object is displayed below and I use input from  it for the inline text used in the write-up
+ScrdMissMax <- digits(ScoredPrMiss$max, 0)
+ScrdMissMin
+"
+"1","[1]"
+"1"," 0"
+"1","
+"
+"0","ScrdMissMax"
+"1","[1]"
+"1"," 33"
+"1","
+"

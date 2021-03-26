@@ -110,6 +110,127 @@
             "type": "book"
         },
         {
+            "ISBN": "978-1-317-63313-6",
+            "URL": "http://ebookcentral.proquest.com/lib/spu/detail.action?docID=4556523",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2019,
+                        11,
+                        14
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Byrne",
+                    "given": "Barbara M."
+                }
+            ],
+            "edition": "3rd",
+            "id": "byrne_structural_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "keyword": "Structural equation modeling.",
+            "publisher": "Routledge",
+            "publisher-place": "London, UNITED KINGDOM",
+            "title": "Structural equation modeling with AMOS: Basic concepts, applications, and programming",
+            "title-short": "Structural Equation Modeling with AMOS",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1037/a0033266",
+            "ISSN": "1939-1463, 1082-989X",
+            "URL": "http://doi.apa.org/getdoi.cfm?doi=10.1037/a0033266",
+            "abstract": "The use of item parcels has been a matter of debate since the earliest use of factor analysis and structural equation modeling. Here, we review the arguments that have been levied both for and against the use of parcels, and discuss the relevance of these arguments in light of the building body of empirical evidence investigating their performance. We discuss the many advantages of parcels that some researchers find attractive and highlight, too, the potential problems that illinformed use can incur. We argue that no absolute pro or con stance is warranted. Parcels are an analytic tool like any other. There are circumstances in which parceling is useful and times when parcels would not be used. We emphasize the precautions that should be taken when creating item parcels and interpreting model results based on parcels. Finally, we review and compare several proposed strategies for parcel building, and suggest directions for further research.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2019,
+                        11,
+                        17
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Little",
+                    "given": "Todd D."
+                },
+                {
+                    "family": "Rhemtulla",
+                    "given": "Mijke"
+                },
+                {
+                    "family": "Gibson",
+                    "given": "Kimberly"
+                },
+                {
+                    "family": "Schoemann",
+                    "given": "Alexander M."
+                }
+            ],
+            "container-title": "Psychological Methods",
+            "id": "little_why_2013",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "285-300",
+            "title": "Why the items versus parcels controversy needn’t be one.",
+            "type": "article-journal",
+            "volume": "18"
+        },
+        {
+            "DOI": "10.1207/S15328007SEM0902_1",
+            "ISSN": "1070-5511",
+            "abstract": "We examine the controversial practice of using parcels of items as manifest variables in structural equation modeling (SEM) procedures. After detailing arguments pro and con, we conclude that the unconsidered use of parcels is never warranted, while, at the same time, the considered use of parcels cannot be dismissed out of hand. In large part, the decision to parcel or not depends on one’s philosophical stance regarding scientific inquiry (e.g., empiricist vs. pragmatist) and the substantive goal of a study (e.g., to understand the structure of a set of items or to examine the nature of a set of constructs). Prior to creating parcels, however, we recommend strongly that investigators acquire a thorough understanding of the nature and dimensionality of the items to be parceled. With this knowledge in hand, various techniques for creating parcels can be utilized to minimize potential pitfalls and to optimize the measurement structure of constructs in SEM procedures. A number of parceling techniques are described, noting their strengths and weaknesses. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "author": [
+                {
+                    "family": "Little",
+                    "given": "Todd D."
+                },
+                {
+                    "family": "Cunningham",
+                    "given": "William A."
+                },
+                {
+                    "family": "Shahar",
+                    "given": "Golan"
+                },
+                {
+                    "family": "Widaman",
+                    "given": "Keith F."
+                }
+            ],
+            "container-title": "Structural Equation Modeling",
+            "id": "little_parcel_2002",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002,
+                        4
+                    ]
+                ]
+            },
+            "keyword": "Structural Equation Modeling, Measurement, Experimental Methods, measurement, parcels, research, scientific inquiry, structural equation modeling",
+            "page": "151-173",
+            "title": "To parcel or not to parcel: Exploring the question, weighing the merits",
+            "title-short": "To parcel or not to parcel",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
             "DOI": "10.1177/0011000012445176",
             "ISSN": "0011-0000, 1552-3861",
             "URL": "http://journals.sagepub.com/doi/10.1177/0011000012445176",
@@ -167,6 +288,31 @@
             "publisher": "Guilford Press",
             "publisher-place": "New York, NY",
             "title": "Applied missing data analysis",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-8058-6373-4",
+            "abstract": "This bestselling text provides a practical guide to the basic concepts of structural equation modeling (SEM) and the AMOS program (Versions 17 & 18). The author reviews SEM applications based on actual data taken from her research. Noted for its non-mathematical language, this book is written for the novice SEM user. With each chapter, the author ’walks’ the reader through all steps involved in testing the SEM model. The book opens with an introduction to the fundamental concepts of SEM and the basics of the AMOS program. The next 3 sections present applications that focus on single-group, multiple-group, and multitrait-multimethod and latent growth curve models. The book concludes with a discussion about non-normal and missing (incomplete) data and two applications capable of addressing these issues. Intended for researchers, practitioners, and students who use SEM and AMOS in their work, this book is an ideal resource for graduate level courses on SEM taught in departments of psychology, education, business, and other social and health sciences and/or as a supplement in courses on applied statistics, multivariate statistics, statistics II, intermediate or advanced statistics, and/or research design. Appropriate for those with limited or no previous exposure to SEM, a prerequisite of basic statistics through regression analysis is recommended. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "author": [
+                {
+                    "family": "Byrne",
+                    "given": "Barbara M."
+                }
+            ],
+            "collection-title": "Multivariate applications series",
+            "id": "byrne_structural_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "keyword": "Structural Equation Modeling, structural equation modeling, AMOS program, mathematics, Mathematics, Statistical Analysis, statistics, Statistics, Testing",
+            "publisher": "Routledge/Taylor & Francis Group",
+            "publisher-place": "New York, NY",
+            "title": "Structural equation modeling with AMOS: Basic concepts, applications, and programming, 2nd ed",
+            "title-short": "Structural equation modeling with AMOS",
             "type": "book"
         },
         {
@@ -519,6 +665,7 @@
                     "given": "Aycan"
                 }
             ],
+            "container-title": "University of Virginia Library: Research Data Services + Sciences",
             "id": "katitas_getting_2019",
             "issued": {
                 "date-parts": [
@@ -528,7 +675,7 @@
                 ]
             },
             "note": "Library Catalog: uvastatlab.github.io",
-            "title": "Getting Started with Multiple Imputation in R - StatLab Articles",
+            "title": "Getting Started with Multiple Imputation in R",
             "type": ""
         },
         {
@@ -564,6 +711,50 @@
             "type": ""
         },
         {
+            "URL": "https://crmda.dept.ku.edu/guides/11.ImputationWithLargeDataSets/11.ImputationWithLargeDataSets.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        3,
+                        20
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Little",
+                    "given": "Todd D."
+                },
+                {
+                    "family": "Howard",
+                    "given": "W. J."
+                },
+                {
+                    "family": "McConnell",
+                    "given": "E. K."
+                },
+                {
+                    "family": "Stump",
+                    "given": "K. N."
+                }
+            ],
+            "container-title": "KUant Guides",
+            "id": "little_missing_2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "10",
+            "title": "Missing data in large data projects: Two methods of missing data imputation when working with large data projects",
+            "title-short": "Missing data in large data projects: Two mehods of missing data imputation when working with large data projects",
+            "type": "article-journal",
+            "volume": "011.3"
+        },
+        {
             "URL": "https://stefvanbuuren.name/fimd/",
             "abstract": "Flexible Imputation of Missing Data, Second Edition",
             "accessed": {
@@ -597,6 +788,33 @@
             "note": "Library Catalog: datascienceplus.com",
             "title": "Handling missing data with MICE package; a simple approach",
             "type": ""
+        },
+        {
+            "DOI": "10.1016/j.brat.2016.11.008",
+            "ISSN": "0005-7967",
+            "abstract": "The last 20 years has seen an uptick in research on missing data problems, and most software applications now implement one or more sophisticated missing data handling routines (e.g., multiple imputation or maximum likelihood estimation). Despite their superior statistical properties (e.g., less stringent assumptions, greater accuracy and power), the adoption of these modern analytic approaches is not uniform in psychology and related disciplines. Thus, the primary goal of this manuscript is to describe and illustrate the application of multiple imputation. Although maximum likelihood estimation is perhaps the easiest method to use in practice, psychological data sets often feature complexities that are currently difficult to handle appropriately in the likelihood framework (e.g., mixtures of categorical and continuous variables), but relatively simple to treat with imputation. The paper describes a number of practical issues that clinical researchers are likely to encounter when applying multiple imputation, including mixtures of categorical and continuous variables, item-level missing data in questionnaires, significance testing, interaction effects, and multilevel missing data. Analysis examples illustrate imputation with software packages that are freely available on the internet. (PsycINFO Database Record (c) 2017 APA, all rights reserved)",
+            "author": [
+                {
+                    "family": "Enders",
+                    "given": "Craig K."
+                }
+            ],
+            "container-title": "Behaviour Research and Therapy",
+            "id": "enders_multiple_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        11
+                    ]
+                ]
+            },
+            "keyword": "Maximum Likelihood, Attrition, Data Collection, Experimental Attrition, Maximum likelihood estimation, Missing data, Multiple imputation, Statistical Estimation",
+            "note": "Publisher: Elsevier Science",
+            "page": "4-18",
+            "title": "Multiple imputation as a flexible tool for missing data handling in clinical research",
+            "type": "article-journal",
+            "volume": "98"
         },
         {
             "DOI": "10.1016/S0022-2496(02)00028-7",
@@ -5180,6 +5398,40 @@
             "title": "On the Use, the Misuse, and the Very Limited Usefulness of Cronbach’s Alpha",
             "type": "article-journal",
             "volume": "74"
+        },
+        {
+            "URL": "https://www.csusb.edu/sites/default/files/FACT%20SHEET-%20Anti-Asian%20Hate%202020%203.2.21.pdf",
+            "id": "noauthor_fact_nodate",
+            "publisher": "Center or the Study of Hate & Extremism, California University System - Berkley",
+            "title": "FACT SHEET: Anti-Asian Prejudice March 2020",
+            "title-short": "FACT SHEET",
+            "type": ""
+        },
+        {
+            "ISBN": "978-0-316-01792-3",
+            "abstract": "Includes bibliographical references (pages 287-296) and index.",
+            "author": [
+                {
+                    "family": "Gladwell",
+                    "given": "Malcolm"
+                }
+            ],
+            "collection-title": "New York Times best sellers",
+            "edition": "First edition.",
+            "id": "gladwell_outliers_2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "keyword": "Successful people; Success",
+            "publisher": "Little, Brown; Company",
+            "publisher-place": "New York",
+            "title": "Outliers: The story of success",
+            "title-short": "Outliers",
+            "type": "book"
         }
     ],
     "project_biblios": [

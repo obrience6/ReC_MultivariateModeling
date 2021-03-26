@@ -1,0 +1,3 @@
+"0","library(qualtRics)"
+"0","QTRX_df <- fetch_survey(surveyID = ""SV_b2cClqAlLGQ6nLU"",useLocalTime = TRUE,"
+"0","                         verbose = FALSE, label=FALSE, convert=FALSE, force_request = TRUE, import_id = FALSE)"

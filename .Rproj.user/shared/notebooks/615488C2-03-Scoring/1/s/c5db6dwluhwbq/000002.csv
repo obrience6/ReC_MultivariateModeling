@@ -1,0 +1,4 @@
+"0","#Using the package: mice"
+"0","library(mice)"
+"0",""
+"0","mice_out <- md.pattern(scrub_df, plot = TRUE, rotate.names = TRUE)"

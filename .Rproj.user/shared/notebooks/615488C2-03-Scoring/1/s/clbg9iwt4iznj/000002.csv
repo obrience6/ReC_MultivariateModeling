@@ -1,5 +1,0 @@
-"0","library(dplyr)"
-"0","scrub_df <- scrub_df %>% mutate(ID = row_number())"
-"0",""
-"0","#moving the ID number to the first column; requires "
-"0","scrub_df <- scrub_df%>%select(ID, everything())"

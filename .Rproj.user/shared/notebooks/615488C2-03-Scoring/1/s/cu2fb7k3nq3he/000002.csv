@@ -1,0 +1,7 @@
+"0","ScoredCasesIncluded <- nrow(scored)
+ScoredCasesIncluded #this object is displayed below and I use input from  it for the inline text used in the write-up
+"
+"1","[1]"
+"1"," 28"
+"1","
+"
