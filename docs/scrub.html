@@ -294,8 +294,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="multimp.html"><a href="multimp.html#working-the-problem-2"><i class="fa fa-check"></i><b>5.5</b> Working the Problem</a>
 <ul>
 <li class="chapter" data-level="5.5.1" data-path="multimp.html"><a href="multimp.html#selecting-and-formatting-variables"><i class="fa fa-check"></i><b>5.5.1</b> Selecting and Formatting Variables</a></li>
-<li class="chapter" data-level="5.5.2" data-path="multimp.html"><a href="multimp.html#the-multiple-imputation"><i class="fa fa-check"></i><b>5.5.2</b> The Multiple Imputation</a></li>
-<li class="chapter" data-level="5.5.3" data-path="multimp.html"><a href="multimp.html#creating-scale-scores"><i class="fa fa-check"></i><b>5.5.3</b> Creating Scale Scores</a></li>
+<li class="chapter" data-level="5.5.2" data-path="multimp.html"><a href="multimp.html#creating-composite-variables"><i class="fa fa-check"></i><b>5.5.2</b> Creating Composite Variables</a></li>
+<li class="chapter" data-level="5.5.3" data-path="multimp.html"><a href="multimp.html#the-multiple-imputation"><i class="fa fa-check"></i><b>5.5.3</b> The Multiple Imputation</a></li>
+<li class="chapter" data-level="5.5.4" data-path="multimp.html"><a href="multimp.html#creating-scale-scores"><i class="fa fa-check"></i><b>5.5.4</b> Creating Scale Scores</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="multimp.html"><a href="multimp.html#multiple-regression-with-multiply-imputed-data"><i class="fa fa-check"></i><b>5.6</b> Multiple Regression with Multiply Imputed Data</a></li>
 <li class="chapter" data-level="5.7" data-path="multimp.html"><a href="multimp.html#toward-the-apa-style-write-up-1"><i class="fa fa-check"></i><b>5.7</b> Toward the APA Style Write-up</a>
@@ -549,21 +550,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-2"><a href="scrub.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># I used inline text below to update the text with the new number</span></span>
 <span id="cb11-3"><a href="scrub.html#cb11-3" aria-hidden="true" tabindex="-1"></a>attempts <span class="ot">&lt;-</span> <span class="fu">nrow</span>(QTRX_df)</span>
 <span id="cb11-4"><a href="scrub.html#cb11-4" aria-hidden="true" tabindex="-1"></a>attempts</span></code></pre></div>
-<pre><code>## [1] 33</code></pre>
-<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 33 individuals opened the survey link.</p>
+<pre><code>## [1] 34</code></pre>
+<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 34 individuals opened the survey link.</p>
 <p>Next let’s filter in only those who consented to take the survey. Because Qualtrics discontinued the survey for everyone who did not consent, we do not have to worry that their data is unintentionally included, but it can be useful to mention the number of non-consenters in the summary of missing data.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="scrub.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># == are used </span></span>
 <span id="cb13-2"><a href="scrub.html#cb13-2" aria-hidden="true" tabindex="-1"></a>QTRX_df <span class="ot">&lt;-</span>(<span class="fu">filter</span> (QTRX_df, Consent <span class="sc">==</span> <span class="dv">1</span>))</span>
 <span id="cb13-3"><a href="scrub.html#cb13-3" aria-hidden="true" tabindex="-1"></a>consented_attempts <span class="ot">&lt;-</span> <span class="fu">nrow</span>(QTRX_df)</span>
 <span id="cb13-4"><a href="scrub.html#cb13-4" aria-hidden="true" tabindex="-1"></a>consented_attempts</span></code></pre></div>
-<pre><code>## [1] 31</code></pre>
-<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 33 individuals opened the survey link. Of those, 31, granted consent and proceeded into the survey items.</p>
+<pre><code>## [1] 32</code></pre>
+<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 34 individuals opened the survey link. Of those, 32, granted consent and proceeded into the survey items.</p>
 <p>In this particular study, the categories used to collect race were U.S.-centric. Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="scrub.html#cb15-1" aria-hidden="true" tabindex="-1"></a>QTRX_df <span class="ot">&lt;-</span>(<span class="fu">filter</span> (QTRX_df, USinst <span class="sc">==</span> <span class="dv">0</span>))</span>
 <span id="cb15-2"><a href="scrub.html#cb15-2" aria-hidden="true" tabindex="-1"></a>US_inclusion <span class="ot">&lt;-</span> <span class="fu">nrow</span>(QTRX_df)</span>
 <span id="cb15-3"><a href="scrub.html#cb15-3" aria-hidden="true" tabindex="-1"></a>US_inclusion</span></code></pre></div>
-<pre><code>## [1] 31</code></pre>
-<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 33 individuals opened the survey link. Of those, 31, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 31 met this criteria.</p>
+<pre><code>## [1] 32</code></pre>
+<p>CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 34 individuals opened the survey link. Of those, 32, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 32 met this criteria.</p>
 </div>
 <div id="renaming-variables" class="section level3" number="2.5.3">
 <h3><span class="header-section-number">2.5.3</span> Renaming Variables</h3>
@@ -597,7 +598,7 @@ df_named &lt;- rename(df_raw, NewName1 = OldName1)</p>
 <h2><span class="header-section-number">2.6</span> Toward the APA Style Write-up</h2>
 <div id="methodprocedure" class="section level3" number="2.6.1">
 <h3><span class="header-section-number">2.6.1</span> Method/Procedure</h3>
-<p>Data screening suggested that 33 individuals opened the survey link. Of those, 31 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 31 met this criteria.</p>
+<p>Data screening suggested that 34 individuals opened the survey link. Of those, 32 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 32 met this criteria.</p>
 </div>
 </div>
 <div id="practice-problems" class="section level2" number="2.7">

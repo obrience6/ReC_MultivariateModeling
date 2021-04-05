@@ -57,8 +57,8 @@
 \clbrdrt\brdrw15\brdrs
 \clvertalc\cellx11689 
 \pard\sa0\sb0\intbl\qr{(Intercept)}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx547{3.08**}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[1.70, 4.47]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx547{2.59**}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[1.24, 3.94]}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx205{}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{}\cell
@@ -79,13 +79,13 @@
 \clvertalc\cellx9910 
 \clvertalc\cellx11689 
 \pard\sa0\sb0\intbl\qr{Belonging}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx547{-0.04}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[-0.32, 0.24]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-0.07}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-0.50, 0.37]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx547{0.03}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[-0.25, 0.31]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{0.04}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-0.39, 0.48]}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{.00}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-.04, .05]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-.02}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-.03, .03]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{.05}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx267{}\cell
 \row
 }
@@ -101,13 +101,13 @@
 \clvertalc\cellx9910 
 \clvertalc\cellx11689 
 \pard\sa0\sb0\intbl\qr{cmBlack}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx547{-0.03}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[-0.08, 0.01]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-0.33}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-0.75, 0.10]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{.10}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-.11, .31]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-.29}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx547{-0.02}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[-0.07, 0.02]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-0.23}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-0.65, 0.20]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{.05}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-.11, .21]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-.23}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx267{}\cell
 \row
 }
@@ -123,13 +123,13 @@
 \clvertalc\cellx9910 
 \clvertalc\cellx11689 
 \pard\sa0\sb0\intbl\qr{iBIPOC_pr}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx547{-0.50}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[-1.48, 0.48]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-0.21}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-0.63, 0.20]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{.04}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-.10, .19]}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-.20}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx547{-0.37}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx277{[-1.39, 0.65]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-0.15}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-0.58, 0.27]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{.02}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx205{[-.09, .13]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx130{-.14}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx267{}\cell
 \row
 }
@@ -152,7 +152,7 @@
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx205{}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx267{{\i R\super 2 \nosupersub}  = .141}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx267{{\i R\super 2 \nosupersub}  = .076}\cell
 \row
 }
 {
@@ -174,7 +174,7 @@
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx205{}\cell
 \pard\sa0\sb0\intbl\tqdec\tldot\tx130{}\cell
-\pard\sa0\sb0\intbl\tqdec\tldot\tx267{95% CI[.00,.33]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx267{95% CI[.00,.23]}\cell
 \row
 }
 {

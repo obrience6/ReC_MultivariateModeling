@@ -11,6 +11,7 @@ h3:steps-in-multiple-imputation Steps in Multiple Imputation
 h3:statistical-approaches-to-multiple-imputation Statistical Approaches to Multiple Imputation
 h2:working-the-problem Working the Problem
 h3:selecting-and-formatting-variables Selecting and Formatting Variables
+h3:creating-composite-variables Creating Composite Variables
 h3:the-multiple-imputation The Multiple Imputation
 h3:creating-scale-scores Creating Scale Scores
 h2:multiple-regression-with-multiply-imputed-data Multiple Regression with Multiply Imputed Data

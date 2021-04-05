@@ -1,0 +1,28 @@
+{
+    "id": "6EE4A7AD",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1617593501323.0,
+    "source_on_save": false,
+    "relative_order": 12,
+    "properties": {
+        "id": "6f7fc97779ed4079b953004147f2cbd6",
+        "name": "mimp_mids",
+        "title": "mimp_mids",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2056734052368,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1617593501323,
+    "read_only": false,
+    "read_only_alternatives": []
+}

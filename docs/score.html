@@ -294,8 +294,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="multimp.html"><a href="multimp.html#working-the-problem-2"><i class="fa fa-check"></i><b>5.5</b> Working the Problem</a>
 <ul>
 <li class="chapter" data-level="5.5.1" data-path="multimp.html"><a href="multimp.html#selecting-and-formatting-variables"><i class="fa fa-check"></i><b>5.5.1</b> Selecting and Formatting Variables</a></li>
-<li class="chapter" data-level="5.5.2" data-path="multimp.html"><a href="multimp.html#the-multiple-imputation"><i class="fa fa-check"></i><b>5.5.2</b> The Multiple Imputation</a></li>
-<li class="chapter" data-level="5.5.3" data-path="multimp.html"><a href="multimp.html#creating-scale-scores"><i class="fa fa-check"></i><b>5.5.3</b> Creating Scale Scores</a></li>
+<li class="chapter" data-level="5.5.2" data-path="multimp.html"><a href="multimp.html#creating-composite-variables"><i class="fa fa-check"></i><b>5.5.2</b> Creating Composite Variables</a></li>
+<li class="chapter" data-level="5.5.3" data-path="multimp.html"><a href="multimp.html#the-multiple-imputation"><i class="fa fa-check"></i><b>5.5.3</b> The Multiple Imputation</a></li>
+<li class="chapter" data-level="5.5.4" data-path="multimp.html"><a href="multimp.html#creating-scale-scores"><i class="fa fa-check"></i><b>5.5.4</b> Creating Scale Scores</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="multimp.html"><a href="multimp.html#multiple-regression-with-multiply-imputed-data"><i class="fa fa-check"></i><b>5.6</b> Multiple Regression with Multiply Imputed Data</a></li>
 <li class="chapter" data-level="5.7" data-path="multimp.html"><a href="multimp.html#toward-the-apa-style-write-up-1"><i class="fa fa-check"></i><b>5.7</b> Toward the APA Style Write-up</a>
@@ -521,7 +522,7 @@ analyses.</p></li>
 <p>I use <em>different</em> names for the object/df in my R environment than I use for the filename that holds the data on my computer. Why? I don’t want to accidentally overwrite this precious “source” of data.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="score.html#cb27-1" aria-hidden="true" tabindex="-1"></a>scrub_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span> (<span class="st">&quot;BlackStntsModel210318.csv&quot;</span>, <span class="at">head =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
 <span id="cb27-2"><a href="score.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(scrub_df)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    31 obs. of  25 variables:
+<pre><code>## &#39;data.frame&#39;:    32 obs. of  25 variables:
 ##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iRace1   : int  3 3 3 3 1 3 3 3 1 0 ...
 ##  $ iRace2   : int  1 NA 1 1 NA NA 3 NA NA 0 ...
@@ -571,7 +572,7 @@ analyses.</p></li>
 </ul>
 <p>Our next step is to conduct a preliminary missing data analysis at the item level, across the dataset we are using. The Campus Climate and Belonging scales are traditional in the sense that they have items that we sum. The variable representing proportion of classmates who are Black is a single item. The variable representing the proportion of instructional staff who are BIPOC must be calculated in a manner that takes into consideration the there may be multiple instructors. The survey allowed a respondent to name up to 10 instructors.</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="score.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(scrub_df<span class="sc">$</span>iRace1)</span></code></pre></div>
-<pre><code>##  int [1:31] 3 3 3 3 1 3 3 3 1 0 ...</code></pre>
+<pre><code>##  int [1:32] 3 3 3 3 1 3 3 3 1 0 ...</code></pre>
 <p>Looking at the structure of our data, the iRace(1 thru 10) variables are in “int” or integer format. This means that they are represented as whole numbers. We need them to be represented as factors. R handles factors represented as words well. Therefore, let’s use our codebook to reformat this variable as a an ordered factor, with words instead of numbers.</p>
 <p>Qualtrics imports many of the categorical variables as numbers. R often reads them numerically (integers or numbers). If they are directly converted to factors, R will sometimes collapse across missing numbers. In this example, if there is a race that is not represented (e.g., 2 for BiMulti), when the numbers are changed to factors, R will assume they are ordered and there is a consecutive series of numbers (0,1,2,3,4). If a number in the sequence is missing (0,1,3,4) and labels are applied, it will collapse across the numbers and the labels you think are attached to each number are not. Therefore, it is ESSENTIAL to check (again and again ad nauseum) to ensure that your variables are recoding in a manner you understand.</p>
 <p>One way to avoid this is to use the code below to identify the levels and the labels. When they are in order, they align and don’t “skip” numbers. To quadruple check our work, we will recode into a new variable “tRace#” for “teacher” Race.</p>
@@ -608,7 +609,7 @@ analyses.</p></li>
 <p>Let’s check the structure to see if they are factors.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="score.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb32-2"><a href="score.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(scrub_df)</span></code></pre></div>
-<pre><code>## Rows: 31
+<pre><code>## Rows: 32
 ## Columns: 35
 ## $ ID        &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17...
 ## $ iRace1    &lt;int&gt; 3, 3, 3, 3, 1, 3, 3, 3, 1, 0, 2, 1, 1, 1, 3, 3, 3, 1, 3, ...
@@ -682,7 +683,7 @@ analyses.</p></li>
 <span id="cb39-2"><a href="score.html#cb39-2" aria-hidden="true" tabindex="-1"></a>CaseMiss<span class="ot">&lt;-</span>psych<span class="sc">::</span><span class="fu">describe</span>(scrub_df<span class="sc">$</span>prop_miss)</span>
 <span id="cb39-3"><a href="score.html#cb39-3" aria-hidden="true" tabindex="-1"></a>CaseMiss</span></code></pre></div>
 <pre><code>##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 31 4.11 10.19      0    1.09   0   0 36.36 36.36 2.39     4.37 1.83</code></pre>
+## X1    1 32 3.98 10.05      0    1.05   0   0 36.36 36.36 2.44     4.67 1.78</code></pre>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="score.html#cb41-1" aria-hidden="true" tabindex="-1"></a>missMin <span class="ot">&lt;-</span> <span class="fu">digits</span>(CaseMiss<span class="sc">$</span>min, <span class="dv">0</span>)</span>
 <span id="cb41-2"><a href="score.html#cb41-2" aria-hidden="true" tabindex="-1"></a>missMax <span class="ot">&lt;-</span> <span class="fu">digits</span>(CaseMiss<span class="sc">$</span>max, <span class="dv">0</span>)</span></code></pre></div>
 <p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0% to 36%.</p>
@@ -701,10 +702,10 @@ analyses.</p></li>
 <span id="cb44-2"><a href="score.html#cb44-2" aria-hidden="true" tabindex="-1"></a>CellsMiss <span class="ot">&lt;-</span> <span class="fu">percent</span>(<span class="fu">mean</span>(<span class="fu">is.na</span>(scrub_df)))<span class="co">#what proportion of cells missing across entire dataset</span></span>
 <span id="cb44-3"><a href="score.html#cb44-3" aria-hidden="true" tabindex="-1"></a>CaseComplete <span class="ot">&lt;-</span> <span class="fu">percent</span>(<span class="fu">mean</span>(<span class="fu">complete.cases</span>(scrub_df)))<span class="co">#what proportion of cases (rows) are complete (nonmissing)</span></span>
 <span id="cb44-4"><a href="score.html#cb44-4" aria-hidden="true" tabindex="-1"></a>CellsMiss</span></code></pre></div>
-<pre><code>## [1] 4.11%</code></pre>
+<pre><code>## [1] 3.98%</code></pre>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="score.html#cb46-1" aria-hidden="true" tabindex="-1"></a>CaseComplete</span></code></pre></div>
-<pre><code>## [1] 80.65%</code></pre>
-<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0% to 36%. Across the dataset, 4.11% of cells had missing data and 80.65% of cases had nonmissing data.</p>
+<pre><code>## [1] 81.25%</code></pre>
+<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0% to 36%. Across the dataset, 3.98% of cells had missing data and 81.25% of cases had nonmissing data.</p>
 </div>
 <div id="analyzing-missing-data-patterns" class="section level3" number="3.5.2">
 <h3><span class="header-section-number">3.5.2</span> Analyzing Missing Data Patterns</h3>
@@ -809,14 +810,14 @@ analyses.</p></li>
 <span id="cb57-14"><a href="score.html#cb57-14" aria-hidden="true" tabindex="-1"></a>ScoredPrMiss <span class="ot">&lt;-</span> psych<span class="sc">::</span><span class="fu">describe</span>(scored<span class="sc">$</span>prop_miss)</span>
 <span id="cb57-15"><a href="score.html#cb57-15" aria-hidden="true" tabindex="-1"></a>ScoredPrMiss</span></code></pre></div>
 <pre><code>##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 31  4.3 10.51      0    1.33   0   0 33.33 33.33 2.09     2.78 1.89</code></pre>
+## X1    1 32 4.17 10.37      0    1.28   0   0 33.33 33.33 2.14     3.02 1.83</code></pre>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="score.html#cb59-1" aria-hidden="true" tabindex="-1"></a>ScrdMissMin <span class="ot">&lt;-</span> <span class="fu">digits</span>(ScoredPrMiss<span class="sc">$</span>min, <span class="dv">0</span>)<span class="co">#this object is displayed below and I use input from  it for the inline text used in the write-up</span></span>
 <span id="cb59-2"><a href="score.html#cb59-2" aria-hidden="true" tabindex="-1"></a>ScrdMissMax <span class="ot">&lt;-</span> <span class="fu">digits</span>(ScoredPrMiss<span class="sc">$</span>max, <span class="dv">0</span>)</span>
 <span id="cb59-3"><a href="score.html#cb59-3" aria-hidden="true" tabindex="-1"></a>ScrdMissMin</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="score.html#cb61-1" aria-hidden="true" tabindex="-1"></a>ScrdMissMax</span></code></pre></div>
 <pre><code>## [1] 33</code></pre>
-<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 31 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%.</p>
+<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%.</p>
 <p>We need to decide what is our retention threshhold. Twenty percent seems to be a general rule of thumb. Let’s delete all cases with missingness at 20% or greater.</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="score.html#cb63-1" aria-hidden="true" tabindex="-1"></a>scored <span class="ot">&lt;-</span> <span class="fu">filter</span>(scored, prop_miss <span class="sc">&lt;=</span> <span class="dv">20</span>)  <span class="co">#update df to have only those with at least 20% of complete data (this is an arbitrary decision)</span></span>
 <span id="cb63-2"><a href="score.html#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -824,8 +825,8 @@ analyses.</p></li>
 <span id="cb63-4"><a href="score.html#cb63-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb63-5"><a href="score.html#cb63-5" aria-hidden="true" tabindex="-1"></a>ScoredCasesIncluded <span class="ot">&lt;-</span> <span class="fu">nrow</span>(scored)</span>
 <span id="cb63-6"><a href="score.html#cb63-6" aria-hidden="true" tabindex="-1"></a>ScoredCasesIncluded <span class="co">#this object is displayed below and I use input from  it for the inline text used in the write-up</span></span></code></pre></div>
-<pre><code>## [1] 28</code></pre>
-<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 31 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%. After eliminating cases with greater than 20% missing, the dataset analyzed included 28 cases.</p>
+<pre><code>## [1] 29</code></pre>
+<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%. After eliminating cases with greater than 20% missing, the dataset analyzed included 29 cases.</p>
 <p>With a decision about the number of cases we are going to include, we can continue to analyze missingness.</p>
 </div>
 <div id="revisiting-missing-analysis-at-the-scale-level" class="section level2" number="3.8">
@@ -839,10 +840,10 @@ analyses.</p></li>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="score.html#cb65-1" aria-hidden="true" tabindex="-1"></a>PrScoredCellsMissing <span class="ot">&lt;-</span><span class="fu">percent</span>(<span class="fu">mean</span>(<span class="fu">is.na</span>(scored))) <span class="co">#percent missing across df</span></span>
 <span id="cb65-2"><a href="score.html#cb65-2" aria-hidden="true" tabindex="-1"></a>PrScoredRowsMissing <span class="ot">&lt;-</span> <span class="fu">percent</span>(<span class="fu">mean</span>(<span class="fu">complete.cases</span>(scored))) <span class="co">#percent of rows with nonmissing data</span></span>
 <span id="cb65-3"><a href="score.html#cb65-3" aria-hidden="true" tabindex="-1"></a>PrScoredCellsMissing</span></code></pre></div>
-<pre><code>## [1] 1.19%</code></pre>
+<pre><code>## [1] 1.15%</code></pre>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="score.html#cb67-1" aria-hidden="true" tabindex="-1"></a>PrScoredRowsMissing</span></code></pre></div>
-<pre><code>## [1] 92.86%</code></pre>
-<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 31 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%. After eliminating cases with greater than 20% missing, the dataset analyzed included 28 cases. In this dataset we had 1.19% missing across the df; 92.86% of the rows had nonmissing data.</p>
+<pre><code>## [1] 93.10%</code></pre>
+<p>CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%. After eliminating cases with greater than 20% missing, the dataset analyzed included 29 cases. In this dataset we had 1.15% missing across the df; 93.10% of the rows had nonmissing data.</p>
 <p>Let’s look again at missing patterns and mechanisms.</p>
 <div id="scale-level-patterns-of-missing-data" class="section level3" number="3.8.1">
 <h3><span class="header-section-number">3.8.1</span> Scale Level: Patterns of Missing Data</h3>
@@ -905,8 +906,8 @@ analyses.</p></li>
 <p>All analyses were completed in R Studio (v. 1.4.1106) with R (v. 4.0.4).</p>
 <p><strong>Missing Data Analysis and Treatment of Missing Data</strong></p>
 <p>Available item analysis (AIA; <span class="citation">(<a href="refs.html#ref-parent_handling_2013" role="doc-biblioref">Parent, 2013</a>)</span>) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent’s recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, <em>psych</em> (v. 1.0.12) and <em>mice</em> (v. 3.13.0).</p>
-<p>Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0% to 36%. Across the dataset, 4.11% of cells had missing data and 80.65% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90% missing to continue to the scoring stage. Guided by Parent’s <span class="citation">(<a href="refs.html#ref-parent_handling_2013" role="doc-biblioref">2013</a>)</span> AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.</p>
-<p>Across the 31 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%. After eliminating cases with greater than 20% missing, the dataset analyzed included 28 cases. In this dataset we had 1.19% missing across the df; 92.86% of the rows had nonmissing data.</p>
+<p>Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0% to 36%. Across the dataset, 3.98% of cells had missing data and 81.25% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90% missing to continue to the scoring stage. Guided by Parent’s <span class="citation">(<a href="refs.html#ref-parent_handling_2013" role="doc-biblioref">2013</a>)</span> AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.</p>
+<p>Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0% to 33%. After eliminating cases with greater than 20% missing, the dataset analyzed included 29 cases. In this dataset we had 1.15% missing across the df; 93.10% of the rows had nonmissing data.</p>
 </div>
 <div id="practice-problems-1" class="section level2" number="3.11">
 <h2><span class="header-section-number">3.11</span> Practice Problems</h2>

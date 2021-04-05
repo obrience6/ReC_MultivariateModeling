@@ -1,0 +1,28 @@
+{
+    "id": "492E29DD",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1617593533481.0,
+    "source_on_save": false,
+    "relative_order": 13,
+    "properties": {
+        "id": "62b6a621c0794c70ba8de72b9840429a",
+        "name": "fitimp",
+        "title": "fitimp",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 21674007006019681,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1617593533481,
+    "read_only": false,
+    "read_only_alternatives": []
+}

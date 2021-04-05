@@ -90,9 +90,11 @@ A [GitHub open-source repository](https://github.com/lhbikos/ReC_MultivariateMod
 
 # ACKNOWLEDGEMENTS {-}
 
-As a doctoral student at the University of Kansas (1992-2005), I learned that I "a foreign language" was required for graduation. *Please note that as one who studies the intersections of global, vocational, and sustainable psychology, I regret that I do not have language skills.* This could have been met with credit from high school -- but having grown up in rural, mid-Missouri -- my high school was exempt from this requiremnt. This requirement would have typically been met with a foreign language taken during an undergraduate program -- but my non-teaching degree at the University of Missouri's School of Education did not require one. The requirement could have also been met with a computer language (fortran, C++) -- I did not have any of those either. There was a tiny note on the degree plan that said that a 2-credit course, "SPSS for Windows" would also count.  Given that it was taught by my one of my favorite professors, I readily signed up. As it turns out, Samuel B. Green, PhD, was using the course to draft chapters in the textbook [@green_using_2014] that has been so helpful for so many. Unfortunately, Drs. Green (1947 - 2018) and Salkind (2947 - 2017) are no longer with us. I have worn out numerous versions of their text. Another favorite text of mine was Dr. Barbara Byrne's [-@byrne_structural_2016] text for learning SEM with AMOS. I had taken my tea-stained text with me to a workshop she taught at APA and was proud of the signature she added to it (a little catfur might have fallen out).  Dr. Byrne created SEM texts for a number of statistical programs (e.g., LISREL, EQS, MPlus). As I was learning R, I wrote Dr. Byrne and asked if she had one for SEM/CFA in R that I missed. She promptly wrote back, saying that she did not have the bandwidth to learn a new program.  We lost Dr. Byrne in December 2020. I am so grateful to these authors for their persistent, accessible, work. As my role models, I am aspiring to create something that is equally helpful. I am also grateful for the doctoral students who have taken my courses and are continuing to provide input for how to improve the materials.
+As a doctoral student at the University of Kansas (1992-2005), I learned that "a foreign language" was required for graduation. *Please note that as one who studies the intersections of global, vocational, and sustainable psychology, I regret that I do not have language skills beyond English.* This could have been met with credit from high school my rural, mid-Missouri high school did not offer such classes. This requirement would have typically been met with courses taken during an undergraduate program -- but my non-teaching degree in the University of Missouri's School of Education was exempt from this. The requirement could have also been met with a computer language (fortran, C++) -- I did not have any of those either. There was a tiny footnote on my doctoral degree plan that indicated that a 2-credit course, "SPSS for Windows" would substitute for the language requirement.  Given that it was taught by my one of my favorite professors, I readily signed up. As it turns out, Samuel B. Green, PhD, was using the course to draft chapters in the textbook [@green_using_2014] that has been so helpful for so many. Unfortunately, Drs. Green (1947 - 2018) and Salkind (2947 - 2017) are no longer with us. I have worn out numerous versions of their text. Another favorite text of mine was Dr. Barbara Byrne's [-@byrne_structural_2016], "Structural Equation Modeling with AMOS." I loved the way she worked through each problem and paired it with a published journal article, so that the user could see how the statistical evaluation fit within the larger project/article. I took my tea-stained text with me to a workshop she taught at APA and was proud of the signature she added to it (a little catfur might have fallen out).  Dr. Byrne created SEM texts for a number of statistical programs (e.g., LISREL, EQS, MPlus). As I was learning R, I wrote Dr. Byrne, asking if she had an edition teaching SEM/CFA with R. She promptly wrote back, saying that she did not have the bandwidth to learn a new statistics package.  We lost Dr. Byrne in December 2020. I am so grateful to these role models for their contributions to my statistical training.  I am also grateful for the doctoral students who have taken my courses and are continuing to provide input for how to improve the materials.
 
-At very practical levels, I am indebted to SPU's Library, and more specifically, SPU's Education, Technology, and Media Department.  Assistant Dean for Instructional Design and Emerging Technologies, R. John Robertson, MSc, MCS, has offered unlimited consultation, support, and connection. Senior Instructional Designer in Graphics & Illustrations,Dominic Wilkinson, designed the logo and bookcover.  Psychology and Scholarly Communications Librarian, Kristin Hoffman, MLIS, has provided consultation on topics ranging from OERS to citations. I am alo indebted to Associate Vice President, Teaching and Learning at Kwantlen Polytechnic University, Rajiv Jhangiani, PhD. Dr. Jhangiani's text [-@jhangiani_research_2019] was the first OER I ever used and I was grateful for his encouraging conversation.
+The inspiration for training materials that re*center statistics and research methods came from the [Academics for Black Survival and Wellness Initiative](https://www.academics4blacklives.com/). This project, co-founded by Della V. Mosley, Ph.D., and Pearis L. Bellamy, M.S., made clear the necessity and urgency for change in higher education and the profession of psychology. 
+
+At very practical levels, I am indebted to SPU's Library, and more specifically, SPU's Education, Technology, and Media Department.  Assistant Dean for Instructional Design and Emerging Technologies, R. John Robertson, MSc, MCS, has offered unlimited consultation, support, and connection. Senior Instructional Designer in Graphics & Illustrations, Dominic Wilkinson, designed the logo and bookcover.  Psychology and Scholarly Communications Librarian, Kristin Hoffman, MLIS, has provided consultation on topics ranging from OERS to citations. I am alo indebted to Associate Vice President, Teaching and Learning at Kwantlen Polytechnic University, Rajiv Jhangiani, PhD. Dr. Jhangiani's text [-@jhangiani_research_2019] was the first OER I ever used and I was grateful for his encouraging conversation.
 
 Financial support for this text has been provided from the *Call to Action on Equity, Inclusion, Diversity, Justice, and Social Responsivity
 Request for Proposals* grant from the Association of Psychology Postdoctoral and Internship Centers (2021-2022). 
@@ -117,7 +119,7 @@ This conceptual approach does include occasional, step-by-step, *hand-calculatio
 As with many statistics texts, each chapter includes a *research vignette.* Somewhat unique to this resource is that the vignettes are selected from recently published articles. Each vignette is chosen with the intent to meet as many of the following criteria as possible:
 
 * the statistic that is the focus of the chapter was properly used in the article,
-* the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, emerging nations),
+* the author’s identity is from a group where scholarship is historically marginalized (e.g., BIPOC, LGBTQ+, LMIC [low middle income countries]),
 * the research has a justice, equity, inclusion, diversity, and social responsivity focus and will contribute positively to a social justice pedagogy, and 
 * the data is available in a repository or there is sufficient  information in the article to simulate the data for the chapter example(s) and practice problem(s).  
 
@@ -1781,14 +1783,13 @@ output:
 ---
 # Multiple Imputation (A Brief Demo) {#multimp}
 
- [Screencasted Lecture Link] <!-- TODO: Add link to screencast. -->
+[Screencasted Lecture Link](https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=94d59efe-3f02-4c65-b068-ad01003e09a9)
 
 Multiple imputation is a tool for managing missing data that works with the whole raw data file to impute values for missing data for *multiple sets* (e.g., 5-20) of the raw data. Those multiple sets are considered together in analyses (such as regression) and interpretation is made on the pooled results.  Much has been written about multiple imputation and, if used, should be done with many considerations.  This chapter is intended as a brief introduction.  In this chapter, I demonstrate the use of multiple imputation with the data from the [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU) that has served as the research vignette for the first few chapters of this OER.
 
 ## Navigating this Lesson
 
-<!-- TODO: Update how long it will take. -->
-There is about # hours and ## minutes of lecture.  If you work through the materials with me it would be good to add another ## hours.
+There is about one hour of lecture.  If you work through the materials with me it would be good to add another hour (to an hour-and-a-half).
 
 While the majority of R objects and data you will need are created within the R script that sources the chapter, there are a few that cannot be created from within the R framework. Additionally, sometimes links fail.  All original materials are provided at the [Github site](https://github.com/lhbikos/ReC_MultivariateModeling) that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's [introduction](#ReCintro)
 
@@ -1796,7 +1797,7 @@ While the majority of R objects and data you will need are created within the R 
 
 Learning objectives from this lecture include the following:
 
-* Describe circumstances under which multiple imputation would be appropriate* 
+* Describe circumstances under which multiple imputation would be appropriate 
 * List and define the stages in multiple imputation.
 * Apply multiple imputation to a dataset that has missingness
 * Interpret results from a simple regression that uses multiple imputation
@@ -1805,9 +1806,7 @@ Learning objectives from this lecture include the following:
 
 ### Planning for Practice
 
-<!-- TODO: Specify set of items to score for homework. -->
-
-The suggestions from practice are a continuation from the three prior chapters. If you have completed one or more of those assignments, you should have worked through the steps in preparing a data set and evaluating its appropriateness for the planned, statistical, analysis. This chapter takes a deviation from the AIA [@parent_handling_2013] approach that was the focus of the first few chapters in that we used multiple imputation as the approach for managing missingness.  Options, of graded complexity, for practice include:
+The suggestions for practice are a continuation from the three prior chapters. If you have completed one or more of those assignments, you should have worked through the steps in preparing a data set and evaluating its appropriateness for the planned, statistical, analysis. This chapter takes a deviation from the AIA [@parent_handling_2013] approach that was the focus of the first few chapters in that we used multiple imputation as the approach for managing missingness.  Options, of graded complexity, for practice include:
 
 * Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
 * Use the dataset that is the source of the chapter, but score a different set of items that you choose.
@@ -1845,8 +1844,6 @@ if(!require(mice)){install.packages("mice")}
 
 The following is a proposed workflow for preparing data for analysis. 
 
-<!-- TODO: When finalized, save as PDF so it can open in its own window) -->
-
 ![An image of a workflow for scrubbing and scoring data.](images/Ch05/scrubscore_mimp_itemlvl.jpg) 
 
 In this lecture we are working on the right side of the flowchart in the multiple imputation (blue) section.  Within it, there are two options, each with a slightly different set of options.
@@ -1862,7 +1859,7 @@ Whichever approach is used, the imputed variables (multiple sets) are used in a 
 
 The research vignette comes from the survey titled, [Rate-a-Recent-Course:  A ReCentering Psych Stats Exercise](https://spupsych.az1.qualtrics.com/jfe/form/SV_b2cClqAlLGQ6nLU) and is explained in the [scrubbing chapter](#scrub). In the [scoring chapter](#score) we prepared four variables for analysis. In the [data diagnostics chapter](#DataDx) we assessed the quality of the variables and conducted the multiple regression described below. Details for these are in our [codebook](./Rate-a-Course_Codebook.pdf).
 
-Variable recap:
+Let's quickly review the variables in our model:
 
 * Perceived Campus Climate for Black Students includes 6 items, one of which was reverse scored. This scale was adapted from Szymanski et al.'s [-@szymanski_perceptions_2020] Campus Climate for LGBTQ students. It has not been evaluated for use with other groups.  The Szymanski et al. analysis suggested that it could be used as a total scale score, or divided into three items each that assess
   * College response to LGBTQ students (items 6, 4, 1)
@@ -1873,9 +1870,9 @@ Variable recap:
 
 As we noted in the [scrubbing chapter](#scrub), our design has notable limitations. Briefly, (a) owing to the open source aspect of the data we do not ask about the demographic characteristics of the respondent; (b) the items that ask respondents to *guess* the identities of the instructional staff and to place them in broad categories, (c) we do not provide a "write-in" a response. We made these decisions after extensive conversation with stakeholders. The primary reason for these decisions was to prevent potential harm (a) to respondents who could be identified if/when the revealed private information in this open-source survey, and (b) trolls who would write inappropriate or harmful comments. 
   
-As I think about "how these variables go together" (which is often where I start in planning a study), imagine a parallel mediation.  That is the perception of campus climate for Black students would be predicted by the respondent's sense of belonging, mediated in separate paths through the proportion of classmates who are Black and the proportion of BIPOC instructional staff.  
+As I think about "how these variables go together" (which is often where I start in planning a study), I suspect parallel mediation.  That is the perception of campus climate for Black students would be predicted by the respondent's sense of belonging, mediated in separate paths through the proportion of classmates who are Black and the proportion of BIPOC instructional staff.  
 
-*I would like to assess the model by having the instructional staff variable to be the %Black instructional staff.  At the time that this lecture is being prepared, there is not sufficient Black representation in the staff to model this.* 
+*I would like to assess the model by having the instructional staff variable to be the %Black instructional staff.  At the time that this lecture is being prepared, there is not sufficient Black representation in the instructional staff to model this.* 
 
 ![An image of the statistical model for which we are preparing data.](images/Ch04/BlStuMed.jpg)
 
@@ -1890,21 +1887,21 @@ Multiple imputation is complex. Numerous quantitative psychologists had critique
 ### Steps in Multiple Imputation
 
 * Multiple imputation starts with a raw data file. 
-  * Multiple imputation assumes that data are MAR (remember, MCAR is the more prestigiouos one).  This means that researchers assume that missing values can be replaced by predictions derived from the observable portion of the dataset.  
-* Multiple datsets (often 5 to 20) are created where missing values are replaced via a randomized process (so the same missing value [item 4 for person A] will likely have different values for each dataset). 
-* The desired anlayis(es) is conducted simultaneously/separately for each of the imputed sets (so if you imputed 5 sets and wanted a linear regression, you get 5 linear regressions).  
+  * Multiple imputation assumes that data are MAR (remember, MCAR is the more prestigious one).  This means that researchers assume that missing values can be replaced by predictions derived from the observable portion of the dataset.  
+* Multiple datasets (often 5 to 20) are created where missing values are replaced via a randomized process (so the same missing value [item 4 for person A] will likely have different values for each dataset). 
+* The desired analysis is conducted simultaneously/separately for each of the imputed sets (so if you imputed 5 sets and wanted a linear regression, you get 5 linear regressions).  
 * A *pooled analysis* uses the point estimates and the standard errors to provide a single result that represents the analysis.
 
 In a web-hosted guide from the University of Virginia Library, Katitas [-@katitas_getting_2019] provided a user-friendly review and example of using tools in R in a multiple imputation. Katitas' figure is a useful conceptual tool in understanding how multiple imputation works. *This figure is my recreation of Katitas' original.*
 
 ![An image adapted from the Katitas multiple imputation guide showing the four stages of multiple imputation.](images/Ch05/KatitasMimpFig.jpg)
 
-* the datframe with missing data is the single place we start
-* we intervene with a package like *mice()* to impute
-* multiple sets of data (filling in the missing variables with different values that are a product of their conditional distribution and an element of "random"); 
+* the dataframe with missing data is the single place we start
+* we intervene with a package like *mice()* to 
+* impute multiple sets of data (filling in the missing variables with different values that are a product of their conditional distribution and an element of "random"); 
   * "mids" ("multiply imputed dataset") is an object class where the completed datasets are stored.
 * the "with_mids" command allows OLS regression to be run, as many times as we have imputed datasets (in this figure, 3X).  It produces different regression coefficients for each datset
-* the "pool" command pools together the multiple coefficients taking into consideration the value of the coefficients,the standard errors, and the variance of the missing value parmeter across the samples.
+* the "pool" command pools together the multiple coefficients taking into consideration the value of the coefficients,the standard errors, and the variance of the missing value parameter across the samples.
 
 ### Statistical Approaches to Multiple Imputation
 
@@ -1916,7 +1913,7 @@ In a web-hosted guide from the University of Virginia Library, Katitas [-@katita
 
 ## Working the Problem
 
-Katitas [@katitas_getting_2019] claims that it is best to impute the data in its rawest form possible because any change would be taking it away from its original distribution.  There are debates about how many variables to include in an imputation.  Some authors would suggest that researchers include everything that was collected. Others (like me) will slim down the dataset to include (a) the variables included in the model, plus (b) auxilliary variables (i.e., variables not in the model, but that are sufficiently non-missing and will provide additional information to the data).
+Katitas [-@katitas_getting_2019] claims that it is best to impute the data in its rawest form possible because any change would be taking it away from its original distribution.  There are debates about how many variables to include in an imputation.  Some authors would suggest that researchers include everything that was collected. Others (like me) will trim the dataset to include (a) the variables included in the model, plus (b) auxiliary variables (i.e., variables not in the model, but that are sufficiently non-missing and will provide additional information to the data).
 
 In our case we will want:
 
@@ -1928,7 +1925,7 @@ Item for the variables represented in our model
 * proportion of BIPOC instructional staff
 * proportion of classmates who are Black
 
-Auxilliary variables -- let's choose three.  I'm choosing items from the course evaluation that sample a traditional item, a item about inclusivity/diversity, and an item about the student's growth
+Auxiliary variables -- let's choose four. One will be the format of the course.  Three items will be from the course evaluation.
 
 * format, whether the course was taught in-person, a blend, or virtual
 * cEval_1, "Course material was presented clearly"
@@ -1940,14 +1937,14 @@ Auxilliary variables -- let's choose three.  I'm choosing items from the course 
 
 There are some guidelines for selecting and formatting variables for imputation.  
 
-* Variables should be in their "naturalist" state
+* Variables should be in their *most natural* state
 * Redundant or too highly correlated variables should not be included
-  * If you reverse coded a variable (we haven't yet), that's ok, but EXCLUDE the original variable
+  * If you reverse coded a variable (we haven't yet), that's ok, but if you have already reverse-coded, then exclude the original variable
   * Redundant variables (or multicollinear variables) may cause the multiple imputation process to cease
-  * Violation of this also provides clues for troubleshooting
+  * Violation of this also provides clues for troubleshooting 
 * Exclude variables with more than 25% missing
 
-To make this as realistic as possible. let's start with our very raw data.  The [Scrubbing chapter](#scrub) provides greater detail on importing data directly from Qualtrics.  Therefore, I will repeat our protocol that imports the data and then scrubs it for our purposes. As described in the prior chapter, I named variables in Qualtrics to facilitate a more intuitive use in R.
+To make this as realistic as possible. Let's start with our very raw data.  The [Scrubbing chapter](#scrub) provides greater detail on importing data directly from Qualtrics.  Therefore, I will repeat our protocol that imports the data and then scrubs it for our purposes. As described in the prior chapter, I named variables in Qualtrics to facilitate a more intuitive use in R.
 
 ```{r intRavenous qualtRics, warning=FALSE, message=FALSE}
 library(qualtRics)
@@ -1985,14 +1982,15 @@ QTRX_df2 <- QTRX_df2%>%select(ID, everything())
 ```
 
 Because this huge df is cumbersome to work with, let's downsize it to be closer to the size we will work with in the imputation
-
 ```{r downsizing the df}
 mimp_df <-  select (QTRX_df2, ID, iRace1, iRace2, iRace3, iRace4, iRace5, iRace6, iRace7, iRace8, iRace9, iRace10, cmBiMulti, cmBlack, cmNBPoC, cmWhite, cmUnsure, Belong_1:Belong_3, Blst_1:Blst_6, cEval_1, cEval_13, cEval_19, format)
-glimpse(mimp_df)
+#glimpse(mimp_df)
+head(mimp_df)
 ```
 
-Qualtrics imports many of the categorical variables as numbers.  R often reads them numerically (integers or numbers). If they are directly converted to factors, R will sometimes collapse.  In this example, if there is a race that is not represented (e.g., 2 for BiMulti), when the numbers are changed to factors, R will assume it's ordered and will change up the numbers.  Therefore, it is ESSENTIAL to check (again and again ad nauseum) to ensure that your variables are recoding in a manner you understand.
+### Creating Composite Variables
 
+Qualtrics imports many of the categorical variables as numbers.  R often reads them numerically (integers or numbers). If they are directly converted to factors, R will sometimes collapse.  In this example, if there is a race that is not represented (e.g., 2 for BiMulti), when the numbers are changed to factors, R will assume it's ordered and will change up the numbers.  Therefore, it is ESSENTIAL to check (again and again ad nauseum) to ensure that your variables are recoding in a manner you understand.
 ```{r creating an ordered factor}
 mimp_df$iRace1 = factor(mimp_df$iRace1,
                         levels = c(0,1,2,3,4),
@@ -2027,10 +2025,10 @@ mimp_df$iRace10 = factor(mimp_df$iRace10,
 ```
 
 ```{r another peek, results='hide'}
-glimpse(mimp_df)
+head(mimp_df)
 ```
 
-
+This is a quick recap of how we calculated the proportion of instructional staff who are BIPOC.
 ```{r calculating the proportion of BIPOC instructional staff}
 #creating a count of BIPOC faculty identified by each respondent
 mimp_df$count.BIPOC <- apply(mimp_df[c("iRace1", "iRace2", "iRace3", "iRace4", "iRace5", "iRace6", "iRace7", "iRace8", "iRace9", "iRace10")], 1, function(x) sum(x %in% c("Black", "nBpoc", "BiMulti")))
@@ -2078,7 +2076,6 @@ sort(p_missing[p_missing > 0], decreasing = TRUE)
 Luckily, none of our variables have more than 25% missing (*or at least they didn't when I wrote this; the open nature of the survey and how it sources this chapter could change this*). If we did have a variable with more than 25% missing, we would have to consider what to do about it.
 
 Later we learn that we should eliminate case with greater than 50% missingness.  Let's write code for that, now.
-
 ```{r Remove cases with too much missingness}
 #Calculating number and proportion of item-level missingness
 mimp_df$nmiss <- mimp_df%>%
@@ -2089,10 +2086,10 @@ mimp_df$nmiss <- mimp_df%>%
 mimp_df<- mimp_df%>%
   mutate(prop_miss = (nmiss/15)*100) #11 is the number of variables included in calculating the proportion
 
-mimp_df <- filter(mimp_df, prop_miss <= 50)  #update df to have only those with at least 90% of complete data
+mimp_df <- filter(mimp_df, prop_miss <= 50)  #update df to have only those with at least 50% of complete data
 ```
 
-Once again, trim the df to include on the data to be included in the imputation
+Once again, trim the df to include only the data to be included in the imputation
 ```{r another trimming of the df}
 mimp_df <-  select (mimp_df, ID, iBIPOC_pr, cmBlack, Belong_1:Belong_3, Blst_1:Blst_6, cEval_1, cEval_13, cEval_19, format)
 ```
@@ -2102,10 +2099,11 @@ mimp_df <-  select (mimp_df, ID, iBIPOC_pr, cmBlack, Belong_1:Belong_3, Blst_1:B
 Because multiple imputation is a *random* process, if we all want the same answers we need to set a *random seed.* 
 
 ```{r Set random seed}
-set.seed(210324) #you can pick any number you want, today I'm using today's datestamp
+set.seed(210404) #you can pick any number you want, today I'm using today's datestamp
 ```
 
 The program we will use is *mice*. *mice* assumes that each variable has a distribution and it imputes missing variables according to that distribution.  
+
 This means we need to correctly specify each variable's format/role.  *mice* will automatically choose a distribution (think "format") for each variable; we can override this by changing the methods' characteristics.
 
 The following code sets up the structure for the imputation. I'm not an expert at this -- just following the Katitas example.
@@ -2114,7 +2112,7 @@ The following code sets up the structure for the imputation. I'm not an expert a
 library(mice)
 # runs the mice code with 0 iterations
 imp <- mice(mimp_df, maxit = 0)
-# Extract predictorMatrix and methods of imputation 
+# Extract predictor Matrix and methods of imputation 
 predM = imp$predictorMatrix
 meth = imp$method
 ```
@@ -2134,7 +2132,7 @@ predM[, c("ID")]=0
 #We don't have any dichotomous variables, but if we did we would follow this format
 #log <- c("Var3", "Var4")
 
-#Uunordered categorical variables (nominal variables), but if we did we would follow this format
+#Unordered categorical variables (nominal variables), but if we did we would follow this format
 poly2 <- c("format")
 
 #Turn their methods matrix into the specified imputation models
@@ -2146,7 +2144,7 @@ meth[poly2] = "polyreg"
 meth
 ```
 
-This list (meth) contains all our variables; "pmm" is the default and is the "predictive mean matching" process used. We see tht format (an unordered categorical variable) is noted as "polyreg."  If we had used other categorical variables (ordered/poly, dichotomous/log), we would have seen those designations, instead.  If there is "" underneath it means the data is complete.
+This list (meth) contains all our variables; "pmm" is the default and is the "predictive mean matching" process used. We see that format (an unordered categorical variable) is noted as "polyreg."  If we had used other categorical variables (ordered/poly, dichotomous/log), we would have seen those designations, instead.  If there is "" underneath it means the data is complete.
 
 Our variables of interest are now configured to be imputed with the imputation method we specified.  Empty cells in the method matrix mean that those variables aren't going to be imputed.
 
@@ -2277,7 +2275,7 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 
 ### Method/Data Diagnostics
 
-Data screening suggested that `r attempts` individuals opend the survey link. Of those, `r consented_attempts` granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; `r US_inclusion` met this criteria.  Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from `r missMin`% to `r missMax`%.  Across the dataset, `r CellsMiss` of cells had missing data and `r CaseComplete` of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50% missing to be included the multiple imputation [@katitas_getting_2019].
+Data screening suggested that `r attempts` individuals opened the survey link. Of those, `r consented_attempts` granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; `r US_inclusion` met this criteria.  Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from `r missMin`% to `r missMax`%.  Across the dataset, `r CellsMiss` of cells had missing data and `r CaseComplete` of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50% missing to be included the multiple imputation [@katitas_getting_2019].
 
 Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning [-@kline_principles_2016]. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black ($W$ = `r cmSW`, $p$ = `r cmSWp`) and the proportion of BIPOC instructional staff($W$ = `r iSW`, $p$ = `r iSWp`)  are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging ($W$ = `r belSW`, $p$ = `r belSWp`) and the respondent's perception of campus climate for Black students ($W$ = `r clSW`, $p$ = `r clSWp`) did not differ differently from a normal distribution.
 
@@ -2297,36 +2295,28 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 
 ## Multiple imputation considerations
 
-1. Character vectors (i.e., values that are represented with words) can be problematic.  If they are causing trouble, consider
-   * recode into factors,
-   * keep it in the df, but exclude it from the imputation protocol,
-   * our "format" variable was an ordered factor (i.e., each term was associated with a value), so I think that helped us avoid problems
-   
-2. Variables with really high (like 50% or more) proportions of missingness should be excluded.
-
-3. Variables that are highly correlated or redundant (even if inverse) will halt the execution. If you set print=TRUE you will see where the algorithm is having difficulty because it will halt at that variable.
-
-4. Variables with non-missing values can be problematic.  If they are problematic, just exclude them from the process.
-
-5. Width (columns/variables) versus length (rows/cases).  You must have more columns/variables than rows/cases.  It is difficult to say how many.  If this is a problem:
+* Character vectors (i.e., values that are represented with words) can be problematic.  If they are causing trouble, consider
+  * recode into factors,
+  * keep it in the df, but exclude it from the imputation protocol,
+  * our "format" variable was an ordered factor (i.e., each term was associated with a value), so I think that helped us avoid problems
+* Variables with really high (like 50% or more) proportions of missingness should be excluded.
+* Variables that are highly correlated or redundant (even if inverse) will halt the execution. If you set print=TRUE you will see where the algorithm is having difficulty because it will halt at that variable.
+* Variables with non-missing values can be problematic.  If they are problematic, just exclude them from the process.
+*Width (columns/variables) versus length (rows/cases).  You must have more rows/cases than columns/variables.  It is difficult to say how many.  If this is a problem:
   * Consider scoring scales first with AIA, then impute with whole scales.
   * Divide the df in halves or thirds, impute separately, then join with the ID numbers. 
   * There should be auxiliary variables in each.
-
-6. Item-level imputation is its "whole big thing" with multiple, complex considerations.  There are tremendous resources
+*Item-level imputation is its "whole big thing" with multiple, complex considerations.  There are tremendous resources
   *  Enders [BLIMP](http://www.appliedmissingdata.com/multilevel-imputation.html) app is free and works with R
   *  Little's [-@little_statistical_2002] article
-
-7. How many imputations? Controversial and has changed over the years. 
+* How many imputations? Controversial and has changed over the years. 
   *  Practical concern: the more you request, the longer it will take in R, this demo was 5
   *  For a number of years there was a push for 20, but I've also seen recommendations for 100s.
   *  Check examples of imputed studies in your disciplinary specialty/journals.
+* There are lots of discussions and debates about
+  * allowing for fractional/decimal responses (a 3.5 on 1 to 4 scaling; or a 0.75 on a dichotomous variable such as male/female)
+  * out-of-bounds estimates (what if you get a 7 on 1 to 4 scaling?)
 
-7. There are lots of discussions and debates about
-   * allowing for fractional/decimal responses (a 3.5 on 1 to 4 scaling; or a 0.75 on a dichotomous variable such as male/female)
-   * out-of-bounds estimates (what if you get a 7 on 1 to 4 scaling?)
-
-It can be helpful to save outfiles of progress as we go along.  Here I save this raw file.
 
 ## Practice Problems
 
