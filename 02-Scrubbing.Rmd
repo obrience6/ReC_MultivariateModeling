@@ -36,7 +36,7 @@ Learning objectives from this lecture include the following:
 The suggestions for practice will start with this chapter and continue in the next two chapters (Scoring, Data Dx). Using Parent's [-@parent_handling_2013] AIA approach to managing missing data, you will scrub-and-score a raw dataset. Options of graded complexity could incude:
 
 * Repeating the steps in the chapter with the most recent data from the Rate-A-Recent-Course survey; differences will be in the number of people who have completed the survey since the chapter was written.
-* Use the dataset that is the source of the chapter, but score a different set of items that you choose.
+* Use the dataset that is the source of the chapter, but score a different set of items that you choose. Hey :)
 * Begin with raw data to which you have access. 
 
 ### Readings & Resources
