@@ -171,7 +171,7 @@ write.csv (descriptives, file="DataDx_descripts.csv") #this can be useful if you
 
 To understand whether our data are normally distributed, we can look at skew and kurtosis.  The skew and kurtosis indices in the psych package are reported as *z* scores.  Regarding skew, values > 3.0 are generally considered "severely skewed."  Regarding kurtosis, "severely kurtotic" is argued anywhere > 8 to 20 [@kline_principles_2016].  At the time I am writing this chapter, our skew and kurtosis values fall below the thresholds that Kline identified as concerning.
 
-We can also apply the Shapiro-Wilk test of normality to each of our variables. When the $p$ value is < .05, the variable's distribution is deviates from a normal distribution to a degree that is statistically significant. Below, the plotting of the histogram with a normal curve superimposed shows how the distribution approximates one that is normal.
+We can also apply the Shapiro-Wilk test of normality to each of our variables. When the $p$ value is < .05, the variable's distribution is deviating from a normal distribution to a degree that is statistically significant. Below, the plotting of the histogram with a normal curve superimposed shows how the distribution approximates one that is normal.
 
 ```{r Shapiro Wilk tests of univariate normality}
 #The shapiro-test is in base R; it's specification is simple:  shapiro.test(df$variable)
